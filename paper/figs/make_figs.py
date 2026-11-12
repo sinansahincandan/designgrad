@@ -132,7 +132,8 @@ def _tile(ax, img, n, tot, note=None):
     else:
         ax.text(0.5, 0.55, "did not build", ha="center", va="center", fontsize=9.5, color=INK2, transform=ax.transAxes, style="italic")
     ax.set_xlim(0, 1); ax.set_ylim(0, 1); ax.set_box_aspect(1)
-    _badge(ax, 0.82, 0.12, n, tot, fs=9)
+    if n is not None:
+        _badge(ax, 0.82, 0.12, n, tot, fs=9)
     if note:
         ax.text(0.08, 0.12, note, ha="left", va="center", fontsize=8, color=INK2, transform=ax.transAxes)
 

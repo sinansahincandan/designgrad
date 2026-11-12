@@ -93,7 +93,7 @@ def example(run, problem, rows, name, title=None):
         gs = fig.add_gridspec(1, 4, left=0.012, right=0.988, top=top - i * h - 0.012, bottom=top - (i + 1) * h + 0.012,
                               width_ratios=[0.6, 1.5, 1.5, 0.6], wspace=0.035)
         tag = f"{problem[:3]}_{Path(run).name}_{lv}"
-        a = fig.add_subplot(gs[0]); _tile(a, _ensure_render(rd / f"r{par:02d}/part.stl", REN / f"v4ex_{tag}_r{par}.png", **ANG[problem]), met(pd, rd / f"r{par:02d}"), 7, "before")
+        a = fig.add_subplot(gs[0]); _tile(a, _ensure_render(rd / f"r{par:02d}/part.stl", REN / f"v4ex_{tag}_r{par}.png", **ANG[problem]), None, 7, "before")
         a.set_box_aspect(None)
         c = fig.add_subplot(gs[1]); _cardbox(c, f"{lv}  the critic reads {row['head']}", NC[lv])
         items = [(x, INK, "normal", None) for x in row.get("reads", [])] + [("“" + x + "”", QUOTE, "normal", None) for x in row["critic"]]
@@ -113,8 +113,7 @@ def example(run, problem, rows, name, title=None):
                 d.text(0.085, y, ln, fontsize=6.9, color=col, va="center", transform=d.transAxes)
                 y -= 0.087
             y -= 0.03
-        b = fig.add_subplot(gs[3]); _tile(b, _ensure_render(rd / f"r{k:02d}/part.stl", REN / f"v4ex_{tag}_r{k}.png", **ANG[problem]), met(pd, rd / f"r{k:02d}"), 7,
-                                          "kept" if t["accepted"] else "rejected")
+        b = fig.add_subplot(gs[3]); _tile(b, _ensure_render(rd / f"r{k:02d}/part.stl", REN / f"v4ex_{tag}_r{k}.png", **ANG[problem]), None, 7, "after")
         b.set_box_aspect(None)
     save(fig, name, svg=False)
 

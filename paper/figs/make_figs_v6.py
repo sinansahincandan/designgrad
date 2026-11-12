@@ -41,7 +41,7 @@ def finals(U):
 def fig_results():
     U = F.units(); Sm = F.summary(); fin = finals(U)
     fig = plt.figure(figsize=(7.6, 4.55))
-    g = fig.add_gridspec(2, 6, height_ratios=[1.3, 1], hspace=0.78, wspace=1.1, left=0.075, right=0.985, top=0.925, bottom=0.08)
+    g = fig.add_gridspec(2, 6, height_ratios=[1.3, 1], hspace=0.78, wspace=1.1, left=0.095, right=0.985, top=0.925, bottom=0.08)
     a1 = fig.add_subplot(g[0, :3]); a2 = fig.add_subplot(g[0, 3:])
     rng = np.random.default_rng(3)
     for i, l in enumerate(NLV):
@@ -53,6 +53,8 @@ def fig_results():
     a1.set_xticks(range(4)); a1.set_xticklabels(NLV, fontsize=10)
     a1.set_ylim(0, 8); a1.set_yticks(range(0, 8)); a1.grid(axis="y", color=GRID, lw=0.8, zorder=0)
     a1.set_title("Requirements met by the final design", pad=8, fontsize=9.6)
+    a1.set_ylabel("requirements met (of 7)", fontsize=8.5)
+    a2.set_ylabel("requirements met (of 7)", fontsize=8.5)
     l0 = Sm["levels"]["L0"]["met"]
     a2.plot([-0.2, 4.08], [l0, l0], color=MUTED, ls=(0, (4, 3)), lw=1.2, zorder=1)
     ends = {l: Sm["levels"][l]["curve_kept"] for l in NLV[1:]}
@@ -77,6 +79,7 @@ def fig_results():
         a.set_xticks(range(4)); a.set_xticklabels(NLV, fontsize=8.5); a.set_xlim(-0.5, 3.5)
         a.set_ylim(0, 7.6); a.set_yticks([0, 2, 4, 6, 7]); a.tick_params(axis="y", labelsize=8); a.grid(axis="y", color=GRID, lw=0.8, zorder=0)
         a.set_title(name, fontsize=9.2, pad=5)
+        a.set_ylabel("requirements met", fontsize=7.6)
     save(fig, "v6_fig_results", svg=False)
 
 
@@ -172,7 +175,7 @@ def fig_control(run="runs/v6_s0", problem="P07_nema17_mount", req="R4",
 # ---------------------------------------------------------------- what limits the loop
 def fig_limits():
     Sm = F.summary()["levels"]
-    fig, (a1, a2) = plt.subplots(1, 2, figsize=(7.6, 2.55), gridspec_kw={"width_ratios": [1, 1.25], "wspace": 0.3, "left": 0.07, "right": 0.985, "top": 0.86, "bottom": 0.2})
+    fig, (a1, a2) = plt.subplots(1, 2, figsize=(7.6, 2.55), gridspec_kw={"width_ratios": [1, 1.25], "wspace": 0.3, "left": 0.095, "right": 0.985, "top": 0.86, "bottom": 0.2})
     for i, l in enumerate(NLV[1:]):
         fx, bk = Sm[l]["fix"], Sm[l]["break"]
         f, b = fx[0] / max(fx[1], 1), bk[0] / max(bk[1], 1)
@@ -181,6 +184,8 @@ def fig_limits():
         a1.text(i + 0.21, b * 100 + 2, f"{bk[0]}/{bk[1]}", ha="center", fontsize=7, color=INK2)
     a1.set_xticks(range(3)); a1.set_xticklabels(NLV[1:], fontsize=9.5); a1.set_ylim(0, 60); a1.set_yticks([0, 20, 40, 60]); a1.set_yticklabels(["0", "20%", "40%", "60%"], fontsize=8)
     a1.grid(axis="y", color=GRID, lw=0.8, zorder=0); a1.set_title("One design round", fontsize=9.6, pad=7)
+    a1.set_ylabel("share of requirements", fontsize=8.5)
+    a2.set_ylabel("level", fontsize=8.5)
     a1.text(0.02, -0.26, "solid: unmet requirements it fixes     hatched: met requirements it breaks", fontsize=6.9, color=INK2, transform=a1.transAxes)
     cols = [("agree", "agrees with the tests", GOOD), ("false_alarm", "false alarm", MID), ("missed", "missed", BAD), ("disputed", "disputed by the reviewer", "#b9bdc7")]
     for i, l in enumerate(("L3", "L2")):
@@ -256,11 +261,11 @@ def fig_rounds(rows=None, name="v6_fig_rounds"):
             stl = rd / f"r{k:02d}/part.stl"
             img = _ensure_render(stl, REN / f"v6rounds_{Path(run).name}_{lv}_{p[:3]}_r{k}.png", **F.ANG[p]) if stl.exists() else None
             kept = k == 0 or bool(t.get("accepted")); held = k if kept else held
-            _tile(ax, img, F.met(pd, rd / f"r{k:02d}"), nreq(p), note=("first design" if k == 0 else f"round {k}")); ax.set_box_aspect(None)
-            if kept and k == S["k"]:
+            _tile(ax, img, None, nreq(p), note=("first design" if k == 0 else f"round {k}")); ax.set_box_aspect(None)
+            if False:
                 ax.add_patch(FancyBboxPatch((0.02, 0.02), 0.96, 0.96, boxstyle="round,pad=0,rounding_size=0.06", transform=ax.transAxes, fc="none", ec=NC[lv], lw=2.0, zorder=6))
             if k > 0:
-                fig.text(0.012 + j * w + w / 2, top - 0.735 * h, "kept" if kept else "not kept", ha="center", va="top", fontsize=6.8,
+                fig.text(0.012 + j * w + w / 2, top - 0.735 * h, "", ha="center", va="top", fontsize=6.8,
                          color=GOOD if kept else INK2, weight="demibold")
                 q = _first_problem((rd / f"r{t['from']:02d}/loss.md").read_text())
                 if j > 1 and tr[ks[j - 1]].get("from") == t["from"]:
