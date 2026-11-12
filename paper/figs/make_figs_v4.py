@@ -222,7 +222,7 @@ def fig_loop(run=f"runs/{TAG}_s0", problem="P07_nema17_mount", summ=f"runs/{TAG}
     px0, pw = 156, 24
     for a, b in [((40, yc), (56, yc)), ((88, yc), (104, yc)), ((136, yc), (px0 + 1.5, yc))]:
         _line(ax, [a, b], color=LINE, lw=1.2)
-    ax.text(146.5, yc + 3.4, "CAD agent", **{**sub, "color": INK, "fontsize": 6.6}); ax.text(146.5, yc - 3.4, "runs and repairs", **sub)
+    ax.text(146.5, yc + 3.4, "CAD agent", **{**sub, "color": INK, "fontsize": 6.6}); ax.text(146.5, yc - 3.4, "builds the part", **sub)
     x, w = X["spec"]; ax.text(x + w / 2, T + H - 4.4, "Specification", **head)
     for k in range(7):
         ax.add_patch(Rectangle((x + 6.5, T + H - 9.2 - k * 1.95), [16, 19, 13, 17, 15, 19, 12][k], 0.75, fc="#b9bdc7", ec="none", zorder=3))
@@ -237,7 +237,7 @@ def fig_loop(run=f"runs/{TAG}_s0", problem="P07_nema17_mount", summ=f"runs/{TAG}
     ax.text(px0 + pw / 2, T + 1.6, "the built part", **sub)
     B, HB, W = 41, 24.5, 36
     C = {"L0": 8, "L1": 56, "L2": 104, "L3": 152}
-    title = {"L0": "no feedback", "L1": "reads the design text", "L2": "+ its own analysis", "L3": "+ a look at the part"}
+    title = {"L0": "no feedback", "L1": "+ design document", "L2": "+ its own analysis", "L3": "+ rendered views"}
     kind = {"L0": "", "L1": "conceptual", "L2": "numerical", "L3": "visual"}
     for l, x in C.items():
         _panel(ax, x, B, W, HB, ec=NC[l], fc=_tint(NC[l], 0.07), lw=1.1)
@@ -247,7 +247,7 @@ def fig_loop(run=f"runs/{TAG}_s0", problem="P07_nema17_mount", summ=f"runs/{TAG}
         ax.add_patch(Rectangle((x + 4.5, B + 3.1), (W - 15) * metv[l] / 7, 1.5, fc=NC[l], ec="none", zorder=4))
         ax.text(x + W - 4.5, B + 3.85, f"{metv[l]:.1f}", fontsize=7.6, color=NC[l] if l != "L0" else INK2, weight="demibold", va="center", ha="right")
     gy = B + 12.3
-    ax.text(C["L0"] + W / 2, gy, "the first design, as built", fontsize=6.3, color=INK2, ha="center", va="center", style="italic")
+    ax.text(C["L0"] + W / 2, gy, "designed and built once", fontsize=6.3, color=INK2, ha="center", va="center", style="italic")
     x = C["L1"]
     for q, px in enumerate([x + W / 2 - 2.9]):
         ax.add_patch(Rectangle((px, gy - 3.6), 5.8, 7.2, fc="white", ec=NC["L1"], lw=0.8, zorder=3))
