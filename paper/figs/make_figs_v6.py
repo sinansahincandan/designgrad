@@ -173,15 +173,42 @@ def fig_control(run="runs/v6_s0", problem="P07_nema17_mount", req="R4",
 
 
 # ---------------------------------------------------------------- what limits the loop
+def _per_round():
+    """{level: {"fix": [[fixed, unmet] for rounds 1..4], "break": [[broken, met] for rounds 1..4]}}, by the independent tests of each round and of the design it was rewritten from."""
+    out = {l: {"fix": [[0, 0] for _ in range(4)], "break": [[0, 0] for _ in range(4)]} for l in NLV[1:]}
+    for run in ("runs/v6_s0", "runs/v6_s1000", "runs/v6_s2000"):
+        for l in NLV[1:]:
+            for base in sorted((ROOT / run / l).glob("P*")):
+                S = json.loads((base / "summary.json").read_text())
+                for t in S["trace"]:
+                    k = t["k"]
+                    if k == 0 or "from" not in t or k > 4:
+                        continue
+                    pa = base / f"r{t['from']:02d}/hidden_rows.json"; pb = base / f"r{k:02d}/hidden_rows.json"
+                    if not pa.exists():
+                        continue
+                    a = json.loads(pa.read_text()); b = json.loads(pb.read_text()) if pb.exists() else {r: False for r in a}
+                    for r in a:
+                        if not a[r]:
+                            out[l]["fix"][k - 1][1] += 1; out[l]["fix"][k - 1][0] += bool(b.get(r))
+                        else:
+                            out[l]["break"][k - 1][1] += 1; out[l]["break"][k - 1][0] += (not b.get(r))
+    return out
+
+
 def fig_limits():
-    Sm = F.summary()["levels"]
+    Sm = F.summary()["levels"]; PR = _per_round()
     fig, (a1, a2) = plt.subplots(1, 2, figsize=(7.6, 2.55), gridspec_kw={"width_ratios": [1, 1.25], "wspace": 0.3, "left": 0.095, "right": 0.985, "top": 0.86, "bottom": 0.2})
     for i, l in enumerate(NLV[1:]):
         fx, bk = Sm[l]["fix"], Sm[l]["break"]
         f, b = fx[0] / max(fx[1], 1), bk[0] / max(bk[1], 1)
         a1.bar(i - 0.21, f * 100, 0.36, color=NC[l], zorder=2); a1.bar(i + 0.21, b * 100, 0.36, color=NC[l], alpha=0.35, zorder=2, hatch="////", edgecolor="white", lw=0)
-        a1.text(i - 0.21, f * 100 + 2, f"{fx[0]}/{fx[1]}", ha="center", fontsize=7, color=INK)
-        a1.text(i + 0.21, b * 100 + 2, f"{bk[0]}/{bk[1]}", ha="center", fontsize=7, color=INK2)
+        assert [sum(x[0] for x in PR[l]["fix"]), sum(x[1] for x in PR[l]["fix"])] == list(fx), (l, PR[l]["fix"], fx)
+        pf = [100 * x / y for x, y in PR[l]["fix"] if y]; pb = [100 * x / y for x, y in PR[l]["break"] if y]
+        a1.scatter(i - 0.21 + np.linspace(-0.11, 0.11, len(pf)), pf, s=14, color="white", edgecolor=INK, lw=0.9, zorder=5)
+        a1.scatter(i + 0.21 + np.linspace(-0.11, 0.11, len(pb)), pb, s=14, color="white", edgecolor=INK2, lw=0.9, zorder=5)
+        a1.text(i - 0.21, max([f * 100] + pf) + 3, f"{fx[0]}/{fx[1]}", ha="center", fontsize=7, color=INK)
+        a1.text(i + 0.21, max([b * 100] + pb) + 3, f"{bk[0]}/{bk[1]}", ha="center", fontsize=7, color=INK2)
     a1.set_xticks(range(3)); a1.set_xticklabels(NLV[1:], fontsize=9.5); a1.set_ylim(0, 60); a1.set_yticks([0, 20, 40, 60]); a1.set_yticklabels(["0", "20%", "40%", "60%"], fontsize=8)
     a1.grid(axis="y", color=GRID, lw=0.8, zorder=0); a1.set_title("One design round", fontsize=9.6, pad=7)
     a1.set_ylabel("share of requirements", fontsize=8.5)

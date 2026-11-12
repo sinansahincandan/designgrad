@@ -113,11 +113,11 @@ When a measurement identifies the fault, numerical feedback is effective (Fig. 6
 
 ### 4.4 Factors limiting the loop
 
-Two factors limit the loop (Fig. 9). First, detecting a fault is easier than correcting it: a design round corrects only a minority of the unmet requirements and occasionally breaks a met requirement. The correction rate is highest at L3, where the visual review often identifies the cause of the fault. It does not increase from round to round (23%, 16%, 20%, 18%). Second, the agent's own evaluation is not always correct. It rarely misses a real fault, but it sometimes reports a requirement as unmet although the part meets it, for example when a check examines a region larger than the feature. Such false alarms can cause the loop to discard a better design. The visual reviewer shows the same tendency, so visual feedback is most useful together with measurements.
+Two factors limit the loop (Fig. 9). First, detecting a fault is easier than correcting it: a design round corrects only a minority of the unmet requirements and occasionally breaks a met requirement. The correction rate is highest at L3, where the visual review often identifies the cause of the fault. It does not increase with an increasing number of rounds (23%, 16%, 20%, 18%). Second, the agent's own evaluation is not always correct. It rarely misses a real fault, but it sometimes reports a requirement as unmet although the part meets it, for example when a check examines a region larger than the feature. Such false alarms can cause the loop to discard a better design. The visual reviewer shows the same tendency, so visual feedback is most useful together with measurements.
 
 ![](figs/v6_fig_limits.png)
 
-> **Fig. 9.** Left: the share of unmet requirements that one design round corrects (solid) and of met requirements that it breaks (hatched). Right: the agent's own verdicts compared, after the runs, with the independent tests: agreement (green), false alarm (orange), missed fault (red), disputed by the reviewer (grey).
+> **Fig. 9.** Left: the share of unmet requirements that one design round corrects (solid) and of met requirements that it breaks (hatched); each point is one round, rounds one to four from left to right. Right: the agent's own verdicts compared, after the runs, with the independent tests.
 
 ### 4.5 Four further parts
 
