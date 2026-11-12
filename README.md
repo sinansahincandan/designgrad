@@ -5,7 +5,7 @@ Paper: [`paper/DesignGrad_v4.pdf`](paper/DesignGrad_v4.pdf) (source: `paper/draf
 Agent Paper Track.
 
 One open model, **Gemma 4 26B-A4B**, runs offline on a laptop with Ollama and plays every role. A designer writes a design document
-and CadQuery code, a CAD agent builds the part, a critic reviews the design, and the critique becomes TextGrad-style textual
+and CadQuery code, a CAD agent builds the part, a critic reviews the design, and the critique becomes TextGrad-inspired textual
 gradients that rewrite the design. The levels differ only in what the critic reads:
 
 | Level | What the critic reads | Requirements met (of 7) |
