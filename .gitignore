@@ -39,6 +39,7 @@ __pycache__/
 !/paper/figs/
 /paper/figs/*
 !/paper/figs/make_figs.py
+!/paper/figs/make_figs_v3.py
 !/paper/figs/make_figs_v4.py
 !/paper/figs/make_figs_v6.py
 !/paper/figs/v4_examples.py

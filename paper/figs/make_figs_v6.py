@@ -237,7 +237,7 @@ def _first_problem(loss, n=82):
 def fig_rounds(rows=None, name="v6_fig_rounds"):
     """rows: [(run, level, problem)]. One strip per unit: the part produced in every round, the requirements it meets, whether the
     loop kept it, and the first problem the critic named in the design it was rewritten from."""
-    rows = rows or [(f"runs/{F.TAG}_s0", "L2", "P01_shelf_bracket"), (f"runs/{F.TAG}_s0", "L3", "P07_nema17_mount")]
+    rows = rows or [("runs/v6_s2000", "L2", "P01_shelf_bracket"), ("runs/v6_s1000", "L3", "P07_nema17_mount")]   # the paper's Fig. 6
     n = len(rows); fig = plt.figure(figsize=(8.6, 2.5 * n))
     names = {**MAIN, **MORE}
     for i, (run, lv, p) in enumerate(rows):
