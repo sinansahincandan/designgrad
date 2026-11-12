@@ -113,7 +113,7 @@ When a measurement identifies the fault, numerical feedback is effective (Fig. 6
 
 ### 4.4 What limits the loop
 
-Two factors limit the loop (Fig. 9). First, detecting a fault is easier than correcting it: a design round corrects only a minority of the unmet requirements and occasionally breaks a requirement that was already met. The correction rate is highest at L3, where the visual review often identifies the cause of the fault. Second, the agent's own evaluation is not always correct. It rarely misses a real fault, but it sometimes reports a requirement as unmet although the part meets it, for example when a check examines a region larger than the feature. Such false alarms can cause the loop to discard a design that is in fact better. The visual reviewer shows the same tendency, which is why visual feedback is most useful together with measurements.
+Two factors limit the loop (Fig. 9). First, detecting a fault is easier than correcting it: a design round corrects only a minority of the unmet requirements and occasionally breaks a met requirement. The correction rate is highest at L3, where the visual review often identifies the cause of the fault. It does not increase from round to round (23%, 16%, 20%, 18%). Second, the agent's own evaluation is not always correct. It rarely misses a real fault, but it sometimes reports a requirement as unmet although the part meets it, for example when a check examines a region larger than the feature. Such false alarms can cause the loop to discard a better design. The visual reviewer shows the same tendency, so visual feedback is most useful together with measurements.
 
 ![](figs/v6_fig_limits.png)
 
