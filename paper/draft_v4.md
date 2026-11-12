@@ -152,7 +152,7 @@ python -m designgrad.run --ladder v6 --problems P01 --levels L0 L1 L2 L3 --out r
 python eval/v4_analyze.py runs/x --out runs/x
 ```
 
-Every model call is recorded; replaying the records reproduces the runs we checked byte for byte. Code, problems, tests and records will be released.
+Every model call is recorded; replaying the records reproduces the runs we checked byte for byte. Code, problems, tests and records: https://github.com/sinansahincandan/designgrad
 
 ![](figs/v6_fig_prompts.png)
 
