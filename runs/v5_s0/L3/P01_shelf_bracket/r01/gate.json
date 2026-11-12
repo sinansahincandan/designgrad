@@ -1,0 +1,9 @@
+{
+ "mismatches": [
+  "R3: The screw holes are not visible in any view; the 'Measured facts' also report 0 cylindrical faces, indicating the screw holes were not successfully subtracted.",
+  "R4: The design document specifies that no material may be above z=110 for x >= 8. However, the Front view shows a vertical section extending up to z=110 at x=0, but there is no clear evidence of the 'clearance cutouts' or the tapering described in the design doc; the part appears as a simple L-shape.",
+  "R7: The mass is 112.84g, which exceeds the requirement of <= 90g."
+ ],
+ "systemic": [],
+ "summary": "The part fails to include the required screw holes and exceeds the maximum allowable mass."
+}

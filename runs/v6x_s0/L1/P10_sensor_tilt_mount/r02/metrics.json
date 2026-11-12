@@ -1,0 +1,4 @@
+{
+ "ok": false,
+ "error": "Traceback (most recent call last):\n  File \"design.py\", line 35, in <module>\n    pillar = pillar.rotate(cq.Vector(1, 0, 0), ANGLE)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: Workplane.rotate() missing 1 required positional argument: 'angleDegrees'"
+}

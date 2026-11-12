@@ -1,0 +1,135 @@
+{
+ "k": 0,
+ "proxy": 2.7142857142857144,
+ "level": "L2",
+ "problem": "P08_wall_hook",
+ "llm": {
+  "calls": 33,
+  "tokens_in": 115457,
+  "tokens_out": 31367,
+  "seconds": 676.1
+ },
+ "rounds": 4,
+ "trace": [
+  {
+   "k": 0,
+   "accepted": true,
+   "score": 2.7142857142857144,
+   "proxy": 2.7142857142857144,
+   "critic_frac": 0.8571428571428571,
+   "gate": null,
+   "sim_issue": false,
+   "cad_steps": 0,
+   "cad_exhausted": false,
+   "sim_steps": 5,
+   "sim_exhausted": false,
+   "sim_updated": true,
+   "n_measured": 7,
+   "n_unmeasured": 0,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": [
+      "R3"
+     ]
+    },
+    {
+     "round": 1,
+     "unfaithful": []
+    }
+   ]
+  },
+  {
+   "k": 1,
+   "from": 0,
+   "accepted": false,
+   "score": 2.7142857142857144,
+   "proxy": 2.7142857142857144,
+   "critic_frac": 0.8571428571428571,
+   "gate": null,
+   "sim_issue": false,
+   "cad_steps": 0,
+   "cad_exhausted": false,
+   "sim_steps": 0,
+   "sim_exhausted": false,
+   "sim_updated": false,
+   "n_measured": 7,
+   "n_unmeasured": 0,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": []
+    }
+   ]
+  },
+  {
+   "k": 2,
+   "from": 0,
+   "accepted": false,
+   "score": 2.142857142857143,
+   "proxy": 2.142857142857143,
+   "critic_frac": 0.5714285714285714,
+   "gate": null,
+   "sim_issue": false,
+   "cad_steps": 0,
+   "cad_exhausted": false,
+   "sim_steps": 0,
+   "sim_exhausted": false,
+   "sim_updated": false,
+   "n_measured": 7,
+   "n_unmeasured": 0,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": []
+    }
+   ]
+  },
+  {
+   "k": 3,
+   "from": 0,
+   "accepted": false,
+   "score": 2.428571428571429,
+   "proxy": 2.428571428571429,
+   "critic_frac": 0.7142857142857143,
+   "gate": null,
+   "sim_issue": false,
+   "cad_steps": 0,
+   "cad_exhausted": false,
+   "sim_steps": 0,
+   "sim_exhausted": false,
+   "sim_updated": false,
+   "n_measured": 7,
+   "n_unmeasured": 0,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": []
+    }
+   ]
+  },
+  {
+   "k": 4,
+   "from": 0,
+   "accepted": false,
+   "score": 2.7142857142857144,
+   "proxy": 2.7142857142857144,
+   "critic_frac": 0.8571428571428571,
+   "gate": null,
+   "sim_issue": false,
+   "cad_steps": 0,
+   "cad_exhausted": false,
+   "sim_steps": 0,
+   "sim_exhausted": false,
+   "sim_updated": false,
+   "n_measured": 7,
+   "n_unmeasured": 0,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": []
+    }
+   ]
+  }
+ ]
+}

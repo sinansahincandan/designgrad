@@ -1,0 +1,8 @@
+{
+ "mismatches": [
+  "R7 (Mass): The measured mass is 209.13 g, which significantly exceeds the requirement of <= 90 g.",
+  "The design document claims an optimized volume and aggressive tapering to minimize mass, but the rendered part appears as a largely solid block with much higher volume/mass than specified."
+ ],
+ "systemic": [],
+ "summary": "The part fails the mass requirement (R7) significantly, as the actual mass is over double the allowed limit despite the design document's claims of optimization."
+}

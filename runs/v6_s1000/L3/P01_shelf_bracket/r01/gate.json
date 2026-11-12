@@ -1,0 +1,9 @@
+{
+ "mismatches": [
+  "R3: Screw holes are completely missing from the rendered part.",
+  "R4: The top surface of the horizontal arm is not at z=110; looking at the Front view, the top edge of the bracket appears to be around z=10 mm or 20 mm, whereas the wall plate goes up to z=110. The shelf support is missing or incorrectly placed.",
+  "R7: Mass is 124.18 g, which exceeds the requirement of <= 90 g."
+ ],
+ "systemic": [],
+ "summary": "The rendered part fails significantly as it lacks the required screw holes and the shelf support structure is not positioned at the specified height or configuration."
+}

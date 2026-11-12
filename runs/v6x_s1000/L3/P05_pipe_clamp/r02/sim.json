@@ -1,0 +1,154 @@
+{
+ "ok": true,
+ "result": {
+  "R1": {
+   "status": "pass",
+   "value": 1,
+   "note": "",
+   "method": "Counted number of solids in STEP file: 1",
+   "criteria": [
+    {
+     "condition": "One single, valid solid",
+     "measured": 1,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R2": {
+   "status": "fail",
+   "value": [
+    54.0,
+    40.0,
+    -3.0
+   ],
+   "note": "",
+   "method": "BBox: X=54.0, Y=40.0, Zmin=-3.0",
+   "criteria": [
+    {
+     "condition": "Sits on z = 0",
+     "measured": -3.0,
+     "ok": false
+    },
+    {
+     "condition": "clamp width (Y extent) between 18 and 22 mm",
+     "measured": 40.0,
+     "ok": false
+    },
+    {
+     "condition": "total X extent <= 80 mm",
+     "measured": 54.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R3": {
+   "status": "pass",
+   "value": 0.0,
+   "note": "",
+   "method": "Intersection volume ratio with cylinder R=12.6 at (0,y,12.5)",
+   "criteria": [
+    {
+     "condition": "Pipe volume must be free of material",
+     "measured": 0.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R4": {
+   "status": "pass",
+   "value": 1.0,
+   "note": "",
+   "method": "Sampling in band |x|<=7, dist from axis [12.7, 15.5]",
+   "criteria": [
+    {
+     "condition": "solid material in the band 12.7 to 15.5 mm from pipe axis",
+     "measured": 1.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R5": {
+   "status": "fail",
+   "value": [
+    [
+     0.0,
+     0.03
+    ],
+    [
+     0.0,
+     0.03
+    ]
+   ],
+   "note": "",
+   "method": "Cylinder intersection check at (+-27, 0) for void and shell",
+   "criteria": [
+    {
+     "condition": "Two screw holes, diameter 6.6 mm, vertical, centred at (x, y) = (+-27, 0)",
+     "measured": "fail",
+     "ok": false
+    }
+   ],
+   "faithful": true
+  },
+  "R6": {
+   "status": "fail",
+   "value": 0.6,
+   "note": "",
+   "method": "Sampling in flange region: |x| in [18.5, 23], |y|<=4, z in [0, 3]",
+   "criteria": [
+    {
+     "condition": "Flanges at least 3 mm thick",
+     "measured": 0.6,
+     "ok": false
+    }
+   ],
+   "faithful": true
+  },
+  "R7": {
+   "status": "pass",
+   "value": 14.597,
+   "note": "",
+   "method": "Volume (11771.93 mm3) * Density (1.24 g/cm3)",
+   "criteria": [
+    {
+     "condition": "Mass <= 25 g",
+     "measured": 14.597,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  }
+ },
+ "stdout": "us\": \"fail\", \"value\": [54.0, 40.0, -3.0], \"method\": \"BBox: X=54.0, Y=40.0, Zmin=-3.0\", \"criteria\": [{\"condition\": \"Sits on z = 0\", \"measured\": -3.0, \"ok\": false}, {\"condition\": \"clamp width (Y extent) between 18 and 22 mm\", \"measured\": 40.0, \"ok\": false}, {\"condition\": \"total X extent <= 80 mm\", \"measured\": 54.0, \"ok\": true}], \"note\": \"\"}, \"R3\": {\"status\": \"pass\", \"value\": 0.0, \"method\": \"Intersection volume ratio with cylinder R=12.6 at (0,y,12.5)\", \"criteria\": [{\"condition\": \"Pipe volume must be free of material\", \"measured\": 0.0, \"ok\": true}], \"note\": \"\"}, \"R4\": {\"status\": \"pass\", \"value\": 1.0, \"method\": \"Sampling in band |x|<=7, dist from axis [12.7, 15.5]\", \"criteria\": [{\"condition\": \"solid material in the band 12.7 to 15.5 mm from pipe axis\", \"measured\": 1.0, \"ok\": true}], \"note\": \"\"}, \"R5\": {\"status\": \"fail\", \"value\": [[0.0, 0.03], [0.0, 0.03]], \"method\": \"Cylinder intersection check at (+-27, 0) for void and shell\", \"criteria\": [{\"condition\": \"Two screw holes, diameter 6.6 mm, vertical, centred at (x, y) = (+-27, 0)\", \"measured\": \"fail\", \"ok\": false}], \"note\": \"\"}, \"R6\": {\"status\": \"fail\", \"value\": 0.6, \"method\": \"Sampling in flange region: |x| in [18.5, 23], |y|<=4, z in [0, 3]\", \"criteria\": [{\"condition\": \"Flanges at least 3 mm thick\", \"measured\": 0.6, \"ok\": false}], \"note\": \"\"}, \"R7\": {\"status\": \"pass\", \"value\": 14.597, \"method\": \"Volume (11771.93 mm3) * Density (1.24 g/cm3)\", \"criteria\": [{\"condition\": \"Mass <= 25 g\", \"measured\": 14.597, \"ok\": true}], \"note\": \"\"}}",
+ "stderr": "",
+ "agent": {
+  "sim_steps": 1,
+  "sim_exhausted": false,
+  "review": [
+   {
+    "round": 0,
+    "unfaithful": [
+     "R3"
+    ],
+    "control_pass": [
+     "R1",
+     "R3",
+     "R7"
+    ]
+   },
+   {
+    "round": 1,
+    "unfaithful": [],
+    "control_pass": [
+     "R1",
+     "R3",
+     "R7"
+    ]
+   }
+  ]
+ }
+}

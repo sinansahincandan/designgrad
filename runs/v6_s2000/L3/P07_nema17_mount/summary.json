@@ -1,0 +1,274 @@
+{
+ "k": 0,
+ "proxy": 2.142857142857143,
+ "level": "L3",
+ "problem": "P07_nema17_mount",
+ "llm": {
+  "calls": 52,
+  "tokens_in": 185468,
+  "tokens_out": 53326,
+  "seconds": 1158.0
+ },
+ "rounds": 4,
+ "trace": [
+  {
+   "k": 0,
+   "accepted": true,
+   "score": 2.142857142857143,
+   "proxy": 2.142857142857143,
+   "critic_frac": 0.5714285714285714,
+   "gate": {
+    "mismatches": [
+     "The central bore (R3) and motor screw holes (R4) are not visible on the face plate in any view; the face plate appears to be a solid slab with only a large rectangular cutout.",
+     "The base plate mounting holes (R6) at (x, y) = (+-25, 25) are not visible in the top or right views."
+    ],
+    "systemic": [
+     "The design concept uses a 'pocketed' approach to minimize mass, but the render shows large diagonal chamfers/cutouts that do not align with standard pocketing for screw holes and may compromise structural integrity around the mounting points."
+    ],
+    "summary": "The part lacks all required functional holes (central bore, motor screws, and base screws) in the rendered geometry, appearing instead as a solid L-bracket with large diagonal cutouts."
+   },
+   "sim_issue": false,
+   "cad_steps": 1,
+   "cad_exhausted": false,
+   "sim_steps": 3,
+   "sim_exhausted": false,
+   "sim_updated": true,
+   "n_measured": 7,
+   "n_unmeasured": 0,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": [
+      "R2",
+      "R4",
+      "R6"
+     ],
+     "control_pass": [
+      "R1",
+      "R4",
+      "R5",
+      "R6",
+      "R7"
+     ]
+    },
+    {
+     "round": 1,
+     "unfaithful": [],
+     "control_pass": [
+      "R1",
+      "R5",
+      "R7"
+     ]
+    }
+   ]
+  },
+  {
+   "k": 1,
+   "from": 0,
+   "accepted": false,
+   "score": 2.0,
+   "proxy": 2.0,
+   "critic_frac": 0.42857142857142855,
+   "gate": {
+    "mismatches": [
+     "The design document specifies 'shallow, rectangular pocketing' to reduce mass, but the render shows large diagonal/triangular cutouts (chamfer-like removals) instead.",
+     "Requirement R5 specifies a motor clearance volume in -Y (y < 0), but the part is rendered as an L-bracket where the face plate is at y=0 and the base extends into +Y; the 'cutout' appears to be on the front face of the bracket itself, which does not match the described subtraction of a volume from the -Y side."
+    ],
+    "systemic": [
+     "The structural strategy is compromised: instead of rectangular pocketing that maintains material around fastener zones as intended, the large diagonal cutouts significantly reduce the cross-sectional area and wall thickness near the mounting points."
+    ],
+    "summary": "The part fails to implement the specified rectangular pocketing, instead using large diagonal cutouts that deviate from the design document's structural strategy."
+   },
+   "sim_issue": false,
+   "cad_steps": 0,
+   "cad_exhausted": false,
+   "sim_steps": 3,
+   "sim_exhausted": false,
+   "sim_updated": true,
+   "n_measured": 7,
+   "n_unmeasured": 0,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": [
+      "R2"
+     ],
+     "control_pass": [
+      "R1",
+      "R5",
+      "R7"
+     ]
+    },
+    {
+     "round": 1,
+     "unfaithful": [
+      "R2"
+     ],
+     "control_pass": [
+      "R1",
+      "R5",
+      "R7"
+     ]
+    },
+    {
+     "round": 2,
+     "unfaithful": [
+      "R2"
+     ],
+     "control_pass": [
+      "R1",
+      "R5",
+      "R7"
+     ]
+    },
+    {
+     "round": 3,
+     "unfaithful": [],
+     "control_pass": [
+      "R1",
+      "R5",
+      "R7"
+     ]
+    }
+   ]
+  },
+  {
+   "k": 2,
+   "from": 0,
+   "accepted": false,
+   "score": 1.8571428571428572,
+   "proxy": 1.8571428571428572,
+   "critic_frac": 0.42857142857142855,
+   "gate": {
+    "mismatches": [
+     "The motor screw holes (R4) are missing from the face plate in the render.",
+     "The base mounting holes (R6) at (\u00b125, 25) are not visible/present in the rendered part."
+    ],
+    "systemic": [],
+    "summary": "The rendered L-bracket is missing all specified fastener holes (motor screws and table mounting screws)."
+   },
+   "sim_issue": false,
+   "cad_steps": 0,
+   "cad_exhausted": false,
+   "sim_steps": 1,
+   "sim_exhausted": false,
+   "sim_updated": true,
+   "n_measured": 7,
+   "n_unmeasured": 0,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": [
+      "R2"
+     ],
+     "control_pass": [
+      "R1",
+      "R5",
+      "R7"
+     ]
+    },
+    {
+     "round": 1,
+     "unfaithful": [],
+     "control_pass": [
+      "R1",
+      "R5",
+      "R7"
+     ]
+    }
+   ]
+  },
+  {
+   "k": 3,
+   "from": 0,
+   "accepted": false,
+   "score": 2.142857142857143,
+   "proxy": 2.142857142857143,
+   "critic_frac": 0.5714285714285714,
+   "gate": {
+    "mismatches": [
+     "The motor screw holes (R4) are missing from the render.",
+     "The table mounting holes (R6) are missing from the render."
+    ],
+    "systemic": [],
+    "summary": "The part is missing all required fastener holes (motor screws and base mounting holes), rendering it unable to perform its job of securing a motor or being mounted to a table."
+   },
+   "sim_issue": false,
+   "cad_steps": 2,
+   "cad_exhausted": false,
+   "sim_steps": 0,
+   "sim_exhausted": false,
+   "sim_updated": false,
+   "n_measured": 7,
+   "n_unmeasured": 0,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": [],
+     "control_pass": [
+      "R1",
+      "R5",
+      "R7"
+     ]
+    }
+   ]
+  },
+  {
+   "k": 4,
+   "from": 0,
+   "accepted": false,
+   "score": 2.142857142857143,
+   "proxy": 2.142857142857143,
+   "critic_frac": 0.5714285714285714,
+   "gate": {
+    "mismatches": [
+     "R4: Only two motor screw holes are visible/present (at z=44.5), whereas the specification requires four holes at (x, z) = (+-15.5, 30 +- 15.5).",
+     "R6: The base mounting holes (diameter 5.5 mm at x=+/-25, y=25) are missing from the rendered part."
+    ],
+    "systemic": [],
+    "summary": "The part is missing half of the required motor screw holes and both of the required base mounting holes."
+   },
+   "sim_issue": false,
+   "cad_steps": 1,
+   "cad_exhausted": false,
+   "sim_steps": 2,
+   "sim_exhausted": false,
+   "sim_updated": true,
+   "n_measured": 7,
+   "n_unmeasured": 0,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": [
+      "R2"
+     ],
+     "control_pass": [
+      "R1",
+      "R5",
+      "R7"
+     ]
+    },
+    {
+     "round": 1,
+     "unfaithful": [
+      "R2"
+     ],
+     "control_pass": [
+      "R1",
+      "R5",
+      "R7"
+     ]
+    },
+    {
+     "round": 2,
+     "unfaithful": [],
+     "control_pass": [
+      "R1",
+      "R5",
+      "R7"
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,232 @@
+{
+ "k": 1,
+ "proxy": 2.428571428571429,
+ "level": "L2",
+ "problem": "P03_enclosure_base",
+ "llm": {
+  "calls": 42,
+  "tokens_in": 142447,
+  "tokens_out": 40862,
+  "seconds": 939.1
+ },
+ "rounds": 4,
+ "trace": [
+  {
+   "k": 0,
+   "accepted": true,
+   "score": 2.2142857142857144,
+   "proxy": 2.2142857142857144,
+   "critic_frac": 0.6428571428571429,
+   "gate": null,
+   "sim_issue": false,
+   "cad_steps": 0,
+   "cad_exhausted": false,
+   "sim_steps": 4,
+   "sim_exhausted": false,
+   "sim_updated": true,
+   "n_measured": 6,
+   "n_unmeasured": 1,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": [
+      "R6"
+     ],
+     "control_pass": [
+      "R1",
+      "R3",
+      "R6",
+      "R7"
+     ]
+    },
+    {
+     "round": 1,
+     "unfaithful": [
+      "R3"
+     ],
+     "control_pass": [
+      "R1",
+      "R3",
+      "R7"
+     ]
+    },
+    {
+     "round": 2,
+     "unfaithful": [
+      "R3"
+     ],
+     "control_pass": [
+      "R1",
+      "R3",
+      "R7"
+     ]
+    },
+    {
+     "round": 3,
+     "unfaithful": [
+      "R3"
+     ],
+     "control_pass": [
+      "R1",
+      "R3",
+      "R7"
+     ]
+    }
+   ]
+  },
+  {
+   "k": 1,
+   "from": 0,
+   "accepted": true,
+   "score": 2.428571428571429,
+   "proxy": 2.428571428571429,
+   "critic_frac": 0.7142857142857143,
+   "gate": null,
+   "sim_issue": false,
+   "cad_steps": 0,
+   "cad_exhausted": false,
+   "sim_steps": 0,
+   "sim_exhausted": false,
+   "sim_updated": false,
+   "n_measured": 7,
+   "n_unmeasured": 0,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": [],
+     "control_pass": [
+      "R1",
+      "R3",
+      "R7"
+     ]
+    }
+   ]
+  },
+  {
+   "k": 2,
+   "from": 1,
+   "accepted": false,
+   "score": 2.428571428571429,
+   "proxy": 2.428571428571429,
+   "critic_frac": 0.7142857142857143,
+   "gate": null,
+   "sim_issue": false,
+   "cad_steps": 0,
+   "cad_exhausted": false,
+   "sim_steps": 1,
+   "sim_exhausted": false,
+   "sim_updated": true,
+   "n_measured": 7,
+   "n_unmeasured": 0,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": [
+      "R3"
+     ],
+     "control_pass": [
+      "R1",
+      "R3",
+      "R7"
+     ]
+    },
+    {
+     "round": 1,
+     "unfaithful": [],
+     "control_pass": [
+      "R1",
+      "R7"
+     ]
+    }
+   ]
+  },
+  {
+   "k": 3,
+   "from": 1,
+   "accepted": false,
+   "score": 2.428571428571429,
+   "proxy": 2.428571428571429,
+   "critic_frac": 0.7142857142857143,
+   "gate": null,
+   "sim_issue": false,
+   "cad_steps": 0,
+   "cad_exhausted": false,
+   "sim_steps": 1,
+   "sim_exhausted": false,
+   "sim_updated": true,
+   "n_measured": 7,
+   "n_unmeasured": 0,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": [
+      "R3"
+     ],
+     "control_pass": [
+      "R1",
+      "R3",
+      "R7"
+     ]
+    },
+    {
+     "round": 1,
+     "unfaithful": [],
+     "control_pass": [
+      "R1",
+      "R7"
+     ]
+    }
+   ]
+  },
+  {
+   "k": 4,
+   "from": 1,
+   "accepted": false,
+   "score": 2.428571428571429,
+   "proxy": 2.428571428571429,
+   "critic_frac": 0.7142857142857143,
+   "gate": null,
+   "sim_issue": false,
+   "cad_steps": 0,
+   "cad_exhausted": false,
+   "sim_steps": 2,
+   "sim_exhausted": false,
+   "sim_updated": true,
+   "n_measured": 7,
+   "n_unmeasured": 0,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": [
+      "R3",
+      "R6"
+     ],
+     "control_pass": [
+      "R1",
+      "R3",
+      "R7"
+     ]
+    },
+    {
+     "round": 1,
+     "unfaithful": [
+      "R6"
+     ],
+     "control_pass": [
+      "R1",
+      "R6",
+      "R7"
+     ]
+    },
+    {
+     "round": 2,
+     "unfaithful": [],
+     "control_pass": [
+      "R1",
+      "R7"
+     ]
+    }
+   ]
+  }
+ ]
+}

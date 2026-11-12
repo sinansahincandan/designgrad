@@ -1,0 +1,4 @@
+{
+ "ok": false,
+ "error": "Traceback (most recent call last):\n  File \"design.py\", line 44, in <module>\n    .replaceWith(lambda: cq.Workplane(\"XZ\").polyline([(-7, BAND_INNER), (-7, BAND_OUTER), (7, BAND_OUTER), (7, BAND_INNER)])) # placeholder logic\n     ^^^^^^^^^^^\nAttributeError: 'Workplane' object has no attribute 'replaceWith'"
+}

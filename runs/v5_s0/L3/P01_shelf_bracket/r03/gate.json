@@ -1,0 +1,8 @@
+{
+ "mismatches": [
+  "The screw holes are not centered at y=0; the 'Measured facts' and 'Right view' show the hole centers are offset from the Y-axis (the cylindrical faces data shows centers at y=6.45 and y=0, suggesting an asymmetric or misaligned subtraction).",
+  "R3 requires screw holes to be centered at (y=0, z=20) and (y=0, z=60); the Right view clearly shows the holes are not vertically aligned with the center of the spine's width."
+ ],
+ "systemic": [],
+ "summary": "The part fails to center the screw holes along the Y-axis as specified in the design document and requirements."
+}

@@ -1,0 +1,11 @@
+=== v5 pilot Wed Nov 11 14:25:29 CST 2026
+done L0 P08_wall_hook rounds=0 best_k=0 proxy=1.00 calls=1 43s
+done L1 P08_wall_hook rounds=2 best_k=2 proxy=2.00 calls=17 533s
+done L2 P08_wall_hook rounds=4 best_k=0 proxy=2.71 calls=47 1492s
+=== PAUSED by hand Wed Nov 11 15:21:28 CST 2026
+=== v5 pilot Wed Nov 11 16:22:05 CST 2026
+skip L0 P08_wall_hook
+skip L1 P08_wall_hook
+skip L2 P08_wall_hook
+done L3 P08_wall_hook rounds=4 best_k=2 proxy=2.86 calls=63 1996s
+=== ALL DONE Wed Nov 11 16:55:24 CST 2026

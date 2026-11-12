@@ -1,0 +1,47 @@
+{
+ "cad_steps": 3,
+ "cad_exhausted": false,
+ "cad_history": [
+  {
+   "step": 0,
+   "ok": false,
+   "feedback": "The code failed:\nTraceback (most recent call last):\n  File \"design.py\", line 41, in <module>\n    sketch1 = get_i_profile_sketch(WIDTH_BASE, HEIGHT, FLANGE_THICKNESS, WEB_THICKNESS)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"design.py\", line 36, in get_i_profile_sketch\n    sketch.polyline(pts).close()\n    ^^^^^^^^^^^^^^^\nAttributeError: 'Sketch' object has no attribute 'polyline'. Did you mean: 'polygon'?"
+  },
+  {
+   "step": 1,
+   "ok": false,
+   "feedback": "The code failed:\nTraceback (most recent call last):\n  File \"design.py\", line 41, in <module>\n    .sketch(sketch1)\n     ^^^^^^^^^^^^^^^\nTypeError: Workplane.sketch() takes 1 positional argument but 2 were given"
+  },
+  {
+   "step": 2,
+   "ok": false,
+   "feedback": "The code failed:\nTraceback (most recent call last):\n  File \"design.py\", line 47, in <module>\n    .newSketch()\n     ^^^^^^^^^\nAttributeError: 'Workplane' object has no attribute 'newSketch'"
+  },
+  {
+   "step": 3,
+   "ok": true,
+   "feedback": ""
+  }
+ ],
+ "sim_steps": 0,
+ "sim_exhausted": false,
+ "review": [
+  {
+   "round": 0,
+   "unfaithful": [],
+   "control_pass": [
+    "R1",
+    "R2",
+    "R7"
+   ]
+  }
+ ],
+ "sim_updated": false,
+ "sim_history": [
+  {
+   "step": 0,
+   "ok": true,
+   "feedback": ""
+  }
+ ]
+}

@@ -1,0 +1,68 @@
+{
+ "k": 2,
+ "proxy": 2.0,
+ "level": "L1",
+ "problem": "P08_wall_hook",
+ "llm": {
+  "calls": 17,
+  "tokens_in": 106389,
+  "tokens_out": 19411,
+  "seconds": 502.8
+ },
+ "rounds": 2,
+ "trace": [
+  {
+   "k": 0,
+   "accepted": true,
+   "score": 1.7142857142857144,
+   "proxy": 1.7142857142857144,
+   "critic_frac": 0.7142857142857143,
+   "gate": null,
+   "sim_issue": false,
+   "cad_steps": 0,
+   "cad_exhausted": false,
+   "sim_steps": null,
+   "sim_exhausted": null,
+   "sim_updated": false,
+   "n_measured": null,
+   "n_unmeasured": null,
+   "review": null
+  },
+  {
+   "k": 1,
+   "from": 0,
+   "accepted": false,
+   "score": 1.0714285714285714,
+   "proxy": 1.0714285714285714,
+   "critic_frac": 0.5714285714285714,
+   "gate": null,
+   "sim_issue": false,
+   "cad_steps": 5,
+   "cad_exhausted": true,
+   "sim_steps": null,
+   "sim_exhausted": null,
+   "sim_updated": false,
+   "n_measured": null,
+   "n_unmeasured": null,
+   "review": null
+  },
+  {
+   "k": 2,
+   "from": 0,
+   "accepted": true,
+   "score": 2.0,
+   "proxy": 2.0,
+   "critic_frac": 1.0,
+   "gate": null,
+   "sim_issue": false,
+   "cad_steps": 0,
+   "cad_exhausted": false,
+   "sim_steps": null,
+   "sim_exhausted": null,
+   "sim_updated": false,
+   "n_measured": null,
+   "n_unmeasured": null,
+   "review": null
+  }
+ ]
+}

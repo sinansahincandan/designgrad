@@ -1,0 +1,32 @@
+{
+ "k": 0,
+ "proxy": 2.0,
+ "level": "L1",
+ "problem": "P06_heat_sink",
+ "llm": {
+  "calls": 2,
+  "tokens_in": 1383,
+  "tokens_out": 1446,
+  "seconds": 27.8
+ },
+ "rounds": 0,
+ "trace": [
+  {
+   "k": 0,
+   "accepted": true,
+   "score": 2.0,
+   "proxy": 2.0,
+   "critic_frac": 1.0,
+   "gate": null,
+   "sim_issue": false,
+   "cad_steps": 0,
+   "cad_exhausted": false,
+   "sim_steps": null,
+   "sim_exhausted": null,
+   "sim_updated": false,
+   "n_measured": null,
+   "n_unmeasured": null,
+   "review": null
+  }
+ ]
+}

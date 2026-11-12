@@ -1,0 +1,88 @@
+{
+ "cad_steps": 5,
+ "cad_exhausted": false,
+ "cad_history": [
+  {
+   "step": 0,
+   "ok": false,
+   "feedback": "The code failed:\nTraceback (most recent call last):\n  File \"design.py\", line 31, in <module>\n    pillar = pillar.rotate((1, 0, 0), -ANGLE)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: Workplane.rotate() missing 1 required positional argument: 'angleDegrees'"
+  },
+  {
+   "step": 1,
+   "ok": false,
+   "feedback": "The code failed:\n  File \"/Users/sinancandan/HackathonGemma/.venv/lib/python3.12/site-packages/cadquery/cq.py\", line 859, in faces\n    return self._selectObjects(\"Faces\", selector, tag)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/sinancandan/HackathonGemma/.venv/lib/python3.12/site-packages/cadquery/cq.py\", line 776, in _selectObjects\n    return self.newObject(self._filter(toReturn, selector))\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/sinancandan/HackathonGemma/.venv/lib/python3.12/site-packages/cadquery/cq.py\", line 786, in _filter\n    "
+  },
+  {
+   "step": 2,
+   "ok": false,
+   "feedback": "The code failed:\nTraceback (most recent call last):\n  File \"design.py\", line 60, in <module>\n    if is_mounting_face(f):\n       ^^^^^^^^^^^^^^^^^^^\n  File \"design.py\", line 55, in is_mounting_face\n    return face.normal().sub(target_normal).length < 1e-3\n           ^^^^^^^^^^^\nAttributeError: 'Face' object has no attribute 'normal'. Did you mean: 'normals'?"
+  },
+  {
+   "step": 3,
+   "ok": false,
+   "feedback": "The code failed:\nTraceback (most recent call last):\n  File \"design.py\", line 54, in <module>\n    if f.normal().sub(target_normal).length < 1e-3:\n       ^^^^^^^^\nAttributeError: 'Face' object has no attribute 'normal'. Did you mean: 'normals'?"
+  },
+  {
+   "step": 4,
+   "ok": false,
+   "feedback": "The code failed:\nTraceback (most recent call last):\n  File \"design.py\", line 56, in <module>\n    f_center = f.center()\n               ^^^^^^^^\nAttributeError: 'Face' object has no attribute 'center'. Did you mean: 'Center'?"
+  },
+  {
+   "step": 5,
+   "ok": true,
+   "feedback": ""
+  }
+ ],
+ "sim_steps": 5,
+ "sim_exhausted": false,
+ "review": [
+  {
+   "round": 0,
+   "unfaithful": [
+    "R2",
+    "R5"
+   ],
+   "control_pass": [
+    "R1",
+    "R5",
+    "R7"
+   ]
+  },
+  {
+   "round": 1,
+   "unfaithful": [],
+   "control_pass": [
+    "R1",
+    "R7"
+   ]
+  }
+ ],
+ "sim_updated": true,
+ "sim_history": [
+  {
+   "step": 0,
+   "ok": false,
+   "feedback": "These requirements have no entry in the report: R3, R4, R5\nEvery requirement must end with a real measurement (status pass or fail)."
+  },
+  {
+   "step": 1,
+   "ok": false,
+   "feedback": "These requirements have no entry in the report: R3, R4, R5\nEvery requirement must end with a real measurement (status pass or fail)."
+  },
+  {
+   "step": 2,
+   "ok": false,
+   "feedback": "These checks raised an error instead of measuring (status 'error'):\n- R3: 'Trimesh' object has no attribute 'points'\n    raised at line 71: proj = mesh.points @ n_vec  ->  AttributeError\n- R4: 'Trimesh' object has no attribute 'points'\n    raised at line 71: proj = mesh.points @ n_vec  ->  AttributeError\n- R5: 'Trimesh' object has no attribute 'points'\n    raised at line 71: proj = mesh.points @ n_vec  ->  AttributeError\nEvery requirement must end with a real measurement (status pass or fail)."
+  },
+  {
+   "step": 3,
+   "ok": false,
+   "feedback": "These checks raised an error instead of measuring (status 'error'):\n- R3: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 2 is different from 3)\n    raised at line 94: c3d = (T[:3, :3] @ c2d) + T[:3, 3]  ->  ValueError\n- R4: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 2 is different from 3)\n    raised at line 94: c3d = (T[:3, :3] @ c2d) + T[:3, 3]  ->  ValueError\n- R5: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,"
+  },
+  {
+   "step": 4,
+   "ok": true,
+   "feedback": ""
+  }
+ ]
+}

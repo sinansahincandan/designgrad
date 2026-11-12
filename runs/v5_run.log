@@ -1,0 +1,16 @@
+=== v5 seed 0 Wed Nov 11 16:56:30 CST 2026
+done L0 P01_shelf_bracket rounds=0 best_k=0 proxy=1.00 calls=1 31s
+done L1 P01_shelf_bracket rounds=4 best_k=0 proxy=1.93 calls=25 634s
+done L2 P01_shelf_bracket rounds=4 best_k=3 proxy=2.71 calls=61 2091s
+done L3 P01_shelf_bracket rounds=4 best_k=2 proxy=2.43 calls=62 1994s
+done L0 P03_enclosure_base rounds=0 best_k=0 proxy=1.00 calls=1 38s
+done L1 P03_enclosure_base rounds=0 best_k=0 proxy=2.00 calls=2 16s
+done L2 P03_enclosure_base rounds=4 best_k=1 proxy=2.71 calls=36 796s
+done L3 P03_enclosure_base rounds=4 best_k=2 proxy=2.71 calls=47 1129s
+done L0 P07_nema17_mount rounds=0 best_k=0 proxy=1.00 calls=1 40s
+done L1 P07_nema17_mount rounds=3 best_k=3 proxy=2.00 calls=17 289s
+done L2 P07_nema17_mount rounds=4 best_k=1 proxy=2.71 calls=66 2318s
+done L3 P07_nema17_mount rounds=4 best_k=1 proxy=2.71 calls=69 2648s
+=== v5 seed 1000 Wed Nov 11 20:16:54 CST 2026
+done L0 P01_shelf_bracket rounds=0 best_k=0 proxy=1.00 calls=1 90s
+=== STOPPED by hand Wed Nov 11 20:22:07 CST 2026 (analysis-channel fixes -> v6)

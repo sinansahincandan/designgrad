@@ -1,0 +1,151 @@
+{
+ "ok": true,
+ "result": {
+  "R1": {
+   "status": "pass",
+   "value": 1,
+   "note": "",
+   "method": "Counted number of solids in STEP file: 1",
+   "criteria": [
+    {
+     "condition": "One single, valid solid",
+     "measured": 1.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R2": {
+   "status": "pass",
+   "value": [
+    40.0,
+    40.0,
+    22.0,
+    0.0,
+    0.0
+   ],
+   "note": "",
+   "method": "BBox: dx=40.0, dy=40.0, dz=22.0, cx=0.0, cy=0.0",
+   "criteria": [
+    {
+     "condition": "Footprint exactly 40 x 40 mm (+-0.5)",
+     "measured": [
+      40.0,
+      40.0
+     ],
+     "ok": true
+    },
+    {
+     "condition": "Centred on the origin",
+     "measured": [
+      0.0,
+      0.0
+     ],
+     "ok": true
+    },
+    {
+     "condition": "Total height <= 25 mm",
+     "measured": 22.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R3": {
+   "status": "pass",
+   "value": 4751.75,
+   "note": "",
+   "method": "Intersection volume in z=[0,3]: 4751.745136840863 mm3. Expected (minus holes): 4751.75 mm3.",
+   "criteria": [
+    {
+     "condition": "Solid base at least 3 mm thick (z = 0 to 3) over the whole footprint",
+     "measured": 4751.75,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R4": {
+   "status": "pass",
+   "value": 7.218,
+   "note": "",
+   "method": "R = 1 / (h * A * eta) with h=10, eta=0.85, A=0.016299 m2",
+   "criteria": [
+    {
+     "condition": "Thermal resistance R <= 9 K/W",
+     "measured": 7.218,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R5": {
+   "status": "fail",
+   "value": [
+    {
+     "x": -15.0,
+     "empty_ratio": 0.0,
+     "walled_ratio": 0.75,
+     "clearance_vol": 0.0
+    },
+    {
+     "x": 15.0,
+     "empty_ratio": 0.0,
+     "walled_ratio": 0.75,
+     "clearance_vol": 0.0
+    }
+   ],
+   "note": "",
+   "method": "Verified hole emptiness (core), material presence (ring), and screwdriver clearance (z>=3 cylinder).",
+   "criteria": [
+    {
+     "condition": "Two mounting holes, diameter 3.2 mm",
+     "measured": [
+      0.0,
+      0.0
+     ],
+     "ok": false
+    },
+    {
+     "condition": "Screwdriver clearance: no material within 3mm of axis above z=3",
+     "measured": [
+      0.0,
+      0.0
+     ],
+     "ok": false
+    }
+   ],
+   "faithful": true
+  },
+  "R6": {
+   "status": "pass",
+   "value": 44.61,
+   "note": "",
+   "method": "Mass = Volume (16524.0 mm3) * Density (0.0027 g/mm3)",
+   "criteria": [
+    {
+     "condition": "Mass <= 45 g",
+     "measured": 44.61,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  }
+ },
+ "stdout": "condition\": \"Footprint exactly 40 x 40 mm (+-0.5)\", \"measured\": [40.0, 40.0], \"ok\": true}, {\"condition\": \"Centred on the origin\", \"measured\": [0.0, 0.0], \"ok\": true}, {\"condition\": \"Total height <= 25 mm\", \"measured\": 22.0, \"ok\": true}], \"note\": \"\"}, \"R3\": {\"status\": \"pass\", \"value\": 4751.75, \"method\": \"Intersection volume in z=[0,3]: 4751.745136840863 mm3. Expected (minus holes): 4751.75 mm3.\", \"criteria\": [{\"condition\": \"Solid base at least 3 mm thick (z = 0 to 3) over the whole footprint\", \"measured\": 4751.75, \"ok\": true}], \"note\": \"\"}, \"R4\": {\"status\": \"pass\", \"value\": 7.218, \"method\": \"R = 1 / (h * A * eta) with h=10, eta=0.85, A=0.016299 m2\", \"criteria\": [{\"condition\": \"Thermal resistance R <= 9 K/W\", \"measured\": 7.218, \"ok\": true}], \"note\": \"\"}, \"R5\": {\"status\": \"fail\", \"value\": [{\"x\": -15.0, \"empty_ratio\": 0.0, \"walled_ratio\": 0.75, \"clearance_vol\": 0.0}, {\"x\": 15.0, \"empty_ratio\": 0.0, \"walled_ratio\": 0.75, \"clearance_vol\": 0.0}], \"method\": \"Verified hole emptiness (core), material presence (ring), and screwdriver clearance (z>=3 cylinder).\", \"criteria\": [{\"condition\": \"Two mounting holes, diameter 3.2 mm\", \"measured\": [0.0, 0.0], \"ok\": false}, {\"condition\": \"Screwdriver clearance: no material within 3mm of axis above z=3\", \"measured\": [0.0, 0.0], \"ok\": false}], \"note\": \"\"}, \"R6\": {\"status\": \"pass\", \"value\": 44.61, \"method\": \"Mass = Volume (16524.0 mm3) * Density (0.0027 g/mm3)\", \"criteria\": [{\"condition\": \"Mass <= 45 g\", \"measured\": 44.61, \"ok\": true}], \"note\": \"\"}}",
+ "stderr": "",
+ "agent": {
+  "sim_steps": 0,
+  "sim_exhausted": false,
+  "review": [
+   {
+    "round": 0,
+    "unfaithful": [],
+    "control_pass": [
+     "R1",
+     "R6"
+    ]
+   }
+  ]
+ }
+}

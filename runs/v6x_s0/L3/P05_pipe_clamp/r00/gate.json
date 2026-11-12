@@ -1,0 +1,14 @@
+{
+ "mismatches": [
+  "The part does not sit on z = 0; the bbox_min shows it extends to z = -17.5, and the render shows a large cylindrical protrusion extending downwards.",
+  "Requirement R2 (clamp width Y extent between 18 and 22 mm) is violated; the measured Y extent is 31 mm.",
+  "Requirement R5 (screw holes at x = +-27) is not met; the screw holes appear to be located much higher up on the side flanges, not through flanges lying on the surface.",
+  "Requirement R6 (flanges from z=0 to 3) is violated; the base structure is a large cylinder extending below the mounting plane.",
+  "Requirement R7 (mass <= 25 g) is violated; the measured mass is 39.54 g.",
+  "The design document describes a split-style saddle clamp with a thin base plate, but the render shows a massive solid cylinder as the main body."
+ ],
+ "systemic": [
+  "The part's geometry is fundamentally wrong for its intended purpose; it is a large cylinder with small tabs rather than a saddle clamp that sits on a surface to hold a pipe."
+ ],
+ "summary": "The rendered part completely fails to meet the geometric, dimensional, and functional requirements of the design document, resulting in an incorrect object that exceeds mass and width limits."
+}

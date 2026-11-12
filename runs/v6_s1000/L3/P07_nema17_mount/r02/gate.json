@@ -1,0 +1,9 @@
+{
+ "mismatches": [
+  "R4 (Motor Holes): The design specifies four motor screw holes at (x, z) = (+-15.5, 30 +- 15.5). The render shows only two visible holes in the face plate (one near the center and one higher up), suggesting a failure to implement all four or incorrect placement/orientation.",
+  "R6 (Base Holes): The design specifies two vertical screw holes at (x, y) = (+-25, 25). Looking at the 'Top' view and 'Right' view, there is only one visible hole in the base plate near x=-25, and it appears to be a small diameter hole rather than the specified 5.5 mm.",
+  "R7 (Envelope): The design specifies an envelope of -35 <= x <= 35. The 'Front' view shows the part width extending from approximately -30 to +30, which is within limits, but the 'Top' view and bounding box data indicate a mismatch in how the X-axis extent was handled relative to the design intent."
+ ],
+ "systemic": [],
+ "summary": "The rendered part fails to implement all required motor mounting holes and base screw holes as specified in the design document."
+}

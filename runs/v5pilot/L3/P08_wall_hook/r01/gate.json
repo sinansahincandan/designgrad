@@ -1,0 +1,10 @@
+{
+ "mismatches": [
+  "R3: The screw holes are not at (y, z) = (0, 0) and (0, 40); the measured center is at z=20.",
+  "R3: There is only one cylindrical hole visible in the render/data instead of two.",
+  "R4: The strap seat pocket is not visible; the part appears as a solid block from x=2 to x=52 without the recessed clearance pocket for the strap.",
+  "R7: Mass is 30.41 g, which exceeds the maximum limit of 25 g."
+ ],
+ "systemic": [],
+ "summary": "The part fails several requirements, including incorrect screw hole placement/count, missing the required strap seat recess, and exceeding the mass limit."
+}

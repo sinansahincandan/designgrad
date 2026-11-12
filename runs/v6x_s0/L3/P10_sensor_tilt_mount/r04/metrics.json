@@ -1,0 +1,4 @@
+{
+ "ok": false,
+ "error": "Traceback (most recent call last):\n  File \"design.py\", line 153, in <module>\n    hole1 = create_hole(hole_pos1, target_normal, SENSOR_HOLE_DIA/2, 100)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"design.py\", line 146, in create_hole\n    if rot_axis.length > 1e-6:\n       ^^^^^^^^^^^^^^^\nAttributeError: 'Vector' object has no attribute 'length'. Did you mean: 'Length'?"
+}

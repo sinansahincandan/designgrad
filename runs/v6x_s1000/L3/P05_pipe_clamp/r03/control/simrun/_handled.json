@@ -1,0 +1,1 @@
+[{"type": "GeneratorExit", "msg": "", "line": 132, "src": "all_ok = all(e < 0.05 and f > 0.8 for e, f in hole_results)"}]

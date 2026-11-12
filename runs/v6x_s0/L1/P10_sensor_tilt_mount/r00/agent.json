@@ -1,0 +1,26 @@
+{
+ "cad_steps": 3,
+ "cad_exhausted": false,
+ "cad_history": [
+  {
+   "step": 0,
+   "ok": false,
+   "feedback": "The code failed:\n  File \"/Users/sinancandan/HackathonGemma/.venv/lib/python3.12/site-packages/cadquery/cq.py\", line 1305, in transformed\n    p = self.plane.rotated(rotate)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/sinancandan/HackathonGemma/.venv/lib/python3.12/site-packages/cadquery/occ_impl/geom.py\", line 762, in rotated\n    rotate = Vector(rotate)\n             ^^^^^^^^^^^^^^\n  File \"/Users/sinancandan/HackathonGemma/.venv/lib/python3.12/site-packages/cadquery/occ_impl/geom.py\", line 103, in __init__\n    self._wrapped = fV\n                    ^^\nUnboundLocalError: cannot access local"
+  },
+  {
+   "step": 1,
+   "ok": false,
+   "feedback": "The code failed:\nTraceback (most recent call last):\n  File \"design.py\", line 52, in <module>\n    pillar = pillar.rotate(cq.Vector(1, 0, 0), ANGLE)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: Workplane.rotate() missing 1 required positional argument: 'angleDegrees'"
+  },
+  {
+   "step": 2,
+   "ok": false,
+   "feedback": "The code failed:\n  File \"/Users/sinancandan/HackathonGemma/.venv/lib/python3.12/site-packages/cadquery/cq.py\", line 1305, in transformed\n    p = self.plane.rotated(rotate)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/sinancandan/HackathonGemma/.venv/lib/python3.12/site-packages/cadquery/occ_impl/geom.py\", line 762, in rotated\n    rotate = Vector(rotate)\n             ^^^^^^^^^^^^^^\n  File \"/Users/sinancandan/HackathonGemma/.venv/lib/python3.12/site-packages/cadquery/occ_impl/geom.py\", line 103, in __init__\n    self._wrapped = fV\n                    ^^\nUnboundLocalError: cannot access local"
+  },
+  {
+   "step": 3,
+   "ok": true,
+   "feedback": ""
+  }
+ ]
+}

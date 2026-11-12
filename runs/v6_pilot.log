@@ -1,0 +1,4 @@
+=== v6 pilot Wed Nov 11 20:22:07 CST 2026
+skip L0 P08_wall_hook
+done L2 P08_wall_hook rounds=4 best_k=0 proxy=2.71 calls=40 1143s
+=== pilot stopped after L2 by hand Wed Nov 11 20:41:58 CST 2026

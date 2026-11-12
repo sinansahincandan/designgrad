@@ -1,0 +1,8 @@
+{
+ "mismatches": [
+  "The USB-C cutout (R6) is missing from the -X wall in the rendered views.",
+  "The screw bosses and pilot holes (R5) are not visible inside the cavity in the isometric or top views, suggesting they were either not modeled or were incorrectly subtracted/merged."
+ ],
+ "systemic": [],
+ "summary": "The rendered part is a simple hollow box that fails to include the required USB-C cutout and internal screw bosses specified in the design document."
+}

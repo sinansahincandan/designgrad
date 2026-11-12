@@ -1,0 +1,200 @@
+{
+ "ok": true,
+ "result": {
+  "R1": {
+   "status": "pass",
+   "value": 1,
+   "note": "Found 1 solid(s)",
+   "method": "Counted number of solids in STEP file",
+   "criteria": [
+    {
+     "condition": "One single, valid solid",
+     "measured": 1,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R2": {
+   "status": "fail",
+   "value": 4702.000000000001,
+   "note": "Plate Vol: 4702.00, Ring Integrity: 0.00%",
+   "method": "Verified plate volume in y=[0,4] and material integrity in a 16mm radius ring",
+   "criteria": [
+    {
+     "condition": "Face plate at least 4 mm thick with solid material all around the central bore",
+     "measured": 4702.000000000001,
+     "ok": false
+    }
+   ],
+   "faithful": false,
+   "why": "The check for 'solid material all around the central bore' uses a ring integrity ratio (material volume / expected volume), but in the control run (1mm cube), this would fail because there is no material. However, the script reports R2 as 'fail' on the real part with 0% integrity despite having a la"
+  },
+  "R3": {
+   "status": "pass",
+   "value": 0.0,
+   "note": "Bore material: 0.00",
+   "method": "Measured material volume within the 22.5mm bore cylinder at (0, y, 30)",
+   "criteria": [
+    {
+     "condition": "Central bore diameter 22.5 mm through the face plate",
+     "measured": 0.0,
+     "ok": true
+    }
+   ],
+   "faithful": false,
+   "why": "The check only verifies that the bore is empty (material volume < 1.0). In the control run (a 1mm cube), this also passes because there is no material in the bore region. It fails to verify that the hole actually exists through the plate or has the correct diameter; it only checks for a void."
+  },
+  "R4": {
+   "status": "fail",
+   "value": 0.0,
+   "note": "Measured avg diam: 0.00",
+   "method": "Measured diameters of 4 holes at (+-15.5, 30 +- 15.5) via cylinder intersection in plate region",
+   "criteria": [
+    {
+     "condition": "Four motor screw holes, diameter 3.4 mm",
+     "measured": 0.0,
+     "ok": false
+    }
+   ],
+   "faithful": false,
+   "why": "The script attempts to find holes by probing with cylinders, but it reports an average diameter of 0.0 on the real part (which has cylindrical faces in the geometry) and fails. The logic for detecting the hole is flawed as it doesn't verify the existence of material around the void."
+  },
+  "R5": {
+   "status": "pass",
+   "value": 0.0,
+   "note": "",
+   "method": "Intersection volume with clearance box [-21.5, 21.5] x [-48, 0] x [8.5, 51.5]",
+   "criteria": [
+    {
+     "condition": "Motor clearance: nothing in -21.5 <= x <= 21.5, -48 <= y <= 0, 8.5 <= z <= 51.5",
+     "measured": 0.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R6": {
+   "status": "fail",
+   "value": [
+    0.0,
+    0.0
+   ],
+   "note": "",
+   "method": "Checked z_min >= 0 and measured screw hole diameters at (+-25, 25) via vertical void probing",
+   "criteria": [
+    {
+     "condition": "Base on the table (minimum z = 0)",
+     "measured": 0.0,
+     "ok": true
+    },
+    {
+     "condition": "Two vertical screw holes, diameter 5.5 mm, at (x, y) = (+-25, 25)",
+     "measured": 0.0,
+     "ok": false
+    }
+   ],
+   "faithful": false,
+   "why": "The screw hole diameter check (vertical void probing) fails on the real part (reporting 0.0) and is not robust. It also doesn't verify that the holes are actually located at the specified (x, y) coordinates effectively, as it relies on a volume threshold that failed on the actual geometry."
+  },
+  "R7": {
+   "status": "pass",
+   "value": [
+    -35.0,
+    35.0,
+    55.0,
+    31.667024140521214
+   ],
+   "note": "",
+   "method": "Checked BBox x[-35, 35], z_max <= 55 and mass = volume * 0.00124 g/mm^3",
+   "criteria": [
+    {
+     "condition": "-35 <= x <= 35",
+     "measured": [
+      -35.0,
+      35.0
+     ],
+     "ok": true
+    },
+    {
+     "condition": "top <= 55 mm",
+     "measured": 55.0,
+     "ok": true
+    },
+    {
+     "condition": "mass <= 60 g",
+     "measured": 31.667024140521214,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  }
+ },
+ "stdout": "at (0, y, 30)\", \"criteria\": [{\"condition\": \"Central bore diameter 22.5 mm through the face plate\", \"measured\": 0.0, \"ok\": true}], \"note\": \"Bore material: 0.00\"}, \"R4\": {\"status\": \"fail\", \"value\": 0.0, \"method\": \"Measured diameters of 4 holes at (+-15.5, 30 +- 15.5) via cylinder intersection in plate region\", \"criteria\": [{\"condition\": \"Four motor screw holes, diameter 3.4 mm\", \"measured\": 0.0, \"ok\": false}], \"note\": \"Measured avg diam: 0.00\"}, \"R5\": {\"status\": \"pass\", \"value\": 0.0, \"method\": \"Intersection volume with clearance box [-21.5, 21.5] x [-48, 0] x [8.5, 51.5]\", \"criteria\": [{\"condition\": \"Motor clearance: nothing in -21.5 <= x <= 21.5, -48 <= y <= 0, 8.5 <= z <= 51.5\", \"measured\": 0.0, \"ok\": true}], \"note\": \"\"}, \"R6\": {\"status\": \"fail\", \"value\": [0.0, 0.0], \"method\": \"Checked z_min >= 0 and measured screw hole diameters at (+-25, 25) via vertical void probing\", \"criteria\": [{\"condition\": \"Base on the table (minimum z = 0)\", \"measured\": 0.0, \"ok\": true}, {\"condition\": \"Two vertical screw holes, diameter 5.5 mm, at (x, y) = (+-25, 25)\", \"measured\": 0.0, \"ok\": false}], \"note\": \"\"}, \"R7\": {\"status\": \"pass\", \"value\": [-35.0, 35.0, 55.0, 31.667024140521214], \"method\": \"Checked BBox x[-35, 35], z_max <= 55 and mass = volume * 0.00124 g/mm^3\", \"criteria\": [{\"condition\": \"-35 <= x <= 35\", \"measured\": [-35.0, 35.0], \"ok\": true}, {\"condition\": \"top <= 55 mm\", \"measured\": 55.0, \"ok\": true}, {\"condition\": \"mass <= 60 g\", \"measured\": 31.667024140521214, \"ok\": true}], \"note\": \"\"}}",
+ "stderr": "",
+ "agent": {
+  "sim_steps": 4,
+  "sim_exhausted": false,
+  "review": [
+   {
+    "round": 0,
+    "unfaithful": [
+     "R2",
+     "R3",
+     "R4",
+     "R6"
+    ],
+    "control_pass": [
+     "R1",
+     "R3",
+     "R5",
+     "R7"
+    ]
+   },
+   {
+    "round": 1,
+    "unfaithful": [
+     "R2",
+     "R3",
+     "R4",
+     "R6"
+    ],
+    "control_pass": [
+     "R1",
+     "R3",
+     "R5",
+     "R7"
+    ]
+   },
+   {
+    "round": 2,
+    "unfaithful": [
+     "R2",
+     "R3",
+     "R4",
+     "R6"
+    ],
+    "control_pass": [
+     "R1",
+     "R5",
+     "R7"
+    ]
+   },
+   {
+    "round": 3,
+    "unfaithful": [
+     "R2",
+     "R3",
+     "R4",
+     "R6"
+    ],
+    "control_pass": [
+     "R1",
+     "R3",
+     "R5",
+     "R7"
+    ]
+   }
+  ]
+ }
+}

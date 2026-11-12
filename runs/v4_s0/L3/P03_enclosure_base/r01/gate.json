@@ -1,0 +1,9 @@
+{
+ "mismatches": [
+  "R5: Screw bosses are completely missing from the render and the measured facts (n_cylindrical_faces = 0).",
+  "R6: The USB-C cutout on the -X wall is missing from the render.",
+  "R3: The board space requirement specifies a cavity, but the part appears to be a solid block with walls only, or rather, it lacks the internal features (bosses and cutout) described."
+ ],
+ "systemic": [],
+ "summary": "The rendered part is a simple hollow box that fails to include the critical screw bosses and USB-C cutout specified in the requirements."
+}

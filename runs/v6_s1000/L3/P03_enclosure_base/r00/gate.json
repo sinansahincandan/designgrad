@@ -1,0 +1,11 @@
+{
+ "mismatches": [
+  "R5: The screw bosses are missing from the interior of the enclosure.",
+  "R6: The USB-C cutout on the -X wall is missing; the side walls appear continuous in the renders.",
+  "The 'Right (looking -X)' view shows a small rectangular hole/feature at the center, but it does not match the required 9x3mm USB-C cutout dimensions or position described in R6."
+ ],
+ "systemic": [
+  "The design requires screw bosses to support the PCB, but if they are omitted (as seen in the render), the board will have no mounting points and will sit directly on the floor or be loose."
+ ],
+ "summary": "The rendered part is a simple hollow box that fails to include the required screw bosses for PCB mounting and the USB-C cutout in the side wall."
+}

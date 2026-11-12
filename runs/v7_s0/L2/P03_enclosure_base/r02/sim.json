@@ -1,0 +1,149 @@
+{
+ "ok": true,
+ "result": {
+  "R1": {
+   "status": "pass",
+   "value": 1,
+   "note": "",
+   "method": "Counted solids in CQ shape: 1",
+   "criteria": [
+    {
+     "condition": "One single, valid solid",
+     "measured": 1,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R2": {
+   "status": "pass",
+   "value": 1.0,
+   "note": "",
+   "method": "Intersected floor box (80x50x2 at z=0) with part; ratio=1.0000",
+   "criteria": [
+    {
+     "condition": "solid floor at least 2 mm thick under board area",
+     "measured": 1.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R3": {
+   "status": "fail",
+   "value": 0.16666666666666669,
+   "note": "",
+   "method": "Intersected board cavity (80x50x24 at z=8) with part; ratio=0.1667",
+   "criteria": [
+    {
+     "condition": "region -40<=x<=40, -25<=y<=25, 8<=z<=32 must be completely free of material",
+     "measured": 0.16666666666666669,
+     "ok": false
+    }
+   ],
+   "faithful": true
+  },
+  "R4": {
+   "status": "pass",
+   "value": [
+    85.0,
+    55.0,
+    31.0
+   ],
+   "note": "",
+   "method": "Measured BoundingBox: dx=85.0, dy=55.0, zmax=31.0",
+   "criteria": [
+    {
+     "condition": "outer size 85 x 55 mm (+-1.5 mm) in X and Y",
+     "measured": 85.0,
+     "ok": true
+    },
+    {
+     "condition": "outer size 85 x 55 mm (+-1.5 mm) in X and Y",
+     "measured": 55.0,
+     "ok": true
+    },
+    {
+     "condition": "wall top at z between 30 and 32.5",
+     "measured": 31.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R5": {
+   "status": "pass",
+   "value": "All bosses checked",
+   "note": "",
+   "method": "Probed 4 bosses at (+-35, +-20). Checked cylinder fill, hole emptiness (r=1.1), and wall presence.",
+   "criteria": [
+    {
+     "condition": "Four screw bosses... OD >= 6mm... pilot hole 2.2mm... depth >= 4mm",
+     "measured": "pass",
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R6": {
+   "status": "pass",
+   "value": {
+    "empty_ratio": 0.010000000000000142,
+    "wall_material_vol": 660.25
+   },
+   "note": "",
+   "method": "Checked cutout void (empty_ratio=0.0100) and surrounding wall material (660.25 mm3).",
+   "criteria": [
+    {
+     "condition": "opening at least 9 mm wide (Y) and 3 mm high (Z)",
+     "measured": "pass",
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R7": {
+   "status": "fail",
+   "value": 85.39158167012084,
+   "note": "",
+   "method": "Mass = (Volume 68864.18 mm3 * 1.24 g/cm3) / 1000",
+   "criteria": [
+    {
+     "condition": "Mass <= 70 g",
+     "measured": 85.39158167012084,
+     "ok": false
+    }
+   ],
+   "faithful": true
+  }
+ },
+ "stdout": "Intersected board cavity (80x50x24 at z=8) with part; ratio=0.1667\", \"criteria\": [{\"condition\": \"region -40<=x<=40, -25<=y<=25, 8<=z<=32 must be completely free of material\", \"measured\": 0.16666666666666669, \"ok\": false}], \"note\": \"\"}, \"R4\": {\"status\": \"pass\", \"value\": [85.0, 55.0, 31.0], \"method\": \"Measured BoundingBox: dx=85.0, dy=55.0, zmax=31.0\", \"criteria\": [{\"condition\": \"outer size 85 x 55 mm (+-1.5 mm) in X and Y\", \"measured\": 85.0, \"ok\": true}, {\"condition\": \"outer size 85 x 55 mm (+-1.5 mm) in X and Y\", \"measured\": 55.0, \"ok\": true}, {\"condition\": \"wall top at z between 30 and 32.5\", \"measured\": 31.0, \"ok\": true}], \"note\": \"\"}, \"R5\": {\"status\": \"pass\", \"value\": \"All bosses checked\", \"method\": \"Probed 4 bosses at (+-35, +-20). Checked cylinder fill, hole emptiness (r=1.1), and wall presence.\", \"criteria\": [{\"condition\": \"Four screw bosses... OD >= 6mm... pilot hole 2.2mm... depth >= 4mm\", \"measured\": \"pass\", \"ok\": true}], \"note\": \"\"}, \"R6\": {\"status\": \"pass\", \"value\": {\"empty_ratio\": 0.010000000000000142, \"wall_material_vol\": 660.25}, \"method\": \"Checked cutout void (empty_ratio=0.0100) and surrounding wall material (660.25 mm3).\", \"criteria\": [{\"condition\": \"opening at least 9 mm wide (Y) and 3 mm high (Z)\", \"measured\": \"pass\", \"ok\": true}], \"note\": \"\"}, \"R7\": {\"status\": \"fail\", \"value\": 85.39158167012084, \"method\": \"Mass = (Volume 68864.18 mm3 * 1.24 g/cm3) / 1000\", \"criteria\": [{\"condition\": \"Mass <= 70 g\", \"measured\": 85.39158167012084, \"ok\": false}], \"note\": \"\"}}",
+ "stderr": "",
+ "agent": {
+  "sim_steps": 1,
+  "sim_exhausted": false,
+  "review": [
+   {
+    "round": 0,
+    "unfaithful": [
+     "R6"
+    ],
+    "control_pass": [
+     "R1",
+     "R3",
+     "R6",
+     "R7"
+    ]
+   },
+   {
+    "round": 1,
+    "unfaithful": [],
+    "control_pass": [
+     "R1",
+     "R3",
+     "R7"
+    ]
+   }
+  ]
+ }
+}

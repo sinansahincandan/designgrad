@@ -1,0 +1,253 @@
+{
+ "ok": true,
+ "result": {
+  "R1": {
+   "status": "pass",
+   "value": 1,
+   "note": "",
+   "method": "Counted number of solids in CQ shape: 1",
+   "criteria": [
+    {
+     "condition": "One single, valid solid",
+     "measured": 1,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R2": {
+   "status": "fail",
+   "value": [
+    4.0,
+    0.4
+   ],
+   "note": "",
+   "method": "Thickness: y-range of intersection with box [y=0,4]. Material: filled fraction of ring r=[11.75, 14.25]",
+   "criteria": [
+    {
+     "condition": "Face plate at least 4 mm thick",
+     "measured": 4.0,
+     "ok": true
+    },
+    {
+     "condition": "Solid material all around the central bore",
+     "measured": 0.4000000000000001,
+     "ok": false
+    }
+   ],
+   "faithful": true
+  },
+  "R3": {
+   "status": "fail",
+   "value": [
+    0.0,
+    0.4
+   ],
+   "note": "",
+   "method": "Empty volume fraction and wall presence for cylinder radius 11.25 at (0,0,30) dir (0,1,0)",
+   "criteria": [
+    {
+     "condition": "Central bore diameter 22.5 mm",
+     "measured": 0.0,
+     "ok": true
+    },
+    {
+     "condition": "Bore exists in material",
+     "measured": 0.4000000000000001,
+     "ok": false
+    }
+   ],
+   "faithful": true
+  },
+  "R4": {
+   "status": "fail",
+   "value": [
+    [
+     0.4,
+     0.4
+    ],
+    [
+     0.817,
+     0.733
+    ],
+    [
+     0.4,
+     0.4
+    ],
+    [
+     0.817,
+     0.733
+    ]
+   ],
+   "note": "",
+   "method": "Empty volume fraction and wall presence for 4 cylinders at [(15.5, 45.5), (15.5, 14.5), (-15.5, 45.5), (-15.5, 14.5)]",
+   "criteria": [
+    {
+     "condition": "Four motor screw holes diameter 3.4 mm",
+     "measured": [
+      [
+       0.4,
+       0.4
+      ],
+      [
+       0.817,
+       0.733
+      ],
+      [
+       0.4,
+       0.4
+      ],
+      [
+       0.817,
+       0.733
+      ]
+     ],
+     "ok": false
+    }
+   ],
+   "faithful": true
+  },
+  "R5": {
+   "status": "fail",
+   "value": 6910.2855,
+   "note": "",
+   "method": "Intersection volume with clearance box [-21.5, 21.5] x [-48, 0] x [8.5, 51.5]",
+   "criteria": [
+    {
+     "condition": "Motor clearance: nothing in specified region",
+     "measured": 6910.285543061009,
+     "ok": false
+    }
+   ],
+   "faithful": false,
+   "why": "The check passes on a 1mm cube in the clearance zone because it only checks if intersection volume is < 0.01 mm^3. While it measures the correct region, it fails to detect that the 'nothing' requirement means the volume should be zero; however, more critically, the reported value (6910.28) for the r"
+  },
+  "R6": {
+   "status": "fail",
+   "value": [
+    0.0,
+    [
+     [
+      0.125,
+      0.125
+     ],
+     [
+      0.125,
+      0.125
+     ]
+    ]
+   ],
+   "note": "",
+   "method": "z_min check; Hole empty/wall fraction for cylinders at [(25, 25), (-25, 25)]",
+   "criteria": [
+    {
+     "condition": "Base on the table (minimum z = 0)",
+     "measured": 0.0,
+     "ok": true
+    },
+    {
+     "condition": "Two vertical screw holes diameter 5.5 mm",
+     "measured": [
+      [
+       0.125,
+       0.125
+      ],
+      [
+       0.125,
+       0.125
+      ]
+     ],
+     "ok": false
+    }
+   ],
+   "faithful": true
+  },
+  "R7": {
+   "status": "fail",
+   "value": [
+    -35.0,
+    35.0,
+    55.0,
+    75.76
+   ],
+   "note": "",
+   "method": "BBox check; Mass = volume(61099.8) * 1.24 / 1000",
+   "criteria": [
+    {
+     "condition": "-35 <= x <= 35",
+     "measured": [
+      -35.0,
+      35.0
+     ],
+     "ok": true
+    },
+    {
+     "condition": "top <= 55 mm",
+     "measured": 55.0,
+     "ok": true
+    },
+    {
+     "condition": "mass <= 60 g",
+     "measured": 75.7638030945754,
+     "ok": false
+    }
+   ],
+   "faithful": true
+  }
+ },
+ "stdout": "ox [-21.5, 21.5] x [-48, 0] x [8.5, 51.5]\",\n    \"criteria\": [\n      {\n        \"condition\": \"Motor clearance: nothing in specified region\",\n        \"measured\": 6910.285543061009,\n        \"ok\": false\n      }\n    ],\n    \"note\": \"\"\n  },\n  \"R6\": {\n    \"status\": \"fail\",\n    \"value\": [\n      0.0,\n      [\n        [\n          0.125,\n          0.125\n        ],\n        [\n          0.125,\n          0.125\n        ]\n      ]\n    ],\n    \"method\": \"z_min check; Hole empty/wall fraction for cylinders at [(25, 25), (-25, 25)]\",\n    \"criteria\": [\n      {\n        \"condition\": \"Base on the table (minimum z = 0)\",\n        \"measured\": 0.0,\n        \"ok\": true\n      },\n      {\n        \"condition\": \"Two vertical screw holes diameter 5.5 mm\",\n        \"measured\": [\n          [\n            0.125,\n            0.125\n          ],\n          [\n            0.125,\n            0.125\n          ]\n        ],\n        \"ok\": false\n      }\n    ],\n    \"note\": \"\"\n  },\n  \"R7\": {\n    \"status\": \"fail\",\n    \"value\": [\n      -35.0,\n      35.0,\n      55.0,\n      75.76\n    ],\n    \"method\": \"BBox check; Mass = volume(61099.8) * 1.24 / 1000\",\n    \"criteria\": [\n      {\n        \"condition\": \"-35 <= x <= 35\",\n        \"measured\": [\n          -35.0,\n          35.0\n        ],\n        \"ok\": true\n      },\n      {\n        \"condition\": \"top <= 55 mm\",\n        \"measured\": 55.0,\n        \"ok\": true\n      },\n      {\n        \"condition\": \"mass <= 60 g\",\n        \"measured\": 75.7638030945754,\n        \"ok\": false\n      }\n    ],\n    \"note\": \"\"\n  }\n}",
+ "stderr": "",
+ "agent": {
+  "sim_steps": 4,
+  "sim_exhausted": false,
+  "review": [
+   {
+    "round": 0,
+    "unfaithful": [
+     "R4",
+     "R6"
+    ],
+    "control_pass": [
+     "R1",
+     "R4",
+     "R5",
+     "R6",
+     "R7"
+    ]
+   },
+   {
+    "round": 1,
+    "unfaithful": [
+     "R3"
+    ],
+    "control_pass": [
+     "R1",
+     "R5",
+     "R7"
+    ]
+   },
+   {
+    "round": 2,
+    "unfaithful": [
+     "R5"
+    ],
+    "control_pass": [
+     "R1",
+     "R5",
+     "R7"
+    ]
+   },
+   {
+    "round": 3,
+    "unfaithful": [
+     "R5"
+    ],
+    "control_pass": [
+     "R1",
+     "R5",
+     "R7"
+    ]
+   }
+  ]
+ }
+}

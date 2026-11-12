@@ -1,0 +1,8 @@
+{
+ "mismatches": [
+  "The motor screw holes (R4) are missing from the face plate in the render.",
+  "The base mounting holes (R6) at (\u00b125, 25) are not visible/present in the rendered part."
+ ],
+ "systemic": [],
+ "summary": "The rendered L-bracket is missing all specified fastener holes (motor screws and table mounting screws)."
+}

@@ -1,0 +1,1 @@
+[{"type": "ValueError", "msg": "Sectioning failed at y=2", "line": 41, "src": "raise ValueError(\"Sectioning failed at y=2\")"}]

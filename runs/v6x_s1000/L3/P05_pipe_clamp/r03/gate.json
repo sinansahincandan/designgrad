@@ -1,0 +1,8 @@
+{
+ "mismatches": [
+  "The screw holes (R5) are missing from the rendered part; the base plate and flanges appear solid.",
+  "The total X extent is 54 mm, but the bounding box shows a Z min of -3.0, suggesting the part is not sitting on z=0 as required by R2/R6."
+ ],
+ "systemic": [],
+ "summary": "The rendered part fails to include the required screw holes and appears to be offset below the mounting plane z=0."
+}

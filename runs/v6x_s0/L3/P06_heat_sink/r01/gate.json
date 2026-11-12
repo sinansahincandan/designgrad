@@ -1,0 +1,8 @@
+{
+ "mismatches": [
+  "The mounting holes and screwdriver clearance voids are incorrectly placed; they appear to be centered at approximately (x, y) = (+-14, 0) instead of the specified (+-15, 0).",
+  "The screw clearance voids (diameter 6 mm) do not appear to be implemented as described; the measured facts show cylindrical faces with a radius of 3.0 mm (diameter 6 mm), but they are centered at z=8.29 instead of being continuous from z=3 to z=22."
+ ],
+ "systemic": [],
+ "summary": "The part mostly follows the design, but the mounting holes are slightly offset from the required coordinates and the screwdriver clearance voids do not span the full height above the base as intended."
+}

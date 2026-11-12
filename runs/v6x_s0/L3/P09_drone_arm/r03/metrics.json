@@ -1,0 +1,4 @@
+{
+ "ok": false,
+ "error": "             ^^^^^^^^^^^^^^^^\n  File \"design.py\", line 100, in make_arm_final\n    bottom = create_flange_robust(0)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"design.py\", line 96, in create_flange_robust\n    return cq.Workplane(\"YZ\").add(w1).add(w2).loft()\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/sinancandan/HackathonGemma/.venv/lib/python3.12/site-packages/cadquery/cq.py\", line 3642, in loft\n    raise ValueError(\"Nothing to loft\")\nValueError: Nothing to loft"
+}

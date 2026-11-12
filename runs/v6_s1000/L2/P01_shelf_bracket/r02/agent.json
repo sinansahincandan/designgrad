@@ -1,0 +1,49 @@
+{
+ "cad_steps": 1,
+ "cad_exhausted": false,
+ "cad_history": [
+  {
+   "step": 0,
+   "ok": false,
+   "feedback": "The code failed:\nTraceback (most recent call last):\n  File \"design.py\", line 200, in <module>\n    result = build_bracket()\n             ^^^^^^^^^^^^^^^\n  File \"design.py\", line 114, in build_bracket\n    arm = cq.Workplane(\"YZ\").workplane(offset=10).rect(width, 35.0).translate((0, 0, 92.5)).loft(prof2)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/sinancandan/HackathonGemma/.venv/lib/python3.12/site-packages/cadquery/cq.py\", line 3644, in loft\n    raise ValueError(\"More than one wire or face is required\")\nValueError: More "
+  },
+  {
+   "step": 1,
+   "ok": true,
+   "feedback": ""
+  }
+ ],
+ "sim_steps": 1,
+ "sim_exhausted": false,
+ "review": [
+  {
+   "round": 0,
+   "unfaithful": [
+    "R3",
+    "R4"
+   ],
+   "control_pass": [
+    "R1",
+    "R2",
+    "R7"
+   ]
+  },
+  {
+   "round": 1,
+   "unfaithful": [],
+   "control_pass": [
+    "R1",
+    "R2",
+    "R7"
+   ]
+  }
+ ],
+ "sim_updated": true,
+ "sim_history": [
+  {
+   "step": 0,
+   "ok": true,
+   "feedback": ""
+  }
+ ]
+}

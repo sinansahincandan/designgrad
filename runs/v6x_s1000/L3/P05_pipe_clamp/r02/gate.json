@@ -1,0 +1,9 @@
+{
+ "mismatches": [
+  "R2 violation: The clamp width (Y extent) is 40 mm (from -20 to 20), which exceeds the requirement of 18-22 mm.",
+  "R5 violation: The screw holes are not centered at y=0; they appear offset or misaligned in the top and isometric views.",
+  "R6 violation: The flanges do not match the specified dimensions/locations; the base plate is much wider than intended (Y extent of 40 mm instead of 20 mm)."
+ ],
+ "systemic": [],
+ "summary": "The part fails significantly on dimensional requirements, specifically regarding the Y-extent (width) and the placement of screw holes."
+}

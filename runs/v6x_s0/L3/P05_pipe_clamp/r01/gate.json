@@ -1,0 +1,8 @@
+{
+ "mismatches": [
+  "R5: The screw holes are not present in the rendered part; the base plate appears solid.",
+  "R6: The flanges do not match the specified geometry; the base plate is a continuous rectangle spanning Y from -15.5 to 15.5, whereas R6 and the design document specify flanges with |y| <= 4."
+ ],
+ "systemic": [],
+ "summary": "The rendered part fails to include the required screw holes and does not follow the specified flange geometry, resulting in a solid base plate instead of the designed saddle clamp."
+}

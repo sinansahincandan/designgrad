@@ -1,0 +1,163 @@
+{
+ "ok": true,
+ "result": {
+  "R1": {
+   "status": "pass",
+   "value": 1.0,
+   "note": "Found 1 solid(s)",
+   "method": "Counted number of solids in the STEP file",
+   "criteria": [
+    {
+     "condition": "One single, valid solid",
+     "measured": 1.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R2": {
+   "status": "pass",
+   "value": [
+    0.0,
+    130.0000000000001,
+    -15.0,
+    15.0,
+    0.0,
+    20.0
+   ],
+   "note": "",
+   "method": "Measured bounding box: x[0.00,130.00], y[-15.00,15.00], z[0.00,20.00]",
+   "criteria": [
+    {
+     "condition": "minimum x = 0",
+     "measured": 0.0,
+     "ok": true
+    },
+    {
+     "condition": "maximum x <= 136",
+     "measured": 130.0000000000001,
+     "ok": true
+    },
+    {
+     "condition": "|y| <= 16",
+     "measured": [
+      -15.0,
+      15.0
+     ],
+     "ok": true
+    },
+    {
+     "condition": "minimum z = 0",
+     "measured": 0.0,
+     "ok": true
+    },
+    {
+     "condition": "height <= 20 mm",
+     "measured": 20.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R3": {
+   "status": "fail",
+   "value": [
+    0.0,
+    0.004784021025706471,
+    0.006608826263561541,
+    0.004784021025706471
+   ],
+   "note": "",
+   "method": "Probed two vertical holes at (6, +-6) with D=3.2mm",
+   "criteria": [
+    {
+     "condition": "two vertical holes, diameter 3.2 mm, at (x, y) = (6, +-6)",
+     "measured": 0.0,
+     "ok": false
+    }
+   ],
+   "faithful": true
+  },
+  "R4": {
+   "status": "fail",
+   "value": {
+    "motor_holes_ok": false,
+    "shaft_hole_ok": false
+   },
+   "note": "",
+   "method": "Probed four 3.2mm holes and one 6mm shaft hole",
+   "criteria": [
+    {
+     "condition": "four vertical holes, diameter 3.2 mm, at (x, y) = (120 +- 8, +-9.5)",
+     "measured": 0.0,
+     "ok": false
+    },
+    {
+     "condition": "6 mm vertical clearance hole for the shaft at (120, 0)",
+     "measured": 0.0,
+     "ok": false
+    }
+   ],
+   "faithful": true
+  },
+  "R5": {
+   "status": "fail",
+   "value": 428.5714285714283,
+   "note": "",
+   "method": "M=12.0*L=100.0, c=0.40, I=1.12, sigma=Mc/I",
+   "criteria": [
+    {
+     "condition": "bending stress must be <= 30 MPa",
+     "measured": 428.5714285714283,
+     "ok": false
+    }
+   ],
+   "faithful": true
+  },
+  "R6": {
+   "status": "fail",
+   "value": 1020.4081632653051,
+   "note": "",
+   "method": "Deflection estimate: 1020.41 mm (I=1.12)",
+   "criteria": [
+    {
+     "condition": "tip deflection <= 1.0 mm",
+     "measured": 1020.4081632653051,
+     "ok": false
+    }
+   ],
+   "faithful": true
+  },
+  "R7": {
+   "status": "pass",
+   "value": 16.27007586194753,
+   "note": "",
+   "method": "mass = volume(13121.0) * density(1.24) / 1000",
+   "criteria": [
+    {
+     "condition": "Mass <= 20 g",
+     "measured": 16.27007586194753,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  }
+ },
+ "stdout": "ue}, {\"condition\": \"|y| <= 16\", \"measured\": [-15.0, 15.0], \"ok\": true}, {\"condition\": \"minimum z = 0\", \"measured\": 0.0, \"ok\": true}, {\"condition\": \"height <= 20 mm\", \"measured\": 20.0, \"ok\": true}]}, \"R3\": {\"status\": \"fail\", \"value\": [0.0, 0.004784021025706471, 0.006608826263561541, 0.004784021025706471], \"method\": \"Probed two vertical holes at (6, +-6) with D=3.2mm\", \"criteria\": [{\"condition\": \"two vertical holes, diameter 3.2 mm, at (x, y) = (6, +-6)\", \"measured\": 0.0, \"ok\": false}]}, \"R4\": {\"status\": \"fail\", \"value\": {\"motor_holes_ok\": false, \"shaft_hole_ok\": false}, \"method\": \"Probed four 3.2mm holes and one 6mm shaft hole\", \"criteria\": [{\"condition\": \"four vertical holes, diameter 3.2 mm, at (x, y) = (120 +- 8, +-9.5)\", \"measured\": 0.0, \"ok\": false}, {\"condition\": \"6 mm vertical clearance hole for the shaft at (120, 0)\", \"measured\": 0.0, \"ok\": false}]}, \"R5\": {\"status\": \"fail\", \"value\": 428.5714285714283, \"method\": \"M=12.0*L=100.0, c=0.40, I=1.12, sigma=Mc/I\", \"criteria\": [{\"condition\": \"bending stress must be <= 30 MPa\", \"measured\": 428.5714285714283, \"ok\": false}]}, \"R6\": {\"status\": \"fail\", \"value\": 1020.4081632653051, \"method\": \"Deflection estimate: 1020.41 mm (I=1.12)\", \"criteria\": [{\"condition\": \"tip deflection <= 1.0 mm\", \"measured\": 1020.4081632653051, \"ok\": false}]}, \"R7\": {\"status\": \"pass\", \"value\": 16.27007586194753, \"method\": \"mass = volume(13121.0) * density(1.24) / 1000\", \"criteria\": [{\"condition\": \"Mass <= 20 g\", \"measured\": 16.27007586194753, \"ok\": true}]}}",
+ "stderr": "",
+ "agent": {
+  "sim_steps": 0,
+  "sim_exhausted": false,
+  "review": [
+   {
+    "round": 0,
+    "unfaithful": [],
+    "control_pass": [
+     "R1",
+     "R2",
+     "R7"
+    ]
+   }
+  ]
+ }
+}

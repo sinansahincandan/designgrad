@@ -1,0 +1,8 @@
+{
+ "mismatches": [
+  "R5: The pilot holes are not open at their top; they appear to be centered at z=5 with radius 1.1mm, meaning they are entirely contained within the boss volume (z from 2 to 8) and do not reach the surface at z=8.",
+  "R6: The USB-C cutout is visible on the -X wall in the isometric view, but its dimensions or placement might be slightly off compared to the requirement of being centered at z=14; looking at the 'Front' view (which shows the X-Z plane), the cutout appears lower than expected."
+ ],
+ "systemic": [],
+ "summary": "The part mostly follows the design, but the screw boss pilot holes are internal voids rather than open holes reaching the top surface as required."
+}

@@ -1,0 +1,1 @@
+[{"type": "Standard_Failure", "msg": "", "line": 112, "src": "forbidden_box = cq.Solid.makeBox(shape.BoundingBox().xmax + 1, 40, shape.BoundingBox().zmax - z_surface + 0.1, pnt=cq.Vector(8, -20, z_surface))"}, {"type": "ValueError", "msg": "No material found at section x=10", "line": 146, "src": "raise ValueError(\"No material found at section x=10\")"}]

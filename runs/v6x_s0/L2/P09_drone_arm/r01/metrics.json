@@ -1,0 +1,4 @@
+{
+ "ok": false,
+ "error": "Traceback (most recent call last):\n  File \"design.py\", line 107, in <module>\n    result = design_fixed()\n             ^^^^^^^^^^^^^^\n  File \"design.py\", line 94, in design_fixed\n    arm = cq.Workplane(\"XY\").loft([wire1, wire2])\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/sinancandan/HackathonGemma/.venv/lib/python3.12/site-packages/cadquery/cq.py\", line 3642, in loft\n    raise ValueError(\"Nothing to loft\")\nValueError: Nothing to loft"
+}

@@ -1,0 +1,52 @@
+# environment and caches
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+
+# planning notes and early sketches (kept by the author, not part of the release)
+/PLAN.md
+/PLAN_L5.md
+/ImageGrad*
+/1 *
+
+# runs: only the records named in README.md are part of the release
+/runs/*
+!/runs/v6_s0/
+!/runs/v6_s1000/
+!/runs/v6_s2000/
+!/runs/v6_all/
+!/runs/v6x_s0/
+!/runs/v6x_s1000/
+!/runs/v6x_all/
+!/runs/v4_s0/
+!/runs/v5_s0/
+!/runs/v7_s0/
+!/runs/v4pilot/
+!/runs/v5pilot/
+!/runs/v6pilot/
+!/runs/_ref/
+!/runs/v[4-7]*.sh
+!/runs/v[4-7]*.log
+!/runs/_replay_v[5-7]_check*.log
+
+# paper: the submitted version, its figures and the scripts that draw them
+/paper/*
+!/paper/draft_v4.md
+!/paper/DesignGrad_v4.pdf
+!/paper/build_pdf.py
+!/paper/references.bib
+!/paper/figs/
+/paper/figs/*
+!/paper/figs/make_figs.py
+!/paper/figs/make_figs_v4.py
+!/paper/figs/make_figs_v6.py
+!/paper/figs/v4_examples.py
+!/paper/figs/vtk_render.py
+!/paper/figs/v4_fig_loop.png
+!/paper/figs/v6_*.png
+
+# freeze manifests of ladders whose records are not in the release
+/FROZEN_l5.json
+/FROZEN_v2_main.json
+/FROZEN_v2g_ablation.json

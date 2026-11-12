@@ -1,0 +1,8 @@
+{
+ "mismatches": [
+  "The motor screw holes (R4) are missing from the render.",
+  "The table mounting holes (R6) are missing from the render."
+ ],
+ "systemic": [],
+ "summary": "The part is missing all required fastener holes (motor screws and base mounting holes), rendering it unable to perform its job of securing a motor or being mounted to a table."
+}

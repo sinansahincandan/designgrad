@@ -1,0 +1,11 @@
+{
+ "mismatches": [
+  "R3: The screw holes are not through the back plate; they appear to be centered on the vertical arm rather than at (y, z) = (0, 0) and (0, 40).",
+  "R3: The screw hole diameter is incorrect; the measured cylindrical face radius is 2.25 mm (diameter 4.5 mm), but it is positioned in the middle of the arm rather than through the plate.",
+  "R4/R5: The strap seat and retaining lip geometry do not match the design document's specified dimensions or positions; the rendered part shows a large blocky structure at the bottom instead of a recessed cradle with a specific pocket."
+ ],
+ "systemic": [
+  "The load path is broken: the vertical mounting plate and the horizontal arm are not properly integrated to support the strap seat as described; the 'arm' appears to be a separate vertical slab that doesn't provide a continuous cantilevered structure for the strap bed."
+ ],
+ "summary": "The part fails to implement the specified screw hole locations, strap cradle geometry, and retaining lip, resulting in a shape that does not match the design document."
+}

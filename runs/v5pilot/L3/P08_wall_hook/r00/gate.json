@@ -1,0 +1,11 @@
+{
+ "mismatches": [
+  "R3: The screw holes are not located at (y, z) = (0, 0) and (0, 40); the render shows a single hole centered around Z=20.",
+  "R3: The screw holes should be along X through the back plate; the cylindrical face data indicates a hole with axis [1.0, 0.0, 0.0] but it is not positioned according to R3 requirements.",
+  "R4: The strap seat/recessed pocket is not visible in the renders; the horizontal arm appears as a solid block without the specified subtraction for the strap clearance."
+ ],
+ "systemic": [
+  "The design specifies two screw holes at specific Z heights (0 and 40) to secure the plate, but the implementation only provides one central hole, which would make mounting the hook to a wall impossible according to the specification."
+ ],
+ "summary": "The part fails to implement the required dual screw holes and the recessed strap seat, rendering it both unmountable and unable to hold the specified strap."
+}

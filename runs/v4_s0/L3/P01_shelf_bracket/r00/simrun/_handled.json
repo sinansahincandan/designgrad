@@ -1,0 +1,1 @@
+[{"type": "GeneratorExit", "msg": "", "line": 83, "src": "status = \"pass\" if (access_ok and all(d >= 5.4 for d in diameters)) else \"fail\""}, {"type": "GeneratorExit", "msg": "", "line": 89, "src": "{\"condition\": \"diameter 5.5 mm\", \"measured\": [float(d) for d in diameters], \"ok\": bool(all(d >= 5.4 for d in diameters))},"}]

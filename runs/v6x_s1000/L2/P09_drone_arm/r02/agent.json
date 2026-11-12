@@ -1,0 +1,37 @@
+{
+ "cad_steps": 1,
+ "cad_exhausted": false,
+ "cad_history": [
+  {
+   "step": 0,
+   "ok": false,
+   "feedback": "The code ran but produced 3 disconnected solids:\n  solid 1: volume 7086.6 mm3, bbox_min [120.0, -15.0, 6.0], bbox_max [140.0, 15.0, 18.0]\n  solid 2: volume 1112.9 mm3, bbox_min [65.0, -4.0, 0.55], bbox_max [195.0, 4.0, 1.65]\n  solid 3: volume 462.0 mm3, bbox_min [15.0, -7.0, 0.55], bbox_max [45.0, 7.0, 1.65]\n  solid 2 is separated from solid 1 by 4.3 mm along Z (solid 1 spans z 6.0..18.0, solid 2 spans 0.55..1.65)\n  solid 3 is separated from solid 1 by 75.0 mm along X (solid 1 spans x 120.0..140.0, solid 3 spans 15.0..45.0); 4.3 mm along Z (solid 1 spans z 6.0..18.0, solid 3 spans 0.55..1.65)\n"
+  },
+  {
+   "step": 1,
+   "ok": true,
+   "feedback": ""
+  }
+ ],
+ "sim_steps": 0,
+ "sim_exhausted": false,
+ "review": [
+  {
+   "round": 0,
+   "unfaithful": [],
+   "control_pass": [
+    "R1",
+    "R2",
+    "R7"
+   ]
+  }
+ ],
+ "sim_updated": false,
+ "sim_history": [
+  {
+   "step": 0,
+   "ok": true,
+   "feedback": ""
+  }
+ ]
+}

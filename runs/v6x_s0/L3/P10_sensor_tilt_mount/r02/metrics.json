@@ -1,0 +1,4 @@
+{
+ "ok": false,
+ "error": "                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/sinancandan/HackathonGemma/.venv/lib/python3.12/site-packages/cadquery/occ_impl/shapes.py\", line 1412, in _bool_op\n    return Shape.cast(op.Shape())\n           ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/sinancandan/HackathonGemma/.venv/lib/python3.12/site-packages/cadquery/occ_impl/shapes.py\", line 477, in cast\n    t = shapetype(obj)\n        ^^^^^^^^^^^^^^\n  File \"/Users/sinancandan/HackathonGemma/.venv/lib/python3.12/site-packages/cadquery/occ_impl/shapes.py\", line 399, in shapetype\n    raise ValueError(\"Null TopoDS_Shape object\")\nValueError: Null TopoDS_Shape object"
+}

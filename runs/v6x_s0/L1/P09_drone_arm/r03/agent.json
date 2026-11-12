@@ -1,0 +1,31 @@
+{
+ "cad_steps": 4,
+ "cad_exhausted": false,
+ "cad_history": [
+  {
+   "step": 0,
+   "ok": false,
+   "feedback": "The code failed:\n             ^^^^^^^^^^^^^^\n  File \"design.py\", line 153, in design_final\n    bottom_flange = get_lofted_part(L_TOTAL, W_START, W_END, TF, TF/2)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"design.py\", line 150, in get_lofted_part\n    return cq.Workplane(\"XY\").loft([p1, p2])\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/sinancandan/HackathonGemma/.venv/lib/python3.12/site-packages/cadquery/cq.py\", line 3642, in loft\n    raise ValueError(\"Nothing to loft\")\nValueError: Nothing to loft"
+  },
+  {
+   "step": 1,
+   "ok": false,
+   "feedback": "The code failed:\n             ^^^^^^^^^^^^^^\n  File \"design.py\", line 27, in design_final\n    bottom_flange = get_lofted_part(L_TOTAL, W_START, W_END, TF, TF/2)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"design.py\", line 23, in get_lofted_part\n    return cq.Workplane(\"XY\").add(p1).add(p2).loft()\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/sinancandan/HackathonGemma/.venv/lib/python3.12/site-packages/cadquery/cq.py\", line 3642, in loft\n    raise ValueError(\"Nothing to loft\")\nValueError: Nothing to loft"
+  },
+  {
+   "step": 2,
+   "ok": false,
+   "feedback": "The code failed:\n             ^^^^^^^^^^^^^^\n  File \"design.py\", line 118, in design_final\n    arm = get_i_beam(L_TOTAL, W_START, W_END, H, TF, TW)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"design.py\", line 115, in get_i_beam\n    return wp1.add(wp2).loft()\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/Users/sinancandan/HackathonGemma/.venv/lib/python3.12/site-packages/cadquery/cq.py\", line 3644, in loft\n    raise ValueError(\"More than one wire or face is required\")\nValueError: More than one wire or face is required"
+  },
+  {
+   "step": 3,
+   "ok": false,
+   "feedback": "The code failed:\nTraceback (most recent call last):\n  File \"design.py\", line 64, in <module>\n    result = design_final()\n             ^^^^^^^^^^^^^^\n  File \"design.py\", line 45, in design_final\n    arm = wp1.add(wp2).loft()\n          ^^^^^^^^^^^^^^^^^^^\n  File \"/Users/sinancandan/HackathonGemma/.venv/lib/python3.12/site-packages/cadquery/cq.py\", line 3644, in loft\n    raise ValueError(\"More than one wire or face is required\")\nValueError: More than one wire or face is required"
+  },
+  {
+   "step": 4,
+   "ok": true,
+   "feedback": ""
+  }
+ ]
+}

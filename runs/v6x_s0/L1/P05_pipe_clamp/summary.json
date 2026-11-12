@@ -1,0 +1,68 @@
+{
+ "k": 2,
+ "proxy": 2.0,
+ "level": "L1",
+ "problem": "P05_pipe_clamp",
+ "llm": {
+  "calls": 12,
+  "tokens_in": 19030,
+  "tokens_out": 7023,
+  "seconds": 147.0
+ },
+ "rounds": 2,
+ "trace": [
+  {
+   "k": 0,
+   "accepted": true,
+   "score": 1.6428571428571428,
+   "proxy": 1.6428571428571428,
+   "critic_frac": 0.6428571428571429,
+   "gate": null,
+   "sim_issue": false,
+   "cad_steps": 0,
+   "cad_exhausted": false,
+   "sim_steps": null,
+   "sim_exhausted": null,
+   "sim_updated": false,
+   "n_measured": null,
+   "n_unmeasured": null,
+   "review": null
+  },
+  {
+   "k": 1,
+   "from": 0,
+   "accepted": true,
+   "score": 1.8571428571428572,
+   "proxy": 1.8571428571428572,
+   "critic_frac": 0.8571428571428571,
+   "gate": null,
+   "sim_issue": false,
+   "cad_steps": 0,
+   "cad_exhausted": false,
+   "sim_steps": null,
+   "sim_exhausted": null,
+   "sim_updated": false,
+   "n_measured": null,
+   "n_unmeasured": null,
+   "review": null
+  },
+  {
+   "k": 2,
+   "from": 1,
+   "accepted": true,
+   "score": 2.0,
+   "proxy": 2.0,
+   "critic_frac": 1.0,
+   "gate": null,
+   "sim_issue": false,
+   "cad_steps": 0,
+   "cad_exhausted": false,
+   "sim_steps": null,
+   "sim_exhausted": null,
+   "sim_updated": false,
+   "n_measured": null,
+   "n_unmeasured": null,
+   "review": null
+  }
+ ]
+}

@@ -1,0 +1,8 @@
+{
+ "mismatches": [
+  "The mounting holes are not centered at (x, y) = (+-15, 0); the Top view shows them placed at roughly (x, y) = (+-17, 0).",
+  "The screwdriver access voids (cylindrical subtractions above z=3) appear to be misaligned or split into multiple smaller cylindrical faces rather than two single continuous voids centered on the hole axes."
+ ],
+ "systemic": [],
+ "summary": "The part fails to place the mounting holes at the specified coordinates and shows misalignment in the screwdriver access voids."
+}

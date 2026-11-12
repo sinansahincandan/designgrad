@@ -1,0 +1,203 @@
+{
+ "ok": true,
+ "result": {
+  "R1": {
+   "status": "pass",
+   "value": 1.0,
+   "note": "",
+   "method": "Counted number of solids in CQ shape: 1",
+   "criteria": [
+    {
+     "condition": "One single, valid solid",
+     "measured": 1.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R2": {
+   "status": "pass",
+   "value": [
+    -1e-07,
+    160.0000001,
+    -10.0000001,
+    10.0000001,
+    0.0,
+    116.0000001
+   ],
+   "note": "",
+   "method": "Checked bounding box: x[-0.00,160.00], y[-10.00,10.00], z[0.00,116.00]",
+   "criteria": [
+    {
+     "condition": "0 <= x <= 170",
+     "measured": -1e-07,
+     "ok": true
+    },
+    {
+     "condition": "-20 <= y <= 20",
+     "measured": -10.0000001,
+     "ok": true
+    },
+    {
+     "condition": "0 <= z <= 130",
+     "measured": 0.0,
+     "ok": true
+    },
+    {
+     "condition": "touches the wall (min x = 0)",
+     "measured": -1e-07,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R3": {
+   "status": "fail",
+   "value": [
+    {
+     "exists": false,
+     "access_vol": 0.0
+    },
+    {
+     "exists": false,
+     "access_vol": 0.0
+    }
+   ],
+   "note": "",
+   "method": "Checked holes at (y=0,z=20) and (y=0,z=60). Verified existence/walling and screwdriver clearance (r=4, x>=10)",
+   "criteria": [
+    {
+     "condition": "Two 5.5mm diameter screw holes exist through the wall",
+     "measured": 0.0,
+     "ok": false
+    },
+    {
+     "condition": "Screwdriver access (no material within 4mm for x>=10)",
+     "measured": 0.0,
+     "ok": true
+    }
+   ],
+   "faithful": false,
+   "why": "The hole existence check is unfaithful. It uses a probe cylinder from x=-2 to x=8 (length 10) to check if it's empty, but the requirement specifies holes through the part where it sits on the wall. More importantly, the 'is_walled' probe checks for material in a ring at x=-0.5 to x=1.5, which is out"
+  },
+  "R4": {
+   "status": "fail",
+   "value": [
+    1.0,
+    4087.9999979453096
+   ],
+   "note": "",
+   "method": "Shelf support: fill fraction at x[140,150], y[-1,1], z[105,110] is 1.00. Forbidden volume above z=110 (x>=8) is 4088.0000",
+   "criteria": [
+    {
+     "condition": "solid material directly below z=110 between x=140 and 150",
+     "measured": 1.0,
+     "ok": true
+    },
+    {
+     "condition": "nothing above z=110 for x >= 8",
+     "measured": 4087.9999979453096,
+     "ok": false
+    }
+   ],
+   "faithful": true
+  },
+  "R5": {
+   "status": "pass",
+   "value": 0.6003830267124841,
+   "note": "",
+   "method": "Cantilever at x=10: M=21000 Nmm, c=57.30, I=2004332.18, sigma = 0.60 MPa",
+   "criteria": [
+    {
+     "condition": "bending stress <= 20 MPa",
+     "measured": 0.6003830267124841,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R6": {
+   "status": "pass",
+   "value": 0.019557636391067272,
+   "note": "",
+   "method": "Deflection: F=150N, L=140mm, E=3500MPa, I=2004332.18, delta = 0.02 mm",
+   "criteria": [
+    {
+     "condition": "tip deflection <= 2.0 mm",
+     "measured": 0.019557636391067272,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R7": {
+   "status": "pass",
+   "value": 59.9338591882874,
+   "note": "",
+   "method": "Mass = Volume(48333.76 mm3) * Density(1.24 g/cm3) / 1000",
+   "criteria": [
+    {
+     "condition": "Mass <= 90 g",
+     "measured": 59.9338591882874,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  }
+ },
+ "stdout": "od\": \"Checked holes at (y=0,z=20) and (y=0,z=60). Verified existence/walling and screwdriver clearance (r=4, x>=10)\", \"criteria\": [{\"condition\": \"Two 5.5mm diameter screw holes exist through the wall\", \"measured\": 0.0, \"ok\": false}, {\"condition\": \"Screwdriver access (no material within 4mm for x>=10)\", \"measured\": 0.0, \"ok\": true}], \"note\": \"\"}, \"R4\": {\"status\": \"fail\", \"value\": [1.0, 4087.9999979453096], \"method\": \"Shelf support: fill fraction at x[140,150], y[-1,1], z[105,110] is 1.00. Forbidden volume above z=110 (x>=8) is 4088.0000\", \"criteria\": [{\"condition\": \"solid material directly below z=110 between x=140 and 150\", \"measured\": 1.0, \"ok\": true}, {\"condition\": \"nothing above z=110 for x >= 8\", \"measured\": 4087.9999979453096, \"ok\": false}], \"note\": \"\"}, \"R5\": {\"status\": \"pass\", \"value\": 0.6003830267124841, \"method\": \"Cantilever at x=10: M=21000 Nmm, c=57.30, I=2004332.18, sigma = 0.60 MPa\", \"criteria\": [{\"condition\": \"bending stress <= 20 MPa\", \"measured\": 0.6003830267124841, \"ok\": true}], \"note\": \"\"}, \"R6\": {\"status\": \"pass\", \"value\": 0.019557636391067272, \"method\": \"Deflection: F=150N, L=140mm, E=3500MPa, I=2004332.18, delta = 0.02 mm\", \"criteria\": [{\"condition\": \"tip deflection <= 2.0 mm\", \"measured\": 0.019557636391067272, \"ok\": true}], \"note\": \"\"}, \"R7\": {\"status\": \"pass\", \"value\": 59.9338591882874, \"method\": \"Mass = Volume(48333.76 mm3) * Density(1.24 g/cm3) / 1000\", \"criteria\": [{\"condition\": \"Mass <= 90 g\", \"measured\": 59.9338591882874, \"ok\": true}], \"note\": \"\"}}",
+ "stderr": "",
+ "agent": {
+  "sim_steps": 3,
+  "sim_exhausted": false,
+  "review": [
+   {
+    "round": 0,
+    "unfaithful": [
+     "R3",
+     "R4"
+    ],
+    "control_pass": [
+     "R1",
+     "R2",
+     "R7"
+    ]
+   },
+   {
+    "round": 1,
+    "unfaithful": [
+     "R4"
+    ],
+    "control_pass": [
+     "R1",
+     "R2",
+     "R3",
+     "R7"
+    ]
+   },
+   {
+    "round": 2,
+    "unfaithful": [
+     "R3"
+    ],
+    "control_pass": [
+     "R1",
+     "R2",
+     "R3",
+     "R7"
+    ]
+   },
+   {
+    "round": 3,
+    "unfaithful": [
+     "R3"
+    ],
+    "control_pass": [
+     "R1",
+     "R2",
+     "R7"
+    ]
+   }
+  ]
+ }
+}

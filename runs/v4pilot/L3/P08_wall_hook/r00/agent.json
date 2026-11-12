@@ -1,0 +1,61 @@
+{
+ "cad_steps": 0,
+ "cad_exhausted": false,
+ "cad_history": [
+  {
+   "step": 0,
+   "ok": true,
+   "feedback": ""
+  }
+ ],
+ "sim_steps": 7,
+ "sim_exhausted": false,
+ "review": [
+  {
+   "round": 0,
+   "unfaithful": [
+    "R6"
+   ]
+  },
+  {
+   "round": 1,
+   "unfaithful": [
+    "R4",
+    "R6"
+   ]
+  },
+  {
+   "round": 2,
+   "unfaithful": [
+    "R4"
+   ]
+  },
+  {
+   "round": 3,
+   "unfaithful": []
+  }
+ ],
+ "sim_updated": true,
+ "sim_history": [
+  {
+   "step": 1,
+   "ok": false,
+   "feedback": "The script failed to run:\n  File \"/opt/homebrew/Caskroom/miniconda/base/lib/python3.12/json/encoder.py\", line 406, in _iterencode_dict\n    yield from chunks\n  File \"/opt/homebrew/Caskroom/miniconda/base/lib/python3.12/json/encoder.py\", line 439, in _iterencode\n    o = _default(o)\n        ^^^^^^^^^^^\n  File \"/opt/homebrew/Caskroom/miniconda/base/lib/python3.12/json/encoder.py\", line 180, in default\n    raise TypeError(f'Object of type {o.__class__.__name__} '\nTypeError: Object of type bool is not JSON serializable"
+  },
+  {
+   "step": 2,
+   "ok": false,
+   "feedback": "The script failed to run:\n    chunks = self.iterencode(o, _one_shot=True)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Caskroom/miniconda/base/lib/python3.12/json/encoder.py\", line 258, in iterencode\n    return _iterencode(o, 0)\n           ^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Caskroom/miniconda/base/lib/python3.12/json/encoder.py\", line 180, in default\n    raise TypeError(f'Object of type {o.__class__.__name__} '\nTypeError: Object of type bool is not JSON serializable"
+  },
+  {
+   "step": 3,
+   "ok": false,
+   "feedback": "The script failed to run:\n    chunks = self.iterencode(o, _one_shot=True)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Caskroom/miniconda/base/lib/python3.12/json/encoder.py\", line 258, in iterencode\n    return _iterencode(o, 0)\n           ^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Caskroom/miniconda/base/lib/python3.12/json/encoder.py\", line 180, in default\n    raise TypeError(f'Object of type {o.__class__.__name__} '\nTypeError: Object of type bool is not JSON serializable"
+  },
+  {
+   "step": 4,
+   "ok": true,
+   "feedback": ""
+  }
+ ]
+}

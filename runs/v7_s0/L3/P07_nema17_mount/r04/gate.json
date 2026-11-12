@@ -1,0 +1,8 @@
+{
+ "mismatches": [
+  "R3 (Central bore) is missing from the face plate.",
+  "R4 (Four motor screw holes) are missing from the face plate."
+ ],
+ "systemic": [],
+ "summary": "The rendered part is missing both the central shaft bore and the four motor mounting screw holes required by the specification."
+}

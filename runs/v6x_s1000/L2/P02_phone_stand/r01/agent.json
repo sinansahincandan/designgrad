@@ -1,0 +1,92 @@
+{
+ "cad_steps": 4,
+ "cad_exhausted": false,
+ "cad_history": [
+  {
+   "step": 0,
+   "ok": false,
+   "feedback": "The code ran but produced 3 disconnected solids:\n  solid 1: volume 25341.4 mm3, bbox_min [-98.17, -45.0, -0.0], bbox_max [20.0, 45.0, 8.76]\n  solid 2: volume 9600.0 mm3, bbox_min [-45.17, -15.0, 98.21], bbox_max [-41.17, 15.0, 178.21]\n  solid 3: volume 1080.0 mm3, bbox_min [5.28, -15.0, 13.27], bbox_max [11.28, 15.0, 19.27]\n  solid 2 is separated from solid 1 by 89.4 mm along Z (solid 1 spans z -0.0..8.76, solid 2 spans 98.21..178.21)\n  solid 3 is separated from solid 1 by 4.5 mm along Z (solid 1 spans z -0.0..8.76, solid 3 spans 13.27..19.27)\n`result` must be ONE connected solid. Compare thes"
+  },
+  {
+   "step": 1,
+   "ok": false,
+   "feedback": "The code ran but produced 2 disconnected solids:\n  solid 1: volume 448473.0 mm3, bbox_min [-143.17, -45.0, -10.0], bbox_max [20.0, 45.0, 150.0]\n  solid 2: volume 3000.0 mm3, bbox_min [3.28, -15.0, 11.27], bbox_max [13.28, 15.0, 21.27]\n  solid 2's box touches or overlaps solid 1's box but the solids do not fuse: make them overlap by >= 1 mm\n`result` must be ONE connected solid. Compare these boxes: find which piece does not touch the main body, extend or move it so it overlaps the body by at least 1 mm, and union everything into one solid."
+  },
+  {
+   "step": 2,
+   "ok": false,
+   "feedback": "The code ran but produced 2 disconnected solids:\n  solid 1: volume 508136.3 mm3, bbox_min [-188.17, -45.0, -0.0], bbox_max [20.0, 45.0, 120.0]\n  solid 2: volume 3000.0 mm3, bbox_min [3.28, -15.0, 11.27], bbox_max [13.28, 15.0, 21.27]\n  solid 2's box touches or overlaps solid 1's box but the solids do not fuse: make them overlap by >= 1 mm\n`result` must be ONE connected solid. Compare these boxes: find which piece does not touch the main body, extend or move it so it overlaps the body by at least 1 mm, and union everything into one solid."
+  },
+  {
+   "step": 3,
+   "ok": false,
+   "feedback": "The code ran but produced 3 disconnected solids:\n  solid 1: volume 547200.0 mm3, bbox_min [-193.17, -15.0, -0.0], bbox_max [-41.17, 15.0, 120.0]\n  solid 2: volume 23629.4 mm3, bbox_min [-40.0, -45.0, -0.0], bbox_max [20.0, 45.0, 10.76]\n  solid 3: volume 3000.0 mm3, bbox_min [3.28, -15.0, 11.27], bbox_max [13.28, 15.0, 21.27]\n  solid 2 is separated from solid 1 by 1.2 mm along X (solid 1 spans x -193.17..-41.17, solid 2 spans -40.0..20.0)\n  solid 3 is separated from solid 1 by 44.5 mm along X (solid 1 spans x -193.17..-41.17, solid 3 spans 3.28..13.28)\n`result` must be ONE connected solid. Comp"
+  },
+  {
+   "step": 4,
+   "ok": true,
+   "feedback": ""
+  }
+ ],
+ "sim_steps": 3,
+ "sim_exhausted": false,
+ "review": [
+  {
+   "round": 0,
+   "unfaithful": [
+    "R4",
+    "R5"
+   ],
+   "control_pass": [
+    "R1",
+    "R2",
+    "R3",
+    "R7"
+   ]
+  },
+  {
+   "round": 1,
+   "unfaithful": [
+    "R4",
+    "R5"
+   ],
+   "control_pass": [
+    "R1",
+    "R2",
+    "R3",
+    "R7"
+   ]
+  },
+  {
+   "round": 2,
+   "unfaithful": [
+    "R4",
+    "R5"
+   ],
+   "control_pass": [
+    "R1",
+    "R2",
+    "R3",
+    "R7"
+   ]
+  },
+  {
+   "round": 3,
+   "unfaithful": [],
+   "control_pass": [
+    "R1",
+    "R2",
+    "R3",
+    "R7"
+   ]
+  }
+ ],
+ "sim_updated": true,
+ "sim_history": [
+  {
+   "step": 0,
+   "ok": true,
+   "feedback": ""
+  }
+ ]
+}

@@ -1,0 +1,12 @@
+{
+ "mismatches": [
+  "The bounding box height (133.5 mm) and width (137.6 mm) exceed the R2 requirements (height <= 120 mm, footprint within 100x100 mm).",
+  "The mass is 140.62 g, which significantly exceeds the R7 requirement of <= 60 g.",
+  "The part's minimum Z value is -28.51 mm, violating R2 (must stand on z=0 plane).",
+  "The footprint extents are approximately 137 x 50 mm, exceeding the 100x100 mm limit in R2."
+ ],
+ "systemic": [
+  "The part is not rest stable; it appears to be oriented such that its center of mass and geometry would cause it to tip over or sit below the desk plane."
+ ],
+ "summary": "The rendered part fails almost all dimensional, stability, and mass requirements specified in the design document."
+}

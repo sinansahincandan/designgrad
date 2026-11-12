@@ -1,0 +1,10 @@
+{
+ "mismatches": [
+  "R3: The central bore diameter is 22.5 mm, but the measured cylindrical faces show a radius of 1.7 mm (diameter 3.4 mm) for motor holes and no large central bore is visible in the 'Front' view; instead, there is a large cutout that seems to be part of the clearance volume R5.",
+  "R4: The four motor screw holes are specified as diameter 3.4 mm, but the measured data shows only two cylindrical faces with radius 1.7 mm (diameter 3.4 mm) at z=18, whereas they should be at z = 30 +/- 15.5 (i.e., z=14.5 and z=45.5).",
+  "R6: The base holes are specified as diameter 5.5 mm, but the measured data shows a radius of 2.75 mm (diameter 5.5 mm) at y=48.25, which is outside the base plate thickness shown in the 'Right' view (base plate ends around y=50, but the holes are very close to the edge).",
+  "R3/R5: The central bore (R3) and motor screw holes (R4) appear to have been incorrectly implemented or replaced by a large clearance cutout that violates the requirement for solid material around the central bore."
+ ],
+ "systemic": [],
+ "summary": "The part fails to include the required central bore and has misaligned/incorrectly dimensioned motor screw holes, appearing to have substituted them with an incorrect clearance geometry."
+}

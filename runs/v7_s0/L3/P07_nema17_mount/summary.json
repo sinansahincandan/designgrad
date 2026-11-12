@@ -1,0 +1,404 @@
+{
+ "k": 3,
+ "proxy": 2.5,
+ "level": "L3",
+ "problem": "P07_nema17_mount",
+ "llm": {
+  "calls": 61,
+  "tokens_in": 238477,
+  "tokens_out": 71733,
+  "seconds": 1721.7
+ },
+ "rounds": 4,
+ "trace": [
+  {
+   "k": 0,
+   "accepted": true,
+   "score": 2.142857142857143,
+   "proxy": 2.142857142857143,
+   "critic_frac": 0.5714285714285714,
+   "gate": {
+    "mismatches": [
+     "The face plate (vertical component) is oriented along the X-Z plane at y=0, but its thickness extends into negative Y values (bbox_min y=0 to bbox_max y=50), whereas R2 and the design document specify it should be at y=[0, 4].",
+     "The base plate (horizontal component) is located at z < 0 (bbox_min z=-27.5), which contradicts the requirement that the table is at z=0 and the base must be on the table (R6).",
+     "The motor screw holes (R4) are not visible in the renders; instead, there appear to be large circular cutouts/recesses near the corners of the face plate.",
+     "The central bore (R3) is not clearly visible as a through-hole on the shaft axis (0, 30)."
+    ],
+    "systemic": [
+     "The part is oriented upside down and backwards relative to the coordinate system; the 'base' is below the table (z < 0) and the 'face plate' extends away from the motor side."
+    ],
+    "summary": "The rendered part is incorrectly oriented in the coordinate system, placing the base below the table and the face plate on the wrong side of the Y-axis."
+   },
+   "sim_issue": false,
+   "cad_steps": 0,
+   "cad_exhausted": false,
+   "sim_steps": 4,
+   "sim_exhausted": false,
+   "sim_updated": true,
+   "n_measured": 4,
+   "n_unmeasured": 3,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": [
+      "R2",
+      "R3",
+      "R4",
+      "R6"
+     ],
+     "control_pass": [
+      "R1",
+      "R3",
+      "R4",
+      "R5",
+      "R7"
+     ]
+    },
+    {
+     "round": 1,
+     "unfaithful": [
+      "R2",
+      "R3",
+      "R4",
+      "R6"
+     ],
+     "control_pass": [
+      "R1",
+      "R5",
+      "R7"
+     ]
+    },
+    {
+     "round": 2,
+     "unfaithful": [
+      "R2",
+      "R3",
+      "R4",
+      "R6"
+     ],
+     "control_pass": [
+      "R1",
+      "R5",
+      "R7"
+     ]
+    },
+    {
+     "round": 3,
+     "unfaithful": [
+      "R2",
+      "R4",
+      "R6"
+     ],
+     "control_pass": [
+      "R1",
+      "R5",
+      "R7"
+     ]
+    }
+   ]
+  },
+  {
+   "k": 1,
+   "from": 0,
+   "accepted": false,
+   "score": 1.8571428571428572,
+   "proxy": 1.8571428571428572,
+   "critic_frac": 0.42857142857142855,
+   "gate": {
+    "mismatches": [
+     "The face plate (vertical mounting surface) is oriented along the X-Z plane at y=0, but the 'Front' view shows it as an L-shape with a large cutout, and the 'Right' view shows it as a thin vertical slab. The geometry in the renders does not match the described L-shaped bracket structure where the face plate should be at y=[0,4].",
+     "The central bore (R3) is not visible in the orthographic views; instead, there are large cutouts/voids that do not correspond to a 22.5mm hole.",
+     "The base plate is supposed to sit on the table at z=0, but the 'Front' view shows the part extending from z=-30 to z=20, and the 'Right' view shows it from z=-30 to z=30, indicating the part is incorrectly positioned relative to the Z-axis/table.",
+     "The motor screw holes (R4) are not clearly identifiable as 3.4mm through-holes in the face plate."
+    ],
+    "systemic": [
+     "The part's orientation and placement are fundamentally broken; it is centered around z=0 rather than sitting on the table at z=0, meaning half the part is below the mounting surface."
+    ],
+    "summary": "The rendered part fails to follow the L-shape geometry and coordinate system requirements, resulting in a part that is incorrectly positioned relative to the table and lacks the specified motor interface features."
+   },
+   "sim_issue": true,
+   "cad_steps": 0,
+   "cad_exhausted": false,
+   "sim_steps": 3,
+   "sim_exhausted": false,
+   "sim_updated": true,
+   "n_measured": 4,
+   "n_unmeasured": 3,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": [
+      "R2",
+      "R3"
+     ],
+     "control_pass": [
+      "R1",
+      "R5",
+      "R7"
+     ]
+    },
+    {
+     "round": 1,
+     "unfaithful": [
+      "R2",
+      "R3",
+      "R4"
+     ],
+     "control_pass": [
+      "R1",
+      "R5",
+      "R7"
+     ]
+    },
+    {
+     "round": 2,
+     "unfaithful": [
+      "R2",
+      "R3",
+      "R4"
+     ],
+     "control_pass": [
+      "R1",
+      "R5",
+      "R7"
+     ]
+    },
+    {
+     "round": 3,
+     "unfaithful": [
+      "R2",
+      "R3",
+      "R4"
+     ],
+     "control_pass": [
+      "R1",
+      "R5",
+      "R7"
+     ]
+    }
+   ]
+  },
+  {
+   "k": 2,
+   "from": 0,
+   "accepted": false,
+   "score": 2.0714285714285716,
+   "proxy": 2.0714285714285716,
+   "critic_frac": 0.6428571428571429,
+   "gate": {
+    "mismatches": [
+     "The central bore (R3) and motor screw holes (R4) are completely missing from the face plate in the renders.",
+     "The base mounting holes (R6) are missing from the top surface of the base plate.",
+     "The part lacks any visible features or holes, appearing as a solid L-bracket."
+    ],
+    "systemic": [],
+    "summary": "The rendered part is a solid L-bracket that fails to include any of the required mounting holes or the central motor bore specified in the design document."
+   },
+   "sim_issue": true,
+   "cad_steps": 0,
+   "cad_exhausted": false,
+   "sim_steps": 3,
+   "sim_exhausted": false,
+   "sim_updated": true,
+   "n_measured": 4,
+   "n_unmeasured": 3,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": [
+      "R2",
+      "R4"
+     ],
+     "control_pass": [
+      "R1",
+      "R5",
+      "R7"
+     ]
+    },
+    {
+     "round": 1,
+     "unfaithful": [
+      "R2",
+      "R3"
+     ],
+     "control_pass": [
+      "R1",
+      "R3",
+      "R5",
+      "R7"
+     ]
+    },
+    {
+     "round": 2,
+     "unfaithful": [
+      "R2",
+      "R3",
+      "R4",
+      "R6"
+     ],
+     "control_pass": [
+      "R1",
+      "R5",
+      "R7"
+     ]
+    },
+    {
+     "round": 3,
+     "unfaithful": [
+      "R3",
+      "R4",
+      "R6"
+     ],
+     "control_pass": [
+      "R1",
+      "R3",
+      "R4",
+      "R5",
+      "R6",
+      "R7"
+     ]
+    }
+   ]
+  },
+  {
+   "k": 3,
+   "from": 0,
+   "accepted": true,
+   "score": 2.5,
+   "proxy": 2.5,
+   "critic_frac": 0.7857142857142857,
+   "gate": {
+    "mismatches": [
+     "R3 (Central bore): The central bore of 22.5 mm diameter through the face plate is missing from the render.",
+     "R4 (Motor screw holes): The four motor screw holes of 3.4 mm diameter are missing from the render.",
+     "R5 (Motor clearance): The design document specifies a clearance pocket subtracted from the -Y side, but the rendered part appears to be a solid L-bracket with no cutout on the face plate side."
+    ],
+    "systemic": [],
+    "summary": "The rendered part is a basic L-bracket that completely lacks all specified motor mounting features (central bore and screw holes) and the required motor clearance pocket."
+   },
+   "sim_issue": true,
+   "cad_steps": 0,
+   "cad_exhausted": false,
+   "sim_steps": 3,
+   "sim_exhausted": false,
+   "sim_updated": true,
+   "n_measured": 5,
+   "n_unmeasured": 2,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": [
+      "R2",
+      "R3"
+     ],
+     "control_pass": [
+      "R1",
+      "R5",
+      "R7"
+     ]
+    },
+    {
+     "round": 1,
+     "unfaithful": [
+      "R2",
+      "R3",
+      "R4",
+      "R6"
+     ],
+     "control_pass": [
+      "R1",
+      "R5",
+      "R7"
+     ]
+    },
+    {
+     "round": 2,
+     "unfaithful": [
+      "R2",
+      "R3",
+      "R4",
+      "R6"
+     ],
+     "control_pass": [
+      "R1",
+      "R5",
+      "R7"
+     ]
+    },
+    {
+     "round": 3,
+     "unfaithful": [
+      "R2",
+      "R3"
+     ],
+     "control_pass": [
+      "R1",
+      "R3",
+      "R5",
+      "R7"
+     ]
+    }
+   ]
+  },
+  {
+   "k": 4,
+   "from": 3,
+   "accepted": false,
+   "score": 1.8571428571428572,
+   "proxy": 1.8571428571428572,
+   "critic_frac": 0.42857142857142855,
+   "gate": {
+    "mismatches": [
+     "R3 (Central bore) is missing from the face plate.",
+     "R4 (Four motor screw holes) are missing from the face plate."
+    ],
+    "systemic": [],
+    "summary": "The rendered part is missing both the central shaft bore and the four motor mounting screw holes required by the specification."
+   },
+   "sim_issue": false,
+   "cad_steps": 0,
+   "cad_exhausted": false,
+   "sim_steps": 2,
+   "sim_exhausted": false,
+   "sim_updated": true,
+   "n_measured": 7,
+   "n_unmeasured": 0,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": [
+      "R2",
+      "R3"
+     ],
+     "control_pass": [
+      "R1",
+      "R3",
+      "R5",
+      "R7"
+     ]
+    },
+    {
+     "round": 1,
+     "unfaithful": [
+      "R3"
+     ],
+     "control_pass": [
+      "R1",
+      "R3",
+      "R5",
+      "R7"
+     ]
+    },
+    {
+     "round": 2,
+     "unfaithful": [],
+     "control_pass": [
+      "R1",
+      "R5",
+      "R7"
+     ]
+    }
+   ]
+  }
+ ]
+}

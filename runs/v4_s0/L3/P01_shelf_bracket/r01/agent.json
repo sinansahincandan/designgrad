@@ -1,0 +1,52 @@
+{
+ "cad_steps": 1,
+ "cad_exhausted": false,
+ "cad_history": [
+  {
+   "step": 0,
+   "ok": false,
+   "feedback": "The code ran but produced 2 disconnected solids:\n  solid 1: volume 46821.7 mm3, bbox_min [-0.01, -15.0, -0.0], bbox_max [15.01, 15.0, 110.0]\n  solid 2: volume 22958.3 mm3, bbox_min [25.0, -20.0, 90.0], bbox_max [180.0, 20.0, 110.0]\n  solid 2 is separated from solid 1 by 10.0 mm along X (solid 1 spans x -0.01..15.01, solid 2 spans 25.0..180.0)\n`result` must be ONE connected solid. Compare these boxes: find which piece does not touch the main body, extend or move it so it overlaps the body by at least 1 mm, and union everything into one solid."
+  },
+  {
+   "step": 1,
+   "ok": true,
+   "feedback": ""
+  }
+ ],
+ "sim_steps": 3,
+ "sim_exhausted": false,
+ "review": [
+  {
+   "round": 0,
+   "unfaithful": []
+  },
+  {
+   "round": 1,
+   "unfaithful": [
+    "R4"
+   ]
+  },
+  {
+   "round": 2,
+   "unfaithful": [
+    "R4",
+    "R5",
+    "R6"
+   ]
+  },
+  {
+   "round": 3,
+   "unfaithful": [
+    "R4"
+   ]
+  }
+ ],
+ "sim_updated": true,
+ "sim_history": [
+  {
+   "step": 0,
+   "ok": true,
+   "feedback": ""
+  }
+ ]
+}

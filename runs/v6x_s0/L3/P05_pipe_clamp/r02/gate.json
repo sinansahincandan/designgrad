@@ -1,0 +1,11 @@
+{
+ "mismatches": [
+  "R2 violation: The clamp width (Y extent) is 31 mm (from -15.5 to 15.5), which exceeds the requirement of 18-22 mm.",
+  "R6 violation: The flanges are not located at z=0; the bbox_min shows z = -7.5, meaning the part extends below the mounting surface instead of sitting on it.",
+  "R5/Design mismatch: The screw holes are not vertical bores through the flanges as intended; they appear as small cylindrical features or errors near the base, and the design document's claim that the base plate spans y in [-10, 10] is contradicted by the render/measured Y-extent of 31 mm."
+ ],
+ "systemic": [
+  "The part cannot sit on the mounting surface (z=0) because it extends significantly below it (down to z=-7.5), making it impossible to mount as specified."
+ ],
+ "summary": "The part fails multiple dimensional requirements, specifically regarding its width (Y extent) and its vertical placement relative to the mounting surface."
+}

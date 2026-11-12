@@ -1,0 +1,10 @@
+{
+ "mismatches": [
+  "The outer dimensions are 86 x 56 mm, which exceeds the specified 85 x 55 mm (R4).",
+  "The screw bosses are misplaced; they appear to be located at y = +/- 27.83 instead of the required y = +/- 20 (R5/Design Doc).",
+  "The USB-C cutout is missing from the -X wall in the renders.",
+  "The boss diameters and positions do not match the design document; they appear as large cylindrical protrusions on the outside or near the edges rather than internal bosses at (+/- 35, +/- 20)."
+ ],
+ "systemic": [],
+ "summary": "The part fails to meet several critical requirements, including incorrect outer dimensions, misplaced screw bosses, and a missing USB-C cutout."
+}

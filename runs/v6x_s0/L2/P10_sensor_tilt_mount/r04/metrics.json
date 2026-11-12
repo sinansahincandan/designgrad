@@ -1,0 +1,4 @@
+{
+ "ok": false,
+ "error": "Traceback (most recent call last):\n  File \"design.py\", line 59, in <module>\n    mounting_face = find_face_by_normal(result, target_normal)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"design.py\", line 55, in find_face_by_normal\n    if face.normal().normalized().dot(normal.normalized()) > 0.99:\n       ^^^^^^^^^^^\nAttributeError: 'Face' object has no attribute 'normal'. Did you mean: 'normals'?"
+}

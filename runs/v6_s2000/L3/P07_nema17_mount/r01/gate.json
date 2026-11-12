@@ -1,0 +1,10 @@
+{
+ "mismatches": [
+  "The design document specifies 'shallow, rectangular pocketing' to reduce mass, but the render shows large diagonal/triangular cutouts (chamfer-like removals) instead.",
+  "Requirement R5 specifies a motor clearance volume in -Y (y < 0), but the part is rendered as an L-bracket where the face plate is at y=0 and the base extends into +Y; the 'cutout' appears to be on the front face of the bracket itself, which does not match the described subtraction of a volume from the -Y side."
+ ],
+ "systemic": [
+  "The structural strategy is compromised: instead of rectangular pocketing that maintains material around fastener zones as intended, the large diagonal cutouts significantly reduce the cross-sectional area and wall thickness near the mounting points."
+ ],
+ "summary": "The part fails to implement the specified rectangular pocketing, instead using large diagonal cutouts that deviate from the design document's structural strategy."
+}

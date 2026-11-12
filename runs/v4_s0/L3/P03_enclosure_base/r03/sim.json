@@ -1,0 +1,127 @@
+{
+ "ok": true,
+ "result": {
+  "R1": {
+   "status": "pass",
+   "value": 1,
+   "note": "",
+   "method": "Counted number of solids in CQ shape: 1",
+   "criteria": [
+    {
+     "condition": "One single, valid solid",
+     "measured": 1,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R2": {
+   "status": "pass",
+   "value": 1.0,
+   "note": "Fill ratio: 1.000",
+   "method": "Intersection volume of part with floor region [-40,40]x[-25,25]x[0,2] divided by region volume (8000)",
+   "criteria": [
+    {
+     "condition": "solid floor at least 2 mm thick under the whole board area",
+     "measured": 1.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R3": {
+   "status": "pass",
+   "value": 0.0,
+   "note": "",
+   "method": "Intersection volume with board space box [-40,40]x[-25,25]x[8,32]",
+   "criteria": [
+    {
+     "condition": "region ... must be completely free of material",
+     "measured": 0.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R4": {
+   "status": "pass",
+   "value": [
+    85.0,
+    55.0,
+    31.0
+   ],
+   "note": "",
+   "method": "Bounding box dimensions: dx=85.0, dy=55.0, zmax=31.0",
+   "criteria": [
+    {
+     "condition": "outer size 85 x 55 mm (+-1.5 mm) in X and Y",
+     "measured": [
+      85.0,
+      55.0
+     ],
+     "ok": true
+    },
+    {
+     "condition": "wall top at z between 30 and 32.5",
+     "measured": 31.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R5": {
+   "status": "pass",
+   "value": 0,
+   "note": "",
+   "method": "Checked 4 bosses at (+-35, +-20) for volume and pilot hole clearance (r=1.1, depth=4)",
+   "criteria": [
+    {
+     "condition": "Four screw bosses... OD >= 6mm... pilot hole 2.2mm... hole at least 4mm deep",
+     "measured": 0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R6": {
+   "status": "fail",
+   "value": 67.5,
+   "note": "",
+   "method": "Intersection volume with cutout box [-50, -4.5, 12.5] to [50, 4.5, 15.5]",
+   "criteria": [
+    {
+     "condition": "opening at least 9 mm wide (Y) and 3 mm high (Z), centred at y = 0, z = 14",
+     "measured": 67.5,
+     "ok": false
+    }
+   ],
+   "faithful": true
+  },
+  "R7": {
+   "status": "pass",
+   "value": 65.468,
+   "note": "",
+   "method": "Volume (52796.68 mm3) * density (1.24 g/cm3) / 1000",
+   "criteria": [
+    {
+     "condition": "Mass <= 70 g",
+     "measured": 65.46788167012086,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  }
+ },
+ "stdout": "ume (8000)\", \"criteria\": [{\"condition\": \"solid floor at least 2 mm thick under the whole board area\", \"measured\": 1.0, \"ok\": true}], \"note\": \"Fill ratio: 1.000\"}, \"R3\": {\"status\": \"pass\", \"value\": 0.0, \"method\": \"Intersection volume with board space box [-40,40]x[-25,25]x[8,32]\", \"criteria\": [{\"condition\": \"region ... must be completely free of material\", \"measured\": 0.0, \"ok\": true}], \"note\": \"\"}, \"R4\": {\"status\": \"pass\", \"value\": [85.0, 55.0, 31.0], \"method\": \"Bounding box dimensions: dx=85.0, dy=55.0, zmax=31.0\", \"criteria\": [{\"condition\": \"outer size 85 x 55 mm (+-1.5 mm) in X and Y\", \"measured\": [85.0, 55.0], \"ok\": true}, {\"condition\": \"wall top at z between 30 and 32.5\", \"measured\": 31.0, \"ok\": true}], \"note\": \"\"}, \"R5\": {\"status\": \"pass\", \"value\": 0, \"method\": \"Checked 4 bosses at (+-35, +-20) for volume and pilot hole clearance (r=1.1, depth=4)\", \"criteria\": [{\"condition\": \"Four screw bosses... OD >= 6mm... pilot hole 2.2mm... hole at least 4mm deep\", \"measured\": 0, \"ok\": true}], \"note\": \"\"}, \"R6\": {\"status\": \"fail\", \"value\": 67.5, \"method\": \"Intersection volume with cutout box [-50, -4.5, 12.5] to [50, 4.5, 15.5]\", \"criteria\": [{\"condition\": \"opening at least 9 mm wide (Y) and 3 mm high (Z), centred at y = 0, z = 14\", \"measured\": 67.5, \"ok\": false}], \"note\": \"\"}, \"R7\": {\"status\": \"pass\", \"value\": 65.468, \"method\": \"Volume (52796.68 mm3) * density (1.24 g/cm3) / 1000\", \"criteria\": [{\"condition\": \"Mass <= 70 g\", \"measured\": 65.46788167012086, \"ok\": true}], \"note\": \"\"}}",
+ "stderr": "",
+ "agent": {
+  "sim_steps": 0,
+  "sim_exhausted": false,
+  "review": [
+   {
+    "round": 0,
+    "unfaithful": []
+   }
+  ]
+ }
+}

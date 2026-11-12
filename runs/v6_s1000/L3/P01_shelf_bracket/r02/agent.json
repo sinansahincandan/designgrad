@@ -1,0 +1,37 @@
+{
+ "cad_steps": 1,
+ "cad_exhausted": false,
+ "cad_history": [
+  {
+   "step": 0,
+   "ok": false,
+   "feedback": "The code failed:\nTraceback (most recent call last):\n  File \"design.py\", line 124, in <module>\n    result = build_bracket()\n             ^^^^^^^^^^^^^^^\n  File \"design.py\", line 97, in build_bracket\n    .extrude(shelf_length - 10, mode='undo') # Extrude from plane outwards\n     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: Workplane.extrude() got an unexpected keyword argument 'mode'"
+  },
+  {
+   "step": 1,
+   "ok": true,
+   "feedback": ""
+  }
+ ],
+ "sim_steps": 0,
+ "sim_exhausted": false,
+ "review": [
+  {
+   "round": 0,
+   "unfaithful": [],
+   "control_pass": [
+    "R1",
+    "R2",
+    "R7"
+   ]
+  }
+ ],
+ "sim_updated": false,
+ "sim_history": [
+  {
+   "step": 0,
+   "ok": true,
+   "feedback": ""
+  }
+ ]
+}

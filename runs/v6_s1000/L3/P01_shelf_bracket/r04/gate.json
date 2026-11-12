@@ -1,0 +1,9 @@
+{
+ "mismatches": [
+  "R4 violation: The top surface of the bracket extends above z=110 (the bbox max Z is 127.5 mm, and the front view shows the profile reaching significantly higher than the shelf level).",
+  "R4 violation: For x >= 8, parts of the bracket are clearly above z = 110.",
+  "R7 violation: The mass is 169.77 g, which exceeds the limit of 90 g (as confirmed by measured facts)."
+ ],
+ "systemic": [],
+ "summary": "The part fails multiple requirements, specifically exceeding the maximum height constraint for x >= 8 and significantly exceeding the mass limit."
+}

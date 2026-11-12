@@ -1,0 +1,8 @@
+{
+ "mismatches": [
+  "The USB-C cutout (R6) is not visible on the -X wall in the isometric or right views, despite being required.",
+  "The boss pilot holes are centered at z=5.0 according to the measured facts, which means they extend from z=2 to z=8 as required, but the visual representation of the bosses in the isometric view does not clearly show the internal hole feature."
+ ],
+ "systemic": [],
+ "summary": "The part fails to include the required USB-C cutout on the -X wall."
+}

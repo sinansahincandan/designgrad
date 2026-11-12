@@ -1,0 +1,4 @@
+{
+ "ok": false,
+ "error": "Traceback (most recent call last):\n  File \"design.py\", line 93, in <module>\n    result = design_final()\n             ^^^^^^^^^^^^^^\n  File \"design.py\", line 81, in design_final\n    arm = w1.add(w2).loft()\n          ^^^^^^^^^^^^^^^^^\n  File \"/Users/sinancandan/HackathonGemma/.venv/lib/python3.12/site-packages/cadquery/cq.py\", line 3644, in loft\n    raise ValueError(\"More than one wire or face is required\")\nValueError: More than one wire or face is required"
+}

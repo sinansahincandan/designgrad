@@ -1,0 +1,197 @@
+{
+ "ok": true,
+ "result": {
+  "R1": {
+   "status": "pass",
+   "value": 1,
+   "note": "",
+   "method": "Counted number of solids in CQ shape: 1",
+   "criteria": [
+    {
+     "condition": "One single, valid solid",
+     "measured": 1,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R2": {
+   "status": "fail",
+   "value": 0.0,
+   "note": "",
+   "method": "Ring ratio (y=0-4): 0.0, Thickness probe: False",
+   "criteria": [
+    {
+     "condition": "Face plate >= 4mm thick with solid material around bore",
+     "measured": false,
+     "ok": false
+    }
+   ],
+   "faithful": false,
+   "why": "The check fails on the real part (reported ring ratio 0.0 and thickness probe False), but it is unfaithful because its 'thickness probe' uses a box at z=29, whereas the face plate is specified to be between y=0 and y=4 (z-axis height is irrelevant to plate thickness in this orientation). Furthermore"
+  },
+  "R3": {
+   "status": "pass",
+   "value": 0.0,
+   "note": "",
+   "method": "Bore emptiness ratio: 0.0",
+   "criteria": [
+    {
+     "condition": "Central bore diameter 22.5 mm through the face plate",
+     "measured": true,
+     "ok": true
+    }
+   ],
+   "faithful": false,
+   "why": "The check only verifies if a region is empty (empty_ratio < 0.05). As seen in the control run, it passes on a 1mm cube which has no bore, meaning it fails to verify that the bore is actually located within a solid face plate."
+  },
+  "R4": {
+   "status": "pass",
+   "value": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "note": "",
+   "method": "Checked 4 cylinders of D=3.4 at specified (x,z). Verified emptiness and intersection.",
+   "criteria": [
+    {
+     "condition": "Four motor screw holes diameter 3.4 mm",
+     "measured": true,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R5": {
+   "status": "pass",
+   "value": 0.0,
+   "note": "",
+   "method": "Volume of part intersecting clearance box: 0.0 mm3",
+   "criteria": [
+    {
+     "condition": "Motor clearance region is empty",
+     "measured": 0.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R6": {
+   "status": "pass",
+   "value": {
+    "z_min": 0.0,
+    "holes": [
+     1,
+     1
+    ]
+   },
+   "note": "",
+   "method": "Min Z: 0.0, Hole existence check at (+-25, 25)",
+   "criteria": [
+    {
+     "condition": "Base on the table (minimum z = 0)",
+     "measured": 0.0,
+     "ok": true
+    },
+    {
+     "condition": "two vertical screw holes diameter 5.5 mm",
+     "measured": true,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R7": {
+   "status": "pass",
+   "value": [
+    -35.0,
+    35.0,
+    55.0,
+    29.59
+   ],
+   "note": "",
+   "method": "BBox: x[-35.0,35.0], z_max:55.0, Mass:29.5943571489096g",
+   "criteria": [
+    {
+     "condition": "-35 <= x <= 35",
+     "measured": -35.0,
+     "ok": true
+    },
+    {
+     "condition": "top <= 55 mm",
+     "measured": 55.0,
+     "ok": true
+    },
+    {
+     "condition": "mass <= 60 g",
+     "measured": 29.5943571489096,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  }
+ },
+ "stdout": "be: False\", \"criteria\": [{\"condition\": \"Face plate >= 4mm thick with solid material around bore\", \"measured\": false, \"ok\": false}], \"note\": \"\"}, \"R3\": {\"status\": \"pass\", \"value\": 0.0, \"method\": \"Bore emptiness ratio: 0.0\", \"criteria\": [{\"condition\": \"Central bore diameter 22.5 mm through the face plate\", \"measured\": true, \"ok\": true}], \"note\": \"\"}, \"R4\": {\"status\": \"pass\", \"value\": [1, 1, 1, 1], \"method\": \"Checked 4 cylinders of D=3.4 at specified (x,z). Verified emptiness and intersection.\", \"criteria\": [{\"condition\": \"Four motor screw holes diameter 3.4 mm\", \"measured\": true, \"ok\": true}], \"note\": \"\"}, \"R5\": {\"status\": \"pass\", \"value\": 0.0, \"method\": \"Volume of part intersecting clearance box: 0.0 mm3\", \"criteria\": [{\"condition\": \"Motor clearance region is empty\", \"measured\": 0.0, \"ok\": true}], \"note\": \"\"}, \"R6\": {\"status\": \"pass\", \"value\": {\"z_min\": 0.0, \"holes\": [1, 1]}, \"method\": \"Min Z: 0.0, Hole existence check at (+-25, 25)\", \"criteria\": [{\"condition\": \"Base on the table (minimum z = 0)\", \"measured\": 0.0, \"ok\": true}, {\"condition\": \"two vertical screw holes diameter 5.5 mm\", \"measured\": true, \"ok\": true}], \"note\": \"\"}, \"R7\": {\"status\": \"pass\", \"value\": [-35.0, 35.0, 55.0, 29.59], \"method\": \"BBox: x[-35.0,35.0], z_max:55.0, Mass:29.5943571489096g\", \"criteria\": [{\"condition\": \"-35 <= x <= 35\", \"measured\": -35.0, \"ok\": true}, {\"condition\": \"top <= 55 mm\", \"measured\": 55.0, \"ok\": true}, {\"condition\": \"mass <= 60 g\", \"measured\": 29.5943571489096, \"ok\": true}], \"note\": \"\"}}",
+ "stderr": "",
+ "agent": {
+  "sim_steps": 3,
+  "sim_exhausted": false,
+  "review": [
+   {
+    "round": 0,
+    "unfaithful": [
+     "R2",
+     "R3"
+    ],
+    "control_pass": [
+     "R1",
+     "R5",
+     "R7"
+    ]
+   },
+   {
+    "round": 1,
+    "unfaithful": [
+     "R2",
+     "R3",
+     "R4",
+     "R6"
+    ],
+    "control_pass": [
+     "R1",
+     "R5",
+     "R7"
+    ]
+   },
+   {
+    "round": 2,
+    "unfaithful": [
+     "R2",
+     "R3",
+     "R4",
+     "R6"
+    ],
+    "control_pass": [
+     "R1",
+     "R5",
+     "R7"
+    ]
+   },
+   {
+    "round": 3,
+    "unfaithful": [
+     "R2",
+     "R3"
+    ],
+    "control_pass": [
+     "R1",
+     "R3",
+     "R5",
+     "R7"
+    ]
+   }
+  ]
+ }
+}

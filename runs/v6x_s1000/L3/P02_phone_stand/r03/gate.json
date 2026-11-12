@@ -1,0 +1,10 @@
+{
+ "mismatches": [
+  "Height exceeds R2 limit: The bbox max Z is 173.21 mm, whereas the requirement specifies height <= 120 mm.",
+  "Footprint exceeds R2 limit: The bbox X extent is 147.54 mm (from -98.53 to 49.02), which exceeds the 100 mm limit.",
+  "Mass exceeds R7 limit: Measured mass is 114.78 g, which is greater than the maximum allowed 60 g.",
+  "Stability margin fails R6: The measured rest_stability_margin_mm is 3.64 mm, which is less than the required 5 mm margin."
+ ],
+ "systemic": [],
+ "summary": "The part significantly violates multiple dimensional and mass constraints (height, footprint, and weight) and fails to meet the minimum stability margin requirement."
+}

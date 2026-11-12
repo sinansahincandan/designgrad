@@ -1,0 +1,56 @@
+=== v6 seed 0 Wed Nov 11 20:41:59 CST 2026
+skip L0 P01_shelf_bracket
+skip L1 P01_shelf_bracket
+done L2 P01_shelf_bracket rounds=4 best_k=3 proxy=2.14 calls=41 1072s
+done L3 P01_shelf_bracket rounds=4 best_k=1 proxy=2.14 calls=48 1369s
+skip L0 P03_enclosure_base
+skip L1 P03_enclosure_base
+done L2 P03_enclosure_base rounds=4 best_k=1 proxy=2.43 calls=42 1098s
+done L3 P03_enclosure_base rounds=4 best_k=1 proxy=2.43 calls=41 884s
+skip L0 P07_nema17_mount
+skip L1 P07_nema17_mount
+done L2 P07_nema17_mount rounds=4 best_k=0 proxy=1.86 calls=34 753s
+done L3 P07_nema17_mount rounds=4 best_k=1 proxy=2.43 calls=37 722s
+=== v6 seed 1000 Wed Nov 11 22:20:17 CST 2026
+done L0 P01_shelf_bracket rounds=0 best_k=0 proxy=1.00 calls=1 81s
+=== PAUSED by hand Wed Nov 11 22:29:46 CST 2026 (testing a fix for false alarms of the analysis code)
+=== v6 seed 0 Thu Nov 12 01:47:05 CST 2026
+skip L0 P01_shelf_bracket
+skip L1 P01_shelf_bracket
+skip L2 P01_shelf_bracket
+skip L3 P01_shelf_bracket
+skip L0 P03_enclosure_base
+skip L1 P03_enclosure_base
+skip L2 P03_enclosure_base
+skip L3 P03_enclosure_base
+skip L0 P07_nema17_mount
+skip L1 P07_nema17_mount
+skip L2 P07_nema17_mount
+skip L3 P07_nema17_mount
+=== v6 seed 1000 Thu Nov 12 01:47:07 CST 2026
+skip L0 P01_shelf_bracket
+done L1 P01_shelf_bracket rounds=4 best_k=4 proxy=2.00 calls=22 495s
+done L2 P01_shelf_bracket rounds=4 best_k=4 proxy=2.14 calls=45 1457s
+done L3 P01_shelf_bracket rounds=4 best_k=2 proxy=2.14 calls=46 1255s
+done L0 P03_enclosure_base rounds=0 best_k=0 proxy=1.00 calls=1 30s
+done L1 P03_enclosure_base rounds=0 best_k=0 proxy=2.00 calls=2 17s
+done L2 P03_enclosure_base rounds=4 best_k=0 proxy=2.71 calls=37 778s
+done L3 P03_enclosure_base rounds=4 best_k=0 proxy=2.71 calls=51 1197s
+done L0 P07_nema17_mount rounds=0 best_k=0 proxy=1.00 calls=1 36s
+done L1 P07_nema17_mount rounds=2 best_k=2 proxy=2.00 calls=15 278s
+done L2 P07_nema17_mount rounds=4 best_k=3 proxy=2.43 calls=41 1054s
+done L3 P07_nema17_mount rounds=4 best_k=2 proxy=1.86 calls=41 992s
+=== v6 seed 2000 Thu Nov 12 03:53:38 CST 2026
+done L0 P01_shelf_bracket rounds=0 best_k=0 proxy=1.00 calls=5 236s
+done L1 P01_shelf_bracket rounds=4 best_k=4 proxy=2.00 calls=29 580s
+done L2 P01_shelf_bracket rounds=4 best_k=2 proxy=2.71 calls=31 721s
+done L3 P01_shelf_bracket rounds=4 best_k=0 proxy=2.14 calls=42 1066s
+done L0 P03_enclosure_base rounds=0 best_k=0 proxy=1.00 calls=1 31s
+done L1 P03_enclosure_base rounds=1 best_k=1 proxy=2.00 calls=7 104s
+done L2 P03_enclosure_base rounds=4 best_k=0 proxy=2.71 calls=40 907s
+done L3 P03_enclosure_base rounds=4 best_k=0 proxy=2.43 calls=41 818s
+done L0 P07_nema17_mount rounds=0 best_k=0 proxy=0.50 calls=6 139s
+done L1 P07_nema17_mount rounds=1 best_k=1 proxy=2.00 calls=8 147s
+done L2 P07_nema17_mount rounds=4 best_k=0 proxy=2.14 calls=40 1043s
+done L3 P07_nema17_mount rounds=4 best_k=0 proxy=2.14 calls=52 1328s
+=== ALL DONE Thu Nov 12 05:52:20 CST 2026

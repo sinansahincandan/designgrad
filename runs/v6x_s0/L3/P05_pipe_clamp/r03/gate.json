@@ -1,0 +1,8 @@
+{
+ "mismatches": [
+  "The Y extent (width) of the part is 31 mm (from -15.5 to 15.5), which violates R2 requiring a width between 18 and 22 mm.",
+  "The screw holes are not centered at y=0; looking at the 'Right' view, they appear offset or the base plate is wider than intended, but specifically, the measured facts show the Y extent is far larger than the design document's specified 20 mm."
+ ],
+ "systemic": [],
+ "summary": "The part fails to meet the width requirement (R2), being significantly wider at 31 mm than the specified maximum of 22 mm."
+}

@@ -1,0 +1,11 @@
+{
+ "mismatches": [
+  "The mass (75.76 g) exceeds the maximum requirement of 60 g specified in R7.",
+  "The bounding box Y-dimension is from -25 to 25, which means the face plate is not at y=0 to 4 as required by R2; instead, it appears centered or offset incorrectly relative to the motor mounting plane.",
+  "The base plate footprint (y range) does not match the design document's intent of being on the +Y side for a bracket mounted against a face plate at y=0."
+ ],
+ "systemic": [
+  "The part is oriented such that the 'face plate' and 'base plate' are effectively swapped or misaligned with the coordinate system requirements; if the motor body lies in y < 0, a bracket on the +Y side should have its face at y=0, but the rendered geometry shows the bulk of the part extending into negative Y space."
+ ],
+ "summary": "The part fails the mass requirement and has significant coordinate/orientation mismatches regarding the face plate position and motor clearance zone."
+}

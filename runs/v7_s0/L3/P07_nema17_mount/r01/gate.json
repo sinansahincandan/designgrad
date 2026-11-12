@@ -1,0 +1,12 @@
+{
+ "mismatches": [
+  "The face plate (vertical mounting surface) is oriented along the X-Z plane at y=0, but the 'Front' view shows it as an L-shape with a large cutout, and the 'Right' view shows it as a thin vertical slab. The geometry in the renders does not match the described L-shaped bracket structure where the face plate should be at y=[0,4].",
+  "The central bore (R3) is not visible in the orthographic views; instead, there are large cutouts/voids that do not correspond to a 22.5mm hole.",
+  "The base plate is supposed to sit on the table at z=0, but the 'Front' view shows the part extending from z=-30 to z=20, and the 'Right' view shows it from z=-30 to z=30, indicating the part is incorrectly positioned relative to the Z-axis/table.",
+  "The motor screw holes (R4) are not clearly identifiable as 3.4mm through-holes in the face plate."
+ ],
+ "systemic": [
+  "The part's orientation and placement are fundamentally broken; it is centered around z=0 rather than sitting on the table at z=0, meaning half the part is below the mounting surface."
+ ],
+ "summary": "The rendered part fails to follow the L-shape geometry and coordinate system requirements, resulting in a part that is incorrectly positioned relative to the table and lacks the specified motor interface features."
+}

@@ -1,0 +1,7 @@
+{
+ "PROBLEMS_DIR": "problems/",
+ "RUNS_DIR": "runs/",
+ "PAPER_DIR": "paper/",
+ "MODEL": "gemma4:26b (Ollama, http://localhost:11434)",
+ "NOTE": "Paths are relative to the repository root; the code resolves them from its own location (designgrad/run.py ROOT)."
+}

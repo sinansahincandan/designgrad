@@ -1,0 +1,5 @@
+L1/P03_enclosure_base            identical=True  prompts 1/1 mismatch=0  summary_same=True  diffs=[]  err=None  4.9s
+L1/P07_nema17_mount              identical=True  prompts 16/16 mismatch=0  summary_same=True  diffs=[]  err=None  15.5s
+L2/P03_enclosure_base            identical=True  prompts 35/35 mismatch=0  summary_same=True  diffs=[]  err=None  115.6s
+L2/P07_nema17_mount              identical=True  prompts 65/65 mismatch=0  summary_same=True  diffs=[]  err=None  263.8s
+4/4 units identical

@@ -1,0 +1,144 @@
+{
+ "ok": true,
+ "result": {
+  "R1": {
+   "status": "pass",
+   "value": 1.0,
+   "note": "Found 1 solids",
+   "method": "Counted number of solids in STEP file",
+   "criteria": [
+    {
+     "condition": "One single, valid solid",
+     "measured": 1.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R2": {
+   "status": "pass",
+   "value": 0.9801196089890013,
+   "note": "Fill: 98.01%",
+   "method": "Intersection volume / region volume (1600.0 mm3) and bbox check",
+   "criteria": [
+    {
+     "condition": "solid material at 0 <= x <= 2, |y| <= 8, -5 <= z <= 45",
+     "measured": 0.9801196089890013,
+     "ok": true
+    },
+    {
+     "condition": "minimum x = 0",
+     "measured": 0.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R3": {
+   "status": "fail",
+   "value": 0.0,
+   "note": "Checked for absence of material in hole volumes",
+   "method": "Probing hole locations with cylinders along X axis at (y,z) coordinates",
+   "criteria": [
+    {
+     "condition": "Two screw holes diameter 4.5 mm at (0,0) and (0,40)",
+     "measured": 0.0,
+     "ok": false
+    }
+   ],
+   "faithful": true
+  },
+  "R4": {
+   "status": "fail",
+   "value": [
+    112.0,
+    99.99999999999997
+   ],
+   "note": "",
+   "method": "Intersection volume of bed region and pocket region",
+   "criteria": [
+    {
+     "condition": "solid bed top at z=-14 under 34<=x<=46, |y|<=4",
+     "measured": 112.0,
+     "ok": true
+    },
+    {
+     "condition": "pocket (35<=x<=45, |y|<=6, -13<z<-6) must be empty",
+     "measured": 99.99999999999997,
+     "ok": false
+    }
+   ],
+   "faithful": true
+  },
+  "R5": {
+   "status": "pass",
+   "value": 199.99999999999994,
+   "note": "",
+   "method": "Intersection volume of lip region",
+   "criteria": [
+    {
+     "condition": "solid material at 47<=x<=52, |y|<=4, -13<z<-8",
+     "measured": 199.99999999999994,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R6": {
+   "status": "pass",
+   "value": [
+    2.341463414634146,
+    0.02342035200571786
+   ],
+   "note": "sigma=2.34, delta=0.02",
+   "method": "F=50.0N at x=40.0, section plane x=8.0, M=F*(40-8), sigma=Mc/I, delta=FL^3/(3EI) with L=32",
+   "criteria": [
+    {
+     "condition": "bending stress <= 25 MPa",
+     "measured": 2.341463414634146,
+     "ok": true
+    },
+    {
+     "condition": "tip deflection estimate <= 1.5 mm",
+     "measured": 0.02342035200571786,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R7": {
+   "status": "pass",
+   "value": [
+    13.476557304234177,
+    52.0
+   ],
+   "note": "",
+   "method": "Volume * density and BoundingBox X range",
+   "criteria": [
+    {
+     "condition": "Mass <= 25 g",
+     "measured": 13.476557304234177,
+     "ok": true
+    },
+    {
+     "condition": "X extent <= 55 mm",
+     "measured": 52.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  }
+ },
+ "stdout": "g X axis at (y,z) coordinates\", \"criteria\": [{\"condition\": \"Two screw holes diameter 4.5 mm at (0,0) and (0,40)\", \"measured\": 0.0, \"ok\": false}], \"note\": \"Checked for absence of material in hole volumes\"}, \"R4\": {\"status\": \"fail\", \"value\": [112.0, 99.99999999999997], \"method\": \"Intersection volume of bed region and pocket region\", \"criteria\": [{\"condition\": \"solid bed top at z=-14 under 34<=x<=46, |y|<=4\", \"measured\": 112.0, \"ok\": true}, {\"condition\": \"pocket (35<=x<=45, |y|<=6, -13<z<-6) must be empty\", \"measured\": 99.99999999999997, \"ok\": false}], \"note\": \"\"}, \"R5\": {\"status\": \"pass\", \"value\": 199.99999999999994, \"method\": \"Intersection volume of lip region\", \"criteria\": [{\"condition\": \"solid material at 47<=x<=52, |y|<=4, -13<z<-8\", \"measured\": 199.99999999999994, \"ok\": true}], \"note\": \"\"}, \"R6\": {\"status\": \"pass\", \"value\": [2.341463414634146, 0.02342035200571786], \"method\": \"F=50.0N at x=40.0, section plane x=8.0, M=F*(40-8), sigma=Mc/I, delta=FL^3/(3EI) with L=32\", \"criteria\": [{\"condition\": \"bending stress <= 25 MPa\", \"measured\": 2.341463414634146, \"ok\": true}, {\"condition\": \"tip deflection estimate <= 1.5 mm\", \"measured\": 0.02342035200571786, \"ok\": true}], \"note\": \"sigma=2.34, delta=0.02\"}, \"R7\": {\"status\": \"pass\", \"value\": [13.476557304234177, 52.0], \"method\": \"Volume * density and BoundingBox X range\", \"criteria\": [{\"condition\": \"Mass <= 25 g\", \"measured\": 13.476557304234177, \"ok\": true}, {\"condition\": \"X extent <= 55 mm\", \"measured\": 52.0, \"ok\": true}], \"note\": \"\"}}",
+ "stderr": "",
+ "agent": {
+  "sim_steps": 0,
+  "sim_exhausted": false,
+  "review": [
+   {
+    "round": 0,
+    "unfaithful": []
+   }
+  ]
+ }
+}

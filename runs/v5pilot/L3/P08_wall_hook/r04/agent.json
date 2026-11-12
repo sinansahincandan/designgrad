@@ -1,0 +1,91 @@
+{
+ "cad_steps": 5,
+ "cad_exhausted": true,
+ "cad_history": [
+  {
+   "step": 0,
+   "ok": false,
+   "feedback": "The code ran but produced 2 disconnected solids:\n  solid 1: volume 10589.8 mm3, bbox_min [-0.0, -8.0, -17.5], bbox_max [47.0, 8.0, 45.0]\n  solid 2: volume 200.0 mm3, bbox_min [47.0, -4.0, -13.0], bbox_max [52.0, 4.0, -8.0]\n  solid 2's box touches or overlaps solid 1's box but the solids do not fuse: make them overlap by >= 1 mm\n`result` must be ONE connected solid. Compare these boxes: find which piece does not touch the main body, extend or move it so it overlaps the body by at least 1 mm, and union everything into one solid."
+  },
+  {
+   "step": 1,
+   "ok": false,
+   "feedback": "The code ran but produced 2 disconnected solids:\n  solid 1: volume 10939.8 mm3, bbox_min [-0.0, -8.0, -17.5], bbox_max [47.0, 8.0, 45.0]\n  solid 2: volume 240.0 mm3, bbox_min [46.0, -4.0, -13.0], bbox_max [52.0, 4.0, -8.0]\n  solid 2's box touches or overlaps solid 1's box but the solids do not fuse: make them overlap by >= 1 mm\n`result` must be ONE connected solid. Compare these boxes: find which piece does not touch the main body, extend or move it so it overlaps the body by at least 1 mm, and union everything into one solid."
+  },
+  {
+   "step": 2,
+   "ok": false,
+   "feedback": "The code ran but produced 2 disconnected solids:\n  solid 1: volume 11039.8 mm3, bbox_min [-0.0, -8.0, -17.5], bbox_max [48.0, 8.0, 45.0]\n  solid 2: volume 200.0 mm3, bbox_min [46.0, -4.0, -13.0], bbox_max [51.0, 4.0, -8.0]\n  solid 2's box touches or overlaps solid 1's box but the solids do not fuse: make them overlap by >= 1 mm\n`result` must be ONE connected solid. Compare these boxes: find which piece does not touch the main body, extend or move it so it overlaps the body by at least 1 mm, and union everything into one solid."
+  },
+  {
+   "step": 3,
+   "ok": false,
+   "feedback": "The code ran but produced 2 disconnected solids:\n  solid 1: volume 11139.8 mm3, bbox_min [-0.0, -8.0, -17.5], bbox_max [49.0, 8.0, 45.0]\n  solid 2: volume 200.0 mm3, bbox_min [46.0, -4.0, -13.0], bbox_max [51.0, 4.0, -8.0]\n  solid 2's box touches or overlaps solid 1's box but the solids do not fuse: make them overlap by >= 1 mm\n`result` must be ONE connected solid. Compare these boxes: find which piece does not touch the main body, extend or move it so it overlaps the body by at least 1 mm, and union everything into one solid."
+  },
+  {
+   "step": 4,
+   "ok": false,
+   "feedback": "The code ran but produced 2 disconnected solids:\n  solid 1: volume 11239.8 mm3, bbox_min [-0.0, -8.0, -17.5], bbox_max [50.0, 8.0, 45.0]\n  solid 2: volume 200.0 mm3, bbox_min [46.0, -4.0, -13.0], bbox_max [51.0, 4.0, -8.0]\n  solid 2's box touches or overlaps solid 1's box but the solids do not fuse: make them overlap by >= 1 mm\n`result` must be ONE connected solid. Compare these boxes: find which piece does not touch the main body, extend or move it so it overlaps the body by at least 1 mm, and union everything into one solid."
+  },
+  {
+   "step": 5,
+   "ok": false,
+   "feedback": "The code ran but produced 2 disconnected solids:\n  solid 1: volume 11439.8 mm3, bbox_min [-0.0, -8.0, -17.5], bbox_max [52.0, 8.0, 45.0]\n  solid 2: volume 200.0 mm3, bbox_min [46.0, -4.0, -13.0], bbox_max [51.0, 4.0, -8.0]\n  solid 2's box touches or overlaps solid 1's box but the solids do not fuse: make them overlap by >= 1 mm\n`result` must be ONE connected solid. Compare these boxes: find which piece does not touch the main body, extend or move it so it overlaps the body by at least 1 mm, and union everything into one solid."
+  }
+ ],
+ "sim_steps": 4,
+ "sim_exhausted": false,
+ "review": [
+  {
+   "round": 0,
+   "unfaithful": [
+    "R1",
+    "R3",
+    "R4"
+   ],
+   "control_pass": [
+    "R1",
+    "R7"
+   ]
+  },
+  {
+   "round": 1,
+   "unfaithful": [
+    "R3"
+   ],
+   "control_pass": [
+    "R1",
+    "R7"
+   ]
+  },
+  {
+   "round": 2,
+   "unfaithful": [
+    "R3",
+    "R4"
+   ],
+   "control_pass": [
+    "R1",
+    "R7"
+   ]
+  },
+  {
+   "round": 3,
+   "unfaithful": [
+    "R3"
+   ],
+   "control_pass": [
+    "R1",
+    "R7"
+   ]
+  }
+ ],
+ "sim_updated": true,
+ "sim_history": [
+  {
+   "step": 0,
+   "ok": true,
+   "feedback": ""
+  }
+ ]
+}

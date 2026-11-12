@@ -1,0 +1,162 @@
+{
+ "ok": true,
+ "result": {
+  "R1": {
+   "status": "pass",
+   "value": 1,
+   "note": "",
+   "method": "Counted solids in CQ shape: 1",
+   "criteria": [
+    {
+     "condition": "One single, valid solid",
+     "measured": 1,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R2": {
+   "status": "pass",
+   "value": 1.0,
+   "note": "",
+   "method": "Intersected floor box (80x50x2) with part; ratio=1.0000",
+   "criteria": [
+    {
+     "condition": "solid floor at least 2 mm thick under board area",
+     "measured": 1.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R3": {
+   "status": "pass",
+   "value": 0.0,
+   "note": "",
+   "method": "Intersected board cavity box (80x50x24); vol=0.0000. Part total vol=52825.0",
+   "criteria": [
+    {
+     "condition": "-40 <= x <= 40, -25 <= y <= 25, 8 <= z <= 32 must be completely free",
+     "measured": 0.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R4": {
+   "status": "pass",
+   "value": [
+    85.0,
+    55.0,
+    31.0
+   ],
+   "note": "",
+   "method": "Measured BoundingBox: dx=85.0, dy=55.0, zmax=31.0",
+   "criteria": [
+    {
+     "condition": "outer size 85 x 55 mm (+-1.5)",
+     "measured": [
+      85.0,
+      55.0
+     ],
+     "ok": true
+    },
+    {
+     "condition": "wall top at z between 30 and 32.5",
+     "measured": 31.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R5": {
+   "status": "fail",
+   "value": [
+    {
+     "od_ok": false,
+     "hole_ok": false
+    },
+    {
+     "od_ok": false,
+     "hole_ok": false
+    },
+    {
+     "od_ok": false,
+     "hole_ok": false
+    },
+    {
+     "od_ok": false,
+     "hole_ok": false
+    }
+   ],
+   "note": "",
+   "method": "Probed 4 cylinders at (+-35, +-20) for OD and pilot hole (2.2mm dia, depth >= 4mm)",
+   "criteria": [
+    {
+     "condition": "Four screw bosses... OD >= 6mm... 2.2mm pilot hole... 4mm deep",
+     "measured": "fail",
+     "ok": false
+    }
+   ],
+   "faithful": true
+  },
+  "R6": {
+   "status": "fail",
+   "value": {
+    "void_volume": 639.9999999999999,
+    "opening_intersected": 0.0
+   },
+   "note": "",
+   "method": "Checked if cutout box is empty and if material was removed from the wall block (void=640.00)",
+   "criteria": [
+    {
+     "condition": "USB-C cutout... 9mm wide (Y) and 3mm high (Z)",
+     "measured": "fail",
+     "ok": false
+    }
+   ],
+   "faithful": true
+  },
+  "R7": {
+   "status": "pass",
+   "value": 65.5,
+   "note": "",
+   "method": "Mass = Volume(52825.0 mm3) * density(1.24 g/cm3) / 1000",
+   "criteria": [
+    {
+     "condition": "Mass <= 70 g",
+     "measured": 65.50299999999997,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  }
+ },
+ "stdout": ", \"method\": \"Intersected board cavity box (80x50x24); vol=0.0000. Part total vol=52825.0\", \"criteria\": [{\"condition\": \"-40 <= x <= 40, -25 <= y <= 25, 8 <= z <= 32 must be completely free\", \"measured\": 0.0, \"ok\": true}], \"note\": \"\"}, \"R4\": {\"status\": \"pass\", \"value\": [85.0, 55.0, 31.0], \"method\": \"Measured BoundingBox: dx=85.0, dy=55.0, zmax=31.0\", \"criteria\": [{\"condition\": \"outer size 85 x 55 mm (+-1.5)\", \"measured\": [85.0, 55.0], \"ok\": true}, {\"condition\": \"wall top at z between 30 and 32.5\", \"measured\": 31.0, \"ok\": true}], \"note\": \"\"}, \"R5\": {\"status\": \"fail\", \"value\": [{\"od_ok\": false, \"hole_ok\": false}, {\"od_ok\": false, \"hole_ok\": false}, {\"od_ok\": false, \"hole_ok\": false}, {\"od_ok\": false, \"hole_ok\": false}], \"method\": \"Probed 4 cylinders at (+-35, +-20) for OD and pilot hole (2.2mm dia, depth >= 4mm)\", \"criteria\": [{\"condition\": \"Four screw bosses... OD >= 6mm... 2.2mm pilot hole... 4mm deep\", \"measured\": \"fail\", \"ok\": false}], \"note\": \"\"}, \"R6\": {\"status\": \"fail\", \"value\": {\"void_volume\": 639.9999999999999, \"opening_intersected\": 0.0}, \"method\": \"Checked if cutout box is empty and if material was removed from the wall block (void=640.00)\", \"criteria\": [{\"condition\": \"USB-C cutout... 9mm wide (Y) and 3mm high (Z)\", \"measured\": \"fail\", \"ok\": false}], \"note\": \"\"}, \"R7\": {\"status\": \"pass\", \"value\": 65.5, \"method\": \"Mass = Volume(52825.0 mm3) * density(1.24 g/cm3) / 1000\", \"criteria\": [{\"condition\": \"Mass <= 70 g\", \"measured\": 65.50299999999997, \"ok\": true}], \"note\": \"\"}}",
+ "stderr": "",
+ "agent": {
+  "sim_steps": 1,
+  "sim_exhausted": false,
+  "review": [
+   {
+    "round": 0,
+    "unfaithful": [
+     "R3"
+    ],
+    "control_pass": [
+     "R1",
+     "R3",
+     "R7"
+    ]
+   },
+   {
+    "round": 1,
+    "unfaithful": [],
+    "control_pass": [
+     "R1",
+     "R7"
+    ]
+   }
+  ]
+ }
+}

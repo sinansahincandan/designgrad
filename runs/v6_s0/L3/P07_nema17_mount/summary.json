@@ -1,0 +1,211 @@
+{
+ "k": 1,
+ "proxy": 2.428571428571429,
+ "level": "L3",
+ "problem": "P07_nema17_mount",
+ "llm": {
+  "calls": 37,
+  "tokens_in": 106330,
+  "tokens_out": 25527,
+  "seconds": 626.3
+ },
+ "rounds": 4,
+ "trace": [
+  {
+   "k": 0,
+   "accepted": true,
+   "score": 1.8571428571428572,
+   "proxy": 1.8571428571428572,
+   "critic_frac": 0.42857142857142855,
+   "gate": {
+    "mismatches": [
+     "The face plate (vertical component) is oriented along the XZ plane but extends into negative Z values, whereas the specification requires it to be at y=0 to 4.",
+     "The base plate is located in the -Z region instead of being on the table at z=0 to 5.",
+     "The motor mounting holes and central bore are not visible or correctly placed according to the coordinate system (the part appears rotated/flipped).",
+     "The vertical face plate does not appear to be 4mm thick in the correct orientation; it looks like a large block."
+    ],
+    "systemic": [
+     "The part is oriented such that its center of mass and geometry result in it being unstable (rest_stable: false), meaning it cannot sit on the table as intended."
+    ],
+    "summary": "The rendered part fails to follow the coordinate system requirements, resulting in a misoriented bracket that does not match the motor mounting specifications."
+   },
+   "sim_issue": false,
+   "cad_steps": 0,
+   "cad_exhausted": false,
+   "sim_steps": 2,
+   "sim_exhausted": false,
+   "sim_updated": true,
+   "n_measured": 7,
+   "n_unmeasured": 0,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": [
+      "R2",
+      "R4"
+     ],
+     "control_pass": [
+      "R1",
+      "R4",
+      "R5",
+      "R7"
+     ]
+    },
+    {
+     "round": 1,
+     "unfaithful": [],
+     "control_pass": [
+      "R1",
+      "R5",
+      "R7"
+     ]
+    }
+   ]
+  },
+  {
+   "k": 1,
+   "from": 0,
+   "accepted": true,
+   "score": 2.428571428571429,
+   "proxy": 2.428571428571429,
+   "critic_frac": 0.7142857142857143,
+   "gate": {
+    "mismatches": [
+     "R6: The two vertical screw holes (diameter 5.5 mm) at (x, y) = (+-25, 25) are missing from the rendered part.",
+     "The base plate appears to be solid without any mounting holes as specified in R6."
+    ],
+    "systemic": [],
+    "summary": "The part correctly implements the L-shape and motor interface but fails to include the required M5 mounting holes in the base plate."
+   },
+   "sim_issue": false,
+   "cad_steps": 0,
+   "cad_exhausted": false,
+   "sim_steps": 0,
+   "sim_exhausted": false,
+   "sim_updated": false,
+   "n_measured": 7,
+   "n_unmeasured": 0,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": [],
+     "control_pass": [
+      "R1",
+      "R5",
+      "R7"
+     ]
+    }
+   ]
+  },
+  {
+   "k": 2,
+   "from": 1,
+   "accepted": false,
+   "score": 1.8571428571428572,
+   "proxy": 1.8571428571428572,
+   "critic_frac": 0.42857142857142855,
+   "gate": {
+    "mismatches": [
+     "R4: The motor screw holes are incorrectly placed at (x, z) = (+-15.5, 27.5 +- 13) according to the cylindrical faces data, whereas the design document specifies (x, z) = (+-15.5, 30 +- 15.5).",
+     "R4: Only two motor screw holes are visible/present in the render (the cylindrical faces list only shows two holes with radius 1.7), but four were required.",
+     "R6: The base mounting holes at (x, y) = (+-25, 25) are missing from the rendered part; the 'Right' view shows a solid cross-section without vertical holes through the base plate."
+    ],
+    "systemic": [
+     "The design document specifies the face plate at y=0 to 4 and the motor in y < 0, but the rendered part's bbox_min for Y is 0.0, meaning the entire part exists only on the positive Y side, making it impossible to accommodate a motor that presses against y=0 from the -Y side as described."
+    ],
+    "summary": "The part fails to include all required motor screw holes and base mounting holes, and its orientation/placement prevents it from functioning as a NEMA 17 mount."
+   },
+   "sim_issue": false,
+   "cad_steps": 0,
+   "cad_exhausted": false,
+   "sim_steps": 0,
+   "sim_exhausted": false,
+   "sim_updated": false,
+   "n_measured": 7,
+   "n_unmeasured": 0,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": [],
+     "control_pass": [
+      "R1",
+      "R5",
+      "R7"
+     ]
+    }
+   ]
+  },
+  {
+   "k": 3,
+   "from": 1,
+   "accepted": false,
+   "score": 2.142857142857143,
+   "proxy": 2.142857142857143,
+   "critic_frac": 0.5714285714285714,
+   "gate": {
+    "mismatches": [
+     "R3: The central bore diameter is 22.5 mm, but the measured cylindrical faces show a radius of 1.7 mm (diameter 3.4 mm) for motor holes and no large central bore is visible in the 'Front' view; instead, there is a large cutout that seems to be part of the clearance volume R5.",
+     "R4: The four motor screw holes are specified as diameter 3.4 mm, but the measured data shows only two cylindrical faces with radius 1.7 mm (diameter 3.4 mm) at z=18, whereas they should be at z = 30 +/- 15.5 (i.e., z=14.5 and z=45.5).",
+     "R6: The base holes are specified as diameter 5.5 mm, but the measured data shows a radius of 2.75 mm (diameter 5.5 mm) at y=48.25, which is outside the base plate thickness shown in the 'Right' view (base plate ends around y=50, but the holes are very close to the edge).",
+     "R3/R5: The central bore (R3) and motor screw holes (R4) appear to have been incorrectly implemented or replaced by a large clearance cutout that violates the requirement for solid material around the central bore."
+    ],
+    "systemic": [],
+    "summary": "The part fails to include the required central bore and has misaligned/incorrectly dimensioned motor screw holes, appearing to have substituted them with an incorrect clearance geometry."
+   },
+   "sim_issue": true,
+   "cad_steps": 0,
+   "cad_exhausted": false,
+   "sim_steps": 0,
+   "sim_exhausted": false,
+   "sim_updated": false,
+   "n_measured": 7,
+   "n_unmeasured": 0,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": [],
+     "control_pass": [
+      "R1",
+      "R5",
+      "R7"
+     ]
+    }
+   ]
+  },
+  {
+   "k": 4,
+   "from": 1,
+   "accepted": false,
+   "score": 2.428571428571429,
+   "proxy": 2.428571428571429,
+   "critic_frac": 0.7142857142857143,
+   "gate": {
+    "mismatches": [
+     "R6: The two vertical base screw holes (diameter 5.5 mm) at (x, y) = (+-25, 25) are missing from the rendered part; the base plate appears solid in the Top and Right views.",
+     "The 'Right' view shows a profile that does not match the L-shape described; it appears to show a single block or an incorrectly oriented section rather than the vertical face plate and horizontal base."
+    ],
+    "systemic": [],
+    "summary": "The part is missing the required mounting holes in the base plate, and the orthographic views are inconsistent with the intended L-shaped geometry."
+   },
+   "sim_issue": false,
+   "cad_steps": 2,
+   "cad_exhausted": false,
+   "sim_steps": 0,
+   "sim_exhausted": false,
+   "sim_updated": false,
+   "n_measured": 7,
+   "n_unmeasured": 0,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": [],
+     "control_pass": [
+      "R1",
+      "R5",
+      "R7"
+     ]
+    }
+   ]
+  }
+ ]
+}

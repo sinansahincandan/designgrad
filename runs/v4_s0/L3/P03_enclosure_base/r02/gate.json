@@ -1,0 +1,11 @@
+{
+ "mismatches": [
+  "R5: Screw bosses are completely missing from the render and the measured facts (n_cylindrical_faces = 0).",
+  "R6: The USB-C cutout on the -X wall is not visible in any of the views.",
+  "R3: The board space cavity appears to be incorrectly modeled; the 'Top' view shows a solid block rather than an open enclosure, and the 'Front' view shows a solid rectangle from z=0 to z=31 instead of a hollowed box."
+ ],
+ "systemic": [
+  "The design document specifies a board cavity (R3) and screw bosses (R5), but the resulting geometry is essentially a solid block with slightly different outer dimensions, failing to provide any functional space for the PCB or mounting hardware."
+ ],
+ "summary": "The part is rendered as a nearly solid rectangular block, missing all critical functional features including the board cavity, screw bosses, and USB-C cutout."
+}

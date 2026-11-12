@@ -1,0 +1,190 @@
+{
+ "ok": true,
+ "result": {
+  "R1": {
+   "status": "pass",
+   "value": 1.0,
+   "note": "",
+   "method": "Counted solids in CQ shape: 1",
+   "criteria": [
+    {
+     "condition": "One single, valid solid",
+     "measured": 1.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R2": {
+   "status": "fail",
+   "value": [
+    0.0,
+    150.0,
+    -7.5315778147561e-16,
+    40.0,
+    0.0,
+    110.0
+   ],
+   "note": "",
+   "method": "Checked BBox: x[0.00,150.00], y[-0.00,40.00], z[0.00,110.00]",
+   "criteria": [
+    {
+     "condition": "0 <= x <= 170",
+     "measured": [
+      0.0,
+      150.0
+     ],
+     "ok": true
+    },
+    {
+     "condition": "-20 <= y <= 20",
+     "measured": [
+      -7.5315778147561e-16,
+      40.0
+     ],
+     "ok": false
+    },
+    {
+     "condition": "0 <= z <= 130",
+     "measured": [
+      0.0,
+      110.0
+     ],
+     "ok": true
+    },
+    {
+     "condition": "touches wall (min x = 0)",
+     "measured": 0.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R3": {
+   "status": "pass",
+   "value": 1.0,
+   "note": "",
+   "method": "Verified 5.5mm through-holes at (0,20),(0,60) with surrounding material and 4mm clearance for x>=10",
+   "criteria": [
+    {
+     "condition": "Holes diameter 5.5mm, correct location, and 4mm clearance for x>=10",
+     "measured": 1.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R4": {
+   "status": "pass",
+   "value": [
+    1.0,
+    0.0,
+    1.0
+   ],
+   "note": "",
+   "method": "Shelf existence: True; High material check (z>110, x>=8): False; Surface at z=110: True",
+   "criteria": [
+    {
+     "condition": "solid material directly below z=110 between x=140 and 150 around y=0",
+     "measured": 1.0,
+     "ok": true
+    },
+    {
+     "condition": "Nothing of the bracket may be above z=110 for x >= 8",
+     "measured": 0.0,
+     "ok": true
+    },
+    {
+     "condition": "Shelf surface at exactly z=110",
+     "measured": 1.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R5": {
+   "status": "pass",
+   "value": 0.26194153228327843,
+   "note": "",
+   "method": "M=21000 Nmm, c=54.93 mm, I=4403720.32 mm4, sigma=M*c/I=0.26 MPa",
+   "criteria": [
+    {
+     "condition": "bending stress <= 20 MPa",
+     "measured": 0.26194153228327843,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R6": {
+   "status": "pass",
+   "value": 0.008901564386355166,
+   "note": "",
+   "method": "F=150 N, L=140 mm, E=3500 MPa, I=4403720.32 mm4, delta=FL^3/3EI=0.01 mm",
+   "criteria": [
+    {
+     "condition": "tip deflection <= 2.0 mm",
+     "measured": 0.008901564386355166,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R7": {
+   "status": "fail",
+   "value": 170.49897282917433,
+   "note": "",
+   "method": "Volume=137499.17 mm3, density=1.24 g/cm3, mass=170.50 g",
+   "criteria": [
+    {
+     "condition": "Mass <= 90 g",
+     "measured": 170.49897282917433,
+     "ok": false
+    }
+   ],
+   "faithful": true
+  }
+ },
+ "stdout": "\"}, \"R3\": {\"status\": \"pass\", \"value\": 1.0, \"method\": \"Verified 5.5mm through-holes at (0,20),(0,60) with surrounding material and 4mm clearance for x>=10\", \"criteria\": [{\"condition\": \"Holes diameter 5.5mm, correct location, and 4mm clearance for x>=10\", \"measured\": 1.0, \"ok\": true}], \"note\": \"\"}, \"R4\": {\"status\": \"pass\", \"value\": [1.0, 0.0, 1.0], \"method\": \"Shelf existence: True; High material check (z>110, x>=8): False; Surface at z=110: True\", \"criteria\": [{\"condition\": \"solid material directly below z=110 between x=140 and 150 around y=0\", \"measured\": 1.0, \"ok\": true}, {\"condition\": \"Nothing of the bracket may be above z=110 for x >= 8\", \"measured\": 0.0, \"ok\": true}, {\"condition\": \"Shelf surface at exactly z=110\", \"measured\": 1.0, \"ok\": true}], \"note\": \"\"}, \"R5\": {\"status\": \"pass\", \"value\": 0.26194153228327843, \"method\": \"M=21000 Nmm, c=54.93 mm, I=4403720.32 mm4, sigma=M*c/I=0.26 MPa\", \"criteria\": [{\"condition\": \"bending stress <= 20 MPa\", \"measured\": 0.26194153228327843, \"ok\": true}], \"note\": \"\"}, \"R6\": {\"status\": \"pass\", \"value\": 0.008901564386355166, \"method\": \"F=150 N, L=140 mm, E=3500 MPa, I=4403720.32 mm4, delta=FL^3/3EI=0.01 mm\", \"criteria\": [{\"condition\": \"tip deflection <= 2.0 mm\", \"measured\": 0.008901564386355166, \"ok\": true}], \"note\": \"\"}, \"R7\": {\"status\": \"fail\", \"value\": 170.49897282917433, \"method\": \"Volume=137499.17 mm3, density=1.24 g/cm3, mass=170.50 g\", \"criteria\": [{\"condition\": \"Mass <= 90 g\", \"measured\": 170.49897282917433, \"ok\": false}], \"note\": \"\"}}",
+ "stderr": "",
+ "agent": {
+  "sim_steps": 2,
+  "sim_exhausted": false,
+  "review": [
+   {
+    "round": 0,
+    "unfaithful": [
+     "R5",
+     "R6"
+    ],
+    "control_pass": [
+     "R1",
+     "R2",
+     "R3",
+     "R7"
+    ]
+   },
+   {
+    "round": 1,
+    "unfaithful": [
+     "R3"
+    ],
+    "control_pass": [
+     "R1",
+     "R2",
+     "R3",
+     "R7"
+    ]
+   },
+   {
+    "round": 2,
+    "unfaithful": [],
+    "control_pass": [
+     "R1",
+     "R2",
+     "R7"
+    ]
+   }
+  ]
+ }
+}

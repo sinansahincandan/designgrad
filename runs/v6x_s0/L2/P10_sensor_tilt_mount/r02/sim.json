@@ -1,0 +1,151 @@
+{
+ "ok": true,
+ "result": {
+  "R1": {
+   "status": "pass",
+   "value": 1,
+   "note": "Found 1 solids",
+   "method": "Counted number of solids in the STEP file",
+   "criteria": [
+    {
+     "condition": "One single, valid solid",
+     "measured": 1,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R2": {
+   "status": "fail",
+   "value": [
+    -18.3,
+    [
+     0,
+     0
+    ]
+   ],
+   "note": "",
+   "method": "Checked z_min=-18.30035899189 and probe cylinders at (+-20, -10) with D=4.5",
+   "criteria": [
+    {
+     "condition": "minimum z = 0",
+     "measured": -18.3,
+     "ok": false
+    },
+    {
+     "condition": "two vertical screw holes diameter 4.5 mm at (+-20, -10)",
+     "measured": [
+      0,
+      0
+     ],
+     "ok": false
+    }
+   ],
+   "faithful": true
+  },
+  "R3": {
+   "status": "pass",
+   "value": 2157.54,
+   "note": "",
+   "method": "Sectioned plane normal=[0.        0.8660254 0.5      ], area=2157.5",
+   "criteria": [
+    {
+     "condition": "one flat face of at least 900 mm2",
+     "measured": 2157.54,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R4": {
+   "status": "fail",
+   "value": 12.05,
+   "note": "",
+   "method": "Face center height z=12.05",
+   "criteria": [
+    {
+     "condition": "centre of that face is at a height between 35 and 50 mm",
+     "measured": 12.05,
+     "ok": false
+    }
+   ],
+   "faithful": true
+  },
+  "R5": {
+   "status": "fail",
+   "value": false,
+   "note": "",
+   "method": "Probed 3.2mm holes at face center +-10mm along X, axis=-n (checked empty core and walled shell)",
+   "criteria": [
+    {
+     "condition": "Two sensor screw holes, diameter 3.2 mm... at face centre +- 10 mm along X",
+     "measured": false,
+     "ok": false
+    }
+   ],
+   "faithful": true
+  },
+  "R6": {
+   "status": "pass",
+   "value": [
+    -7.32,
+    16.6
+   ],
+   "note": "Footprint: x[-29.467817649962402,29.601792246181] y[-20.0,26.72538578563]",
+   "method": "Combined CoM with sensor at [-13.34801574  26.52969652  19.54750865], part mass 42.12g, margin 5mm",
+   "criteria": [
+    {
+     "condition": "combined centre of mass must lie inside the contact area with >= 5 mm margin",
+     "measured": [
+      -7.32,
+      16.6
+     ],
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R7": {
+   "status": "fail",
+   "value": 42.122,
+   "note": "",
+   "method": "Volume=33969.03 mm3 * density=0.00124 g/mm3",
+   "criteria": [
+    {
+     "condition": "Mass <= 35 g",
+     "measured": 42.122,
+     "ok": false
+    }
+   ],
+   "faithful": true
+  }
+ },
+ "stdout": "m z = 0\", \"measured\": -18.3, \"ok\": false}, {\"condition\": \"two vertical screw holes diameter 4.5 mm at (+-20, -10)\", \"measured\": [0, 0], \"ok\": false}], \"note\": \"\"}, \"R3\": {\"status\": \"pass\", \"value\": 2157.54, \"method\": \"Sectioned plane normal=[0.        0.8660254 0.5      ], area=2157.5\", \"criteria\": [{\"condition\": \"one flat face of at least 900 mm2\", \"measured\": 2157.54, \"ok\": true}], \"note\": \"\"}, \"R4\": {\"status\": \"fail\", \"value\": 12.05, \"method\": \"Face center height z=12.05\", \"criteria\": [{\"condition\": \"centre of that face is at a height between 35 and 50 mm\", \"measured\": 12.05, \"ok\": false}], \"note\": \"\"}, \"R5\": {\"status\": \"fail\", \"value\": false, \"method\": \"Probed 3.2mm holes at face center +-10mm along X, axis=-n (checked empty core and walled shell)\", \"criteria\": [{\"condition\": \"Two sensor screw holes, diameter 3.2 mm... at face centre +- 10 mm along X\", \"measured\": false, \"ok\": false}], \"note\": \"\"}, \"R6\": {\"status\": \"pass\", \"value\": [-7.32, 16.6], \"method\": \"Combined CoM with sensor at [-13.34801574  26.52969652  19.54750865], part mass 42.12g, margin 5mm\", \"criteria\": [{\"condition\": \"combined centre of mass must lie inside the contact area with >= 5 mm margin\", \"measured\": [-7.32, 16.6], \"ok\": true}], \"note\": \"Footprint: x[-29.467817649962402,29.601792246181] y[-20.0,26.72538578563]\"}, \"R7\": {\"status\": \"fail\", \"value\": 42.122, \"method\": \"Volume=33969.03 mm3 * density=0.00124 g/mm3\", \"criteria\": [{\"condition\": \"Mass <= 35 g\", \"measured\": 42.122, \"ok\": false}], \"note\": \"\"}}",
+ "stderr": "",
+ "agent": {
+  "sim_steps": 5,
+  "sim_exhausted": false,
+  "review": [
+   {
+    "round": 0,
+    "unfaithful": [
+     "R2",
+     "R5"
+    ],
+    "control_pass": [
+     "R1",
+     "R5",
+     "R7"
+    ]
+   },
+   {
+    "round": 1,
+    "unfaithful": [],
+    "control_pass": [
+     "R1",
+     "R7"
+    ]
+   }
+  ]
+ }
+}

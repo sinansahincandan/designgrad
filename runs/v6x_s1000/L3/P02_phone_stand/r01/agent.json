@@ -1,0 +1,105 @@
+{
+ "cad_steps": 5,
+ "cad_exhausted": false,
+ "cad_history": [
+  {
+   "step": 0,
+   "ok": false,
+   "feedback": "The code failed:\nTraceback (most recent call last):\n  File \"design.py\", line 78, in <module>\n    if not result.isSolid():\n           ^^^^^^^^^^^^^^\nAttributeError: 'Workplane' object has no attribute 'isSolid'. Did you mean: 'findSolid'?"
+  },
+  {
+   "step": 1,
+   "ok": false,
+   "feedback": "The code ran but produced 3 disconnected solids:\n  solid 1: volume 85057.2 mm3, bbox_min [-53.17, -45.0, -0.0], bbox_max [20.0, 45.0, 120.0]\n  solid 2: volume 36000.0 mm3, bbox_min [-48.17, -15.0, 88.21], bbox_max [-38.17, 15.0, 208.21]\n  solid 3: volume 750.0 mm3, bbox_min [-6.72, -2.5, 13.77], bbox_max [23.28, 2.5, 18.77]\n  solid 2's box touches or overlaps solid 1's box but the solids do not fuse: make them overlap by >= 1 mm\n  solid 3's box touches or overlaps solid 1's box but the solids do not fuse: make them overlap by >= 1 mm\n`result` must be ONE connected solid. Compare these boxes: f"
+  },
+  {
+   "step": 2,
+   "ok": false,
+   "feedback": "The code ran but produced 2 disconnected solids:\n  solid 1: volume 218350.5 mm3, bbox_min [-58.17, -45.0, -0.0], bbox_max [28.28, 45.0, 150.0]\n  solid 2: volume 36000.0 mm3, bbox_min [-48.17, -15.0, 98.21], bbox_max [-38.17, 15.0, 218.21]\n  solid 2's box touches or overlaps solid 1's box but the solids do not fuse: make them overlap by >= 1 mm\n`result` must be ONE connected solid. Compare these boxes: find which piece does not touch the main body, extend or move it so it overlaps the body by at least 1 mm, and union everything into one solid."
+  },
+  {
+   "step": 3,
+   "ok": false,
+   "feedback": "The code ran but produced 3 disconnected solids:\n  solid 1: volume 214622.2 mm3, bbox_min [-40.0, -45.0, -0.0], bbox_max [38.28, 45.0, 150.0]\n  solid 2: volume 54000.0 mm3, bbox_min [-50.67, -15.0, 98.21], bbox_max [-35.67, 15.0, 218.21]\n  solid 3: volume 4099.1 mm3, bbox_min [-40.0, -15.0, 50.0], bbox_max [-33.17, 15.0, 70.0]\n  solid 2's box touches or overlaps solid 1's box but the solids do not fuse: make them overlap by >= 1 mm\n  solid 3's box touches or overlaps solid 1's box but the solids do not fuse: make them overlap by >= 1 mm\n`result` must be ONE connected solid. Compare these boxes"
+  },
+  {
+   "step": 4,
+   "ok": false,
+   "feedback": "The code ran but produced 3 disconnected solids:\n  solid 1: volume 280378.4 mm3, bbox_min [-40.0, -45.0, -6.91], bbox_max [48.28, 45.0, 150.0]\n  solid 2: volume 120000.0 mm3, bbox_min [-53.17, -20.0, 98.21], bbox_max [-33.17, 20.0, 248.21]\n  solid 3: volume 8198.2 mm3, bbox_min [-40.0, -20.0, 45.0], bbox_max [-33.17, 20.0, 75.0]\n  solid 2's box touches or overlaps solid 1's box but the solids do not fuse: make them overlap by >= 1 mm\n  solid 3's box touches or overlaps solid 1's box but the solids do not fuse: make them overlap by >= 1 mm\n`result` must be ONE connected solid. Compare these box"
+  },
+  {
+   "step": 5,
+   "ok": true,
+   "feedback": ""
+  }
+ ],
+ "sim_steps": 5,
+ "sim_exhausted": false,
+ "review": [
+  {
+   "round": 0,
+   "unfaithful": [
+    "R4",
+    "R5"
+   ],
+   "control_pass": [
+    "R1",
+    "R3",
+    "R7"
+   ]
+  },
+  {
+   "round": 1,
+   "unfaithful": [
+    "R4",
+    "R5"
+   ],
+   "control_pass": [
+    "R1",
+    "R3",
+    "R7"
+   ]
+  },
+  {
+   "round": 2,
+   "unfaithful": [
+    "R6"
+   ],
+   "control_pass": [
+    "R1",
+    "R3",
+    "R7"
+   ]
+  },
+  {
+   "round": 3,
+   "unfaithful": [
+    "R4",
+    "R5"
+   ],
+   "control_pass": [
+    "R1",
+    "R3",
+    "R7"
+   ]
+  }
+ ],
+ "sim_updated": true,
+ "sim_history": [
+  {
+   "step": 0,
+   "ok": false,
+   "feedback": "The script failed to run:\n    chunks = self.iterencode(o, _one_shot=True)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Caskroom/miniconda/base/lib/python3.12/json/encoder.py\", line 258, in iterencode\n    return _iterencode(o, 0)\n           ^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Caskroom/miniconda/base/lib/python3.12/json/encoder.py\", line 180, in default\n    raise TypeError(f'Object of type {o.__class__.__name__} '\nTypeError: Object of type bool is not JSON serializable"
+  },
+  {
+   "step": 1,
+   "ok": false,
+   "feedback": "The script failed to run:\n    chunks = self.iterencode(o, _one_shot=True)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Caskroom/miniconda/base/lib/python3.12/json/encoder.py\", line 258, in iterencode\n    return _iterencode(o, 0)\n           ^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Caskroom/miniconda/base/lib/python3.12/json/encoder.py\", line 180, in default\n    raise TypeError(f'Object of type {o.__class__.__name__} '\nTypeError: Object of type bool is not JSON serializable"
+  },
+  {
+   "step": 2,
+   "ok": true,
+   "feedback": ""
+  }
+ ]
+}

@@ -1,0 +1,12 @@
+{
+ "mismatches": [
+  "The face plate (vertical component) is oriented along the XZ plane but extends into negative Z values, whereas the specification requires it to be at y=0 to 4.",
+  "The base plate is located in the -Z region instead of being on the table at z=0 to 5.",
+  "The motor mounting holes and central bore are not visible or correctly placed according to the coordinate system (the part appears rotated/flipped).",
+  "The vertical face plate does not appear to be 4mm thick in the correct orientation; it looks like a large block."
+ ],
+ "systemic": [
+  "The part is oriented such that its center of mass and geometry result in it being unstable (rest_stable: false), meaning it cannot sit on the table as intended."
+ ],
+ "summary": "The rendered part fails to follow the coordinate system requirements, resulting in a misoriented bracket that does not match the motor mounting specifications."
+}

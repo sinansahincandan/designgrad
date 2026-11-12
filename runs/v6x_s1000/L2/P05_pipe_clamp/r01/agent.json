@@ -1,0 +1,57 @@
+{
+ "cad_steps": 5,
+ "cad_exhausted": true,
+ "cad_history": [
+  {
+   "step": 0,
+   "ok": false,
+   "feedback": "The code ran but produced 6 disconnected solids:\n  solid 1: volume 1469.7 mm3, bbox_min [6.99, -10.01, 20.15], bbox_max [18.51, 10.01, 30.0]\n  solid 2: volume 1469.7 mm3, bbox_min [-18.51, -10.01, 20.15], bbox_max [-6.99, 10.01, 30.0]\n  solid 3: volume 491.8 mm3, bbox_min [-27.0, -10.02, -0.02], bbox_max [-6.98, 10.02, 4.85]\n  solid 4: volume 440.5 mm3, bbox_min [6.98, -10.02, -0.02], bbox_max [27.0, 10.02, 4.85]\n  solid 5: volume 66.9 mm3, bbox_min [2.23, -11.01, -12.51], bbox_max [7.01, 7.51, -10.59]\n  solid 6: volume 66.9 mm3, bbox_min [-7.01, -11.01, -12.51], bbox_max [-2.23, 7.51, -10.59]"
+  },
+  {
+   "step": 1,
+   "ok": false,
+   "feedback": "The code ran but produced 9 disconnected solids:\n  solid 1: volume 692.9 mm3, bbox_min [-7.27, -11.02, -15.52], bbox_max [7.27, 7.52, -10.41]\n  solid 2: volume 249.0 mm3, bbox_min [-27.03, -11.03, -0.03], bbox_max [-6.47, -1.56, 6.38]\n  solid 3: volume 249.0 mm3, bbox_min [-27.03, 1.56, -0.03], bbox_max [-6.47, 11.03, 6.38]\n  solid 4: volume 248.6 mm3, bbox_min [6.48, 1.57, -0.02], bbox_max [27.02, 11.02, 6.37]\n  solid 5: volume 248.6 mm3, bbox_min [6.48, -11.02, -0.02], bbox_max [27.02, -1.57, 6.37]\n  solid 6: volume 244.5 mm3, bbox_min [6.49, -11.01, 18.63], bbox_max [19.01, -1.57, 25.01]\n  "
+  },
+  {
+   "step": 2,
+   "ok": false,
+   "feedback": "The code ran but produced 8 disconnected solids:\n  solid 1: volume 1661.3 mm3, bbox_min [-19.01, -10.01, 20.15], bbox_max [-5.99, 10.01, 30.0]\n  solid 2: volume 1661.3 mm3, bbox_min [5.99, -10.01, 20.15], bbox_max [19.01, 10.01, 30.0]\n  solid 3: volume 186.6 mm3, bbox_min [-27.03, 1.56, -0.03], bbox_max [-5.97, 10.03, 4.86]\n  solid 4: volume 186.6 mm3, bbox_min [-27.03, -10.03, -0.03], bbox_max [-5.97, -1.56, 4.86]\n  solid 5: volume 186.2 mm3, bbox_min [5.98, 1.57, -0.02], bbox_max [27.02, 10.02, 4.85]\n  solid 6: volume 186.2 mm3, bbox_min [5.98, -10.02, -0.02], bbox_max [27.02, -1.57, 4.85]\n "
+  },
+  {
+   "step": 3,
+   "ok": false,
+   "feedback": "The code ran but produced 8 disconnected solids:\n  solid 1: volume 2084.7 mm3, bbox_min [5.49, -11.01, 18.63], bbox_max [19.51, 11.01, 30.0]\n  solid 2: volume 2084.7 mm3, bbox_min [-19.51, -11.01, 18.63], bbox_max [-5.49, 11.01, 30.0]\n  solid 3: volume 278.1 mm3, bbox_min [-27.03, -11.03, -0.03], bbox_max [-5.47, -1.56, 6.38]\n  solid 4: volume 278.1 mm3, bbox_min [-27.03, 1.56, -0.03], bbox_max [-5.47, 11.03, 6.38]\n  solid 5: volume 277.6 mm3, bbox_min [5.48, 1.57, -0.02], bbox_max [27.02, 11.02, 6.37]\n  solid 6: volume 277.6 mm3, bbox_min [5.48, -11.02, -0.02], bbox_max [27.02, -1.57, 6.37]\n "
+  },
+  {
+   "step": 4,
+   "ok": false,
+   "feedback": "The code ran but produced 5 disconnected solids:\n  solid 1: volume 8317.4 mm3, bbox_min [-29.03, -11.03, 18.62], bbox_max [29.03, 11.03, 30.0]\n  solid 2: volume 1132.8 mm3, bbox_min [-29.03, 1.55, -0.03], bbox_max [29.03, 11.03, 6.39]\n  solid 3: volume 1132.8 mm3, bbox_min [-29.03, -11.03, -0.03], bbox_max [29.03, -1.55, 6.39]\n  solid 4: volume 66.9 mm3, bbox_min [2.23, -11.01, -12.51], bbox_max [7.01, 7.51, -10.59]\n  solid 5: volume 66.9 mm3, bbox_min [-7.01, -11.01, -12.51], bbox_max [-2.23, 7.51, -10.59]\n  solid 2 is separated from solid 1 by 12.2 mm along Z (solid 1 spans z 18.62..30.0, so"
+  },
+  {
+   "step": 5,
+   "ok": false,
+   "feedback": "The code ran but produced 5 disconnected solids:\n  solid 1: volume 2535.9 mm3, bbox_min [2.99, -11.01, 18.63], bbox_max [23.01, 11.01, 29.0]\n  solid 2: volume 2535.9 mm3, bbox_min [-23.01, -11.01, 18.63], bbox_max [-2.99, 11.01, 29.0]\n  solid 3: volume 1222.1 mm3, bbox_min [-27.02, -11.02, -1.0], bbox_max [-2.98, 11.02, 6.38]\n  solid 4: volume 1221.3 mm3, bbox_min [2.99, -11.01, -1.0], bbox_max [27.01, 11.01, 6.37]\n  solid 5: volume 679.0 mm3, bbox_min [-7.03, -11.03, -15.52], bbox_max [7.03, 7.53, -10.57]\n  solid 2 is separated from solid 1 by 6.0 mm along X (solid 1 spans x 2.99..23.01, soli"
+  }
+ ],
+ "sim_steps": 0,
+ "sim_exhausted": false,
+ "review": [
+  {
+   "round": 0,
+   "unfaithful": [],
+   "control_pass": [
+    "R1",
+    "R3",
+    "R7"
+   ]
+  }
+ ],
+ "sim_updated": false,
+ "sim_history": [
+  {
+   "step": 0,
+   "ok": true,
+   "feedback": ""
+  }
+ ]
+}

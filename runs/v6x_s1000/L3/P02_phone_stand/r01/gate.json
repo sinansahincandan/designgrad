@@ -1,0 +1,11 @@
+{
+ "mismatches": [
+  "Height (311.9 mm) significantly exceeds the requirement of <= 120 mm.",
+  "Footprint width (126.4 mm) exceeds the requirement of 100 x 100 mm.",
+  "Mass (4005.15 g) is orders of magnitude higher than the limit of 60 g.",
+  "The part does not match the 'continuous spine' design concept; it appears as a massive, oversized block with a small notch.",
+  "The geometry does not provide the specified seat, lip, or back support features described in the design document."
+ ],
+ "systemic": [],
+ "summary": "The rendered part is a massive, incorrectly dimensioned block that fails almost every geometric and mass requirement specified in the design document."
+}

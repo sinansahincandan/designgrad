@@ -1,0 +1,1 @@
+[{"type": "ValueError", "msg": "No material found at section x=20.0", "line": 145, "src": "raise ValueError(f\"No material found at section x={x0}\")"}]

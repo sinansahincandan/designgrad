@@ -1,0 +1,12 @@
+{
+ "mismatches": [
+  "R2 Violation: The Z-axis envelope requires 0 <= z <= 130, but the rendered part extends from approximately z = -55 to z = 55 (bbox_min[2] is -55.0).",
+  "R4 Violation: The shelf support top surface must be at exactly z = 110, but the render shows the top surface near z = 55.",
+  "R3/Design Mismatch: The screw holes and clearance cutouts are not visible in the rendered part; they appear to be missing or incorrectly placed relative to the spine's geometry.",
+  "Design Document Mismatch: The design document specifies a vertical spine from z=0 to z=110, but the render shows a centered spine around z=0."
+ ],
+ "systemic": [
+  "The part is not rest-stable (as indicated by 'rest_stable': false and negative margin), meaning it cannot stand on its own for inspection or assembly if placed on a flat surface."
+ ],
+ "summary": "The rendered part fails almost all critical geometric requirements, specifically regarding the Z-axis positioning, the shelf height (z=110), and the presence of screw holes."
+}

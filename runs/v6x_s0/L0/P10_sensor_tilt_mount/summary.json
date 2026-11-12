@@ -1,0 +1,32 @@
+{
+ "k": 0,
+ "proxy": 0.0,
+ "level": "L0",
+ "problem": "P10_sensor_tilt_mount",
+ "llm": {
+  "calls": 6,
+  "tokens_in": 33420,
+  "tokens_out": 7535,
+  "seconds": 186.0
+ },
+ "rounds": 0,
+ "trace": [
+  {
+   "k": 0,
+   "accepted": true,
+   "score": 0.0,
+   "proxy": 0.0,
+   "critic_frac": 0.0,
+   "gate": null,
+   "sim_issue": false,
+   "cad_steps": 5,
+   "cad_exhausted": true,
+   "sim_steps": null,
+   "sim_exhausted": null,
+   "sim_updated": false,
+   "n_measured": null,
+   "n_unmeasured": null,
+   "review": null
+  }
+ ]
+}

@@ -1,0 +1,24 @@
+=== v7 seed 0 Wed Nov 11 22:32:35 CST 2026
+skip L0 P01_shelf_bracket
+skip L1 P01_shelf_bracket
+done L2 P01_shelf_bracket rounds=4 best_k=1 proxy=2.79 calls=55 1824s
+done L3 P01_shelf_bracket rounds=4 best_k=3 proxy=2.50 calls=60 2276s
+skip L0 P03_enclosure_base
+skip L1 P03_enclosure_base
+=== PAUSED by hand Wed Nov 11 23:41:00 CST 2026 (after a finished unit; resume with runs/v7_run.sh)
+=== v7 seed 0 Wed Nov 11 23:58:43 CST 2026
+skip L0 P01_shelf_bracket
+skip L1 P01_shelf_bracket
+skip L2 P01_shelf_bracket
+skip L3 P01_shelf_bracket
+skip L0 P03_enclosure_base
+skip L1 P03_enclosure_base
+done L2 P03_enclosure_base rounds=4 best_k=0 proxy=2.57 calls=54 1580s
+done L3 P03_enclosure_base rounds=4 best_k=1 proxy=2.57 calls=51 1284s
+skip L0 P07_nema17_mount
+skip L1 P07_nema17_mount
+done L2 P07_nema17_mount rounds=4 best_k=1 proxy=2.43 calls=51 1572s
+done L3 P07_nema17_mount rounds=4 best_k=3 proxy=2.50 calls=61 1975s
+=== v7 seed 1000 Thu Nov 12 01:45:36 CST 2026
+skip L0 P01_shelf_bracket
+=== STOPPED by hand Thu Nov 12 01:47:05 CST 2026: fix failed the agreed criterion (false passes 0 -> 6 of 175 checks in seed 0); falling back to v6

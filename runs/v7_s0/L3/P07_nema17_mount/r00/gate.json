@@ -1,0 +1,12 @@
+{
+ "mismatches": [
+  "The face plate (vertical component) is oriented along the X-Z plane at y=0, but its thickness extends into negative Y values (bbox_min y=0 to bbox_max y=50), whereas R2 and the design document specify it should be at y=[0, 4].",
+  "The base plate (horizontal component) is located at z < 0 (bbox_min z=-27.5), which contradicts the requirement that the table is at z=0 and the base must be on the table (R6).",
+  "The motor screw holes (R4) are not visible in the renders; instead, there appear to be large circular cutouts/recesses near the corners of the face plate.",
+  "The central bore (R3) is not clearly visible as a through-hole on the shaft axis (0, 30)."
+ ],
+ "systemic": [
+  "The part is oriented upside down and backwards relative to the coordinate system; the 'base' is below the table (z < 0) and the 'face plate' extends away from the motor side."
+ ],
+ "summary": "The rendered part is incorrectly oriented in the coordinate system, placing the base below the table and the face plate on the wrong side of the Y-axis."
+}

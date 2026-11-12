@@ -1,0 +1,46 @@
+{
+ "cad_steps": 1,
+ "cad_exhausted": false,
+ "cad_history": [
+  {
+   "step": 0,
+   "ok": false,
+   "feedback": "The code ran but produced 3 disconnected solids:\n  solid 1: volume 22080.0 mm3, bbox_min [6.0, -8.0, -44.0], bbox_max [52.0, 8.0, -14.0]\n  solid 2: volume 4704.6 mm3, bbox_min [-0.0, -8.0, -5.0], bbox_max [6.0, 8.0, 45.0]\n  solid 3: volume 200.0 mm3, bbox_min [47.0, -4.0, -13.0], bbox_max [52.0, 4.0, -8.0]\n  solid 2 is separated from solid 1 by 9.0 mm along Z (solid 1 spans z -44.0..-14.0, solid 2 spans -5.0..45.0)\n  solid 3 is separated from solid 1 by 1.0 mm along Z (solid 1 spans z -44.0..-14.0, solid 3 spans -13.0..-8.0)\n`result` must be ONE connected solid. Compare these boxes: find which"
+  },
+  {
+   "step": 1,
+   "ok": true,
+   "feedback": ""
+  }
+ ],
+ "sim_steps": 1,
+ "sim_exhausted": false,
+ "review": [
+  {
+   "round": 0,
+   "unfaithful": [
+    "R3"
+   ],
+   "control_pass": [
+    "R1",
+    "R7"
+   ]
+  },
+  {
+   "round": 1,
+   "unfaithful": [],
+   "control_pass": [
+    "R1",
+    "R7"
+   ]
+  }
+ ],
+ "sim_updated": true,
+ "sim_history": [
+  {
+   "step": 0,
+   "ok": true,
+   "feedback": ""
+  }
+ ]
+}

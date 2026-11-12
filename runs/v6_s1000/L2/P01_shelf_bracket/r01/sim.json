@@ -1,0 +1,197 @@
+{
+ "ok": true,
+ "result": {
+  "R1": {
+   "status": "pass",
+   "value": 1,
+   "note": "Found 1 solid(s)",
+   "method": "Counted number of solids in the STEP file",
+   "criteria": [
+    {
+     "condition": "One single, valid solid",
+     "measured": 1.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R2": {
+   "status": "fail",
+   "value": [
+    0.0,
+    150.0,
+    -30.0,
+    30.0,
+    0.0,
+    120.0
+   ],
+   "note": "",
+   "method": "Checked bounding box: x[0.00,150.00], y[-30.00,30.00], z[0.00,120.00]",
+   "criteria": [
+    {
+     "condition": "0 <= x <= 170",
+     "measured": [
+      0.0,
+      150.0
+     ],
+     "ok": true
+    },
+    {
+     "condition": "-20 <= y <= 20",
+     "measured": [
+      -30.0,
+      30.0
+     ],
+     "ok": false
+    },
+    {
+     "condition": "0 <= z <= 130",
+     "measured": [
+      0.0,
+      120.0
+     ],
+     "ok": true
+    },
+    {
+     "condition": "touches wall (min x = 0)",
+     "measured": 0.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R3": {
+   "status": "fail",
+   "value": [
+    {
+     "empty_ratio": 0.018749999999999985,
+     "walled_ratio": 0.018750000000000003,
+     "clearance_vol": 0.0,
+     "valid": false
+    },
+    {
+     "empty_ratio": 0.018750000000000003,
+     "walled_ratio": 0.018749999999999985,
+     "clearance_vol": 0.0,
+     "valid": false
+    }
+   ],
+   "note": "",
+   "method": "Holes at (y=0,z=20), (y=0,z=60). Verified core emptiness, wall presence, and 4mm clearance for x>=10.",
+   "criteria": [
+    {
+     "condition": "diameter 5.5 mm hole exists",
+     "measured": false,
+     "ok": false
+    },
+    {
+     "condition": "no material within 4mm of axis for x >= 10",
+     "measured": false,
+     "ok": false
+    }
+   ],
+   "faithful": true
+  },
+  "R4": {
+   "status": "fail",
+   "value": {
+    "fill_ratio": 0.09090909090909088,
+    "forbidden_vol": 1358.4229847251586
+   },
+   "note": "",
+   "method": "Checked support column [140,150]x[-2,2] below z=110 and forbidden zone volume for x>=8, z>110.",
+   "criteria": [
+    {
+     "condition": "top surface at z=110 reaches x=150 (solid below)",
+     "measured": 0.09090909090909088,
+     "ok": false
+    },
+    {
+     "condition": "nothing above z=110 for x >= 8",
+     "measured": 1358.4229847251586,
+     "ok": false
+    }
+   ],
+   "faithful": true
+  },
+  "R5": {
+   "status": "pass",
+   "value": 0.31224786557295336,
+   "note": "",
+   "method": "M=21000.0 Nmm, c=61.06 mm, I=4106477.5 mm4. sigma=Mc/I",
+   "criteria": [
+    {
+     "condition": "bending stress <= 20 MPa",
+     "measured": 0.31224786557295336,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R6": {
+   "status": "pass",
+   "value": 0.009545894261681828,
+   "note": "",
+   "method": "F=150.0 N, L=140.0 mm, E=3500.0 MPa, I=4106477.5 mm4. delta=FL^3/3EI",
+   "criteria": [
+    {
+     "condition": "deflection <= 2.0 mm",
+     "measured": 0.009545894261681828,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R7": {
+   "status": "fail",
+   "value": 350.9760717926727,
+   "note": "",
+   "method": "Volume=283045.2 mm3, density=1.24 g/cm3. mass = vol * dens / 1000",
+   "criteria": [
+    {
+     "condition": "Mass <= 90 g",
+     "measured": 350.9760717926727,
+     "ok": false
+    }
+   ],
+   "faithful": true
+  }
+ },
+ "stdout": "alled_ratio\": 0.018749999999999985, \"clearance_vol\": 0.0, \"valid\": false}], \"method\": \"Holes at (y=0,z=20), (y=0,z=60). Verified core emptiness, wall presence, and 4mm clearance for x>=10.\", \"criteria\": [{\"condition\": \"diameter 5.5 mm hole exists\", \"measured\": false, \"ok\": false}, {\"condition\": \"no material within 4mm of axis for x >= 10\", \"measured\": false, \"ok\": false}]}, \"R4\": {\"status\": \"fail\", \"value\": {\"fill_ratio\": 0.09090909090909088, \"forbidden_vol\": 1358.4229847251586}, \"method\": \"Checked support column [140,150]x[-2,2] below z=110 and forbidden zone volume for x>=8, z>110.\", \"criteria\": [{\"condition\": \"top surface at z=110 reaches x=150 (solid below)\", \"measured\": 0.09090909090909088, \"ok\": false}, {\"condition\": \"nothing above z=110 for x >= 8\", \"measured\": 1358.4229847251586, \"ok\": false}]}, \"R5\": {\"status\": \"pass\", \"value\": 0.31224786557295336, \"method\": \"M=21000.0 Nmm, c=61.06 mm, I=4106477.5 mm4. sigma=Mc/I\", \"criteria\": [{\"condition\": \"bending stress <= 20 MPa\", \"measured\": 0.31224786557295336, \"ok\": true}]}, \"R6\": {\"status\": \"pass\", \"value\": 0.009545894261681828, \"method\": \"F=150.0 N, L=140.0 mm, E=3500.0 MPa, I=4106477.5 mm4. delta=FL^3/3EI\", \"criteria\": [{\"condition\": \"deflection <= 2.0 mm\", \"measured\": 0.009545894261681828, \"ok\": true}]}, \"R7\": {\"status\": \"fail\", \"value\": 350.9760717926727, \"method\": \"Volume=283045.2 mm3, density=1.24 g/cm3. mass = vol * dens / 1000\", \"criteria\": [{\"condition\": \"Mass <= 90 g\", \"measured\": 350.9760717926727, \"ok\": false}]}}",
+ "stderr": "",
+ "agent": {
+  "sim_steps": 2,
+  "sim_exhausted": false,
+  "review": [
+   {
+    "round": 0,
+    "unfaithful": [
+     "R3",
+     "R4"
+    ],
+    "control_pass": [
+     "R1",
+     "R7"
+    ]
+   },
+   {
+    "round": 1,
+    "unfaithful": [
+     "R3"
+    ],
+    "control_pass": [
+     "R1",
+     "R7"
+    ]
+   },
+   {
+    "round": 2,
+    "unfaithful": [],
+    "control_pass": [
+     "R1",
+     "R7"
+    ]
+   }
+  ]
+ }
+}

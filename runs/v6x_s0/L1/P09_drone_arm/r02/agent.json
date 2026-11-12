@@ -1,0 +1,36 @@
+{
+ "cad_steps": 5,
+ "cad_exhausted": false,
+ "cad_history": [
+  {
+   "step": 0,
+   "ok": false,
+   "feedback": "The code failed:\nTraceback (most recent call last):\n  File \"design.py\", line 89, in <module>\n    result = design()\n             ^^^^^^^^\n  File \"design.py\", line 35, in design\n    sketch_start = cq.Sketch().polyline(points_start).close()\n                   ^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'Sketch' object has no attribute 'polyline'. Did you mean: 'polygon'?"
+  },
+  {
+   "step": 1,
+   "ok": false,
+   "feedback": "The code failed:\nTraceback (most recent call last):\n  File \"design.py\", line 66, in <module>\n    result = design()\n             ^^^^^^^^\n  File \"design.py\", line 39, in design\n    arm = cq.Workplane(\"XY\").loft([w1, w2], ruled=True)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: Workplane.loft() got multiple values for argument 'ruled'"
+  },
+  {
+   "step": 2,
+   "ok": false,
+   "feedback": "The code failed:\nTraceback (most recent call last):\n  File \"design.py\", line 105, in <module>\n    result = design()\n             ^^^^^^^^\n  File \"design.py\", line 41, in design\n    arm = cq.Workplane(\"XY\").loft([w1, w2], ruled=True)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: Workplane.loft() got multiple values for argument 'ruled'"
+  },
+  {
+   "step": 3,
+   "ok": false,
+   "feedback": "The code failed:\nTraceback (most recent call last):\n  File \"design.py\", line 72, in <module>\n    result = design()\n             ^^^^^^^^\n  File \"design.py\", line 43, in design\n    arm = cq.Workplane(\"YZ\").loft([w1, w2], ruled=True)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: Workplane.loft() got multiple values for argument 'ruled'"
+  },
+  {
+   "step": 4,
+   "ok": false,
+   "feedback": "The code failed:\nTraceback (most recent call last):\n  File \"design.py\", line 71, in <module>\n    result = design()\n             ^^^^^^^^\n  File \"design.py\", line 43, in design\n    arm = cq.Workplane(\"YZ\").loft([w1, w2], ruled=True)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: Workplane.loft() got multiple values for argument 'ruled'"
+  },
+  {
+   "step": 5,
+   "ok": true,
+   "feedback": ""
+  }
+ ]
+}

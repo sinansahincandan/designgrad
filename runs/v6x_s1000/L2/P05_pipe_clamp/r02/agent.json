@@ -1,0 +1,68 @@
+{
+ "cad_steps": 5,
+ "cad_exhausted": true,
+ "cad_history": [
+  {
+   "step": 0,
+   "ok": false,
+   "feedback": "The code ran but produced 2 disconnected solids:\n  solid 1: volume 8793.9 mm3, bbox_min [-27.0, -15.54, -7.54], bbox_max [27.0, 15.54, 32.54]\n  solid 2: volume 1617.8 mm3, bbox_min [-7.01, -10.01, 20.15], bbox_max [7.01, 10.01, 30.0]\n  solid 2's box touches or overlaps solid 1's box but the solids do not fuse: make them overlap by >= 1 mm\n`result` must be ONE connected solid. Compare these boxes: find which piece does not touch the main body, extend or move it so it overlaps the body by at least 1 mm, and union everything into one solid."
+  },
+  {
+   "step": 1,
+   "ok": false,
+   "feedback": "The code failed:\nTraceback (most recent call last):\n  File \"design.py\", line 25, in <module>\n    .replaceArc(BAND_INNER, 0, BAND_OUTER, 0, 0, 180) # This is complex in CQ, let's use a simpler approach:\n     ^^^^^^^^^^\nAttributeError: 'Workplane' object has no attribute 'replaceArc'"
+  },
+  {
+   "step": 2,
+   "ok": false,
+   "feedback": "The code ran but produced 6 disconnected solids:\n  solid 1: volume 2180.0 mm3, bbox_min [-27.0, -10.04, -0.04], bbox_max [27.0, 10.04, 4.87]\n  solid 2: volume 1617.8 mm3, bbox_min [-7.01, -10.01, 20.15], bbox_max [7.01, 10.01, 30.0]\n  solid 3: volume 1.8 mm3, bbox_min [-7.0, 10.59, 18.64], bbox_max [-6.34, 11.0, 32.5]\n  solid 4: volume 1.8 mm3, bbox_min [6.34, 10.59, 18.64], bbox_max [7.0, 11.0, 32.5]\n  solid 5: volume 1.8 mm3, bbox_min [-7.0, -11.0, 18.64], bbox_max [-6.34, -10.59, 32.5]\n  solid 6: volume 1.8 mm3, bbox_min [6.34, -11.0, 18.64], bbox_max [7.0, -10.59, 32.5]\n  solid 2 is separa"
+  },
+  {
+   "step": 3,
+   "ok": false,
+   "feedback": "The code ran but produced 6 disconnected solids:\n  solid 1: volume 2180.0 mm3, bbox_min [-27.0, -10.04, -0.04], bbox_max [27.0, 10.04, 4.87]\n  solid 2: volume 1634.9 mm3, bbox_min [-7.01, -10.01, 20.15], bbox_max [7.01, 10.01, 30.0]\n  solid 3: volume 1.8 mm3, bbox_min [-7.0, 10.59, 18.64], bbox_max [-6.34, 11.0, 32.5]\n  solid 4: volume 1.8 mm3, bbox_min [6.34, 10.59, 18.64], bbox_max [7.0, 11.0, 32.5]\n  solid 5: volume 1.8 mm3, bbox_min [-7.0, -11.0, 18.64], bbox_max [-6.34, -10.59, 32.5]\n  solid 6: volume 1.8 mm3, bbox_min [6.34, -11.0, 18.64], bbox_max [7.0, -10.59, 32.5]\n  solid 2 is separa"
+  },
+  {
+   "step": 4,
+   "ok": false,
+   "feedback": "The code ran but produced 2 disconnected solids:\n  solid 1: volume 2335.6 mm3, bbox_min [-27.0, -11.04, -0.04], bbox_max [27.0, 11.04, 6.39]\n  solid 2: volume 1914.6 mm3, bbox_min [-7.02, -11.02, 18.62], bbox_max [7.02, 11.02, 32.5]\n  solid 2 is separated from solid 1 by 12.2 mm along Z (solid 1 spans z -0.04..6.39, solid 2 spans 18.62..32.5)\n`result` must be ONE connected solid. Compare these boxes: find which piece does not touch the main body, extend or move it so it overlaps the body by at least 1 mm, and union everything into one solid."
+  },
+  {
+   "step": 5,
+   "ok": false,
+   "feedback": "The code ran but produced 2 disconnected solids:\n  solid 1: volume 2335.6 mm3, bbox_min [-27.0, -11.04, -0.04], bbox_max [27.0, 11.04, 6.39]\n  solid 2: volume 1914.6 mm3, bbox_min [-7.02, -11.02, 18.62], bbox_max [7.02, 11.02, 32.5]\n  solid 2 is separated from solid 1 by 12.2 mm along Z (solid 1 spans z -0.04..6.39, solid 2 spans 18.62..32.5)\n`result` must be ONE connected solid. Compare these boxes: find which piece does not touch the main body, extend or move it so it overlaps the body by at least 1 mm, and union everything into one solid."
+  }
+ ],
+ "sim_steps": 1,
+ "sim_exhausted": false,
+ "review": [
+  {
+   "round": 0,
+   "unfaithful": [
+    "R3"
+   ],
+   "control_pass": [
+    "R1",
+    "R3",
+    "R7"
+   ]
+  },
+  {
+   "round": 1,
+   "unfaithful": [],
+   "control_pass": [
+    "R1",
+    "R3",
+    "R7"
+   ]
+  }
+ ],
+ "sim_updated": true,
+ "sim_history": [
+  {
+   "step": 0,
+   "ok": true,
+   "feedback": ""
+  }
+ ]
+}

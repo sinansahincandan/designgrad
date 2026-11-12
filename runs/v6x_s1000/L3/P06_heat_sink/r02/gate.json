@@ -1,0 +1,10 @@
+{
+ "mismatches": [
+  "The screwdriver access voids are not continuous cylindrical voids from z=3 to z=25; they appear as small, disconnected holes or irregular geometry near the top of the fins (as seen in the 'Right' and 'Isometric' views).",
+  "The mounting hole diameter is inconsistent with the requirement: the measured facts show cylindrical faces with radii of 1.6mm (diameter 3.2mm) at z=19.5, but also radii of 3.5mm (diameter 7mm) at lower Z levels, suggesting the access voids and mounting holes are inverted or incorrectly applied."
+ ],
+ "systemic": [
+  "The screwdriver access requirement specifies a void of diameter 7mm for z >= 3 to allow tool clearance, but the geometry shows small holes at the top of the fins rather than large voids through the fin structure."
+ ],
+ "summary": "The part fails to provide the required screwdriver access voids, instead showing small, misplaced cylindrical features near the top of the fins."
+}

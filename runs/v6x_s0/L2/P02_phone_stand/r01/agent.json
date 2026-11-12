@@ -1,0 +1,52 @@
+{
+ "cad_steps": 4,
+ "cad_exhausted": false,
+ "cad_history": [
+  {
+   "step": 0,
+   "ok": false,
+   "feedback": "The code ran but produced 3 disconnected solids:\n  solid 1: volume 74940.8 mm3, bbox_min [-49.54, -40.0, -27.19], bbox_max [49.54, 40.0, 33.19]\n  solid 2: volume 1200.0 mm3, bbox_min [-45.17, -15.0, 93.21], bbox_max [-41.17, 15.0, 103.21]\n  solid 3: volume 480.0 mm3, bbox_min [6.54, -15.0, 16.33], bbox_max [14.54, 15.0, 18.33]\n  solid 2 is separated from solid 1 by 60.0 mm along Z (solid 1 spans z -27.19..33.19, solid 2 spans 93.21..103.21)\n  solid 3's box touches or overlaps solid 1's box but the solids do not fuse: make them overlap by >= 1 mm\n`result` must be ONE connected solid. Compare th"
+  },
+  {
+   "step": 1,
+   "ok": false,
+   "feedback": "The code ran but produced 3 disconnected solids:\n  solid 1: volume 55479.1 mm3, bbox_min [-60.18, -40.0, -27.19], bbox_max [61.49, 40.0, 33.19]\n  solid 2: volume 2700.0 mm3, bbox_min [-46.17, -15.0, 90.71], bbox_max [-40.17, 15.0, 105.71]\n  solid 3: volume 1287.4 mm3, bbox_min [3.28, -15.0, 14.27], bbox_max [14.54, 15.0, 18.33]\n  solid 2 is separated from solid 1 by 57.5 mm along Z (solid 1 spans z -27.19..33.19, solid 2 spans 90.71..105.71)\n  solid 3's box touches or overlaps solid 1's box but the solids do not fuse: make them overlap by >= 1 mm\n`result` must be ONE connected solid. Compare t"
+  },
+  {
+   "step": 2,
+   "ok": false,
+   "feedback": "The code ran but produced 2 disconnected solids:\n  solid 1: volume 69167.8 mm3, bbox_min [-70.09, -40.0, -33.23], bbox_max [70.09, 40.0, 39.23]\n  solid 2: volume 14000.0 mm3, bbox_min [-53.17, -17.5, 88.21], bbox_max [-33.17, 17.5, 108.21]\n  solid 2 is separated from solid 1 by 49.0 mm along Z (solid 1 spans z -33.23..39.23, solid 2 spans 88.21..108.21)\n`result` must be ONE connected solid. Compare these boxes: find which piece does not touch the main body, extend or move it so it overlaps the body by at least 1 mm, and union everything into one solid."
+  },
+  {
+   "step": 3,
+   "ok": false,
+   "feedback": "The code ran but produced 2 disconnected solids:\n  solid 1: volume 237765.4 mm3, bbox_min [-76.73, -40.0, -39.87], bbox_max [76.73, 40.0, 150.0]\n  solid 2: volume 64000.0 mm3, bbox_min [-63.17, -20.0, 78.21], bbox_max [-23.17, 20.0, 118.21]\n  solid 2's box touches or overlaps solid 1's box but the solids do not fuse: make them overlap by >= 1 mm\n`result` must be ONE connected solid. Compare these boxes: find which piece does not touch the main body, extend or move it so it overlaps the body by at least 1 mm, and union everything into one solid."
+  },
+  {
+   "step": 4,
+   "ok": true,
+   "feedback": ""
+  }
+ ],
+ "sim_steps": 0,
+ "sim_exhausted": false,
+ "review": [
+  {
+   "round": 0,
+   "unfaithful": [],
+   "control_pass": [
+    "R1",
+    "R3",
+    "R7"
+   ]
+  }
+ ],
+ "sim_updated": false,
+ "sim_history": [
+  {
+   "step": 0,
+   "ok": true,
+   "feedback": ""
+  }
+ ]
+}

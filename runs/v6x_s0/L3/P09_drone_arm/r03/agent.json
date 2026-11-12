@@ -1,0 +1,40 @@
+{
+ "cad_steps": 5,
+ "cad_exhausted": true,
+ "cad_history": [
+  {
+   "step": 0,
+   "ok": false,
+   "feedback": "The code failed:\n             ^^^^^^^^^^\n  File \"design.py\", line 31, in make_arm\n    bottom_flange = create_tapered_flange(L_TOTAL, WIDTH_BASE, WIDTH_TIP, FLANGE_THICKNESS, 0)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"design.py\", line 25, in create_tapered_flange\n    return cq.Workplane(\"YZ\").workplane(offset=0).add(p1).add(p2).loft()\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/sinancandan/HackathonGemma/.venv/lib/python3.12/site-packages/cadquery/cq.py\", line 3642, in loft\n    raise Value"
+  },
+  {
+   "step": 1,
+   "ok": false,
+   "feedback": "The code failed:\n             ^^^^^^^^^^\n  File \"design.py\", line 27, in make_arm\n    bottom_flange = create_tapered_flange(L_TOTAL, WIDTH_BASE, WIDTH_TIP, FLANGE_THICKNESS)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"design.py\", line 22, in create_tapered_flange\n    return cq.Workplane(\"YZ\").add(p1).add(p2).loft()\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/sinancandan/HackathonGemma/.venv/lib/python3.12/site-packages/cadquery/cq.py\", line 3642, in loft\n    raise ValueError(\"Nothing to loft\")\nValueError: Nothing t"
+  },
+  {
+   "step": 2,
+   "ok": false,
+   "feedback": "The code failed:\nTraceback (most recent call last):\n  File \"design.py\", line 77, in <module>\n    result = make_arm()\n             ^^^^^^^^^^\n  File \"design.py\", line 25, in make_arm\n    bottom_flange = cq.Workplane(\"YZ\").add(p1).add(p2).loft()\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/sinancandan/HackathonGemma/.venv/lib/python3.12/site-packages/cadquery/cq.py\", line 3642, in loft\n    raise ValueError(\"Nothing to loft\")\nValueError: Nothing to loft"
+  },
+  {
+   "step": 3,
+   "ok": false,
+   "feedback": "The code failed:\n             ^^^^^^^^^^\n  File \"design.py\", line 35, in make_arm\n    bottom_flange = create_tapered_flange_solid(WIDTH_BASE, WIDTH_TIP, FLANGE_THICKNESS, 0)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"design.py\", line 30, in create_tapered_flange_solid\n    return cq.Workplane(\"YZ\").add(p1).add(p2).loft()\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/sinancandan/HackathonGemma/.venv/lib/python3.12/site-packages/cadquery/cq.py\", line 3642, in loft\n    raise ValueError(\"Nothing to loft\")\nValueError: Not"
+  },
+  {
+   "step": 4,
+   "ok": false,
+   "feedback": "The code failed:\n             ^^^^^^^^^^^^^^^^\n  File \"design.py\", line 103, in make_arm_final\n    bottom = get_flange_fixed(0)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"design.py\", line 101, in get_flange_fixed\n    return cq.Workplane(\"YZ\").add(p1).add(p2).loft()\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/sinancandan/HackathonGemma/.venv/lib/python3.12/site-packages/cadquery/cq.py\", line 3642, in loft\n    raise ValueError(\"Nothing to loft\")\nValueError: Nothing to loft"
+  },
+  {
+   "step": 5,
+   "ok": false,
+   "feedback": "The code failed:\n             ^^^^^^^^^^^^^^^^\n  File \"design.py\", line 100, in make_arm_final\n    bottom = create_flange_robust(0)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"design.py\", line 96, in create_flange_robust\n    return cq.Workplane(\"YZ\").add(w1).add(w2).loft()\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/sinancandan/HackathonGemma/.venv/lib/python3.12/site-packages/cadquery/cq.py\", line 3642, in loft\n    raise ValueError(\"Nothing to loft\")\nValueError: Nothing to loft"
+  }
+ ],
+ "sim_steps": 0,
+ "sim_exhausted": false,
+ "review": [],
+ "sim_updated": false
+}

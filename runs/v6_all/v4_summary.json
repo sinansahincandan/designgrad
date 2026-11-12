@@ -1,0 +1,339 @@
+{
+ "units": [
+  "P01_shelf_bracket@s0",
+  "P01_shelf_bracket@s1000",
+  "P01_shelf_bracket@s2000",
+  "P03_enclosure_base@s0",
+  "P03_enclosure_base@s1000",
+  "P03_enclosure_base@s2000",
+  "P07_nema17_mount@s0",
+  "P07_nema17_mount@s1000",
+  "P07_nema17_mount@s2000"
+ ],
+ "levels": {
+  "L0": {
+   "n": 9,
+   "met_frac": 0.5714285714285715,
+   "by_problem": {
+    "P01_shelf_bracket": [
+     3.3333333333333335,
+     3
+    ],
+    "P03_enclosure_base": [
+     6.333333333333333,
+     3
+    ],
+    "P07_nema17_mount": [
+     2.3333333333333335,
+     3
+    ]
+   },
+   "met": 4.0,
+   "met_ci": [
+    2.888888888888889,
+    5.222222222222222
+   ],
+   "all_met": 1,
+   "best_produced": 4.0,
+   "calls": 2.0,
+   "minutes": 1.0918518518518519,
+   "curve_kept": null,
+   "agent_loops": 9,
+   "exhausted": 1
+  },
+  "L1": {
+   "n": 9,
+   "met_frac": 0.6031746031746033,
+   "by_problem": {
+    "P01_shelf_bracket": [
+     3.3333333333333335,
+     3
+    ],
+    "P03_enclosure_base": [
+     6.333333333333333,
+     3
+    ],
+    "P07_nema17_mount": [
+     3.0,
+     3
+    ]
+   },
+   "met": 4.222222222222222,
+   "met_ci": [
+    3.111111111111111,
+    5.444444444444445
+   ],
+   "all_met": 1,
+   "best_produced": 5.0,
+   "calls": 14.11111111111111,
+   "minutes": 4.401296296296296,
+   "curve_kept": [
+    4.222222222222222,
+    4.444444444444445,
+    4.111111111111111,
+    4.111111111111111,
+    4.222222222222222
+   ],
+   "agent_loops": 28,
+   "exhausted": 1,
+   "fix": [
+    11,
+    71
+   ],
+   "break": [
+    8,
+    62
+   ],
+   "rounds_accepted": 8,
+   "rounds_rejected": 11,
+   "improved_candidates": 5,
+   "improved_kept": 2
+  },
+  "L2": {
+   "n": 9,
+   "met_frac": 0.6984126984126984,
+   "by_problem": {
+    "P01_shelf_bracket": [
+     4.666666666666667,
+     3
+    ],
+    "P03_enclosure_base": [
+     6.333333333333333,
+     3
+    ],
+    "P07_nema17_mount": [
+     3.6666666666666665,
+     3
+    ]
+   },
+   "met": 4.888888888888889,
+   "met_ci": [
+    4.0,
+    5.777777777777778
+   ],
+   "all_met": 1,
+   "best_produced": 5.111111111111111,
+   "calls": 39.0,
+   "minutes": 14.140740740740739,
+   "curve_kept": [
+    4.222222222222222,
+    4.444444444444445,
+    4.555555555555555,
+    4.777777777777778,
+    4.888888888888889
+   ],
+   "agent_loops": 90,
+   "exhausted": 2,
+   "analysis_checks": 304,
+   "analysis_agreement": 0.9473684210526315,
+   "unmet_flagged": [
+    106,
+    111
+   ],
+   "analysis_counts": {
+    "agree": 288,
+    "false_alarm": 13,
+    "missed": 3,
+    "disputed": 4,
+    "unmeasured": 0,
+    "unmet": 111,
+    "unmet_reported": 107
+   },
+   "fix": [
+    11,
+    90
+   ],
+   "break": [
+    14,
+    162
+   ],
+   "rounds_accepted": 8,
+   "rounds_rejected": 28,
+   "improved_candidates": 7,
+   "improved_kept": 5
+  },
+  "L3": {
+   "n": 9,
+   "met_frac": 0.7301587301587301,
+   "by_problem": {
+    "P01_shelf_bracket": [
+     4.333333333333333,
+     3
+    ],
+    "P03_enclosure_base": [
+     6.333333333333333,
+     3
+    ],
+    "P07_nema17_mount": [
+     4.666666666666667,
+     3
+    ]
+   },
+   "met": 5.111111111111111,
+   "met_ci": [
+    4.333333333333333,
+    5.888888888888889
+   ],
+   "all_met": 1,
+   "best_produced": 5.666666666666667,
+   "calls": 44.333333333333336,
+   "minutes": 15.416296296296293,
+   "curve_kept": [
+    4.222222222222222,
+    4.777777777777778,
+    5.111111111111111,
+    5.111111111111111,
+    5.111111111111111
+   ],
+   "agent_loops": 90,
+   "exhausted": 2,
+   "analysis_checks": 313,
+   "analysis_agreement": 0.8562300319488818,
+   "unmet_flagged": [
+    93,
+    96
+   ],
+   "analysis_counts": {
+    "agree": 268,
+    "false_alarm": 43,
+    "missed": 2,
+    "disputed": 2,
+    "unmeasured": 0,
+    "unmet": 96,
+    "unmet_reported": 94
+   },
+   "fix": [
+    25,
+    79
+   ],
+   "break": [
+    17,
+    173
+   ],
+   "rounds_accepted": 6,
+   "rounds_rejected": 30,
+   "improved_candidates": 12,
+   "improved_kept": 5,
+   "render_complaints_naming_a_requirement": 103,
+   "render_complaints_about_met_requirements": 27
+  }
+ },
+ "steps": {
+  "L0->L1": {
+   "mean": 0.2222222222222222,
+   "ci": [
+    -0.6666666666666666,
+    1.3333333333333333
+   ],
+   "wtl": [
+    2,
+    5,
+    2
+   ]
+  },
+  "L1->L2": {
+   "mean": 0.6666666666666666,
+   "ci": [
+    -0.3333333333333333,
+    1.7777777777777777
+   ],
+   "wtl": [
+    3,
+    5,
+    1
+   ]
+  },
+  "L2->L3": {
+   "mean": 0.2222222222222222,
+   "ci": [
+    -0.5555555555555556,
+    1.1111111111111112
+   ],
+   "wtl": [
+    2,
+    6,
+    1
+   ]
+  },
+  "L0->L2": {
+   "mean": 0.8888888888888888,
+   "ci": [
+    0.3333333333333333,
+    1.4444444444444444
+   ],
+   "wtl": [
+    5,
+    4,
+    0
+   ]
+  },
+  "L0->L3": {
+   "mean": 1.1111111111111112,
+   "ci": [
+    0.4444444444444444,
+    1.8888888888888888
+   ],
+   "wtl": [
+    5,
+    4,
+    0
+   ]
+  }
+ },
+ "per_unit": {
+  "P01_shelf_bracket@s0": {
+   "L0": 3,
+   "L1": 3,
+   "L2": 4,
+   "L3": 4
+  },
+  "P01_shelf_bracket@s1000": {
+   "L0": 3,
+   "L1": 4,
+   "L2": 4,
+   "L3": 5
+  },
+  "P01_shelf_bracket@s2000": {
+   "L0": 4,
+   "L1": 3,
+   "L2": 6,
+   "L3": 4
+  },
+  "P03_enclosure_base@s0": {
+   "L0": 7,
+   "L1": 7,
+   "L2": 7,
+   "L3": 7
+  },
+  "P03_enclosure_base@s1000": {
+   "L0": 6,
+   "L1": 6,
+   "L2": 6,
+   "L3": 6
+  },
+  "P03_enclosure_base@s2000": {
+   "L0": 6,
+   "L1": 6,
+   "L2": 6,
+   "L3": 6
+  },
+  "P07_nema17_mount@s0": {
+   "L0": 3,
+   "L1": 3,
+   "L2": 3,
+   "L3": 6
+  },
+  "P07_nema17_mount@s1000": {
+   "L0": 3,
+   "L1": 1,
+   "L2": 5,
+   "L3": 5
+  },
+  "P07_nema17_mount@s2000": {
+   "L0": 1,
+   "L1": 5,
+   "L2": 3,
+   "L3": 3
+  }
+ }
+}

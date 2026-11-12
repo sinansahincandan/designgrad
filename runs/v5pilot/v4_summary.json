@@ -1,0 +1,203 @@
+{
+ "units": [
+  "P08_wall_hook@v5pilot"
+ ],
+ "levels": {
+  "L0": {
+   "n": 1,
+   "met": 6.0,
+   "met_ci": [
+    6.0,
+    6.0
+   ],
+   "all_met": 0,
+   "best_produced": 6.0,
+   "calls": 1.0,
+   "minutes": 0.64,
+   "curve_kept": null,
+   "agent_loops": 1,
+   "exhausted": 0
+  },
+  "L1": {
+   "n": 1,
+   "met": 4.0,
+   "met_ci": [
+    4.0,
+    4.0
+   ],
+   "all_met": 0,
+   "best_produced": 6.0,
+   "calls": 17.0,
+   "minutes": 8.38,
+   "curve_kept": [
+    6.0,
+    6.0,
+    4.0
+   ],
+   "agent_loops": 3,
+   "exhausted": 1,
+   "fix": [
+    0,
+    2
+   ],
+   "break": [
+    4,
+    12
+   ],
+   "rounds_accepted": 1,
+   "rounds_rejected": 1,
+   "improved_candidates": 0,
+   "improved_kept": 0
+  },
+  "L2": {
+   "n": 1,
+   "met": 6.0,
+   "met_ci": [
+    6.0,
+    6.0
+   ],
+   "all_met": 0,
+   "best_produced": 7.0,
+   "calls": 47.0,
+   "minutes": 21.871666666666666,
+   "curve_kept": [
+    6.0,
+    6.0,
+    6.0,
+    6.0,
+    6.0
+   ],
+   "agent_loops": 10,
+   "exhausted": 0,
+   "analysis_checks": 34,
+   "analysis_agreement": 0.9411764705882353,
+   "unmet_flagged": [
+    4,
+    5
+   ],
+   "fix": [
+    1,
+    4
+   ],
+   "break": [
+    1,
+    24
+   ],
+   "rounds_accepted": 0,
+   "rounds_rejected": 4,
+   "improved_candidates": 1,
+   "improved_kept": 0
+  },
+  "L3": {
+   "n": 1,
+   "met": 5.0,
+   "met_ci": [
+    5.0,
+    5.0
+   ],
+   "all_met": 0,
+   "best_produced": 6.0,
+   "calls": 63.0,
+   "minutes": 29.323333333333334,
+   "curve_kept": [
+    6.0,
+    6.0,
+    5.0,
+    5.0,
+    5.0
+   ],
+   "agent_loops": 10,
+   "exhausted": 1,
+   "analysis_checks": 33,
+   "analysis_agreement": 0.9696969696969697,
+   "unmet_flagged": [
+    7,
+    10
+   ],
+   "fix": [
+    0,
+    6
+   ],
+   "break": [
+    3,
+    22
+   ],
+   "rounds_accepted": 1,
+   "rounds_rejected": 3,
+   "improved_candidates": 0,
+   "improved_kept": 0,
+   "render_complaints_naming_a_requirement": 15,
+   "render_complaints_about_met_requirements": 2
+  }
+ },
+ "steps": {
+  "L0->L1": {
+   "mean": -2.0,
+   "ci": [
+    -2.0,
+    -2.0
+   ],
+   "wtl": [
+    0,
+    0,
+    1
+   ]
+  },
+  "L1->L2": {
+   "mean": 2.0,
+   "ci": [
+    2.0,
+    2.0
+   ],
+   "wtl": [
+    1,
+    0,
+    0
+   ]
+  },
+  "L2->L3": {
+   "mean": -1.0,
+   "ci": [
+    -1.0,
+    -1.0
+   ],
+   "wtl": [
+    0,
+    0,
+    1
+   ]
+  },
+  "L0->L2": {
+   "mean": 0.0,
+   "ci": [
+    0.0,
+    0.0
+   ],
+   "wtl": [
+    0,
+    1,
+    0
+   ]
+  },
+  "L0->L3": {
+   "mean": -1.0,
+   "ci": [
+    -1.0,
+    -1.0
+   ],
+   "wtl": [
+    0,
+    0,
+    1
+   ]
+  }
+ },
+ "per_unit": {
+  "P08_wall_hook@v5pilot": {
+   "L0": 6,
+   "L1": 4,
+   "L2": 6,
+   "L3": 5
+  }
+ }
+}

@@ -1,0 +1,65 @@
+{
+ "cad_steps": 3,
+ "cad_exhausted": false,
+ "cad_history": [
+  {
+   "step": 0,
+   "ok": false,
+   "feedback": "The code failed:\nTraceback (most recent call last):\n  File \"design.py\", line 84, in <module>\n    .loft([\n     ^^^^^^\nTypeError: Workplane.loft() got multiple values for argument 'ruled'"
+  },
+  {
+   "step": 1,
+   "ok": false,
+   "feedback": "The code failed:\nTraceback (most recent call last):\n  File \"design.py\", line 30, in <module>\n    .loft([prof1, prof2], ruled=True)\n     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: Workplane.loft() got multiple values for argument 'ruled'"
+  },
+  {
+   "step": 2,
+   "ok": false,
+   "feedback": "The code ran but produced 2 disconnected solids:\n  solid 1: volume 81000.0 mm3, bbox_min [10.0, -25.0, 80.0], bbox_max [155.0, 25.0, 115.0]\n  solid 2: volume 65516.2 mm3, bbox_min [-0.0, -0.0, -55.0], bbox_max [15.0, 40.0, 55.0]\n  solid 2 is separated from solid 1 by 25.0 mm along Z (solid 1 spans z 80.0..115.0, solid 2 spans -55.0..55.0)\n`result` must be ONE connected solid. Compare these boxes: find which piece does not touch the main body, extend or move it so it overlaps the body by at least 1 mm, and union everything into one solid."
+  },
+  {
+   "step": 3,
+   "ok": true,
+   "feedback": ""
+  }
+ ],
+ "sim_steps": 4,
+ "sim_exhausted": false,
+ "review": [
+  {
+   "round": 0,
+   "unfaithful": [
+    "R4",
+    "R5",
+    "R6"
+   ]
+  },
+  {
+   "round": 1,
+   "unfaithful": [
+    "R4",
+    "R5",
+    "R6"
+   ]
+  },
+  {
+   "round": 2,
+   "unfaithful": [
+    "R5",
+    "R6"
+   ]
+  },
+  {
+   "round": 3,
+   "unfaithful": []
+  }
+ ],
+ "sim_updated": true,
+ "sim_history": [
+  {
+   "step": 0,
+   "ok": true,
+   "feedback": ""
+  }
+ ]
+}

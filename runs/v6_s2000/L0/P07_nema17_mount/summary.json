@@ -1,0 +1,32 @@
+{
+ "k": 0,
+ "proxy": 0.5,
+ "level": "L0",
+ "problem": "P07_nema17_mount",
+ "llm": {
+  "calls": 6,
+  "tokens_in": 27517,
+  "tokens_out": 5542,
+  "seconds": 116.3
+ },
+ "rounds": 0,
+ "trace": [
+  {
+   "k": 0,
+   "accepted": true,
+   "score": 0.5,
+   "proxy": 0.5,
+   "critic_frac": 0.0,
+   "gate": null,
+   "sim_issue": false,
+   "cad_steps": 5,
+   "cad_exhausted": true,
+   "sim_steps": null,
+   "sim_exhausted": null,
+   "sim_updated": false,
+   "n_measured": null,
+   "n_unmeasured": null,
+   "review": null
+  }
+ ]
+}

@@ -1,0 +1,12 @@
+{
+ "mismatches": [
+  "The face plate (vertical component) is oriented along the X-Z plane instead of being parallel to the Y-Z plane as specified (it should be at y=0 to 4, but it appears to be at z=0 to 4 or similar orientation).",
+  "The base plate (horizontal component) is located in the X-Y plane at a negative Z position, whereas the specification requires the table to be at z=0 and the base to be on the table.",
+  "The motor mounting holes and central bore are not visible/present in the vertical face as described; instead, there are large circular cutouts in what appears to be the 'top' view of a plate that doesn't match the L-shape geometry requirements.",
+  "The part is oriented such that it cannot function as an L-bracket for a NEMA 17 motor according to the coordinate system provided."
+ ],
+ "systemic": [
+  "The part is not rest stable (center of mass is below the base/table plane), meaning it cannot stand on its own."
+ ],
+ "summary": "The rendered part fails to follow the coordinate system and orientation requirements, resulting in an L-bracket that is incorrectly oriented and physically unstable."
+}

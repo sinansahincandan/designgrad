@@ -1,0 +1,4 @@
+{
+ "ok": false,
+ "error": "                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: Workplane.rotate() missing 1 required positional argument: 'angleDegrees'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"design.py\", line 82, in <module>\n    pillar_tilted = cq.Workplane(\"XY\").box(PILLAR_W, PILLAR_T, PILLAR_H).rotate((1,0,0), ANGLE)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: Workplane.rotate() missing 1 required positional argument: 'angleDegrees'"
+}

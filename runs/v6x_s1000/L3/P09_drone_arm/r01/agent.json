@@ -1,0 +1,56 @@
+{
+ "cad_steps": 5,
+ "cad_exhausted": true,
+ "cad_history": [
+  {
+   "step": 0,
+   "ok": false,
+   "feedback": "The code ran but produced 4 disconnected solids:\n  solid 1: volume 5978.1 mm3, bbox_min [-0.0, -12.0, -0.0], bbox_max [130.0, 12.0, 18.0]\n  solid 2: volume 5.7 mm3, bbox_min [-0.0, 4.95, -0.0], bbox_max [4.79, 5.05, 12.0]\n  solid 3: volume 1.0 mm3, bbox_min [13.6, -0.05, -0.0], bbox_max [110.0, 0.05, 0.1]\n  solid 4: volume 0.1 mm3, bbox_min [-0.0, -0.05, -0.0], bbox_max [10.4, 0.05, 0.1]\n  solid 2's box touches or overlaps solid 1's box but the solids do not fuse: make them overlap by >= 1 mm\n  solid 3's box touches or overlaps solid 1's box but the solids do not fuse: make them overlap by >= "
+  },
+  {
+   "step": 1,
+   "ok": false,
+   "feedback": "The code ran but produced 4 disconnected solids:\n  solid 1: volume 6552.9 mm3, bbox_min [-0.0, -12.0, -0.0], bbox_max [130.0, 12.0, 18.0]\n  solid 2: volume 97.4 mm3, bbox_min [13.58, -0.25, -0.0], bbox_max [111.0, 0.25, 2.0]\n  solid 3: volume 10.4 mm3, bbox_min [-0.0, -0.25, -0.0], bbox_max [10.42, 0.25, 2.0]\n  solid 4: volume 5.7 mm3, bbox_min [-0.0, 4.95, -0.0], bbox_max [4.79, 5.05, 12.0]\n  solid 2's box touches or overlaps solid 1's box but the solids do not fuse: make them overlap by >= 1 mm\n  solid 3's box touches or overlaps solid 1's box but the solids do not fuse: make them overlap by"
+  },
+  {
+   "step": 2,
+   "ok": false,
+   "feedback": "The code ran but produced 4 disconnected solids:\n  solid 1: volume 8552.4 mm3, bbox_min [-0.0, -12.0, -0.0], bbox_max [135.0, 12.0, 18.0]\n  solid 2: volume 196.9 mm3, bbox_min [13.52, -0.5, -0.0], bbox_max [112.0, 0.5, 2.0]\n  solid 3: volume 20.9 mm3, bbox_min [-0.0, -0.5, -0.0], bbox_max [10.48, 0.5, 2.0]\n  solid 4: volume 5.7 mm3, bbox_min [-0.0, 4.95, -0.0], bbox_max [4.79, 5.05, 12.0]\n  solid 2's box touches or overlaps solid 1's box but the solids do not fuse: make them overlap by >= 1 mm\n  solid 3's box touches or overlaps solid 1's box but the solids do not fuse: make them overlap by >="
+  },
+  {
+   "step": 3,
+   "ok": false,
+   "feedback": "The code ran but produced 4 disconnected solids:\n  solid 1: volume 11430.0 mm3, bbox_min [-0.0, -12.0, -0.0], bbox_max [140.0, 12.0, 18.0]\n  solid 2: volume 406.0 mm3, bbox_min [13.25, -1.0, -0.0], bbox_max [115.0, 1.0, 2.0]\n  solid 3: volume 42.0 mm3, bbox_min [-0.0, -1.0, -0.0], bbox_max [10.75, 1.0, 2.0]\n  solid 4: volume 5.7 mm3, bbox_min [-0.0, 4.95, -0.0], bbox_max [4.79, 5.05, 12.0]\n  solid 2's box touches or overlaps solid 1's box but the solids do not fuse: make them overlap by >= 1 mm\n  solid 3's box touches or overlaps solid 1's box but the solids do not fuse: make them overlap by >"
+  },
+  {
+   "step": 4,
+   "ok": false,
+   "feedback": "The code ran but produced 4 disconnected solids:\n  solid 1: volume 5979.3 mm3, bbox_min [-1.0, -12.0, -0.0], bbox_max [130.0, 12.0, 18.0]\n  solid 2: volume 462.3 mm3, bbox_min [13.25, -1.0, -0.0], bbox_max [129.18, 1.0, 2.0]\n  solid 3: volume 42.0 mm3, bbox_min [-0.0, -1.0, -0.0], bbox_max [10.75, 1.0, 2.0]\n  solid 4: volume 6.9 mm3, bbox_min [-1.0, 4.95, -0.0], bbox_max [4.79, 5.05, 12.0]\n  solid 2's box touches or overlaps solid 1's box but the solids do not fuse: make them overlap by >= 1 mm\n  solid 3's box touches or overlaps solid 1's box but the solids do not fuse: make them overlap by >"
+  },
+  {
+   "step": 5,
+   "ok": false,
+   "feedback": "The code ran but produced 3 disconnected solids:\n  solid 1: volume 8556.0 mm3, bbox_min [-2.5, -12.0, -0.0], bbox_max [135.0, 12.0, 18.0]\n  solid 2: volume 2075.7 mm3, bbox_min [-2.5, -2.0, -1.0], bbox_max [129.77, 2.0, 3.0]\n  solid 3: volume 8.7 mm3, bbox_min [-2.5, 4.95, -0.0], bbox_max [4.79, 5.05, 12.0]\n  solid 2's box touches or overlaps solid 1's box but the solids do not fuse: make them overlap by >= 1 mm\n  solid 3's box touches or overlaps solid 1's box but the solids do not fuse: make them overlap by >= 1 mm\n`result` must be ONE connected solid. Compare these boxes: find which piece d"
+  }
+ ],
+ "sim_steps": 0,
+ "sim_exhausted": false,
+ "review": [
+  {
+   "round": 0,
+   "unfaithful": [],
+   "control_pass": [
+    "R1",
+    "R7"
+   ]
+  }
+ ],
+ "sim_updated": false,
+ "sim_history": [
+  {
+   "step": 0,
+   "ok": true,
+   "feedback": ""
+  }
+ ]
+}

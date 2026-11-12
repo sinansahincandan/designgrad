@@ -1,0 +1,219 @@
+{
+ "units": [
+  "P01_shelf_bracket@s0",
+  "P03_enclosure_base@s0",
+  "P07_nema17_mount@s0"
+ ],
+ "levels": {
+  "L0": {
+   "n": 3,
+   "met": 4.333333333333333,
+   "met_ci": [
+    3.0,
+    7.0
+   ],
+   "all_met": 1,
+   "best_produced": 4.333333333333333,
+   "calls": 1.0,
+   "minutes": 0.52,
+   "curve_kept": null,
+   "agent_loops": 3,
+   "exhausted": 0
+  },
+  "L1": {
+   "n": 3,
+   "met": 4.333333333333333,
+   "met_ci": [
+    3.0,
+    7.0
+   ],
+   "all_met": 1,
+   "best_produced": 4.666666666666667,
+   "calls": 14.666666666666666,
+   "minutes": 4.903888888888889,
+   "curve_kept": [
+    4.333333333333333,
+    4.333333333333333,
+    4.333333333333333,
+    4.333333333333333,
+    4.333333333333333
+   ],
+   "agent_loops": 10,
+   "exhausted": 0,
+   "fix": [
+    1,
+    28
+   ],
+   "break": [
+    0,
+    21
+   ],
+   "rounds_accepted": 2,
+   "rounds_rejected": 5,
+   "improved_candidates": 1,
+   "improved_kept": 0
+  },
+  "L2": {
+   "n": 3,
+   "met": 6.333333333333333,
+   "met_ci": [
+    6.0,
+    7.0
+   ],
+   "all_met": 1,
+   "best_produced": 6.666666666666667,
+   "calls": 53.333333333333336,
+   "minutes": 23.928333333333335,
+   "curve_kept": [
+    4.333333333333333,
+    6.333333333333333,
+    6.333333333333333,
+    6.333333333333333,
+    6.333333333333333
+   ],
+   "agent_loops": 30,
+   "exhausted": 0,
+   "analysis_checks": 87,
+   "analysis_agreement": 0.9195402298850575,
+   "unmet_flagged": [
+    13,
+    26
+   ],
+   "fix": [
+    8,
+    14
+   ],
+   "break": [
+    12,
+    70
+   ],
+   "rounds_accepted": 2,
+   "rounds_rejected": 10,
+   "improved_candidates": 3,
+   "improved_kept": 2
+  },
+  "L3": {
+   "n": 3,
+   "met": 5.666666666666667,
+   "met_ci": [
+    4.0,
+    7.0
+   ],
+   "all_met": 1,
+   "best_produced": 5.666666666666667,
+   "calls": 57.333333333333336,
+   "minutes": 26.88888888888889,
+   "curve_kept": [
+    4.333333333333333,
+    5.333333333333333,
+    5.333333333333333,
+    5.666666666666667,
+    5.666666666666667
+   ],
+   "agent_loops": 30,
+   "exhausted": 0,
+   "analysis_checks": 88,
+   "analysis_agreement": 0.8636363636363636,
+   "unmet_flagged": [
+    14,
+    29
+   ],
+   "fix": [
+    5,
+    22
+   ],
+   "break": [
+    4,
+    62
+   ],
+   "rounds_accepted": 4,
+   "rounds_rejected": 8,
+   "improved_candidates": 2,
+   "improved_kept": 2,
+   "render_complaints_naming_a_requirement": 29,
+   "render_complaints_about_met_requirements": 10
+  }
+ },
+ "steps": {
+  "L0->L1": {
+   "mean": 0.0,
+   "ci": [
+    0.0,
+    0.0
+   ],
+   "wtl": [
+    0,
+    3,
+    0
+   ]
+  },
+  "L1->L2": {
+   "mean": 2.0,
+   "ci": [
+    0.0,
+    3.0
+   ],
+   "wtl": [
+    2,
+    1,
+    0
+   ]
+  },
+  "L2->L3": {
+   "mean": -0.6666666666666666,
+   "ci": [
+    -2.0,
+    0.0
+   ],
+   "wtl": [
+    0,
+    2,
+    1
+   ]
+  },
+  "L0->L2": {
+   "mean": 2.0,
+   "ci": [
+    0.0,
+    3.0
+   ],
+   "wtl": [
+    2,
+    1,
+    0
+   ]
+  },
+  "L0->L3": {
+   "mean": 1.3333333333333333,
+   "ci": [
+    0.0,
+    3.0
+   ],
+   "wtl": [
+    2,
+    1,
+    0
+   ]
+  }
+ },
+ "per_unit": {
+  "P01_shelf_bracket@s0": {
+   "L0": 3,
+   "L1": 3,
+   "L2": 6,
+   "L3": 6
+  },
+  "P03_enclosure_base@s0": {
+   "L0": 7,
+   "L1": 7,
+   "L2": 7,
+   "L3": 7
+  },
+  "P07_nema17_mount@s0": {
+   "L0": 3,
+   "L1": 3,
+   "L2": 6,
+   "L3": 4
+  }
+ }
+}

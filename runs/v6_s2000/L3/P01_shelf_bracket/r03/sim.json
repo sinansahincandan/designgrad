@@ -1,0 +1,173 @@
+{
+ "ok": true,
+ "result": {
+  "R1": {
+   "status": "pass",
+   "value": 1,
+   "note": "",
+   "method": "Counted number of solids in the STEP file.",
+   "criteria": [
+    {
+     "condition": "One single, valid solid",
+     "measured": 1.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R2": {
+   "status": "fail",
+   "value": [
+    0.0,
+    150.0,
+    -6.902162237191449e-14,
+    40.0,
+    -1.5243333701684344e-12,
+    110.0
+   ],
+   "note": "",
+   "method": "Checked bounding box: x[0.00,150.00], y[-0.00,40.00], z[-0.00,110.00]",
+   "criteria": [
+    {
+     "condition": "0 <= x <= 170 and touches wall (x=0)",
+     "measured": 0.0,
+     "ok": true
+    },
+    {
+     "condition": "-20 <= y <= 20",
+     "measured": [
+      -6.902162237191449e-14,
+      40.0
+     ],
+     "ok": false
+    },
+    {
+     "condition": "0 <= z <= 130",
+     "measured": [
+      -1.5243333701684344e-12,
+      110.0
+     ],
+     "ok": false
+    }
+   ],
+   "faithful": true
+  },
+  "R3": {
+   "status": "fail",
+   "value": [
+    {
+     "cy": 0,
+     "cz": 20,
+     "empty_ratio": 0.0,
+     "walled_ratio": 0.025647095959600737,
+     "clearance_vol": 0.0,
+     "ok": false
+    },
+    {
+     "cy": 0,
+     "cz": 60,
+     "empty_ratio": 0.0,
+     "walled_ratio": 0.025647095959600744,
+     "clearance_vol": 0.0,
+     "ok": false
+    }
+   ],
+   "note": "",
+   "method": "Verified holes via intersection with diameter-matched cylinders and checked screwdriver clearance (R=4) for x>=10.",
+   "criteria": [
+    {
+     "condition": "Two 5.5mm holes exist and are surrounded by material",
+     "measured": false,
+     "ok": false
+    },
+    {
+     "condition": "Screwdriver clearance (R=4, x>=10) is empty",
+     "measured": false,
+     "ok": false
+    }
+   ],
+   "faithful": true
+  },
+  "R4": {
+   "status": "fail",
+   "value": [
+    0.5,
+    0.0
+   ],
+   "note": "",
+   "method": "Checked fill fraction in x[140,150],y[-5,5],z[105,110] (0.50) and volume above z=110 for x>=8 (0.00)",
+   "criteria": [
+    {
+     "condition": "Solid material below z=110 between x=140-150",
+     "measured": 0.5,
+     "ok": false
+    },
+    {
+     "condition": "Nothing above z=110 for x >= 8",
+     "measured": 0.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R5": {
+   "status": "pass",
+   "value": 0.26223927291223015,
+   "note": "",
+   "method": "M=21000.0 Nmm, c=54.98 mm, I=4403037.61 mm4, sigma=M*c/I",
+   "criteria": [
+    {
+     "condition": "bending stress <= 20 MPa",
+     "measured": 0.26223927291223015,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R6": {
+   "status": "pass",
+   "value": 0.008902944618294606,
+   "note": "",
+   "method": "F=150.0 N, L=140.0 mm, E=3500.0 MPa, I=4403037.61 mm4, delta=FL^3/3EI",
+   "criteria": [
+    {
+     "condition": "deflection <= 2.0 mm",
+     "measured": 0.008902944618294606,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R7": {
+   "status": "fail",
+   "value": 443.81152804526647,
+   "note": "",
+   "method": "Volume=357912.52 mm3, density=1.24 g/cm3, mass=V*rho/1000",
+   "criteria": [
+    {
+     "condition": "Mass <= 90 g",
+     "measured": 443.81152804526647,
+     "ok": false
+    }
+   ],
+   "faithful": true
+  }
+ },
+ "stdout": "lled_ratio\": 0.025647095959600744, \"clearance_vol\": 0.0, \"ok\": false}], \"method\": \"Verified holes via intersection with diameter-matched cylinders and checked screwdriver clearance (R=4) for x>=10.\", \"criteria\": [{\"condition\": \"Two 5.5mm holes exist and are surrounded by material\", \"measured\": false, \"ok\": false}, {\"condition\": \"Screwdriver clearance (R=4, x>=10) is empty\", \"measured\": false, \"ok\": false}], \"note\": \"\"}, \"R4\": {\"status\": \"fail\", \"value\": [0.5, 0.0], \"method\": \"Checked fill fraction in x[140,150],y[-5,5],z[105,110] (0.50) and volume above z=110 for x>=8 (0.00)\", \"criteria\": [{\"condition\": \"Solid material below z=110 between x=140-150\", \"measured\": 0.5, \"ok\": false}, {\"condition\": \"Nothing above z=110 for x >= 8\", \"measured\": 0.0, \"ok\": true}], \"note\": \"\"}, \"R5\": {\"status\": \"pass\", \"value\": 0.26223927291223015, \"method\": \"M=21000.0 Nmm, c=54.98 mm, I=4403037.61 mm4, sigma=M*c/I\", \"criteria\": [{\"condition\": \"bending stress <= 20 MPa\", \"measured\": 0.26223927291223015, \"ok\": true}], \"note\": \"\"}, \"R6\": {\"status\": \"pass\", \"value\": 0.008902944618294606, \"method\": \"F=150.0 N, L=140.0 mm, E=3500.0 MPa, I=4403037.61 mm4, delta=FL^3/3EI\", \"criteria\": [{\"condition\": \"deflection <= 2.0 mm\", \"measured\": 0.008902944618294606, \"ok\": true}], \"note\": \"\"}, \"R7\": {\"status\": \"fail\", \"value\": 443.81152804526647, \"method\": \"Volume=357912.52 mm3, density=1.24 g/cm3, mass=V*rho/1000\", \"criteria\": [{\"condition\": \"Mass <= 90 g\", \"measured\": 443.81152804526647, \"ok\": false}], \"note\": \"\"}}",
+ "stderr": "",
+ "agent": {
+  "sim_steps": 0,
+  "sim_exhausted": false,
+  "review": [
+   {
+    "round": 0,
+    "unfaithful": [],
+    "control_pass": [
+     "R1",
+     "R2",
+     "R7"
+    ]
+   }
+  ]
+ }
+}

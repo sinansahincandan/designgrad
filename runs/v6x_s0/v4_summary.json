@@ -1,0 +1,343 @@
+{
+ "units": [
+  "P02_phone_stand@s0",
+  "P05_pipe_clamp@s0",
+  "P06_heat_sink@s0",
+  "P09_drone_arm@s0",
+  "P10_sensor_tilt_mount@s0"
+ ],
+ "levels": {
+  "L0": {
+   "n": 5,
+   "met_frac": 0.45714285714285713,
+   "by_problem": {
+    "P02_phone_stand": [
+     2.0,
+     1
+    ],
+    "P05_pipe_clamp": [
+     3.0,
+     1
+    ],
+    "P06_heat_sink": [
+     6.0,
+     1
+    ],
+    "P09_drone_arm": [
+     4.0,
+     1
+    ],
+    "P10_sensor_tilt_mount": [
+     0.0,
+     1
+    ]
+   },
+   "met": 3.0,
+   "met_ci": [
+    1.2,
+    4.8
+   ],
+   "all_met": 1,
+   "best_produced": 3.0,
+   "calls": 3.2,
+   "minutes": 1.718,
+   "curve_kept": null,
+   "agent_loops": 5,
+   "exhausted": 1
+  },
+  "L1": {
+   "n": 5,
+   "met_frac": 0.5428571428571429,
+   "by_problem": {
+    "P02_phone_stand": [
+     3.0,
+     1
+    ],
+    "P05_pipe_clamp": [
+     3.0,
+     1
+    ],
+    "P06_heat_sink": [
+     6.0,
+     1
+    ],
+    "P09_drone_arm": [
+     4.0,
+     1
+    ],
+    "P10_sensor_tilt_mount": [
+     2.0,
+     1
+    ]
+   },
+   "met": 3.6,
+   "met_ci": [
+    2.6,
+    4.8
+   ],
+   "all_met": 1,
+   "best_produced": 3.8,
+   "calls": 24.4,
+   "minutes": 8.745000000000001,
+   "curve_kept": [
+    3.4,
+    3.6,
+    3.6,
+    3.6,
+    3.6
+   ],
+   "agent_loops": 19,
+   "exhausted": 4,
+   "fix": [
+    5,
+    53
+   ],
+   "break": [
+    13,
+    44
+   ],
+   "rounds_accepted": 5,
+   "rounds_rejected": 9,
+   "improved_candidates": 2,
+   "improved_kept": 1
+  },
+  "L2": {
+   "n": 5,
+   "met_frac": 0.6,
+   "by_problem": {
+    "P02_phone_stand": [
+     3.0,
+     1
+    ],
+    "P05_pipe_clamp": [
+     4.0,
+     1
+    ],
+    "P06_heat_sink": [
+     6.0,
+     1
+    ],
+    "P09_drone_arm": [
+     5.0,
+     1
+    ],
+    "P10_sensor_tilt_mount": [
+     2.0,
+     1
+    ]
+   },
+   "met": 4.0,
+   "met_ci": [
+    2.8,
+    5.2
+   ],
+   "all_met": 1,
+   "best_produced": 4.2,
+   "calls": 43.4,
+   "minutes": 17.349666666666668,
+   "curve_kept": [
+    3.4,
+    3.8,
+    3.8,
+    4.0,
+    4.0
+   ],
+   "agent_loops": 50,
+   "exhausted": 8,
+   "analysis_checks": 132,
+   "analysis_agreement": 0.8939393939393939,
+   "unmet_flagged": [
+    52,
+    61
+   ],
+   "analysis_counts": {
+    "agree": 118,
+    "false_alarm": 8,
+    "missed": 6,
+    "disputed": 0,
+    "unmeasured": 3,
+    "unmet": 61,
+    "unmet_reported": 52
+   },
+   "fix": [
+    7,
+    61
+   ],
+   "break": [
+    25,
+    75
+   ],
+   "rounds_accepted": 4,
+   "rounds_rejected": 16,
+   "improved_candidates": 5,
+   "improved_kept": 3
+  },
+  "L3": {
+   "n": 5,
+   "met_frac": 0.6285714285714286,
+   "by_problem": {
+    "P02_phone_stand": [
+     5.0,
+     1
+    ],
+    "P05_pipe_clamp": [
+     3.0,
+     1
+    ],
+    "P06_heat_sink": [
+     6.0,
+     1
+    ],
+    "P09_drone_arm": [
+     5.0,
+     1
+    ],
+    "P10_sensor_tilt_mount": [
+     2.0,
+     1
+    ]
+   },
+   "met": 4.2,
+   "met_ci": [
+    3.0,
+    5.4
+   ],
+   "all_met": 1,
+   "best_produced": 4.2,
+   "calls": 43.0,
+   "minutes": 15.603666666666667,
+   "curve_kept": [
+    3.4,
+    4.2,
+    4.2,
+    4.2,
+    4.2
+   ],
+   "agent_loops": 50,
+   "exhausted": 6,
+   "analysis_checks": 132,
+   "analysis_agreement": 0.9242424242424242,
+   "unmet_flagged": [
+    45,
+    52
+   ],
+   "analysis_counts": {
+    "agree": 122,
+    "false_alarm": 6,
+    "missed": 4,
+    "disputed": 0,
+    "unmeasured": 3,
+    "unmet": 52,
+    "unmet_reported": 45
+   },
+   "fix": [
+    6,
+    56
+   ],
+   "break": [
+    20,
+    80
+   ],
+   "rounds_accepted": 3,
+   "rounds_rejected": 17,
+   "improved_candidates": 2,
+   "improved_kept": 2,
+   "render_complaints_naming_a_requirement": 33,
+   "render_complaints_about_met_requirements": 9
+  }
+ },
+ "steps": {
+  "L0->L1": {
+   "mean": 0.6,
+   "ci": [
+    0.0,
+    1.4
+   ],
+   "wtl": [
+    2,
+    3,
+    0
+   ]
+  },
+  "L1->L2": {
+   "mean": 0.4,
+   "ci": [
+    0.0,
+    0.8
+   ],
+   "wtl": [
+    2,
+    3,
+    0
+   ]
+  },
+  "L2->L3": {
+   "mean": 0.2,
+   "ci": [
+    -0.6,
+    1.2
+   ],
+   "wtl": [
+    1,
+    3,
+    1
+   ]
+  },
+  "L0->L2": {
+   "mean": 1.0,
+   "ci": [
+    0.4,
+    1.6
+   ],
+   "wtl": [
+    4,
+    1,
+    0
+   ]
+  },
+  "L0->L3": {
+   "mean": 1.2,
+   "ci": [
+    0.2,
+    2.2
+   ],
+   "wtl": [
+    3,
+    2,
+    0
+   ]
+  }
+ },
+ "per_unit": {
+  "P02_phone_stand@s0": {
+   "L0": 2,
+   "L1": 3,
+   "L2": 3,
+   "L3": 5
+  },
+  "P05_pipe_clamp@s0": {
+   "L0": 3,
+   "L1": 3,
+   "L2": 4,
+   "L3": 3
+  },
+  "P06_heat_sink@s0": {
+   "L0": 6,
+   "L1": 6,
+   "L2": 6,
+   "L3": 6
+  },
+  "P09_drone_arm@s0": {
+   "L0": 4,
+   "L1": 4,
+   "L2": 5,
+   "L3": 5
+  },
+  "P10_sensor_tilt_mount@s0": {
+   "L0": 0,
+   "L1": 2,
+   "L2": 2,
+   "L3": 2
+  }
+ }
+}

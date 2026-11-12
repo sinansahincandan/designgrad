@@ -1,0 +1,17 @@
+=== v4 seed 0 Wed Nov 11 11:29:24 CST 2026
+done L0 P01_shelf_bracket rounds=0 best_k=0 proxy=1.00 calls=1 32s
+done L1 P01_shelf_bracket rounds=4 best_k=1 proxy=2.00 calls=33 783s
+done L2 P01_shelf_bracket rounds=4 best_k=3 proxy=2.86 calls=60 2049s
+done L3 P01_shelf_bracket rounds=4 best_k=1 proxy=2.31 calls=66 2316s
+done L0 P03_enclosure_base rounds=0 best_k=0 proxy=1.00 calls=1 35s
+done L1 P03_enclosure_base rounds=4 best_k=0 proxy=1.86 calls=22 350s
+done L2 P03_enclosure_base rounds=4 best_k=0 proxy=2.71 calls=32 604s
+done L3 P03_enclosure_base rounds=4 best_k=0 proxy=2.71 calls=33 501s
+done L0 P07_nema17_mount rounds=0 best_k=0 proxy=1.00 calls=1 39s
+done L1 P07_nema17_mount rounds=4 best_k=1 proxy=2.00 calls=22 308s
+done L2 P07_nema17_mount rounds=4 best_k=3 proxy=2.79 calls=42 1050s
+done L3 P07_nema17_mount rounds=4 best_k=2 proxy=3.00 calls=46 1063s
+=== v4 seed 1000 Wed Nov 11 14:01:35 CST 2026
+done L0 P01_shelf_bracket rounds=0 best_k=0 proxy=1.00 calls=1 82s
+done L1 P01_shelf_bracket rounds=4 best_k=0 proxy=2.00 calls=24 584s
+=== PAUSED by hand Wed Nov 11 14:25:28 CST 2026 (fixes for critic and analysis; resume with runs/v4_run.sh)

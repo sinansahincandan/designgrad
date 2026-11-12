@@ -1,0 +1,57 @@
+{
+ "cad_steps": 1,
+ "cad_exhausted": false,
+ "cad_history": [
+  {
+   "step": 0,
+   "ok": false,
+   "feedback": "The code ran but produced 2 disconnected solids:\n  solid 1: volume 35000.0 mm3, bbox_min [-35.0, 25.0, -0.0], bbox_max [35.0, 75.0, 10.0]\n  solid 2: volume 13480.0 mm3, bbox_min [-35.0, -0.01, -27.5], bbox_max [35.0, 4.0, 27.51]\n  solid 2 is separated from solid 1 by 21.0 mm along Y (solid 1 spans y 25.0..75.0, solid 2 spans -0.01..4.0)\n`result` must be ONE connected solid. Compare these boxes: find which piece does not touch the main body, extend or move it so it overlaps the body by at least 1 mm, and union everything into one solid."
+  },
+  {
+   "step": 1,
+   "ok": true,
+   "feedback": ""
+  }
+ ],
+ "sim_steps": 3,
+ "sim_exhausted": false,
+ "review": [
+  {
+   "round": 0,
+   "unfaithful": [
+    "R2",
+    "R4",
+    "R6"
+   ],
+   "control_pass": [
+    "R1",
+    "R4",
+    "R5",
+    "R6",
+    "R7"
+   ]
+  },
+  {
+   "round": 1,
+   "unfaithful": [],
+   "control_pass": [
+    "R1",
+    "R5",
+    "R7"
+   ]
+  }
+ ],
+ "sim_updated": true,
+ "sim_history": [
+  {
+   "step": 1,
+   "ok": false,
+   "feedback": "These requirements have no entry in the report: R2, R3\nThese checks raised an error instead of measuring (status 'error'):\n- R6: 'BoundBox' object has no attribute 'min'\n    raised at line 39: y_min, y_max = bbox.min.y, bbox.max.y  ->  AttributeError\n- R7: 'BoundBox' object has no attribute 'min'\n    raised at line 39: y_min, y_max = bbox.min.y, bbox.max.y  ->  AttributeError\nEvery requirement must end with a real measurement (status pass or fail)."
+  },
+  {
+   "step": 2,
+   "ok": true,
+   "feedback": ""
+  }
+ ]
+}

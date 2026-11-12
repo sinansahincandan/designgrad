@@ -1,0 +1,8 @@
+{
+ "mismatches": [
+  "R4: Only two motor screw holes are visible/present (at z=44.5), whereas the specification requires four holes at (x, z) = (+-15.5, 30 +- 15.5).",
+  "R6: The base mounting holes (diameter 5.5 mm at x=+/-25, y=25) are missing from the rendered part."
+ ],
+ "systemic": [],
+ "summary": "The part is missing half of the required motor screw holes and both of the required base mounting holes."
+}

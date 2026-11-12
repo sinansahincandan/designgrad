@@ -1,0 +1,228 @@
+{
+ "ok": true,
+ "result": {
+  "R1": {
+   "status": "fail",
+   "value": 2,
+   "note": "",
+   "method": "Counted number of solids in CQ shape: 2",
+   "criteria": [
+    {
+     "condition": "One single, valid solid",
+     "measured": 2,
+     "ok": false
+    }
+   ],
+   "faithful": true
+  },
+  "R2": {
+   "status": "fail",
+   "value": [
+    4.0,
+    0.149
+   ],
+   "note": "",
+   "method": "Thickness check (y=0 to 4) and ring-shell material presence around bore radius 11.25",
+   "criteria": [
+    {
+     "condition": "Face plate at least 4 mm thick",
+     "measured": 4.000000000001138,
+     "ok": true
+    },
+    {
+     "condition": "Solid material all around the central bore",
+     "measured": 0.1491452186329658,
+     "ok": false
+    }
+   ],
+   "faithful": true
+  },
+  "R3": {
+   "status": "fail",
+   "value": [
+    0.0,
+    0.149
+   ],
+   "note": "",
+   "method": "Cylinder probe at (0, -1, 30) dir (0,1,0) to verify diameter and through-hole",
+   "criteria": [
+    {
+     "condition": "Central bore diameter 22.5 mm",
+     "measured": 0.0,
+     "ok": true
+    },
+    {
+     "condition": "Bore is a through-hole in material",
+     "measured": 0.1491452186329658,
+     "ok": false
+    }
+   ],
+   "faithful": true
+  },
+  "R4": {
+   "status": "fail",
+   "value": [
+    [
+     0.267,
+     0.267
+    ],
+    [
+     0.0,
+     0.0
+    ],
+    [
+     0.267,
+     0.267
+    ],
+    [
+     0.0,
+     0.0
+    ]
+   ],
+   "note": "",
+   "method": "Cylinder probes at [(15.5, 45.5), (15.5, 14.5), (-15.5, 45.5), (-15.5, 14.5)] spanning y=-1 to 14",
+   "criteria": [
+    {
+     "condition": "Four motor screw holes diameter 3.4 mm through face plate",
+     "measured": [
+      [
+       0.267,
+       0.267
+      ],
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.267,
+       0.267
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ],
+     "ok": false
+    }
+   ],
+   "faithful": true
+  },
+  "R5": {
+   "status": "pass",
+   "value": 0.0,
+   "note": "",
+   "method": "Intersection volume with clearance box [-21.5, 21.5] x [-48, 0] x [8.5, 51.5]",
+   "criteria": [
+    {
+     "condition": "Motor clearance: nothing in specified region",
+     "measured": 0.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R6": {
+   "status": "fail",
+   "value": [
+    0.0,
+    [
+     [
+      0.047,
+      0.047
+     ],
+     [
+      0.047,
+      0.047
+     ]
+    ]
+   ],
+   "note": "",
+   "method": "z_min check; Hole empty/wall fraction for vertical cylinders at [(25, 25), (-25, 25)]",
+   "criteria": [
+    {
+     "condition": "Base on the table (minimum z = 0)",
+     "measured": 0.0,
+     "ok": true
+    },
+    {
+     "condition": "Two vertical screw holes diameter 5.5 mm",
+     "measured": [
+      [
+       0.047,
+       0.047
+      ],
+      [
+       0.047,
+       0.047
+      ]
+     ],
+     "ok": false
+    }
+   ],
+   "faithful": true
+  },
+  "R7": {
+   "status": "fail",
+   "value": [
+    -35.0,
+    35.0,
+    82.5,
+    51.34
+   ],
+   "note": "",
+   "method": "BBox check; Mass = volume(41406.9) * 1.24 / 1000",
+   "criteria": [
+    {
+     "condition": "-35 <= x <= 35",
+     "measured": [
+      -35.0,
+      35.0
+     ],
+     "ok": true
+    },
+    {
+     "condition": "top <= 55 mm",
+     "measured": 82.5,
+     "ok": false
+    },
+    {
+     "condition": "mass <= 60 g",
+     "measured": 51.344532111617866,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  }
+ },
+ "stdout": "ce box [-21.5, 21.5] x [-48, 0] x [8.5, 51.5]\",\n    \"criteria\": [\n      {\n        \"condition\": \"Motor clearance: nothing in specified region\",\n        \"measured\": 0.0,\n        \"ok\": true\n      }\n    ],\n    \"note\": \"\"\n  },\n  \"R6\": {\n    \"status\": \"fail\",\n    \"value\": [\n      0.0,\n      [\n        [\n          0.047,\n          0.047\n        ],\n        [\n          0.047,\n          0.047\n        ]\n      ]\n    ],\n    \"method\": \"z_min check; Hole empty/wall fraction for vertical cylinders at [(25, 25), (-25, 25)]\",\n    \"criteria\": [\n      {\n        \"condition\": \"Base on the table (minimum z = 0)\",\n        \"measured\": 0.0,\n        \"ok\": true\n      },\n      {\n        \"condition\": \"Two vertical screw holes diameter 5.5 mm\",\n        \"measured\": [\n          [\n            0.047,\n            0.047\n          ],\n          [\n            0.047,\n            0.047\n          ]\n        ],\n        \"ok\": false\n      }\n    ],\n    \"note\": \"\"\n  },\n  \"R7\": {\n    \"status\": \"fail\",\n    \"value\": [\n      -35.0,\n      35.0,\n      82.5,\n      51.34\n    ],\n    \"method\": \"BBox check; Mass = volume(41406.9) * 1.24 / 1000\",\n    \"criteria\": [\n      {\n        \"condition\": \"-35 <= x <= 35\",\n        \"measured\": [\n          -35.0,\n          35.0\n        ],\n        \"ok\": true\n      },\n      {\n        \"condition\": \"top <= 55 mm\",\n        \"measured\": 82.5,\n        \"ok\": false\n      },\n      {\n        \"condition\": \"mass <= 60 g\",\n        \"measured\": 51.344532111617866,\n        \"ok\": true\n      }\n    ],\n    \"note\": \"\"\n  }\n}",
+ "stderr": "",
+ "agent": {
+  "sim_steps": 1,
+  "sim_exhausted": false,
+  "review": [
+   {
+    "round": 0,
+    "unfaithful": [
+     "R2",
+     "R3",
+     "R4",
+     "R6"
+    ],
+    "control_pass": [
+     "R1",
+     "R5",
+     "R7"
+    ]
+   },
+   {
+    "round": 1,
+    "unfaithful": [],
+    "control_pass": [
+     "R1",
+     "R5",
+     "R7"
+    ]
+   }
+  ]
+ }
+}

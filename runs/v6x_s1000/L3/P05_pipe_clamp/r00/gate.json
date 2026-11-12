@@ -1,0 +1,12 @@
+{
+ "mismatches": [
+  "R1 violation: The part consists of two disconnected solids (n_solids: 2), as seen in the isometric and top views where the upper band is not connected to the base.",
+  "R5 violation: The screw holes are not centered at x = +-27; looking at the 'Front' view, the holes appear much closer to the center (around x = +-10).",
+  "R6 violation: The flanges do not lie on the surface z=0; the 'Right' view shows the base of the part extending down to z = -15.5.",
+  "The pipe cutout axis is incorrect; instead of being at z=12.5, the cylindrical void appears centered much lower, near z=0 or even negative."
+ ],
+ "systemic": [
+  "The design concept intended to bridge the upper band to the base via side walls to ensure a single solid (R1), but the resulting part is disconnected and cannot function as a clamp."
+ ],
+ "summary": "The rendered part fails almost all geometric requirements, including being multiple disconnected solids, having incorrectly placed screw holes, and an incorrect vertical position/orientation relative to the mounting surface."
+}

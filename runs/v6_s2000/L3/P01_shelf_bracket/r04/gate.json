@@ -1,0 +1,10 @@
+{
+ "mismatches": [
+  "The width of the part (y-dimension) is 80mm (from -40 to 40 based on bbox/views), whereas the design document specifies a width of 40mm (y in [-20, 20]).",
+  "The screw holes and clearance channels are missing from the rendered part.",
+  "The internal pocketing/webbing described in the design document to reduce mass is not visible; the wall plate appears as a solid block.",
+  "The mass is 93.0g, which exceeds the R7 requirement of <= 90g."
+ ],
+ "systemic": [],
+ "summary": "The part fails several key requirements including width dimensions, screw hole features, and the mass limit."
+}

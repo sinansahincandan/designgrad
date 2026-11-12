@@ -1,0 +1,194 @@
+{
+ "ok": true,
+ "result": {
+  "R1": {
+   "status": "pass",
+   "value": 1,
+   "note": "Found 1 solid(s)",
+   "method": "Counted number of solids in the STEP file",
+   "criteria": [
+    {
+     "condition": "One single, valid solid",
+     "measured": 1,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R2": {
+   "status": "fail",
+   "value": [
+    0.0,
+    160.0000001,
+    -15.0000001,
+    15.0000001,
+    -5.0000001,
+    110.0
+   ],
+   "note": "",
+   "method": "Checked bounding box: x[0.0,160.0], y[-15.0,15.0], z[-5.0,110.0]",
+   "criteria": [
+    {
+     "condition": "0 <= x <= 170",
+     "measured": [
+      0.0,
+      160.0000001
+     ],
+     "ok": true
+    },
+    {
+     "condition": "-20 <= y <= 20",
+     "measured": [
+      -15.0000001,
+      15.0000001
+     ],
+     "ok": true
+    },
+    {
+     "condition": "0 <= z <= 130",
+     "measured": [
+      -5.0000001,
+      110.0
+     ],
+     "ok": false
+    },
+    {
+     "condition": "touches wall (min x = 0)",
+     "measured": 0.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R3": {
+   "status": "pass",
+   "value": [
+    5.5,
+    5.5
+   ],
+   "note": "",
+   "method": "Checked hole diameter at x~0 and screwdriver clearance (r=4) for x>=10",
+   "criteria": [
+    {
+     "condition": "diameter 5.5 mm",
+     "measured": [
+      5.5,
+      5.5
+     ],
+     "ok": true
+    },
+    {
+     "condition": "no material within 4mm of axis for x>=10",
+     "measured": true,
+     "ok": true
+    }
+   ],
+   "faithful": false,
+   "why": "The diameter check is flawed: it uses a probe cylinder of radius 2.75mm to see if it intersects the part; if the intersection volume is low, it assumes the hole exists. This doesn't actually measure the diameter of an existing hole but rather whether a specific cylinder fits inside the solid, which "
+  },
+  "R4": {
+   "status": "fail",
+   "value": [
+    0.0,
+    0.0
+   ],
+   "note": "",
+   "method": "Shelf surface check at z=110: vol=0.00mm3; Vol above z=110 for x>=8: 0.00",
+   "criteria": [
+    {
+     "condition": "horizontal top surface at z=110 reaching x=150 (solid below)",
+     "measured": 0.0,
+     "ok": false
+    },
+    {
+     "condition": "nothing above z=110 for x>=8",
+     "measured": 1.0,
+     "ok": true
+    }
+   ],
+   "faithful": false,
+   "why": "The shelf surface check probes a box from z=108 to 110 (thickness 2mm) at x=[140, 150], but the requirement asks for solid material 'directly below z=110'. The probe volume is too small and specific to guarantee the entire required span is supported. Furthermore, it uses a hardcoded threshold of 5.0"
+  },
+  "R5": {
+   "status": "pass",
+   "value": 0.4577634706671013,
+   "note": "",
+   "method": "M=21000.0Nmm, c=59.83mm, I=2744601.4mm4, sigma=Mc/I",
+   "criteria": [
+    {
+     "condition": "stress <= 20 MPa",
+     "measured": 0.4577634706671013,
+     "ok": true
+    }
+   ],
+   "faithful": false,
+   "why": "The moment calculation M = F * L uses L=140mm (distance from x=10 to x=150), but the reported value in the report (M=21000) suggests it used 150N * 140mm. However, the calculated I (2744601 mm4) is physically impossible for a part with volume ~62795 mm3 and dimensions ~160x30x115; such a massive mom"
+  },
+  "R6": {
+   "status": "pass",
+   "value": 0.014282584002791256,
+   "note": "",
+   "method": "F=150.0N, L=140.0mm, E=3500.0MPa, I=2744601.4mm4, delta=FL^3/3EI",
+   "criteria": [
+    {
+     "condition": "deflection <= 2.0 mm",
+     "measured": 0.014282584002791256,
+     "ok": true
+    }
+   ],
+   "faithful": false,
+   "why": "Uses the same physically implausible Moment of Inertia (I) as R5, leading to an unrealistic deflection value."
+  },
+  "R7": {
+   "status": "pass",
+   "value": 77.86621699460517,
+   "note": "",
+   "method": "mass = volume(62795.3) * density(1.24) / 1000",
+   "criteria": [
+    {
+     "condition": "Mass <= 90 g",
+     "measured": 77.86621699460517,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  }
+ },
+ "stdout": "ion\": \"0 <= z <= 130\", \"measured\": [-5.0000001, 110.0], \"ok\": false}, {\"condition\": \"touches wall (min x = 0)\", \"measured\": 0.0, \"ok\": true}], \"note\": \"\"}, \"R3\": {\"status\": \"pass\", \"value\": [5.5, 5.5], \"method\": \"Checked hole diameter at x~0 and screwdriver clearance (r=4) for x>=10\", \"criteria\": [{\"condition\": \"diameter 5.5 mm\", \"measured\": [5.5, 5.5], \"ok\": true}, {\"condition\": \"no material within 4mm of axis for x>=10\", \"measured\": true, \"ok\": true}], \"note\": \"\"}, \"R4\": {\"status\": \"fail\", \"value\": [0.0, 0.0], \"method\": \"Shelf surface check at z=110: vol=0.00mm3; Vol above z=110 for x>=8: 0.00\", \"criteria\": [{\"condition\": \"horizontal top surface at z=110 reaching x=150 (solid below)\", \"measured\": 0.0, \"ok\": false}, {\"condition\": \"nothing above z=110 for x>=8\", \"measured\": 1.0, \"ok\": true}], \"note\": \"\"}, \"R5\": {\"status\": \"pass\", \"value\": 0.4577634706671013, \"method\": \"M=21000.0Nmm, c=59.83mm, I=2744601.4mm4, sigma=Mc/I\", \"criteria\": [{\"condition\": \"stress <= 20 MPa\", \"measured\": 0.4577634706671013, \"ok\": true}], \"note\": \"\"}, \"R6\": {\"status\": \"pass\", \"value\": 0.014282584002791256, \"method\": \"F=150.0N, L=140.0mm, E=3500.0MPa, I=2744601.4mm4, delta=FL^3/3EI\", \"criteria\": [{\"condition\": \"deflection <= 2.0 mm\", \"measured\": 0.014282584002791256, \"ok\": true}], \"note\": \"\"}, \"R7\": {\"status\": \"pass\", \"value\": 77.86621699460517, \"method\": \"mass = volume(62795.3) * density(1.24) / 1000\", \"criteria\": [{\"condition\": \"Mass <= 90 g\", \"measured\": 77.86621699460517, \"ok\": true}], \"note\": \"\"}}",
+ "stderr": "",
+ "agent": {
+  "sim_steps": 3,
+  "sim_exhausted": false,
+  "review": [
+   {
+    "round": 0,
+    "unfaithful": [
+     "R4"
+    ]
+   },
+   {
+    "round": 1,
+    "unfaithful": [
+     "R4"
+    ]
+   },
+   {
+    "round": 2,
+    "unfaithful": [
+     "R4",
+     "R5",
+     "R6"
+    ]
+   },
+   {
+    "round": 3,
+    "unfaithful": [
+     "R3",
+     "R4",
+     "R5",
+     "R6"
+    ]
+   }
+  ]
+ }
+}

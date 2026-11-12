@@ -1,0 +1,8 @@
+{
+ "mismatches": [
+  "The USB-C cutout (R6) is not visible on the -X wall in the isometric or front views, suggesting it was either not modeled or incorrectly placed.",
+  "The screw bosses (R5) are not visible in any of the orthographic views (Top, Front, Right), indicating they may have been modeled inside the board cavity or were omitted."
+ ],
+ "systemic": [],
+ "summary": "The rendered part appears to be a simple hollow box, missing both the required USB-C cutout and the internal screw bosses specified in the design document."
+}

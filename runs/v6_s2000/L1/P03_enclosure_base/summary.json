@@ -1,0 +1,50 @@
+{
+ "k": 1,
+ "proxy": 2.0,
+ "level": "L1",
+ "problem": "P03_enclosure_base",
+ "llm": {
+  "calls": 7,
+  "tokens_in": 10558,
+  "tokens_out": 4525,
+  "seconds": 96.0
+ },
+ "rounds": 1,
+ "trace": [
+  {
+   "k": 0,
+   "accepted": true,
+   "score": 1.9285714285714286,
+   "proxy": 1.9285714285714286,
+   "critic_frac": 0.9285714285714286,
+   "gate": null,
+   "sim_issue": false,
+   "cad_steps": 0,
+   "cad_exhausted": false,
+   "sim_steps": null,
+   "sim_exhausted": null,
+   "sim_updated": false,
+   "n_measured": null,
+   "n_unmeasured": null,
+   "review": null
+  },
+  {
+   "k": 1,
+   "from": 0,
+   "accepted": true,
+   "score": 2.0,
+   "proxy": 2.0,
+   "critic_frac": 1.0,
+   "gate": null,
+   "sim_issue": false,
+   "cad_steps": 0,
+   "cad_exhausted": false,
+   "sim_steps": null,
+   "sim_exhausted": null,
+   "sim_updated": false,
+   "n_measured": null,
+   "n_unmeasured": null,
+   "review": null
+  }
+ ]
+}

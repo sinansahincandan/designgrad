@@ -1,0 +1,229 @@
+{
+ "k": 3,
+ "proxy": 2.857142857142857,
+ "level": "L2",
+ "problem": "P01_shelf_bracket",
+ "llm": {
+  "calls": 60,
+  "tokens_in": 245598,
+  "tokens_out": 74668,
+  "seconds": 1636.3
+ },
+ "rounds": 4,
+ "trace": [
+  {
+   "k": 0,
+   "accepted": true,
+   "score": 1.4857142857142858,
+   "proxy": 1.4857142857142858,
+   "critic_frac": 0.2857142857142857,
+   "gate": null,
+   "sim_issue": true,
+   "cad_steps": 0,
+   "cad_exhausted": false,
+   "sim_steps": 6,
+   "sim_exhausted": false,
+   "sim_updated": true,
+   "n_measured": 5,
+   "n_unmeasured": 2,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": [
+      "R3",
+      "R4",
+      "R5",
+      "R6"
+     ]
+    },
+    {
+     "round": 1,
+     "unfaithful": [
+      "R3",
+      "R4"
+     ]
+    },
+    {
+     "round": 2,
+     "unfaithful": [
+      "R4",
+      "R5",
+      "R6"
+     ]
+    },
+    {
+     "round": 3,
+     "unfaithful": [
+      "R5",
+      "R6"
+     ]
+    }
+   ]
+  },
+  {
+   "k": 1,
+   "from": 0,
+   "accepted": true,
+   "score": 2.5714285714285716,
+   "proxy": 2.5714285714285716,
+   "critic_frac": 0.8571428571428571,
+   "gate": null,
+   "sim_issue": false,
+   "cad_steps": 3,
+   "cad_exhausted": false,
+   "sim_steps": 4,
+   "sim_exhausted": false,
+   "sim_updated": true,
+   "n_measured": 7,
+   "n_unmeasured": 0,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": [
+      "R4",
+      "R5",
+      "R6"
+     ]
+    },
+    {
+     "round": 1,
+     "unfaithful": [
+      "R4",
+      "R5",
+      "R6"
+     ]
+    },
+    {
+     "round": 2,
+     "unfaithful": [
+      "R5",
+      "R6"
+     ]
+    },
+    {
+     "round": 3,
+     "unfaithful": []
+    }
+   ]
+  },
+  {
+   "k": 2,
+   "from": 1,
+   "accepted": false,
+   "score": 2.5714285714285716,
+   "proxy": 2.5714285714285716,
+   "critic_frac": 0.8571428571428571,
+   "gate": null,
+   "sim_issue": false,
+   "cad_steps": 0,
+   "cad_exhausted": false,
+   "sim_steps": 1,
+   "sim_exhausted": false,
+   "sim_updated": true,
+   "n_measured": 7,
+   "n_unmeasured": 0,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": [
+      "R4"
+     ]
+    },
+    {
+     "round": 1,
+     "unfaithful": []
+    }
+   ]
+  },
+  {
+   "k": 3,
+   "from": 1,
+   "accepted": true,
+   "score": 2.857142857142857,
+   "proxy": 2.857142857142857,
+   "critic_frac": 1.0,
+   "gate": null,
+   "sim_issue": false,
+   "cad_steps": 0,
+   "cad_exhausted": false,
+   "sim_steps": 3,
+   "sim_exhausted": false,
+   "sim_updated": true,
+   "n_measured": 7,
+   "n_unmeasured": 0,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": [
+      "R4"
+     ]
+    },
+    {
+     "round": 1,
+     "unfaithful": [
+      "R5",
+      "R6"
+     ]
+    },
+    {
+     "round": 2,
+     "unfaithful": [
+      "R5",
+      "R6"
+     ]
+    },
+    {
+     "round": 3,
+     "unfaithful": []
+    }
+   ]
+  },
+  {
+   "k": 4,
+   "from": 3,
+   "accepted": false,
+   "score": 2.5142857142857142,
+   "proxy": 2.5142857142857142,
+   "critic_frac": 0.7142857142857143,
+   "gate": null,
+   "sim_issue": true,
+   "cad_steps": 0,
+   "cad_exhausted": false,
+   "sim_steps": 3,
+   "sim_exhausted": false,
+   "sim_updated": true,
+   "n_measured": 5,
+   "n_unmeasured": 2,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": [
+      "R5",
+      "R6"
+     ]
+    },
+    {
+     "round": 1,
+     "unfaithful": [
+      "R5",
+      "R6"
+     ]
+    },
+    {
+     "round": 2,
+     "unfaithful": [
+      "R5",
+      "R6"
+     ]
+    },
+    {
+     "round": 3,
+     "unfaithful": [
+      "R5",
+      "R6"
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,4 @@
+{
+ "ok": false,
+ "error": "  File \"/Users/sinancandan/HackathonGemma/.venv/lib/python3.12/site-packages/cadquery/cq.py\", line 1305, in transformed\n    p = self.plane.rotated(rotate)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/sinancandan/HackathonGemma/.venv/lib/python3.12/site-packages/cadquery/occ_impl/geom.py\", line 762, in rotated\n    rotate = Vector(rotate)\n             ^^^^^^^^^^^^^^\n  File \"/Users/sinancandan/HackathonGemma/.venv/lib/python3.12/site-packages/cadquery/occ_impl/geom.py\", line 103, in __init__\n    self._wrapped = fV\n                    ^^\nUnboundLocalError: cannot access local variable 'fV' where it is not associated with a value"
+}

@@ -1,0 +1,288 @@
+{
+ "k": 1,
+ "proxy": 2.3095238095238093,
+ "level": "L3",
+ "problem": "P01_shelf_bracket",
+ "llm": {
+  "calls": 66,
+  "tokens_in": 267504,
+  "tokens_out": 78988,
+  "seconds": 1800.2
+ },
+ "rounds": 4,
+ "trace": [
+  {
+   "k": 0,
+   "accepted": true,
+   "score": 1.4857142857142858,
+   "proxy": 1.4857142857142858,
+   "critic_frac": 0.2857142857142857,
+   "gate": {
+    "mismatches": [
+     "The screw holes are not centered at y=0; they appear to be offset towards the negative Y direction (the center of the cylindrical faces is at y=1.75, while the part width is 30mm from y=0 to y=30).",
+     "The screw hole axes are along the Y axis, not the X axis as specified in R3.",
+     "The mass is 119.34g, which violates requirement R7 (mass <= 90g).",
+     "The part does not feature a tapered profile as described in the design document; it appears to be a constant rectangular cross-section for the arm."
+    ],
+    "systemic": [],
+    "summary": "The rendered part fails multiple requirements, including mass limits, screw hole orientation/placement, and the intended tapered geometry."
+   },
+   "sim_issue": true,
+   "cad_steps": 0,
+   "cad_exhausted": false,
+   "sim_steps": 6,
+   "sim_exhausted": false,
+   "sim_updated": true,
+   "n_measured": 5,
+   "n_unmeasured": 2,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": [
+      "R3",
+      "R4",
+      "R5",
+      "R6"
+     ]
+    },
+    {
+     "round": 1,
+     "unfaithful": [
+      "R3",
+      "R4"
+     ]
+    },
+    {
+     "round": 2,
+     "unfaithful": [
+      "R4",
+      "R5",
+      "R6"
+     ]
+    },
+    {
+     "round": 3,
+     "unfaithful": [
+      "R5",
+      "R6"
+     ]
+    }
+   ]
+  },
+  {
+   "k": 1,
+   "from": 0,
+   "accepted": true,
+   "score": 2.3095238095238093,
+   "proxy": 2.3095238095238093,
+   "critic_frac": 0.6428571428571429,
+   "gate": {
+    "mismatches": [
+     "The vertical spine does not start at z=0; the bbox_min shows it starts at z=-5.0, which contradicts R2 (0 <= z <= 130).",
+     "The screw hole axes are along X, but the cylindrical faces data suggests they might be split or incorrectly positioned relative to the clearance requirement."
+    ],
+    "systemic": [],
+    "summary": "The part mostly follows the design document, though it violates the Z-axis minimum boundary constraint by extending below z=0."
+   },
+   "sim_issue": true,
+   "cad_steps": 1,
+   "cad_exhausted": false,
+   "sim_steps": 3,
+   "sim_exhausted": false,
+   "sim_updated": true,
+   "n_measured": 6,
+   "n_unmeasured": 1,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": []
+    },
+    {
+     "round": 1,
+     "unfaithful": [
+      "R4"
+     ]
+    },
+    {
+     "round": 2,
+     "unfaithful": [
+      "R4",
+      "R5",
+      "R6"
+     ]
+    },
+    {
+     "round": 3,
+     "unfaithful": [
+      "R4"
+     ]
+    }
+   ]
+  },
+  {
+   "k": 2,
+   "from": 1,
+   "accepted": false,
+   "score": 2.3095238095238093,
+   "proxy": 2.3095238095238093,
+   "critic_frac": 0.6428571428571429,
+   "gate": {
+    "mismatches": [
+     "R2 Violation: The Z-axis envelope requires 0 <= z <= 130, but the rendered part extends from approximately z = -55 to z = 55 (bbox_min[2] is -55.0).",
+     "R4 Violation: The shelf support top surface must be at exactly z = 110, but the render shows the top surface near z = 55.",
+     "R3/Design Mismatch: The screw holes and clearance cutouts are not visible in the rendered part; they appear to be missing or incorrectly placed relative to the spine's geometry.",
+     "Design Document Mismatch: The design document specifies a vertical spine from z=0 to z=110, but the render shows a centered spine around z=0."
+    ],
+    "systemic": [
+     "The part is not rest-stable (as indicated by 'rest_stable': false and negative margin), meaning it cannot stand on its own for inspection or assembly if placed on a flat surface."
+    ],
+    "summary": "The rendered part fails almost all critical geometric requirements, specifically regarding the Z-axis positioning, the shelf height (z=110), and the presence of screw holes."
+   },
+   "sim_issue": true,
+   "cad_steps": 0,
+   "cad_exhausted": false,
+   "sim_steps": 3,
+   "sim_exhausted": false,
+   "sim_updated": true,
+   "n_measured": 6,
+   "n_unmeasured": 1,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": []
+    },
+    {
+     "round": 1,
+     "unfaithful": [
+      "R5",
+      "R6"
+     ]
+    },
+    {
+     "round": 2,
+     "unfaithful": [
+      "R5",
+      "R6"
+     ]
+    },
+    {
+     "round": 3,
+     "unfaithful": [
+      "R4"
+     ]
+    }
+   ]
+  },
+  {
+   "k": 3,
+   "from": 1,
+   "accepted": false,
+   "score": 2.238095238095238,
+   "proxy": 2.238095238095238,
+   "critic_frac": 0.5714285714285714,
+   "gate": {
+    "mismatches": [
+     "The Z-range of the bounding box starts at -5.0 mm (bbox_min[2]), whereas R2 requires 0 <= z <= 130.",
+     "R4 states that nothing of the bracket may be above z = 110 for x >= 8, but the bbox shows a total height of 115 mm and the vertical spine appears to extend above the horizontal arm."
+    ],
+    "systemic": [],
+    "summary": "The part violates the Z-coordinate requirement by extending below z=0 and potentially exceeding the maximum height constraint for the specified x-range."
+   },
+   "sim_issue": true,
+   "cad_steps": 0,
+   "cad_exhausted": false,
+   "sim_steps": 3,
+   "sim_exhausted": false,
+   "sim_updated": true,
+   "n_measured": 3,
+   "n_unmeasured": 4,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": [
+      "R4"
+     ]
+    },
+    {
+     "round": 1,
+     "unfaithful": [
+      "R5",
+      "R6"
+     ]
+    },
+    {
+     "round": 2,
+     "unfaithful": [
+      "R4",
+      "R5",
+      "R6"
+     ]
+    },
+    {
+     "round": 3,
+     "unfaithful": [
+      "R3",
+      "R4",
+      "R5",
+      "R6"
+     ]
+    }
+   ]
+  },
+  {
+   "k": 4,
+   "from": 1,
+   "accepted": false,
+   "score": 2.238095238095238,
+   "proxy": 2.238095238095238,
+   "critic_frac": 0.5714285714285714,
+   "gate": {
+    "mismatches": [
+     "The part's Z-dimension starts at -5 mm (bbox_min[2] = -5.0), whereas R2 requires 0 <= z <= 130 and the design document states the bottom face is exactly at z=0.",
+     "R3 requires screw holes to be centered at y=0, but the 'Right' view shows the part is offset along the Y-axis (bbox_min[1] = -15.0, bbox_max[1] = 15.0), and while the center of mass is at y=0, the geometry appears asymmetric or shifted relative to the coordinate system described."
+    ],
+    "systemic": [],
+    "summary": "The part fails to meet the Z-coordinate requirement by extending below z=0, and there is a discrepancy in the vertical positioning/alignment of the base."
+   },
+   "sim_issue": true,
+   "cad_steps": 0,
+   "cad_exhausted": false,
+   "sim_steps": 3,
+   "sim_exhausted": false,
+   "sim_updated": true,
+   "n_measured": 3,
+   "n_unmeasured": 4,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": [
+      "R4"
+     ]
+    },
+    {
+     "round": 1,
+     "unfaithful": [
+      "R4"
+     ]
+    },
+    {
+     "round": 2,
+     "unfaithful": [
+      "R4",
+      "R5",
+      "R6"
+     ]
+    },
+    {
+     "round": 3,
+     "unfaithful": [
+      "R3",
+      "R4",
+      "R5",
+      "R6"
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,181 @@
+{
+ "ok": true,
+ "result": {
+  "R1": {
+   "status": "pass",
+   "value": 1.0,
+   "note": "Found 1 solids",
+   "method": "Counted number of solids in STEP file",
+   "criteria": [
+    {
+     "condition": "One single, valid solid",
+     "measured": 1.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R2": {
+   "status": "pass",
+   "value": 0.9801196089890029,
+   "note": "Fill: 98.01%",
+   "method": "Intersection volume / region volume (1600.0 mm3) and bbox.xmin check",
+   "criteria": [
+    {
+     "condition": "solid material at 0 <= x <= 2, |y| <= 8, -5 <= z <= 45",
+     "measured": 0.9801196089890029,
+     "ok": true
+    },
+    {
+     "condition": "minimum x = 0",
+     "measured": 0.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R3": {
+   "status": "fail",
+   "value": 0.0,
+   "note": "",
+   "method": "Cylinder intersection for through-hole check and X-thickness probe around hole",
+   "criteria": [
+    {
+     "condition": "Two screw holes dia 4.5mm and 4mm plate thickness around them",
+     "measured": 0.0,
+     "ok": false
+    }
+   ],
+   "faithful": false,
+   "why": "The script attempts to verify a 4mm thickness in X around the holes, but R2 defines the plate as only 2mm thick (0 <= x <= 2), making the requirement impossible to satisfy. Furthermore, it uses a probe volume that might not accurately capture 'thickness' for a through-hole."
+  },
+  "R4": {
+   "status": "pass",
+   "value": [
+    96.0,
+    0.0
+   ],
+   "note": "",
+   "method": "Bed volume probe: 96.0, Pocket volume probe: 0.0",
+   "criteria": [
+    {
+     "condition": "solid bed top at z=-14",
+     "measured": 96.0,
+     "ok": true
+    },
+    {
+     "condition": "space above empty",
+     "measured": 0.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R5": {
+   "status": "pass",
+   "value": 200.0,
+   "note": "",
+   "method": "Intersection volume with lip region: 200.0",
+   "criteria": [
+    {
+     "condition": "solid material at 47<=x<=52, |y|<=4, -13<=z<=-8",
+     "measured": 200.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R6": {
+   "status": "pass",
+   "value": [
+    0.5740891559229835,
+    0.00311706937642368
+   ],
+   "note": "",
+   "method": "Section x=8.0: A=520.0, I=50059.2, c=18.0. M=F*32=1600.0. sigma=Mc/I, defl=FL^3/3EI",
+   "criteria": [
+    {
+     "condition": "bending stress <= 25 MPa",
+     "measured": 0.5740891559229835,
+     "ok": true
+    },
+    {
+     "condition": "tip deflection estimate <= 1.5 mm",
+     "measured": 0.00311706937642368,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R7": {
+   "status": "pass",
+   "value": [
+    18.064557304234178,
+    52.0
+   ],
+   "note": "",
+   "method": "Mass = vol * density (0.00124), X-extent = bbox.xmax - bbox.xmin",
+   "criteria": [
+    {
+     "condition": "Mass <= 25 g",
+     "measured": 18.064557304234178,
+     "ok": true
+    },
+    {
+     "condition": "X extent <= 55 mm",
+     "measured": 52.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  }
+ },
+ "stdout": "\": 0.0, \"ok\": true}], \"note\": \"Fill: 98.01%\"}, \"R3\": {\"status\": \"fail\", \"value\": 0.0, \"method\": \"Cylinder intersection for through-hole check and X-thickness probe around hole\", \"criteria\": [{\"condition\": \"Two screw holes dia 4.5mm and 4mm plate thickness around them\", \"measured\": 0.0, \"ok\": false}], \"note\": \"\"}, \"R4\": {\"status\": \"pass\", \"value\": [96.0, 0.0], \"method\": \"Bed volume probe: 96.0, Pocket volume probe: 0.0\", \"criteria\": [{\"condition\": \"solid bed top at z=-14\", \"measured\": 96.0, \"ok\": true}, {\"condition\": \"space above empty\", \"measured\": 0.0, \"ok\": true}], \"note\": \"\"}, \"R5\": {\"status\": \"pass\", \"value\": 200.0, \"method\": \"Intersection volume with lip region: 200.0\", \"criteria\": [{\"condition\": \"solid material at 47<=x<=52, |y|<=4, -13<=z<=-8\", \"measured\": 200.0, \"ok\": true}], \"note\": \"\"}, \"R6\": {\"status\": \"pass\", \"value\": [0.5740891559229835, 0.00311706937642368], \"method\": \"Section x=8.0: A=520.0, I=50059.2, c=18.0. M=F*32=1600.0. sigma=Mc/I, defl=FL^3/3EI\", \"criteria\": [{\"condition\": \"bending stress <= 25 MPa\", \"measured\": 0.5740891559229835, \"ok\": true}, {\"condition\": \"tip deflection estimate <= 1.5 mm\", \"measured\": 0.00311706937642368, \"ok\": true}], \"note\": \"\"}, \"R7\": {\"status\": \"pass\", \"value\": [18.064557304234178, 52.0], \"method\": \"Mass = vol * density (0.00124), X-extent = bbox.xmax - bbox.xmin\", \"criteria\": [{\"condition\": \"Mass <= 25 g\", \"measured\": 18.064557304234178, \"ok\": true}, {\"condition\": \"X extent <= 55 mm\", \"measured\": 52.0, \"ok\": true}], \"note\": \"\"}}",
+ "stderr": "",
+ "agent": {
+  "sim_steps": 3,
+  "sim_exhausted": false,
+  "review": [
+   {
+    "round": 0,
+    "unfaithful": [
+     "R3"
+    ],
+    "control_pass": [
+     "R1",
+     "R7"
+    ]
+   },
+   {
+    "round": 1,
+    "unfaithful": [
+     "R3"
+    ],
+    "control_pass": [
+     "R1",
+     "R7"
+    ]
+   },
+   {
+    "round": 2,
+    "unfaithful": [
+     "R3"
+    ],
+    "control_pass": [
+     "R1",
+     "R7"
+    ]
+   },
+   {
+    "round": 3,
+    "unfaithful": [
+     "R3"
+    ],
+    "control_pass": [
+     "R1",
+     "R7"
+    ]
+   }
+  ]
+ }
+}

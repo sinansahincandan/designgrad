@@ -1,0 +1,8 @@
+{
+ "mismatches": [
+  "R5: The screw bosses are missing from the interior of the enclosure.",
+  "R6: The USB-C cutout on the -X wall is missing from the rendered part."
+ ],
+ "systemic": [],
+ "summary": "The rendered part is a simple hollow box that fails to include the required mounting bosses and the USB-C port cutout specified in the design document."
+}

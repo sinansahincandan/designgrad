@@ -1,0 +1,105 @@
+{
+ "ok": true,
+ "result": {
+  "R1": {
+   "status": "pass",
+   "value": 1,
+   "note": "Found 1 solids",
+   "method": "Counted number of solids in the STEP file",
+   "criteria": [
+    {
+     "condition": "One single, valid solid",
+     "measured": 1,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R2": {
+   "status": "fail",
+   "value": [
+    -57.5,
+    [
+     0,
+     0
+    ]
+   ],
+   "note": "",
+   "method": "Checked z_min=-57.5 and probe cylinders at (+-20, -10) with D=4.5",
+   "criteria": [
+    {
+     "condition": "minimum z = 0",
+     "measured": -57.5,
+     "ok": false
+    },
+    {
+     "condition": "two vertical screw holes diameter 4.5 mm at (+-20, -10)",
+     "measured": [
+      0,
+      0
+     ],
+     "ok": false
+    }
+   ],
+   "faithful": true
+  },
+  "R3_5": {
+   "status": "error",
+   "value": null,
+   "note": "'Trimesh' object has no attribute 'points'",
+   "method": "N/A",
+   "criteria": [],
+   "where": "line 69: proj = mesh.points @ n_vec  ->  AttributeError"
+  },
+  "R6": {
+   "status": "pass",
+   "value": [
+    0.0,
+    11.8
+   ],
+   "note": "Footprint: x[-22.5,22.5] y[-20.0,20.0]",
+   "method": "Combined CoM with sensor at [  0.    15.   -18.75], part mass 29.71g, margin 5mm",
+   "criteria": [
+    {
+     "condition": "combined centre of mass must lie inside the contact area with >= 5 mm margin",
+     "measured": [
+      0.0,
+      11.8
+     ],
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R7": {
+   "status": "pass",
+   "value": 29.711,
+   "note": "",
+   "method": "Volume=23960.53 mm3 * density=0.00124 g/mm3",
+   "criteria": [
+    {
+     "condition": "Mass <= 35 g",
+     "measured": 29.711,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  }
+ },
+ "stdout": "{\"R1\": {\"status\": \"pass\", \"value\": 1, \"method\": \"Counted number of solids in the STEP file\", \"criteria\": [{\"condition\": \"One single, valid solid\", \"measured\": 1, \"ok\": true}], \"note\": \"Found 1 solids\"}, \"R2\": {\"status\": \"fail\", \"value\": [-57.5, [0, 0]], \"method\": \"Checked z_min=-57.5 and probe cylinders at (+-20, -10) with D=4.5\", \"criteria\": [{\"condition\": \"minimum z = 0\", \"measured\": -57.5, \"ok\": false}, {\"condition\": \"two vertical screw holes diameter 4.5 mm at (+-20, -10)\", \"measured\": [0, 0], \"ok\": false}], \"note\": \"\"}, \"R3_5\": {\"status\": \"error\", \"value\": null, \"method\": \"N/A\", \"criteria\": [], \"note\": \"'Trimesh' object has no attribute 'points'\"}, \"R6\": {\"status\": \"pass\", \"value\": [0.0, 11.8], \"method\": \"Combined CoM with sensor at [  0.    15.   -18.75], part mass 29.71g, margin 5mm\", \"criteria\": [{\"condition\": \"combined centre of mass must lie inside the contact area with >= 5 mm margin\", \"measured\": [0.0, 11.8], \"ok\": true}], \"note\": \"Footprint: x[-22.5,22.5] y[-20.0,20.0]\"}, \"R7\": {\"status\": \"pass\", \"value\": 29.711, \"method\": \"Volume=23960.53 mm3 * density=0.00124 g/mm3\", \"criteria\": [{\"condition\": \"Mass <= 35 g\", \"measured\": 29.711, \"ok\": true}], \"note\": \"\"}}",
+ "stderr": "",
+ "agent": {
+  "sim_steps": 6,
+  "sim_exhausted": true,
+  "review": [
+   {
+    "round": 0,
+    "unfaithful": [],
+    "control_pass": [
+     "R1",
+     "R7"
+    ]
+   }
+  ]
+ }
+}

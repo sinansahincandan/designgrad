@@ -1,0 +1,8 @@
+{
+ "mismatches": [
+  "The Z-range of the bounding box starts at -5.0 mm (bbox_min[2]), whereas R2 requires 0 <= z <= 130.",
+  "R4 states that nothing of the bracket may be above z = 110 for x >= 8, but the bbox shows a total height of 115 mm and the vertical spine appears to extend above the horizontal arm."
+ ],
+ "systemic": [],
+ "summary": "The part violates the Z-coordinate requirement by extending below z=0 and potentially exceeding the maximum height constraint for the specified x-range."
+}

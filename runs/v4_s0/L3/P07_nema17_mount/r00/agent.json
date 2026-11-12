@@ -1,0 +1,44 @@
+{
+ "cad_steps": 0,
+ "cad_exhausted": false,
+ "cad_history": [
+  {
+   "step": 0,
+   "ok": true,
+   "feedback": ""
+  }
+ ],
+ "sim_steps": 4,
+ "sim_exhausted": false,
+ "review": [
+  {
+   "round": 0,
+   "unfaithful": [
+    "R2"
+   ]
+  },
+  {
+   "round": 1,
+   "unfaithful": [
+    "R2"
+   ]
+  },
+  {
+   "round": 2,
+   "unfaithful": []
+  }
+ ],
+ "sim_updated": true,
+ "sim_history": [
+  {
+   "step": 1,
+   "ok": false,
+   "feedback": "These requirements have no entry in the report: R2, R3\nEvery requirement must end with a real measurement (status pass or fail)."
+  },
+  {
+   "step": 2,
+   "ok": true,
+   "feedback": ""
+  }
+ ]
+}

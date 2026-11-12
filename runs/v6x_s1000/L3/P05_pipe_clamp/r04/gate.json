@@ -1,0 +1,11 @@
+{
+ "mismatches": [
+  "The part does not sit on z = 0; the bbox_min shows z = -3.0, and the Front view shows the base plate extending below the zero axis.",
+  "R5 (Screw holes) is failed: The screw holes are not centered at y=0 as required; they appear offset or incorrectly formed, and the measured cylindrical faces show centers at y=2.1 and y=-2.1 rather than 0.",
+  "The pipe cutout (R3) axis is incorrect: The design document specifies the axis at z = 12.5, but the measured facts show the center of the 12.6mm radius cylinder is at z = 1.17, meaning the hole is cut through the base rather than forming a saddle for a pipe."
+ ],
+ "systemic": [
+  "The design concept for the pipe cutout (R3) and the base plate/flanges are fundamentally misaligned in the implementation; if the cutout is at z=1.17, it destroys the structural integrity of the mounting surface required to hold a pipe."
+ ],
+ "summary": "The part fails almost all geometric requirements: it sits below the mounting plane, the screw holes are misaligned, and the pipe cutout is incorrectly positioned at the base instead of above it."
+}

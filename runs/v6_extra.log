@@ -1,0 +1,53 @@
+=== v6 extra P02 seed 0 Thu Nov 12 05:52:34 CST 2026
+done L0 P02_phone_stand rounds=0 best_k=0 proxy=1.00 calls=4 122s
+done L1 P02_phone_stand rounds=3 best_k=3 proxy=2.00 calls=26 625s
+done L2 P02_phone_stand rounds=4 best_k=1 proxy=2.14 calls=44 1246s
+done L3 P02_phone_stand rounds=4 best_k=1 proxy=2.43 calls=42 1000s
+=== v6 extra P10 seed 0 Thu Nov 12 06:42:29 CST 2026
+done L0 P10_sensor_tilt_mount rounds=0 best_k=0 proxy=0.00 calls=6 203s
+done L1 P10_sensor_tilt_mount rounds=4 best_k=0 proxy=1.86 calls=45 1094s
+done L2 P10_sensor_tilt_mount rounds=4 best_k=0 proxy=2.07 calls=59 1791s
+done L3 P10_sensor_tilt_mount rounds=4 best_k=0 proxy=2.07 calls=53 1606s
+=== v6 extra P05 seed 0 Thu Nov 12 08:00:44 CST 2026
+done L0 P05_pipe_clamp rounds=0 best_k=0 proxy=1.00 calls=3 97s
+done L1 P05_pipe_clamp rounds=2 best_k=2 proxy=2.00 calls=12 160s
+done L2 P05_pipe_clamp rounds=4 best_k=1 proxy=1.86 calls=35 774s
+done L3 P05_pipe_clamp rounds=4 best_k=1 proxy=1.86 calls=37 747s
+=== v6 extra P09 seed 0 Thu Nov 12 08:30:24 CST 2026
+done L0 P09_drone_arm rounds=0 best_k=0 proxy=1.00 calls=1 105s
+done L1 P09_drone_arm rounds=4 best_k=0 proxy=1.86 calls=32 851s
+done L2 P09_drone_arm rounds=4 best_k=4 proxy=2.43 calls=44 1308s
+done L3 P09_drone_arm rounds=4 best_k=1 proxy=2.43 calls=43 1172s
+=== v6 extra P06 seed 0 Thu Nov 12 09:27:41 CST 2026
+done L0 P06_heat_sink rounds=0 best_k=0 proxy=1.00 calls=2 45s
+done L1 P06_heat_sink rounds=1 best_k=1 proxy=2.00 calls=7 101s
+done L2 P06_heat_sink rounds=4 best_k=0 proxy=2.67 calls=35 739s
+done L3 P06_heat_sink rounds=4 best_k=0 proxy=2.67 calls=40 711s
+=== EXTRA SEED 0 DONE Thu Nov 12 09:54:18 CST 2026
+=== v6 extra P02 seed 1000 Thu Nov 12 09:54:18 CST 2026
+done L0 P02_phone_stand rounds=0 best_k=0 proxy=1.00 calls=2 48s
+done L1 P02_phone_stand rounds=4 best_k=4 proxy=1.86 calls=25 489s
+done L2 P02_phone_stand rounds=4 best_k=0 proxy=2.14 calls=57 1618s
+done L3 P02_phone_stand rounds=4 best_k=4 proxy=2.14 calls=63 1912s
+=== extra2: P02 seed 1000 finished Thu Nov 12 11:02:25 CST 2026
+=== v6 extra P05 seed 1000 Thu Nov 12 11:02:25 CST 2026
+done L0 P05_pipe_clamp rounds=0 best_k=0 proxy=0.50 calls=6 258s
+=== PAUSED by user request Thu Nov 12 11:12:51 CST 2026: P02 seed 1000 complete; P05 seed 1000 stopped during L1
+=== v6 extra P05 seed 1000 Thu Nov 12 11:59:33 CST 2026
+skip L0 P05_pipe_clamp
+done L1 P05_pipe_clamp rounds=4 best_k=3 proxy=1.86 calls=40 963s
+done L2 P05_pipe_clamp rounds=4 best_k=2 proxy=1.36 calls=54 1385s
+done L3 P05_pipe_clamp rounds=4 best_k=2 proxy=2.14 calls=42 920s
+=== v6 extra P09 seed 1000 Thu Nov 12 12:54:02 CST 2026
+done L0 P09_drone_arm rounds=0 best_k=0 proxy=1.00 calls=2 54s
+done L1 P09_drone_arm rounds=4 best_k=0 proxy=1.86 calls=26 557s
+done L2 P09_drone_arm rounds=4 best_k=4 proxy=2.43 calls=40 1221s
+done L3 P09_drone_arm rounds=4 best_k=0 proxy=2.00 calls=48 1571s
+=== time guard: skip P06 seed 1000 Thu Nov 12 13:50:48 CST 2026
+=== EXTRA3 DONE Thu Nov 12 13:50:48 CST 2026
+=== v6 extra P06 seed 1000 Thu Nov 12 13:54:02 CST 2026
+done L0 P06_heat_sink rounds=0 best_k=0 proxy=1.00 calls=3 88s
+done L1 P06_heat_sink rounds=0 best_k=0 proxy=2.00 calls=2 31s
+done L2 P06_heat_sink rounds=4 best_k=1 proxy=2.33 calls=32 665s
+done L3 P06_heat_sink rounds=4 best_k=3 proxy=2.67 calls=39 754s
+=== EXTRA4 DONE Thu Nov 12 14:19:42 CST 2026

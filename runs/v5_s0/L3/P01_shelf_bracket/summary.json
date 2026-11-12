@@ -1,0 +1,339 @@
+{
+ "k": 2,
+ "proxy": 2.428571428571429,
+ "level": "L3",
+ "problem": "P01_shelf_bracket",
+ "llm": {
+  "calls": 62,
+  "tokens_in": 254127,
+  "tokens_out": 77308,
+  "seconds": 1736.3
+ },
+ "rounds": 4,
+ "trace": [
+  {
+   "k": 0,
+   "accepted": true,
+   "score": 1.6071428571428572,
+   "proxy": 1.6071428571428572,
+   "critic_frac": 0.35714285714285715,
+   "gate": {
+    "mismatches": [
+     "The screw holes are not centered at y=0; they appear to be offset towards one side of the vertical spine.",
+     "The design document specifies a tapered profile, but the rendered part has a constant thickness throughout the horizontal arm.",
+     "The mass is 119.34g, which exceeds the R7 requirement of <= 90g."
+    ],
+    "systemic": [],
+    "summary": "The part fails to meet the mass requirement and does not implement the intended tapered profile described in the design document."
+   },
+   "sim_issue": true,
+   "cad_steps": 0,
+   "cad_exhausted": false,
+   "sim_steps": 8,
+   "sim_exhausted": false,
+   "sim_updated": true,
+   "n_measured": 4,
+   "n_unmeasured": 3,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": [
+      "R3",
+      "R4"
+     ],
+     "control_pass": [
+      "R1",
+      "R2",
+      "R7"
+     ]
+    },
+    {
+     "round": 1,
+     "unfaithful": [
+      "R3",
+      "R4",
+      "R5",
+      "R6"
+     ],
+     "control_pass": [
+      "R1",
+      "R2",
+      "R7"
+     ]
+    },
+    {
+     "round": 2,
+     "unfaithful": [
+      "R3",
+      "R4",
+      "R5",
+      "R6"
+     ],
+     "control_pass": [
+      "R1",
+      "R2",
+      "R7"
+     ]
+    },
+    {
+     "round": 3,
+     "unfaithful": [
+      "R3",
+      "R5",
+      "R6"
+     ],
+     "control_pass": [
+      "R1",
+      "R2",
+      "R3",
+      "R7"
+     ]
+    }
+   ]
+  },
+  {
+   "k": 1,
+   "from": 0,
+   "accepted": true,
+   "score": 2.0,
+   "proxy": 2.0,
+   "critic_frac": 0.5,
+   "gate": {
+    "mismatches": [
+     "R3: The screw holes are not visible in any view; the 'Measured facts' also report 0 cylindrical faces, indicating the screw holes were not successfully subtracted.",
+     "R4: The design document specifies that no material may be above z=110 for x >= 8. However, the Front view shows a vertical section extending up to z=110 at x=0, but there is no clear evidence of the 'clearance cutouts' or the tapering described in the design doc; the part appears as a simple L-shape.",
+     "R7: The mass is 112.84g, which exceeds the requirement of <= 90g."
+    ],
+    "systemic": [],
+    "summary": "The part fails to include the required screw holes and exceeds the maximum allowable mass."
+   },
+   "sim_issue": true,
+   "cad_steps": 1,
+   "cad_exhausted": false,
+   "sim_steps": 3,
+   "sim_exhausted": false,
+   "sim_updated": true,
+   "n_measured": 6,
+   "n_unmeasured": 1,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": [
+      "R3",
+      "R4"
+     ],
+     "control_pass": [
+      "R1",
+      "R2",
+      "R3",
+      "R7"
+     ]
+    },
+    {
+     "round": 1,
+     "unfaithful": [
+      "R3",
+      "R4"
+     ],
+     "control_pass": [
+      "R1",
+      "R2",
+      "R3",
+      "R7"
+     ]
+    },
+    {
+     "round": 2,
+     "unfaithful": [
+      "R3"
+     ],
+     "control_pass": [
+      "R1",
+      "R2",
+      "R3",
+      "R7"
+     ]
+    },
+    {
+     "round": 3,
+     "unfaithful": [
+      "R3"
+     ],
+     "control_pass": [
+      "R1",
+      "R2",
+      "R3",
+      "R7"
+     ]
+    }
+   ]
+  },
+  {
+   "k": 2,
+   "from": 1,
+   "accepted": true,
+   "score": 2.428571428571429,
+   "proxy": 2.428571428571429,
+   "critic_frac": 0.7142857142857143,
+   "gate": {
+    "mismatches": [
+     "The screw holes (R3) are completely missing from the rendered part.",
+     "The design document specifies a Y-axis taper to reduce mass, but the render shows a constant width arm for most of its length.",
+     "The measured mass is 170.5g, which significantly violates R7 (max 90g).",
+     "The volume/mass mismatch suggests the 'Screw Access Channels' and 'Tapered Profile' described in the design document were not implemented in the code."
+    ],
+    "systemic": [],
+    "summary": "The rendered part fails to include the required screw holes and does not implement the mass-reduction taper, resulting in a part that is nearly double the allowed weight limit."
+   },
+   "sim_issue": false,
+   "cad_steps": 0,
+   "cad_exhausted": false,
+   "sim_steps": 2,
+   "sim_exhausted": false,
+   "sim_updated": true,
+   "n_measured": 7,
+   "n_unmeasured": 0,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": [
+      "R5",
+      "R6"
+     ],
+     "control_pass": [
+      "R1",
+      "R2",
+      "R3",
+      "R7"
+     ]
+    },
+    {
+     "round": 1,
+     "unfaithful": [
+      "R3"
+     ],
+     "control_pass": [
+      "R1",
+      "R2",
+      "R3",
+      "R7"
+     ]
+    },
+    {
+     "round": 2,
+     "unfaithful": [],
+     "control_pass": [
+      "R1",
+      "R2",
+      "R7"
+     ]
+    }
+   ]
+  },
+  {
+   "k": 3,
+   "from": 2,
+   "accepted": false,
+   "score": 2.428571428571429,
+   "proxy": 2.428571428571429,
+   "critic_frac": 0.7142857142857143,
+   "gate": {
+    "mismatches": [
+     "The screw holes are not centered at y=0; the 'Measured facts' and 'Right view' show the hole centers are offset from the Y-axis (the cylindrical faces data shows centers at y=6.45 and y=0, suggesting an asymmetric or misaligned subtraction).",
+     "R3 requires screw holes to be centered at (y=0, z=20) and (y=0, z=60); the Right view clearly shows the holes are not vertically aligned with the center of the spine's width."
+    ],
+    "systemic": [],
+    "summary": "The part fails to center the screw holes along the Y-axis as specified in the design document and requirements."
+   },
+   "sim_issue": false,
+   "cad_steps": 2,
+   "cad_exhausted": false,
+   "sim_steps": 0,
+   "sim_exhausted": false,
+   "sim_updated": false,
+   "n_measured": 7,
+   "n_unmeasured": 0,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": [],
+     "control_pass": [
+      "R1",
+      "R2",
+      "R7"
+     ]
+    }
+   ]
+  },
+  {
+   "k": 4,
+   "from": 2,
+   "accepted": false,
+   "score": 2.428571428571429,
+   "proxy": 2.428571428571429,
+   "critic_frac": 0.7142857142857143,
+   "gate": {
+    "mismatches": [
+     "The design document specifies two screw holes centered at z=20 and z=60, but the Right view shows the holes are positioned much lower (around z=15 and z=55) or the spine is shorter than intended.",
+     "The design document states the shelf arm thickness is 10mm (from z=100 to z=110), but the Front view shows the horizontal arm is significantly thicker, occupying most of the vertical space from approximately z=80 to z=110."
+    ],
+    "systemic": [],
+    "summary": "The rendered part deviates from the design document regarding the vertical placement of screw holes and the thickness of the shelf arm."
+   },
+   "sim_issue": false,
+   "cad_steps": 0,
+   "cad_exhausted": false,
+   "sim_steps": 3,
+   "sim_exhausted": false,
+   "sim_updated": true,
+   "n_measured": 7,
+   "n_unmeasured": 0,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": [
+      "R4"
+     ],
+     "control_pass": [
+      "R1",
+      "R2",
+      "R7"
+     ]
+    },
+    {
+     "round": 1,
+     "unfaithful": [
+      "R3"
+     ],
+     "control_pass": [
+      "R1",
+      "R2",
+      "R3",
+      "R7"
+     ]
+    },
+    {
+     "round": 2,
+     "unfaithful": [
+      "R3"
+     ],
+     "control_pass": [
+      "R1",
+      "R2",
+      "R3",
+      "R7"
+     ]
+    },
+    {
+     "round": 3,
+     "unfaithful": [],
+     "control_pass": [
+      "R1",
+      "R2",
+      "R7"
+     ]
+    }
+   ]
+  }
+ ]
+}

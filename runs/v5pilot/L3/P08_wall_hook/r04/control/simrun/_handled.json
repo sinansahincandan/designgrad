@@ -1,0 +1,1 @@
+[{"type": "ValueError", "msg": "Plane x=8 does not intersect the part", "line": 163, "src": "raise ValueError(\"Plane x=8 does not intersect the part\")"}]

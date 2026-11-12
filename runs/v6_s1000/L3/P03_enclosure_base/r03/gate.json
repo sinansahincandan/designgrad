@@ -1,0 +1,8 @@
+{
+ "mismatches": [
+  "R6: The USB-C cutout is missing from the -X wall (visible in Isometric and Front views).",
+  "R5: The screw bosses are not visible as distinct features on top of the floor; instead, the cylindrical face data suggests they might be incorrectly subtracted or merged into the bottom rather than being pillars rising to z=8."
+ ],
+ "systemic": [],
+ "summary": "The rendered part fails to include the required USB-C cutout and the screw bosses are not correctly implemented as mounting pillars."
+}

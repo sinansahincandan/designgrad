@@ -1,0 +1,8 @@
+{
+ "mismatches": [
+  "R2: The footprint width (x-extent) is 100.47 mm, which exceeds the 100 mm limit specified in the requirements and design document.",
+  "R7: The mass is 64.98 g, which exceeds the maximum allowed mass of 60 g."
+ ],
+ "systemic": [],
+ "summary": "The part fails to meet the dimensional footprint constraint (exceeds 100mm) and the weight limit (exceeds 60g)."
+}

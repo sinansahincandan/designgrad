@@ -1,0 +1,41 @@
+{
+ "cad_steps": 2,
+ "cad_exhausted": false,
+ "cad_history": [
+  {
+   "step": 0,
+   "ok": false,
+   "feedback": "The code failed:\nTraceback (most recent call last):\n  File \"design.py\", line 77, in <module>\n    arm = arm_profile.extrude(width, centered=(False, False, False))\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: Workplane.extrude() got an unexpected keyword argument 'centered'"
+  },
+  {
+   "step": 1,
+   "ok": false,
+   "feedback": "The code ran but produced 2 disconnected solids:\n  solid 1: volume 362500.0 mm3, bbox_min [15.0, -60.0, -0.0], bbox_max [160.0, -20.0, 110.0]\n  solid 2: volume 65046.7 mm3, bbox_min [-0.0, -0.01, -0.0], bbox_max [15.01, 40.0, 110.0]\n  solid 2 is separated from solid 1 by 20.0 mm along Y (solid 1 spans y -60.0..-20.0, solid 2 spans -0.01..40.0)\n`result` must be ONE connected solid. Compare these boxes: find which piece does not touch the main body, extend or move it so it overlaps the body by at least 1 mm, and union everything into one solid."
+  },
+  {
+   "step": 2,
+   "ok": true,
+   "feedback": ""
+  }
+ ],
+ "sim_steps": 0,
+ "sim_exhausted": false,
+ "review": [
+  {
+   "round": 0,
+   "unfaithful": [],
+   "control_pass": [
+    "R1",
+    "R7"
+   ]
+  }
+ ],
+ "sim_updated": false,
+ "sim_history": [
+  {
+   "step": 0,
+   "ok": true,
+   "feedback": ""
+  }
+ ]
+}

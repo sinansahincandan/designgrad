@@ -1,0 +1,69 @@
+{
+ "cad_steps": 0,
+ "cad_exhausted": false,
+ "cad_history": [
+  {
+   "step": 0,
+   "ok": true,
+   "feedback": ""
+  }
+ ],
+ "sim_steps": 6,
+ "sim_exhausted": false,
+ "review": [
+  {
+   "round": 0,
+   "unfaithful": [
+    "R5",
+    "R6"
+   ],
+   "control_pass": [
+    "R1",
+    "R2",
+    "R7"
+   ]
+  },
+  {
+   "round": 1,
+   "unfaithful": [],
+   "control_pass": [
+    "R1",
+    "R2",
+    "R7"
+   ]
+  }
+ ],
+ "sim_updated": true,
+ "sim_history": [
+  {
+   "step": 0,
+   "ok": false,
+   "feedback": "These checks raised an error instead of measuring (status 'error'):\n- R5: No material found at section x=20\n    raised at line 123: raise ValueError(\"No material found at section x=20\")  ->  ValueError\n- R6: No material found at section x=20\n    raised at line 123: raise ValueError(\"No material found at section x=20\")  ->  ValueError\nEvery requirement must end with a real measurement (status pass or fail)."
+  },
+  {
+   "step": 1,
+   "ok": false,
+   "feedback": "These checks raised an error instead of measuring (status 'error'):\n- R5: No material found near section x=20\n    raised at line 132: raise ValueError(\"No material found near section x=20\")  ->  ValueError\n- R6: No material found near section x=20\n    raised at line 132: raise ValueError(\"No material found near section x=20\")  ->  ValueError\nEvery requirement must end with a real measurement (status pass or fail)."
+  },
+  {
+   "step": 2,
+   "ok": false,
+   "feedback": "These checks raised an error instead of measuring (status 'error'):\n- R5: No material found near section x=20\n    raised at line 138: raise ValueError(\"No material found near section x=20\")  ->  ValueError\n- R6: No material found near section x=20\n    raised at line 138: raise ValueError(\"No material found near section x=20\")  ->  ValueError\nEvery requirement must end with a real measurement (status pass or fail)."
+  },
+  {
+   "step": 3,
+   "ok": false,
+   "feedback": "These checks raised an error instead of measuring (status 'error'):\n- R5: No material found near section x=20\n    raised at line 135: raise ValueError(\"No material found near section x=20\")  ->  ValueError\n- R6: No material found near section x=20\n    raised at line 135: raise ValueError(\"No material found near section x=20\")  ->  ValueError\nEvery requirement must end with a real measurement (status pass or fail)."
+  },
+  {
+   "step": 4,
+   "ok": false,
+   "feedback": "These checks raised an error instead of measuring (status 'error'):\n- R5: No material found near section x=20\n    raised at line 137: raise ValueError(\"No material found near section x=20\")  ->  ValueError\n- R6: No material found near section x=20\n    raised at line 137: raise ValueError(\"No material found near section x=20\")  ->  ValueError\nEvery requirement must end with a real measurement (status pass or fail)."
+  },
+  {
+   "step": 5,
+   "ok": true,
+   "feedback": ""
+  }
+ ]
+}

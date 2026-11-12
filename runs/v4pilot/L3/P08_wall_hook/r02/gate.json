@@ -1,0 +1,8 @@
+{
+ "mismatches": [
+  "R3: The design requires two screw holes at (y, z) = (0, 0) and (0, 40); the render/measured facts show only one cylindrical hole centered at (1.0, 0.0, 20.0).",
+  "R3: The back plate thickness is specified as 2mm (x=0 to x=2), but the measured bbox_min z is -22 and max z is 45, while the hole center is at z=20, suggesting the vertical plate geometry or hole placement does not match the specification."
+ ],
+ "systemic": [],
+ "summary": "The part fails to include the second required screw hole and the existing hole is incorrectly positioned relative to the design specifications."
+}

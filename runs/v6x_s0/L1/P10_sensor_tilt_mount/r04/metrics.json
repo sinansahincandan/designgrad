@@ -1,0 +1,4 @@
+{
+ "ok": false,
+ "error": "Traceback (most recent call last):\n  File \"design.py\", line 55, in <module>\n    s1 = base.solids().pop()\n         ^^^^^^^^^^^^^^^^^\nAttributeError: 'Workplane' object has no attribute 'pop'"
+}

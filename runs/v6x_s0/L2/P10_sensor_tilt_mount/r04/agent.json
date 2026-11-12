@@ -1,0 +1,40 @@
+{
+ "cad_steps": 5,
+ "cad_exhausted": true,
+ "cad_history": [
+  {
+   "step": 0,
+   "ok": false,
+   "feedback": "The code failed:\nTraceback (most recent call last):\n  File \"design.py\", line 30, in <module>\n    .rotate((1, 0, 0), ANGLE)\n     ^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: Workplane.rotate() missing 1 required positional argument: 'angleDegrees'"
+  },
+  {
+   "step": 1,
+   "ok": false,
+   "feedback": "The code failed:\nTraceback (most recent call last):\n  File \"design.py\", line 30, in <module>\n    .rotate((1, 0, 0), ANGLE)\n     ^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: Workplane.rotate() missing 1 required positional argument: 'angleDegrees'"
+  },
+  {
+   "step": 2,
+   "ok": false,
+   "feedback": "The code failed:\nTraceback (most recent call last):\n  File \"design.py\", line 34, in <module>\n    .rotate(cq.Vector(1, 0, 0), ANGLE)\n     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: Workplane.rotate() missing 1 required positional argument: 'angleDegrees'"
+  },
+  {
+   "step": 3,
+   "ok": false,
+   "feedback": "The code failed:\nTraceback (most recent call last):\n  File \"design.py\", line 38, in <module>\n    .rotate(cq.Vector(1, 0, 0), ANGLE)\n     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: Workplane.rotate() missing 1 required positional argument: 'angleDegrees'"
+  },
+  {
+   "step": 4,
+   "ok": false,
+   "feedback": "The code failed:\nTraceback (most recent call last):\n  File \"design.py\", line 47, in <module>\n    .rotate(cq.Vector(1, 0, 0), angleDegrees=ANGLE) # Using keyword argument to fix TypeError\n     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: Workplane.rotate() missing 1 required positional argument: 'axisEndPoint'"
+  },
+  {
+   "step": 5,
+   "ok": false,
+   "feedback": "The code failed:\nTraceback (most recent call last):\n  File \"design.py\", line 59, in <module>\n    mounting_face = find_face_by_normal(result, target_normal)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"design.py\", line 55, in find_face_by_normal\n    if face.normal().normalized().dot(normal.normalized()) > 0.99:\n       ^^^^^^^^^^^\nAttributeError: 'Face' object has no attribute 'normal'. Did you mean: 'normals'?"
+  }
+ ],
+ "sim_steps": 0,
+ "sim_exhausted": false,
+ "review": [],
+ "sim_updated": false
+}

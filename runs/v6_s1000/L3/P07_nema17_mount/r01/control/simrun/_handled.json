@@ -1,0 +1,1 @@
+[{"type": "Standard_Failure", "msg": "Bnd_Box is void", "line": 52, "src": "inter_bbox = shape.intersect(thickness_probe).BoundingBox()"}]

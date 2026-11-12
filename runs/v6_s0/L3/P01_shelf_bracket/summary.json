@@ -1,0 +1,228 @@
+{
+ "k": 1,
+ "proxy": 2.142857142857143,
+ "level": "L3",
+ "problem": "P01_shelf_bracket",
+ "llm": {
+  "calls": 48,
+  "tokens_in": 206739,
+  "tokens_out": 50127,
+  "seconds": 1202.7
+ },
+ "rounds": 4,
+ "trace": [
+  {
+   "k": 0,
+   "accepted": true,
+   "score": 1.8571428571428572,
+   "proxy": 1.8571428571428572,
+   "critic_frac": 0.42857142857142855,
+   "gate": {
+    "mismatches": [
+     "The screw holes are not centered at y=0; they appear to be offset towards the back/side (center of cylindrical faces shows y=1.75 instead of 0).",
+     "The screw hole axes are along Z, not along X as required by R3.",
+     "The part fails requirement R7: the measured mass is 119.34g, which exceeds the limit of 90g.",
+     "The design document specifies a tapered profile to reduce mass, but the render shows a constant thickness arm (no taper visible).",
+     "The screw holes are at z=35 and z=75 according to measured facts, whereas R3 requires them at z=20 and z=60."
+    ],
+    "systemic": [
+     "The screwdriver access requirement (R3) cannot be met because the screw holes are oriented along Z instead of X, making it impossible to drive a screw through the wall into the bracket."
+    ],
+    "summary": "The part fails multiple requirements including mass limits, hole orientation, hole placement, and the intended tapered geometry."
+   },
+   "sim_issue": false,
+   "cad_steps": 0,
+   "cad_exhausted": false,
+   "sim_steps": 4,
+   "sim_exhausted": false,
+   "sim_updated": true,
+   "n_measured": 7,
+   "n_unmeasured": 0,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": [
+      "R3",
+      "R4"
+     ],
+     "control_pass": [
+      "R1",
+      "R2",
+      "R7"
+     ]
+    },
+    {
+     "round": 1,
+     "unfaithful": [
+      "R3"
+     ],
+     "control_pass": [
+      "R1",
+      "R2",
+      "R3",
+      "R7"
+     ]
+    },
+    {
+     "round": 2,
+     "unfaithful": [],
+     "control_pass": [
+      "R1",
+      "R2",
+      "R7"
+     ]
+    }
+   ]
+  },
+  {
+   "k": 1,
+   "from": 0,
+   "accepted": true,
+   "score": 2.142857142857143,
+   "proxy": 2.142857142857143,
+   "critic_frac": 0.5714285714285714,
+   "gate": {
+    "mismatches": [
+     "R2 Envelope violation: The Y-dimension (width) of the part is 80 mm (-60 to 20), which exceeds the requirement of -20 <= y <= 20 (max width 40 mm).",
+     "R7 Mass violation: The mass is 534.08 g, which significantly exceeds the limit of 90 g.",
+     "R3 Screw hole placement/access: While holes are present, the 'Measured facts' show cylindrical faces with radii of 2.75mm and 6.75mm, suggesting complex or incorrect boolean operations for the clearance channels intended to satisfy R3."
+    ],
+    "systemic": [],
+    "summary": "The part fails significantly on mass (over 5x the limit) and width (double the allowed envelope), likely due to a failure in implementing the tapered profile and correct Y-dimensions."
+   },
+   "sim_issue": false,
+   "cad_steps": 2,
+   "cad_exhausted": false,
+   "sim_steps": 0,
+   "sim_exhausted": false,
+   "sim_updated": false,
+   "n_measured": 7,
+   "n_unmeasured": 0,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": [],
+     "control_pass": [
+      "R1",
+      "R7"
+     ]
+    }
+   ]
+  },
+  {
+   "k": 2,
+   "from": 1,
+   "accepted": false,
+   "score": 1.3571428571428572,
+   "proxy": 1.3571428571428572,
+   "critic_frac": 0.42857142857142855,
+   "gate": {
+    "mismatches": [
+     "The part consists of two disconnected solids (n_solids: 2), violating R1.",
+     "The wall spine and the trussed arm are not joined, meaning it cannot function as a single bracket.",
+     "The screw holes are located at the tip of the arm (x=140) instead of on the wall spine (x near 0) as required by R3.",
+     "The vertical support pillar for the shelf is missing from the trussed section (R4).",
+     "The bounding box shows negative Z values (min z = -55), violating R2 (0 <= z <= 130)."
+    ],
+    "systemic": [
+     "The load path is broken because the spine and the arm are disconnected solids; a load at x=150 cannot be transferred to the wall."
+    ],
+    "summary": "The rendered part fails significantly as it consists of two disconnected pieces, with screw holes placed at the tip instead of the wall and no connection between the spine and the arm."
+   },
+   "sim_issue": false,
+   "cad_steps": 5,
+   "cad_exhausted": true,
+   "sim_steps": 0,
+   "sim_exhausted": false,
+   "sim_updated": false,
+   "n_measured": 7,
+   "n_unmeasured": 0,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": [],
+     "control_pass": [
+      "R1",
+      "R7"
+     ]
+    }
+   ]
+  },
+  {
+   "k": 3,
+   "from": 1,
+   "accepted": false,
+   "score": 2.142857142857143,
+   "proxy": 2.142857142857143,
+   "critic_frac": 0.5714285714285714,
+   "gate": {
+    "mismatches": [
+     "The Y-dimension of the part is 80mm (from -60 to 20), which violates R2 requirement of -20 <= y <= 20.",
+     "The design document specifies a hollowed vertical spine, but the render shows a solid block for the wall section.",
+     "There are no visible screw holes or clearance channels as required by R3.",
+     "The mass is measured at 859.48g, which significantly exceeds the R7 limit of 90g.",
+     "The top surface does not appear to have the integrated solid support pillar for x in [140, 150] as described in R4."
+    ],
+    "systemic": [],
+    "summary": "The rendered part fails almost all dimensional and functional requirements, specifically regarding Y-axis envelope, mass, screw holes, and the hollow spine concept."
+   },
+   "sim_issue": false,
+   "cad_steps": 1,
+   "cad_exhausted": false,
+   "sim_steps": 0,
+   "sim_exhausted": false,
+   "sim_updated": false,
+   "n_measured": 7,
+   "n_unmeasured": 0,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": [],
+     "control_pass": [
+      "R1",
+      "R7"
+     ]
+    }
+   ]
+  },
+  {
+   "k": 4,
+   "from": 1,
+   "accepted": false,
+   "score": 2.142857142857143,
+   "proxy": 2.142857142857143,
+   "critic_frac": 0.5714285714285714,
+   "gate": {
+    "mismatches": [
+     "R3: Screw hole axes are at x=83.57 instead of being centered on the wall (x near 0) as specified.",
+     "R3: The screw holes are not through the part where it sits on the wall; they are located far out in the arm.",
+     "R4: There is no solid material directly below z=110 between x=140 and x=150 around y=0 as required (the pillar is missing or incorrectly placed).",
+     "R7: The mass is 188.06g, which exceeds the maximum limit of 90g."
+    ],
+    "systemic": [
+     "The load path is broken because the screw holes (intended for wall mounting) are placed in the cantilever arm rather than the spine at x=0."
+    ],
+    "summary": "The part fails multiple requirements, most notably placing the mounting holes in the middle of the arm instead of on the wall and exceeding the mass limit significantly."
+   },
+   "sim_issue": false,
+   "cad_steps": 2,
+   "cad_exhausted": false,
+   "sim_steps": 0,
+   "sim_exhausted": false,
+   "sim_updated": false,
+   "n_measured": 7,
+   "n_unmeasured": 0,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": [],
+     "control_pass": [
+      "R1",
+      "R2",
+      "R7"
+     ]
+    }
+   ]
+  }
+ ]
+}

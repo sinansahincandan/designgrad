@@ -1,0 +1,32 @@
+{
+ "k": 0,
+ "proxy": 1.0,
+ "level": "L0",
+ "problem": "P09_drone_arm",
+ "llm": {
+  "calls": 1,
+  "tokens_in": 568,
+  "tokens_out": 5550,
+  "seconds": 100.2
+ },
+ "rounds": 0,
+ "trace": [
+  {
+   "k": 0,
+   "accepted": true,
+   "score": 1.0,
+   "proxy": 1.0,
+   "critic_frac": 0.0,
+   "gate": null,
+   "sim_issue": false,
+   "cad_steps": 0,
+   "cad_exhausted": false,
+   "sim_steps": null,
+   "sim_exhausted": null,
+   "sim_updated": false,
+   "n_measured": null,
+   "n_unmeasured": null,
+   "review": null
+  }
+ ]
+}

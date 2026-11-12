@@ -1,0 +1,177 @@
+{
+ "ok": true,
+ "result": {
+  "R1": {
+   "status": "pass",
+   "value": 1,
+   "note": "",
+   "method": "Counted solids in CQ shape: 1",
+   "criteria": [
+    {
+     "condition": "One single, valid solid",
+     "measured": 1,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R2": {
+   "status": "pass",
+   "value": 1.0,
+   "note": "",
+   "method": "Intersected floor box (80x50x2 at z=0) with part; ratio=1.0000",
+   "criteria": [
+    {
+     "condition": "solid floor at least 2 mm thick under board area",
+     "measured": 1.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R3": {
+   "status": "pass",
+   "value": 0.0,
+   "note": "",
+   "method": "Intersected board cavity (80x50x24 at z=8) with part; ratio=0.0000",
+   "criteria": [
+    {
+     "condition": "region -40<=x<=40, -25<=y<=25, 8<=z<=32 must be completely free of material",
+     "measured": 0.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R4": {
+   "status": "pass",
+   "value": [
+    85.0,
+    55.0,
+    31.0
+   ],
+   "note": "",
+   "method": "Measured BoundingBox: dx=85.0, dy=55.0, zmax=31.0",
+   "criteria": [
+    {
+     "condition": "outer size 85 x 55 mm (+-1.5 mm) in X and Y",
+     "measured": 85.0,
+     "ok": true
+    },
+    {
+     "condition": "outer size 85 x 55 mm (+-1.5 mm) in X and Y",
+     "measured": 55.0,
+     "ok": true
+    },
+    {
+     "condition": "wall top at z between 30 and 32.5",
+     "measured": 31.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R5": {
+   "status": "fail",
+   "value": "All bosses checked",
+   "note": "",
+   "method": "Probed 4 bosses at (+-35, +-20). Checked cylinder fill, hole emptiness (r=1.1), and wall presence.",
+   "criteria": [
+    {
+     "condition": "Four screw bosses... OD >= 6mm... pilot hole 2.2mm... depth >= 4mm",
+     "measured": "fail",
+     "ok": false
+    }
+   ],
+   "faithful": false,
+   "why": "The pilot hole probe (r=1.1) is checked for emptiness using a cylinder from z=4 to 8, but the requirement says 'at least 4mm deep' and bosses go up to z=8; however, the measured geometry shows cylindrical faces with r=1.1 at z=6, confirming the hole exists. The check fails on the real part despite t"
+  },
+  "R6": {
+   "status": "fail",
+   "value": {
+    "empty_ratio": 0.15625,
+    "walled_ratio": 0.18998579545454544
+   },
+   "note": "",
+   "method": "Checked cutout void (empty=0.1562) and wall presence (walled=0.1900) in -X wall.",
+   "criteria": [
+    {
+     "condition": "opening at least 9 mm wide (Y) and 3 mm high (Z)",
+     "measured": "fail",
+     "ok": false
+    }
+   ],
+   "faithful": false,
+   "why": "The probe for 'empty_ratio' uses a box of thickness 15mm (probe_x_end = bbox.xmin + 15), which is arbitrary and not tied to the wall thickness. The check fails on the real part with an empty_ratio of 0.156, even though the requirement only asks for the opening to be at least 9x3mm; the script's thre"
+  },
+  "R7": {
+   "status": "pass",
+   "value": 65.55158167012081,
+   "note": "",
+   "method": "Mass = (Volume 52864.18 mm3 * 1.24 g/cm3) / 1000",
+   "criteria": [
+    {
+     "condition": "Mass <= 70 g",
+     "measured": 65.55158167012081,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  }
+ },
+ "stdout": "\"value\": 0.0, \"method\": \"Intersected board cavity (80x50x24 at z=8) with part; ratio=0.0000\", \"criteria\": [{\"condition\": \"region -40<=x<=40, -25<=y<=25, 8<=z<=32 must be completely free of material\", \"measured\": 0.0, \"ok\": true}], \"note\": \"\"}, \"R4\": {\"status\": \"pass\", \"value\": [85.0, 55.0, 31.0], \"method\": \"Measured BoundingBox: dx=85.0, dy=55.0, zmax=31.0\", \"criteria\": [{\"condition\": \"outer size 85 x 55 mm (+-1.5 mm) in X and Y\", \"measured\": 85.0, \"ok\": true}, {\"condition\": \"outer size 85 x 55 mm (+-1.5 mm) in X and Y\", \"measured\": 55.0, \"ok\": true}, {\"condition\": \"wall top at z between 30 and 32.5\", \"measured\": 31.0, \"ok\": true}], \"note\": \"\"}, \"R5\": {\"status\": \"fail\", \"value\": \"All bosses checked\", \"method\": \"Probed 4 bosses at (+-35, +-20). Checked cylinder fill, hole emptiness (r=1.1), and wall presence.\", \"criteria\": [{\"condition\": \"Four screw bosses... OD >= 6mm... pilot hole 2.2mm... depth >= 4mm\", \"measured\": \"fail\", \"ok\": false}], \"note\": \"\"}, \"R6\": {\"status\": \"fail\", \"value\": {\"empty_ratio\": 0.15625, \"walled_ratio\": 0.18998579545454544}, \"method\": \"Checked cutout void (empty=0.1562) and wall presence (walled=0.1900) in -X wall.\", \"criteria\": [{\"condition\": \"opening at least 9 mm wide (Y) and 3 mm high (Z)\", \"measured\": \"fail\", \"ok\": false}], \"note\": \"\"}, \"R7\": {\"status\": \"pass\", \"value\": 65.55158167012081, \"method\": \"Mass = (Volume 52864.18 mm3 * 1.24 g/cm3) / 1000\", \"criteria\": [{\"condition\": \"Mass <= 70 g\", \"measured\": 65.55158167012081, \"ok\": true}], \"note\": \"\"}}",
+ "stderr": "",
+ "agent": {
+  "sim_steps": 3,
+  "sim_exhausted": false,
+  "review": [
+   {
+    "round": 0,
+    "unfaithful": [
+     "R6"
+    ],
+    "control_pass": [
+     "R1",
+     "R3",
+     "R6",
+     "R7"
+    ]
+   },
+   {
+    "round": 1,
+    "unfaithful": [
+     "R6"
+    ],
+    "control_pass": [
+     "R1",
+     "R3",
+     "R7"
+    ]
+   },
+   {
+    "round": 2,
+    "unfaithful": [
+     "R5",
+     "R6"
+    ],
+    "control_pass": [
+     "R1",
+     "R3",
+     "R7"
+    ]
+   },
+   {
+    "round": 3,
+    "unfaithful": [
+     "R5",
+     "R6"
+    ],
+    "control_pass": [
+     "R1",
+     "R3",
+     "R7"
+    ]
+   }
+  ]
+ }
+}

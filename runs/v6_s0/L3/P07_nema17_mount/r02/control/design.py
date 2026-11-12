@@ -1,0 +1,2 @@
+import cadquery as cq
+result = cq.Workplane("XY").box(1, 1, 1, centered=False).translate((-35.0, 0.0, -25.5))

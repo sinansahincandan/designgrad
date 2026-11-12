@@ -1,0 +1,12 @@
+{
+ "mismatches": [
+  "The part does not sit on z=0; it extends from z=-27.5 to z=52.5, meaning it is floating/misplaced.",
+  "The base plate and flanges described in the design document are completely missing from the render.",
+  "The screw holes (R5) are missing from the render.",
+  "The saddle arch is oriented vertically along the Z-axis instead of horizontally along the Y-axis as specified.",
+  "The dimensions are incorrect: the X extent is 31 mm instead of the required ~54 mm, and the Y extent is 31 mm instead of the required 20 mm.",
+  "The volume (1410.6 mm3) and mass (1.75 g) are significantly lower than the design document's estimates."
+ ],
+ "systemic": [],
+ "summary": "The rendered part is a complete failure, appearing as a vertical ring floating in space rather than the described saddle clamp with a base plate and flanges."
+}

@@ -1,0 +1,16 @@
+{
+ "cad_steps": 1,
+ "cad_exhausted": false,
+ "cad_history": [
+  {
+   "step": 0,
+   "ok": false,
+   "feedback": "The code failed:\n  File \"design.py\", line 160, in <module>\n    result = design()\n             ^^^^^^^^\n  File \"design.py\", line 35, in design\n    s1 = get_i_profile_sketch(WIDTH_BASE, HEIGHT, FLANGE_THICKNESS, WEB_THICKNESS)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"design.py\", line 24, in get_i_profile_sketch\n    .cut(cq.Sketch().rect(side_void_w, side_void_h).translate((web_t/2, 0))) # Right void\n     ^^^\nAttributeError: 'Sketch' object has no attribute 'cut'"
+  },
+  {
+   "step": 1,
+   "ok": true,
+   "feedback": ""
+  }
+ ]
+}

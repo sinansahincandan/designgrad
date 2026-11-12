@@ -1,0 +1,9 @@
+{
+ "mismatches": [
+  "The USB-C cutout (R6) is missing from the -X wall in the renders.",
+  "The screw bosses (R5) are not visible as distinct features; instead, there appear to be cylindrical protrusions or artifacts on the exterior bottom/sides that do not match the design of internal bosses at (+/-35, +/-20).",
+  "The outer dimensions (86.0 x 56.0 mm) slightly exceed the specified 85 x 55 mm requirement."
+ ],
+ "systemic": [],
+ "summary": "The rendered part fails to include the required USB-C cutout and does not correctly implement the internal screw bosses as described in the design document."
+}

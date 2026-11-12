@@ -1,0 +1,21 @@
+{
+ "cad_steps": 2,
+ "cad_exhausted": false,
+ "cad_history": [
+  {
+   "step": 0,
+   "ok": false,
+   "feedback": "The code ran but produced 9 disconnected solids:\n  solid 1: volume 4124.3 mm3, bbox_min [-20.01, -20.0, -1.51], bbox_max [20.01, 20.0, 1.51]\n  solid 2: volume 2400.0 mm3, bbox_min [4.78, -20.0, 3.0], bbox_max [7.78, 20.0, 23.0]\n  solid 3: volume 2400.0 mm3, bbox_min [-4.78, -20.0, 3.0], bbox_max [-1.78, 20.0, 23.0]\n  solid 4: volume 2381.1 mm3, bbox_min [-9.56, -20.0, 2.99], bbox_max [-6.56, 20.0, 23.0]\n  solid 5: volume 2319.6 mm3, bbox_min [-0.0, -20.0, 3.0], bbox_max [3.0, 20.0, 23.0]\n  solid 6: volume 2138.4 mm3, bbox_min [9.55, -20.0, 2.99], bbox_max [12.56, 20.0, 23.0]\n  solid 7: volume "
+  },
+  {
+   "step": 1,
+   "ok": false,
+   "feedback": "The code ran but produced 5 disconnected solids:\n  solid 1: volume 13544.7 mm3, bbox_min [-0.0, -20.0, -0.01], bbox_max [40.0, 40.0, 23.0]\n  solid 2: volume 2460.0 mm3, bbox_min [-4.78, -20.0, 2.5], bbox_max [-1.78, 20.0, 23.0]\n  solid 3: volume 2439.3 mm3, bbox_min [-9.56, -20.0, 2.49], bbox_max [-6.56, 20.0, 23.0]\n  solid 4: volume 2109.3 mm3, bbox_min [-19.12, -20.0, 2.49], bbox_max [-16.1, 20.0, 23.0]\n  solid 5: volume 2095.9 mm3, bbox_min [-14.34, -20.0, 2.49], bbox_max [-11.33, 20.0, 23.0]\n  solid 2 is separated from solid 1 by 1.8 mm along X (solid 1 spans x -0.0..40.0, solid 2 spans -4"
+  },
+  {
+   "step": 2,
+   "ok": true,
+   "feedback": ""
+  }
+ ]
+}

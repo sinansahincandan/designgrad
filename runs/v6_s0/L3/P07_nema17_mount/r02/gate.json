@@ -1,0 +1,11 @@
+{
+ "mismatches": [
+  "R4: The motor screw holes are incorrectly placed at (x, z) = (+-15.5, 27.5 +- 13) according to the cylindrical faces data, whereas the design document specifies (x, z) = (+-15.5, 30 +- 15.5).",
+  "R4: Only two motor screw holes are visible/present in the render (the cylindrical faces list only shows two holes with radius 1.7), but four were required.",
+  "R6: The base mounting holes at (x, y) = (+-25, 25) are missing from the rendered part; the 'Right' view shows a solid cross-section without vertical holes through the base plate."
+ ],
+ "systemic": [
+  "The design document specifies the face plate at y=0 to 4 and the motor in y < 0, but the rendered part's bbox_min for Y is 0.0, meaning the entire part exists only on the positive Y side, making it impossible to accommodate a motor that presses against y=0 from the -Y side as described."
+ ],
+ "summary": "The part fails to include all required motor screw holes and base mounting holes, and its orientation/placement prevents it from functioning as a NEMA 17 mount."
+}

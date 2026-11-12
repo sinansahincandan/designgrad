@@ -1,0 +1,36 @@
+{
+ "cad_steps": 5,
+ "cad_exhausted": true,
+ "cad_history": [
+  {
+   "step": 0,
+   "ok": false,
+   "feedback": "The code ran but produced 5 disconnected solids:\n  solid 1: volume 1469.7 mm3, bbox_min [6.99, -10.01, 20.15], bbox_max [18.51, 10.01, 30.0]\n  solid 2: volume 1469.7 mm3, bbox_min [-18.51, -10.01, 20.15], bbox_max [-6.99, 10.01, 30.0]\n  solid 3: volume 738.8 mm3, bbox_min [-7.02, -10.52, -15.52], bbox_max [7.02, 7.52, -10.58]\n  solid 4: volume 593.1 mm3, bbox_min [6.98, -10.02, -0.02], bbox_max [35.5, 10.02, 4.85]\n  solid 5: volume 593.1 mm3, bbox_min [-35.5, -10.02, -0.02], bbox_max [-6.98, 10.02, 4.85]\n  solid 2 is separated from solid 1 by 14.0 mm along X (solid 1 spans x 6.99..18.51, solid"
+  },
+  {
+   "step": 1,
+   "ok": false,
+   "feedback": "The code ran but produced 4 disconnected solids:\n  solid 1: volume 2328.9 mm3, bbox_min [-35.5, -10.02, -0.02], bbox_max [35.5, 10.02, 4.85]\n  solid 2: volume 1469.7 mm3, bbox_min [6.99, -10.01, 20.15], bbox_max [18.51, 10.01, 30.0]\n  solid 3: volume 1469.7 mm3, bbox_min [-18.51, -10.01, 20.15], bbox_max [-6.99, 10.01, 30.0]\n  solid 4: volume 797.7 mm3, bbox_min [-7.52, -10.52, -15.5], bbox_max [7.52, 7.52, -10.23]\n  solid 2 is separated from solid 1 by 15.3 mm along Z (solid 1 spans z -0.02..4.85, solid 2 spans 20.15..30.0)\n  solid 3 is separated from solid 1 by 15.3 mm along Z (solid 1 spans"
+  },
+  {
+   "step": 2,
+   "ok": false,
+   "feedback": "The code ran but produced 4 disconnected solids:\n  solid 1: volume 1828.6 mm3, bbox_min [-35.5, -10.02, -0.02], bbox_max [35.5, 10.02, 4.85]\n  solid 2: volume 1469.7 mm3, bbox_min [6.99, -10.01, 20.15], bbox_max [18.51, 10.01, 30.0]\n  solid 3: volume 1469.7 mm3, bbox_min [-18.51, -10.01, 20.15], bbox_max [-6.99, 10.01, 30.0]\n  solid 4: volume 797.7 mm3, bbox_min [-7.52, -10.52, -15.5], bbox_max [7.52, 7.52, -10.23]\n  solid 2 is separated from solid 1 by 15.3 mm along Z (solid 1 spans z -0.02..4.85, solid 2 spans 20.15..30.0)\n  solid 3 is separated from solid 1 by 15.3 mm along Z (solid 1 spans"
+  },
+  {
+   "step": 3,
+   "ok": false,
+   "feedback": "The code ran but produced 6 disconnected solids:\n  solid 1: volume 2619.7 mm3, bbox_min [6.99, -10.01, 20.15], bbox_max [18.51, 10.01, 35.0]\n  solid 2: volume 2619.7 mm3, bbox_min [-18.51, -10.01, 20.15], bbox_max [-6.99, 10.01, 35.0]\n  solid 3: volume 797.7 mm3, bbox_min [-7.52, -10.52, -15.5], bbox_max [7.52, 7.52, -10.23]\n  solid 4: volume 793.2 mm3, bbox_min [-35.52, 1.57, -0.02], bbox_max [35.52, 10.02, 4.85]\n  solid 5: volume 793.2 mm3, bbox_min [-35.52, -10.02, -0.02], bbox_max [35.52, -1.57, 4.85]\n  solid 6: volume 255.6 mm3, bbox_min [-1.01, -10.01, 20.15], bbox_max [1.01, 10.01, 30.0"
+  },
+  {
+   "step": 4,
+   "ok": false,
+   "feedback": "The code ran but produced 3 disconnected solids:\n  solid 1: volume 5631.4 mm3, bbox_min [-18.52, -10.02, 20.14], bbox_max [18.52, 10.02, 35.0]\n  solid 2: volume 3916.8 mm3, bbox_min [-35.52, -10.02, -5.0], bbox_max [35.52, 10.02, 4.85]\n  solid 3: volume 797.7 mm3, bbox_min [-7.52, -10.52, -15.5], bbox_max [7.52, 7.52, -10.23]\n  solid 2 is separated from solid 1 by 15.3 mm along Z (solid 1 spans z 20.14..35.0, solid 2 spans -5.0..4.85)\n  solid 3 is separated from solid 1 by 30.4 mm along Z (solid 1 spans z 20.14..35.0, solid 3 spans -15.5..-10.23)\n`result` must be ONE connected solid. Compare t"
+  },
+  {
+   "step": 5,
+   "ok": false,
+   "feedback": "The code ran but produced 3 disconnected solids:\n  solid 1: volume 8428.4 mm3, bbox_min [-18.51, -10.01, 20.15], bbox_max [18.51, 10.01, 35.0]\n  solid 2: volume 5313.9 mm3, bbox_min [-35.52, -10.02, -5.0], bbox_max [35.52, 10.02, 4.85]\n  solid 3: volume 797.7 mm3, bbox_min [-7.52, -10.52, -15.5], bbox_max [7.52, 7.52, -10.23]\n  solid 2 is separated from solid 1 by 15.3 mm along Z (solid 1 spans z 20.15..35.0, solid 2 spans -5.0..4.85)\n  solid 3 is separated from solid 1 by 30.4 mm along Z (solid 1 spans z 20.15..35.0, solid 3 spans -15.5..-10.23)\n`result` must be ONE connected solid. Compare t"
+  }
+ ]
+}

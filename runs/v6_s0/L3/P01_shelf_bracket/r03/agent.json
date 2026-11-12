@@ -1,0 +1,36 @@
+{
+ "cad_steps": 1,
+ "cad_exhausted": false,
+ "cad_history": [
+  {
+   "step": 0,
+   "ok": false,
+   "feedback": "The code ran but produced 4 disconnected solids:\n  solid 1: volume 653000.0 mm3, bbox_min [15.0, -60.0, -0.0], bbox_max [160.0, 20.0, 110.0]\n  solid 2: volume 15792.0 mm3, bbox_min [-0.0, -20.0, 68.0], bbox_max [15.0, 20.0, 110.0]\n  solid 3: volume 9024.0 mm3, bbox_min [-0.0, -20.0, 28.0], bbox_max [15.0, 20.0, 52.0]\n  solid 4: volume 5408.0 mm3, bbox_min [-0.0, -20.0, -0.0], bbox_max [15.0, 20.0, 12.0]\n  solid 2's box touches or overlaps solid 1's box but the solids do not fuse: make them overlap by >= 1 mm\n  solid 3's box touches or overlaps solid 1's box but the solids do not fuse: make the"
+  },
+  {
+   "step": 1,
+   "ok": true,
+   "feedback": ""
+  }
+ ],
+ "sim_steps": 0,
+ "sim_exhausted": false,
+ "review": [
+  {
+   "round": 0,
+   "unfaithful": [],
+   "control_pass": [
+    "R1",
+    "R7"
+   ]
+  }
+ ],
+ "sim_updated": false,
+ "sim_history": [
+  {
+   "step": 0,
+   "ok": true,
+   "feedback": ""
+  }
+ ]
+}

@@ -1,0 +1,11 @@
+{
+ "mismatches": [
+  "R3: The central bore (diameter 22.5 mm) is missing from the face plate in the renders.",
+  "R4: Only two motor screw holes are present/visible instead of four; the lower pair at z=14.5 seems to be missing or obscured by the pocketing, and only the top ones at z=45.5 (radius 1.7mm) are accounted for in the measured facts.",
+  "R6: The base screw holes (diameter 5.5 mm) appear to be located at z=3 based on 'center' in measured facts, but they should extend through the full thickness of the base plate from z=0."
+ ],
+ "systemic": [
+  "The weight reduction pocketing is so aggressive that it has likely deleted the central bore and two of the motor mounting holes, making the part unable to function as a NEMA 17 mount."
+ ],
+ "summary": "The part fails to meet several critical requirements (R3 and R4) because the weight reduction strategy has removed essential mounting features."
+}

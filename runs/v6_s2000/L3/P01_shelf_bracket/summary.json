@@ -1,0 +1,208 @@
+{
+ "k": 0,
+ "proxy": 2.142857142857143,
+ "level": "L3",
+ "problem": "P01_shelf_bracket",
+ "llm": {
+  "calls": 42,
+  "tokens_in": 161158,
+  "tokens_out": 39592,
+  "seconds": 906.1
+ },
+ "rounds": 4,
+ "trace": [
+  {
+   "k": 0,
+   "accepted": true,
+   "score": 2.142857142857143,
+   "proxy": 2.142857142857143,
+   "critic_frac": 0.5714285714285714,
+   "gate": {
+    "mismatches": [
+     "R2 Envelope violation: The bbox_max Y value is 40.0, whereas the requirement specifies -20 <= y <= 20 (total width 40). The part appears to be centered incorrectly or has a total width of 50.",
+     "R3 Screw holes/clearance: The measured facts show only one cylindrical face with radius 4.0 at z=60, whereas R3 requires two screw holes and specific clearance cutouts for screwdriver access.",
+     "R7 Mass violation: The mass is measured at 444.83 g, which significantly exceeds the maximum limit of 90 g."
+    ],
+    "systemic": [
+     "The design concept aims for a tapered cantilever to save mass, but the resulting geometry (as seen in the isometric and front views) is a bulky, non-tapered block that fails the mass requirement by nearly 5x."
+    ],
+    "summary": "The part fails significantly on mass requirements, screw hole specifications, and envelope dimensions."
+   },
+   "sim_issue": false,
+   "cad_steps": 0,
+   "cad_exhausted": false,
+   "sim_steps": 3,
+   "sim_exhausted": false,
+   "sim_updated": true,
+   "n_measured": 7,
+   "n_unmeasured": 0,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": [
+      "R3"
+     ],
+     "control_pass": [
+      "R1",
+      "R2",
+      "R7"
+     ]
+    },
+    {
+     "round": 1,
+     "unfaithful": [],
+     "control_pass": [
+      "R1",
+      "R2",
+      "R7"
+     ]
+    }
+   ]
+  },
+  {
+   "k": 1,
+   "from": 0,
+   "accepted": false,
+   "score": 1.8571428571428572,
+   "proxy": 1.8571428571428572,
+   "critic_frac": 0.42857142857142855,
+   "gate": {
+    "mismatches": [
+     "R4 violation: The top surface of the bracket extends above z=110 (the bbox max Z is 135, and the front view shows a vertical section reaching up to ~135mm), whereas the requirement states nothing may be above z=110 for x >= 8.",
+     "R7 violation: The mass is 187.68g, which significantly exceeds the maximum limit of 90g."
+    ],
+    "systemic": [],
+    "summary": "The part fails both the height constraint at the tip (exceeding z=110) and the mass requirement (over double the allowed weight)."
+   },
+   "sim_issue": false,
+   "cad_steps": 0,
+   "cad_exhausted": false,
+   "sim_steps": 0,
+   "sim_exhausted": false,
+   "sim_updated": false,
+   "n_measured": 7,
+   "n_unmeasured": 0,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": [],
+     "control_pass": [
+      "R1",
+      "R2",
+      "R7"
+     ]
+    }
+   ]
+  },
+  {
+   "k": 2,
+   "from": 0,
+   "accepted": false,
+   "score": 1.3571428571428572,
+   "proxy": 1.3571428571428572,
+   "critic_frac": 0.42857142857142855,
+   "gate": {
+    "mismatches": [
+     "R1: The part consists of 3 solids instead of one single valid solid.",
+     "R7: The mass is 156.46 g, which exceeds the maximum limit of 90 g.",
+     "The design document specifies an I-beam profile to reduce mass, but the rendered part appears to be a much heavier, bulky structure."
+    ],
+    "systemic": [],
+    "summary": "The part fails the mass requirement significantly and is composed of multiple disconnected solids instead of a single continuous body."
+   },
+   "sim_issue": false,
+   "cad_steps": 5,
+   "cad_exhausted": true,
+   "sim_steps": 0,
+   "sim_exhausted": false,
+   "sim_updated": false,
+   "n_measured": 7,
+   "n_unmeasured": 0,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": [],
+     "control_pass": [
+      "R1",
+      "R2",
+      "R7"
+     ]
+    }
+   ]
+  },
+  {
+   "k": 3,
+   "from": 0,
+   "accepted": false,
+   "score": 1.8571428571428572,
+   "proxy": 1.8571428571428572,
+   "critic_frac": 0.42857142857142855,
+   "gate": {
+    "mismatches": [
+     "R2: The Y-dimension (width) is 40mm (-0 to 40), violating the requirement of -20 <= y <= 20.",
+     "R3: There are no visible screw holes or clearance channels in the wall plate section.",
+     "R4: The top surface at z=110 appears to be a tapered edge rather than a horizontal shelf support plane, and it does not reach x=150 as a solid plate.",
+     "R4: Part of the geometry extends above z=110 (the bbox max Z is 110, but the shape's profile suggests the top surface isn't flat/horizontal at that height).",
+     "R7: The mass is 443.8g, which significantly exceeds the maximum limit of 90g."
+    ],
+    "systemic": [],
+    "summary": "The rendered part fails almost all geometric and functional requirements, including incorrect width, missing screw holes, improper shelf surface, and excessive mass."
+   },
+   "sim_issue": false,
+   "cad_steps": 1,
+   "cad_exhausted": false,
+   "sim_steps": 0,
+   "sim_exhausted": false,
+   "sim_updated": false,
+   "n_measured": 7,
+   "n_unmeasured": 0,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": [],
+     "control_pass": [
+      "R1",
+      "R2",
+      "R7"
+     ]
+    }
+   ]
+  },
+  {
+   "k": 4,
+   "from": 0,
+   "accepted": false,
+   "score": 1.8571428571428572,
+   "proxy": 1.8571428571428572,
+   "critic_frac": 0.42857142857142855,
+   "gate": {
+    "mismatches": [
+     "The width of the part (y-dimension) is 80mm (from -40 to 40 based on bbox/views), whereas the design document specifies a width of 40mm (y in [-20, 20]).",
+     "The screw holes and clearance channels are missing from the rendered part.",
+     "The internal pocketing/webbing described in the design document to reduce mass is not visible; the wall plate appears as a solid block.",
+     "The mass is 93.0g, which exceeds the R7 requirement of <= 90g."
+    ],
+    "systemic": [],
+    "summary": "The part fails several key requirements including width dimensions, screw hole features, and the mass limit."
+   },
+   "sim_issue": false,
+   "cad_steps": 0,
+   "cad_exhausted": false,
+   "sim_steps": 0,
+   "sim_exhausted": false,
+   "sim_updated": false,
+   "n_measured": 7,
+   "n_unmeasured": 0,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": [],
+     "control_pass": [
+      "R1",
+      "R7"
+     ]
+    }
+   ]
+  }
+ ]
+}

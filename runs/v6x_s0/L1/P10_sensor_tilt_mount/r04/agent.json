@@ -1,0 +1,36 @@
+{
+ "cad_steps": 5,
+ "cad_exhausted": true,
+ "cad_history": [
+  {
+   "step": 0,
+   "ok": false,
+   "feedback": "The code failed:\nTraceback (most recent call last):\n  File \"design.py\", line 68, in <module>\n    .rotate((1, 0, 0), ANGLE)\n     ^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: Workplane.rotate() missing 1 required positional argument: 'angleDegrees'"
+  },
+  {
+   "step": 1,
+   "ok": false,
+   "feedback": "The code failed:\nTraceback (most recent call last):\n  File \"design.py\", line 37, in <module>\n    .rotate((1, 0, 0), ANGLE)\n     ^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: Workplane.rotate() missing 1 required positional argument: 'angleDegrees'"
+  },
+  {
+   "step": 2,
+   "ok": false,
+   "feedback": "The code failed:\nTraceback (most recent call last):\n  File \"design.py\", line 39, in <module>\n    .rotate((1, 0, 0), ANGLE)\n     ^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: Workplane.rotate() missing 1 required positional argument: 'angleDegrees'"
+  },
+  {
+   "step": 3,
+   "ok": false,
+   "feedback": "The code failed:\nTraceback (most recent call last):\n  File \"design.py\", line 78, in <module>\n    result = base.union(pillar)\n             ^^^^^^^^^^^^^^^^^^\n  File \"/Users/sinancandan/HackathonGemma/.venv/lib/python3.12/site-packages/cadquery/cq.py\", line 3330, in union\n    raise ValueError(\nValueError: Workplane object must have at least one solid on the stack to union!"
+  },
+  {
+   "step": 4,
+   "ok": false,
+   "feedback": "The code failed:\nTraceback (most recent call last):\n  File \"design.py\", line 61, in <module>\n    result = base.union(pillar)\n             ^^^^^^^^^^^^^^^^^^\n  File \"/Users/sinancandan/HackathonGemma/.venv/lib/python3.12/site-packages/cadquery/cq.py\", line 3330, in union\n    raise ValueError(\nValueError: Workplane object must have at least one solid on the stack to union!"
+  },
+  {
+   "step": 5,
+   "ok": false,
+   "feedback": "The code failed:\nTraceback (most recent call last):\n  File \"design.py\", line 55, in <module>\n    s1 = base.solids().pop()\n         ^^^^^^^^^^^^^^^^^\nAttributeError: 'Workplane' object has no attribute 'pop'"
+  }
+ ]
+}

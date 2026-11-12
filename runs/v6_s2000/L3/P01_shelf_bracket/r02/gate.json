@@ -1,0 +1,9 @@
+{
+ "mismatches": [
+  "R1: The part consists of 3 solids instead of one single valid solid.",
+  "R7: The mass is 156.46 g, which exceeds the maximum limit of 90 g.",
+  "The design document specifies an I-beam profile to reduce mass, but the rendered part appears to be a much heavier, bulky structure."
+ ],
+ "systemic": [],
+ "summary": "The part fails the mass requirement significantly and is composed of multiple disconnected solids instead of a single continuous body."
+}

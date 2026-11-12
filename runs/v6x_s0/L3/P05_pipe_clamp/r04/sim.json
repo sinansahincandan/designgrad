@@ -1,0 +1,150 @@
+{
+ "ok": true,
+ "result": {
+  "R1": {
+   "status": "pass",
+   "value": 1,
+   "note": "",
+   "method": "Counted number of solids in STEP file: 1",
+   "criteria": [
+    {
+     "condition": "One single, valid solid",
+     "measured": 1,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R2": {
+   "status": "fail",
+   "value": [
+    31.0,
+    31.0,
+    -27.5
+   ],
+   "note": "",
+   "method": "BBox: X=31.0, Y=31.0, Zmin=-27.5",
+   "criteria": [
+    {
+     "condition": "Sits on z=0",
+     "measured": -27.5,
+     "ok": false
+    },
+    {
+     "condition": "Width (Y) between 18 and 22 mm",
+     "measured": 31.0,
+     "ok": false
+    },
+    {
+     "condition": "Total X extent <= 80 mm",
+     "measured": 31.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R3": {
+   "status": "pass",
+   "value": 0.004848569222213339,
+   "note": "",
+   "method": "Intersection volume of cylinder (r=12.6) / Cylinder Volume",
+   "criteria": [
+    {
+     "condition": "Pipe volume free of material",
+     "measured": 0.004848569222213339,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R4": {
+   "status": "fail",
+   "value": 0.0,
+   "note": "",
+   "method": "Intersection volume of shell (r=12.7-15.5) intersected with |x|<=7 / Shell Volume",
+   "criteria": [
+    {
+     "condition": "Solid material in the band 12.7 to 15.5 mm from pipe axis (|x| <= 7)",
+     "measured": 0.0,
+     "ok": false
+    }
+   ],
+   "faithful": true
+  },
+  "R5": {
+   "status": "fail",
+   "value": [
+    false,
+    false
+   ],
+   "note": "",
+   "method": "Checked two vertical cylinders (d=6.6) at (+-27, 0) for emptiness and surrounding material",
+   "criteria": [
+    {
+     "condition": "Two screw holes, diameter 6.6 mm, vertical, centred at (x, y) = (+-27, 0)",
+     "measured": [
+      false,
+      false
+     ],
+     "ok": false
+    }
+   ],
+   "faithful": true
+  },
+  "R6": {
+   "status": "fail",
+   "value": false,
+   "note": "",
+   "method": "Intersection volume of probe boxes (z=0-3, |y|<=4, 18.5<=|x|<=23) / Probe Volume",
+   "criteria": [
+    {
+     "condition": "Flanges at least 3 mm thick: solid from z = 0 to 3 for 18.5 <= |x| <= 23, |y| <= 4",
+     "measured": false,
+     "ok": false
+    }
+   ],
+   "faithful": true
+  },
+  "R7": {
+   "status": "pass",
+   "value": 1.7491271100865975,
+   "note": "",
+   "method": "Volume=1410.5863791020947 mm3 * Density=0.00124 g/mm3",
+   "criteria": [
+    {
+     "condition": "Mass <= 25 g",
+     "measured": 1.7491271100865975,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  }
+ },
+ "stdout": ") between 18 and 22 mm\", \"measured\": 31.0, \"ok\": false}, {\"condition\": \"Total X extent <= 80 mm\", \"measured\": 31.0, \"ok\": true}], \"note\": \"\"}, \"R3\": {\"status\": \"pass\", \"value\": 0.004848569222213339, \"method\": \"Intersection volume of cylinder (r=12.6) / Cylinder Volume\", \"criteria\": [{\"condition\": \"Pipe volume free of material\", \"measured\": 0.004848569222213339, \"ok\": true}], \"note\": \"\"}, \"R4\": {\"status\": \"fail\", \"value\": 0.0, \"method\": \"Intersection volume of shell (r=12.7-15.5) intersected with |x|<=7 / Shell Volume\", \"criteria\": [{\"condition\": \"Solid material in the band 12.7 to 15.5 mm from pipe axis (|x| <= 7)\", \"measured\": 0.0, \"ok\": false}], \"note\": \"\"}, \"R5\": {\"status\": \"fail\", \"value\": [false, false], \"method\": \"Checked two vertical cylinders (d=6.6) at (+-27, 0) for emptiness and surrounding material\", \"criteria\": [{\"condition\": \"Two screw holes, diameter 6.6 mm, vertical, centred at (x, y) = (+-27, 0)\", \"measured\": [false, false], \"ok\": false}], \"note\": \"\"}, \"R6\": {\"status\": \"fail\", \"value\": false, \"method\": \"Intersection volume of probe boxes (z=0-3, |y|<=4, 18.5<=|x|<=23) / Probe Volume\", \"criteria\": [{\"condition\": \"Flanges at least 3 mm thick: solid from z = 0 to 3 for 18.5 <= |x| <= 23, |y| <= 4\", \"measured\": false, \"ok\": false}], \"note\": \"\"}, \"R7\": {\"status\": \"pass\", \"value\": 1.7491271100865975, \"method\": \"Volume=1410.5863791020947 mm3 * Density=0.00124 g/mm3\", \"criteria\": [{\"condition\": \"Mass <= 25 g\", \"measured\": 1.7491271100865975, \"ok\": true}], \"note\": \"\"}}",
+ "stderr": "",
+ "agent": {
+  "sim_steps": 1,
+  "sim_exhausted": false,
+  "review": [
+   {
+    "round": 0,
+    "unfaithful": [
+     "R3"
+    ],
+    "control_pass": [
+     "R1",
+     "R7"
+    ]
+   },
+   {
+    "round": 1,
+    "unfaithful": [],
+    "control_pass": [
+     "R1",
+     "R3",
+     "R7"
+    ]
+   }
+  ]
+ }
+}

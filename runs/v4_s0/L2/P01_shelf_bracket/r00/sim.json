@@ -1,0 +1,194 @@
+{
+ "ok": true,
+ "result": {
+  "R1": {
+   "status": "pass",
+   "value": 1,
+   "note": "Found 1 solid(s)",
+   "method": "Counted number of solids in the STEP file",
+   "criteria": [
+    {
+     "condition": "One single, valid solid",
+     "measured": 1,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R2": {
+   "status": "fail",
+   "value": [
+    0.0,
+    150.0,
+    0.0,
+    30.0,
+    0.0,
+    110.0
+   ],
+   "note": "",
+   "method": "Checked bounding box: x[0.0,150.0], y[0.0,30.0], z[0.0,110.0]",
+   "criteria": [
+    {
+     "condition": "0 <= x <= 170",
+     "measured": [
+      0.0,
+      150.0
+     ],
+     "ok": true
+    },
+    {
+     "condition": "-20 <= y <= 20",
+     "measured": [
+      0.0,
+      30.0
+     ],
+     "ok": false
+    },
+    {
+     "condition": "0 <= z <= 130",
+     "measured": [
+      0.0,
+      110.0
+     ],
+     "ok": true
+    },
+    {
+     "condition": "touches wall (min x = 0)",
+     "measured": 0.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R3": {
+   "status": "fail",
+   "value": [
+    0.0,
+    0.0
+   ],
+   "note": "",
+   "method": "Checked hole diameter at x~0 and screwdriver clearance (r=4) for x>=10",
+   "criteria": [
+    {
+     "condition": "diameter 5.5 mm",
+     "measured": [
+      0.0,
+      0.0
+     ],
+     "ok": false
+    },
+    {
+     "condition": "no material within 4mm of axis for x>=10",
+     "measured": true,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R4": {
+   "status": "fail",
+   "value": [
+    0.0,
+    0.0
+   ],
+   "note": "",
+   "method": "Shelf existence at z=110: False; Volume above z=110 for x>=8: 0.00",
+   "criteria": [
+    {
+     "condition": "horizontal top surface at z=110 reaching x=150",
+     "measured": 0.0,
+     "ok": false
+    },
+    {
+     "condition": "nothing above z=110 for x>=8",
+     "measured": 0.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R5": {
+   "status": "pass",
+   "value": 0.3797130033251884,
+   "note": "",
+   "method": "M=21000.0Nmm, c=56.42mm, I=3120416.2mm4, sigma=Mc/I",
+   "criteria": [
+    {
+     "condition": "stress <= 20 MPa",
+     "measured": 0.3797130033251884,
+     "ok": true
+    }
+   ],
+   "faithful": false,
+   "why": "The reported value is physically impossible. The script reports M=21000 Nmm (which is 150N * 140mm), but the calculated stress is 0.38 MPa with an I of 3,120,416 mm^4. For a part with volume ~96k mm^3 and dimensions ~150x30x110, an I of 3 million is several orders of magnitude too large (it implies "
+  },
+  "R6": {
+   "status": "pass",
+   "value": 0.012562426663662812,
+   "note": "",
+   "method": "F=150.0N, L=140.0mm, E=3500.0MPa, I=3120416.2mm4, delta=FL^3/3EI",
+   "criteria": [
+    {
+     "condition": "deflection <= 2.0 mm",
+     "measured": 0.012562426663662812,
+     "ok": true
+    }
+   ],
+   "faithful": false,
+   "why": "Uses the same incorrect/implausible moment of inertia (I) as R5, resulting in an unrealistic deflection value."
+  },
+  "R7": {
+   "status": "fail",
+   "value": 119.34209572336445,
+   "note": "",
+   "method": "mass = volume(96243.6) * density(1.24) / 1000",
+   "criteria": [
+    {
+     "condition": "Mass <= 90 g",
+     "measured": 119.34209572336445,
+     "ok": false
+    }
+   ],
+   "faithful": true
+  }
+ },
+ "stdout": "], \"ok\": false}, {\"condition\": \"0 <= z <= 130\", \"measured\": [0.0, 110.0], \"ok\": true}, {\"condition\": \"touches wall (min x = 0)\", \"measured\": 0.0, \"ok\": true}], \"note\": \"\"}, \"R3\": {\"status\": \"fail\", \"value\": [0.0, 0.0], \"method\": \"Checked hole diameter at x~0 and screwdriver clearance (r=4) for x>=10\", \"criteria\": [{\"condition\": \"diameter 5.5 mm\", \"measured\": [0.0, 0.0], \"ok\": false}, {\"condition\": \"no material within 4mm of axis for x>=10\", \"measured\": true, \"ok\": true}], \"note\": \"\"}, \"R4\": {\"status\": \"fail\", \"value\": [0.0, 0.0], \"method\": \"Shelf existence at z=110: False; Volume above z=110 for x>=8: 0.00\", \"criteria\": [{\"condition\": \"horizontal top surface at z=110 reaching x=150\", \"measured\": 0.0, \"ok\": false}, {\"condition\": \"nothing above z=110 for x>=8\", \"measured\": 0.0, \"ok\": true}], \"note\": \"\"}, \"R5\": {\"status\": \"pass\", \"value\": 0.3797130033251884, \"method\": \"M=21000.0Nmm, c=56.42mm, I=3120416.2mm4, sigma=Mc/I\", \"criteria\": [{\"condition\": \"stress <= 20 MPa\", \"measured\": 0.3797130033251884, \"ok\": true}], \"note\": \"\"}, \"R6\": {\"status\": \"pass\", \"value\": 0.012562426663662812, \"method\": \"F=150.0N, L=140.0mm, E=3500.0MPa, I=3120416.2mm4, delta=FL^3/3EI\", \"criteria\": [{\"condition\": \"deflection <= 2.0 mm\", \"measured\": 0.012562426663662812, \"ok\": true}], \"note\": \"\"}, \"R7\": {\"status\": \"fail\", \"value\": 119.34209572336445, \"method\": \"mass = volume(96243.6) * density(1.24) / 1000\", \"criteria\": [{\"condition\": \"Mass <= 90 g\", \"measured\": 119.34209572336445, \"ok\": false}], \"note\": \"\"}}",
+ "stderr": "",
+ "agent": {
+  "sim_steps": 6,
+  "sim_exhausted": false,
+  "review": [
+   {
+    "round": 0,
+    "unfaithful": [
+     "R3",
+     "R4",
+     "R5",
+     "R6"
+    ]
+   },
+   {
+    "round": 1,
+    "unfaithful": [
+     "R3",
+     "R4"
+    ]
+   },
+   {
+    "round": 2,
+    "unfaithful": [
+     "R4",
+     "R5",
+     "R6"
+    ]
+   },
+   {
+    "round": 3,
+    "unfaithful": [
+     "R5",
+     "R6"
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,40 @@
+{
+ "cad_steps": 5,
+ "cad_exhausted": true,
+ "cad_history": [
+  {
+   "step": 0,
+   "ok": false,
+   "feedback": "The code failed:\nTraceback (most recent call last):\n  File \"design.py\", line 121, in <module>\n    if is_tilted_face(face):\n       ^^^^^^^^^^^^^^^^^^^^\n  File \"design.py\", line 114, in is_tilted_face\n    f_norm = face.normal().toTuple()\n             ^^^^^^^^^^^\nAttributeError: 'Face' object has no attribute 'normal'. Did you mean: 'normals'?"
+  },
+  {
+   "step": 1,
+   "ok": false,
+   "feedback": "The code failed:\nTraceback (most recent call last):\n  File \"design.py\", line 28, in <module>\n    pillar = pillar.rotate((1, 0, 0), ANGLE)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: Workplane.rotate() missing 1 required positional argument: 'angleDegrees'"
+  },
+  {
+   "step": 2,
+   "ok": false,
+   "feedback": "The code failed:\nTraceback (most recent call last):\n  File \"design.py\", line 30, in <module>\n    pillar = pillar.rotate((1, 0, 0), ANGLE)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: Workplane.rotate() missing 1 required positional argument: 'angleDegrees'"
+  },
+  {
+   "step": 3,
+   "ok": false,
+   "feedback": "The code failed:\nTraceback (most recent call last):\n  File \"design.py\", line 28, in <module>\n    pillar_shape = cq.Workplane(\"XY\").box(PILLAR_W, PILLAR_T, PILLAR_H).rotate((1, 0, 0), ANGLE)\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: Workplane.rotate() missing 1 required positional argument: 'angleDegrees'"
+  },
+  {
+   "step": 4,
+   "ok": false,
+   "feedback": "The code failed:\nTraceback (most recent call last):\n  File \"design.py\", line 32, in <module>\n    pillar_shape = pillar_box.rotate((1, 0, 0), ANGLE)\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: Workplane.rotate() missing 1 required positional argument: 'angleDegrees'"
+  },
+  {
+   "step": 5,
+   "ok": false,
+   "feedback": "The code failed:\nTraceback (most recent call last):\n  File \"design.py\", line 38, in <module>\n    ).rotate(cq.Vector(1, 0, 0), ANGLE)\n      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: Workplane.rotate() missing 1 required positional argument: 'angleDegrees'"
+  }
+ ],
+ "sim_steps": 0,
+ "sim_exhausted": false,
+ "review": [],
+ "sim_updated": false
+}

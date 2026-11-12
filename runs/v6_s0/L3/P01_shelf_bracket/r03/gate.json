@@ -1,0 +1,11 @@
+{
+ "mismatches": [
+  "The Y-dimension of the part is 80mm (from -60 to 20), which violates R2 requirement of -20 <= y <= 20.",
+  "The design document specifies a hollowed vertical spine, but the render shows a solid block for the wall section.",
+  "There are no visible screw holes or clearance channels as required by R3.",
+  "The mass is measured at 859.48g, which significantly exceeds the R7 limit of 90g.",
+  "The top surface does not appear to have the integrated solid support pillar for x in [140, 150] as described in R4."
+ ],
+ "systemic": [],
+ "summary": "The rendered part fails almost all dimensional and functional requirements, specifically regarding Y-axis envelope, mass, screw holes, and the hollow spine concept."
+}

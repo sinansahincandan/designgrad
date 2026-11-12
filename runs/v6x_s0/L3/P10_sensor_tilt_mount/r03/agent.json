@@ -1,0 +1,40 @@
+{
+ "cad_steps": 5,
+ "cad_exhausted": true,
+ "cad_history": [
+  {
+   "step": 0,
+   "ok": false,
+   "feedback": "The code failed:\nTraceback (most recent call last):\n  File \"design.py\", line 45, in <module>\n    cq.Workplane(p_center, p_center + (1, 0, 0), p_center + (0, math.cos(RAD), math.sin(RAD)))\n  File \"/Users/sinancandan/HackathonGemma/.venv/lib/python3.12/site-packages/cadquery/cq.py\", line 200, in __init__\n    raise ValueError(\nValueError: Provided value (0, 0, 42.5) is not a valid work plane"
+  },
+  {
+   "step": 1,
+   "ok": false,
+   "feedback": "The code failed:\n  File \"/Users/sinancandan/HackathonGemma/.venv/lib/python3.12/site-packages/cadquery/cq.py\", line 859, in faces\n    return self._selectObjects(\"Faces\", selector, tag)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/sinancandan/HackathonGemma/.venv/lib/python3.12/site-packages/cadquery/cq.py\", line 776, in _selectObjects\n    return self.newObject(self._filter(toReturn, selector))\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/sinancandan/HackathonGemma/.venv/lib/python3.12/site-packages/cadquery/cq.py\", line 786, in _filter\n    "
+  },
+  {
+   "step": 2,
+   "ok": false,
+   "feedback": "The code failed:\n  File \"/Users/sinancandan/HackathonGemma/.venv/lib/python3.12/site-packages/cadquery/cq.py\", line 859, in faces\n    return self._selectObjects(\"Faces\", selector, tag)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/sinancandan/HackathonGemma/.venv/lib/python3.12/site-packages/cadquery/cq.py\", line 776, in _selectObjects\n    return self.newObject(self._filter(toReturn, selector))\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/sinancandan/HackathonGemma/.venv/lib/python3.12/site-packages/cadquery/cq.py\", line 786, in _filter\n    "
+  },
+  {
+   "step": 3,
+   "ok": false,
+   "feedback": "The code failed:\nTraceback (most recent call last):\n  File \"design.py\", line 60, in <module>\n    if f.normal().dot(target_normal) > 0.99:\n       ^^^^^^^^\nAttributeError: 'Face' object has no attribute 'normal'. Did you mean: 'normals'?"
+  },
+  {
+   "step": 4,
+   "ok": false,
+   "feedback": "The code failed:\nTraceback (most recent call last):\n  File \"design.py\", line 57, in <module>\n    if f.normal().dot(target_normal) > 0.99:\n       ^^^^^^^^\nAttributeError: 'Face' object has no attribute 'normal'. Did you mean: 'normals'?"
+  },
+  {
+   "step": 5,
+   "ok": false,
+   "feedback": "The code failed:\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/sinancandan/HackathonGemma/.venv/lib/python3.12/site-packages/cadquery/occ_impl/shapes.py\", line 1412, in _bool_op\n    return Shape.cast(op.Shape())\n           ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/sinancandan/HackathonGemma/.venv/lib/python3.12/site-packages/cadquery/occ_impl/shapes.py\", line 477, in cast\n    t = shapetype(obj)\n        ^^^^^^^^^^^^^^\n  File \"/Users/sinancandan/HackathonGemma/.venv/lib/python3.12/site-packages/cadquery/occ_impl/shapes.py\", line 399, in shapetype\n    raise ValueError(\""
+  }
+ ],
+ "sim_steps": 0,
+ "sim_exhausted": false,
+ "review": [],
+ "sim_updated": false
+}

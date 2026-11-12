@@ -1,0 +1,11 @@
+{
+ "mismatches": [
+  "R2: The Y-dimension (width) is 40mm (-0 to 40), violating the requirement of -20 <= y <= 20.",
+  "R3: There are no visible screw holes or clearance channels in the wall plate section.",
+  "R4: The top surface at z=110 appears to be a tapered edge rather than a horizontal shelf support plane, and it does not reach x=150 as a solid plate.",
+  "R4: Part of the geometry extends above z=110 (the bbox max Z is 110, but the shape's profile suggests the top surface isn't flat/horizontal at that height).",
+  "R7: The mass is 443.8g, which significantly exceeds the maximum limit of 90g."
+ ],
+ "systemic": [],
+ "summary": "The rendered part fails almost all geometric and functional requirements, including incorrect width, missing screw holes, improper shelf surface, and excessive mass."
+}

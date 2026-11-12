@@ -1,0 +1,9 @@
+{
+ "mismatches": [
+  "The mass (179.91 g) significantly exceeds the requirement R7 (<= 90 g).",
+  "The volume/mass mismatch suggests the 'Tapered Profile' described in the design document was not implemented, as the part appears to be a constant rectangular cross-section.",
+  "The top surface height is at z=110, but the bounding box max Z is 110, meaning the thickness of the shelf support might be zero or it is exactly at the limit, whereas the design implies a solid section."
+ ],
+ "systemic": [],
+ "summary": "The part fails the mass requirement (R7) because the intended tapered profile was not implemented, resulting in a much heavier constant-section bracket."
+}

@@ -1,0 +1,135 @@
+{
+ "ok": true,
+ "result": {
+  "R1": {
+   "status": "pass",
+   "value": 1,
+   "note": "",
+   "method": "Counted number of solids in CQ shape: 1",
+   "criteria": [
+    {
+     "condition": "One single, valid solid",
+     "measured": 1,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R2": {
+   "status": "pass",
+   "value": {
+    "fill_ratio": 1.0000000000000002,
+    "z_min": 0.0
+   },
+   "note": "",
+   "method": "Intersection volume of floor region (80x50x2 at z=0) with part: 8000.000000000001 mm3",
+   "criteria": [
+    {
+     "condition": "solid floor at least 2 mm thick under the whole board area",
+     "measured": 1.0000000000000002,
+     "ok": true
+    },
+    {
+     "condition": "floor z from 0 to 2",
+     "measured": 0.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R3": {
+   "status": "pass",
+   "value": 0.0,
+   "note": "",
+   "method": "Intersection volume of board cavity region (80x50x24 at z=8) with part: 0.0 mm3",
+   "criteria": [
+    {
+     "condition": "region -40<=x<=40, -25<=y<=25, 8<=z<=32 must be completely free of material",
+     "measured": 0.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R4": {
+   "status": "pass",
+   "value": [
+    85.0,
+    55.0,
+    31.0
+   ],
+   "note": "",
+   "method": "Measured Bounding Box: dx=85.0, dy=55.0, zmax=31.0",
+   "criteria": [
+    {
+     "condition": "outer size 85 x 55 mm (+-1.5 mm) in X and Y",
+     "measured": [
+      85.0,
+      55.0
+     ],
+     "ok": true
+    },
+    {
+     "condition": "wall top at z between 30 and 32.5",
+     "measured": 31.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R5": {
+   "status": "fail",
+   "value": 0,
+   "note": "",
+   "method": "Verified 4 bosses: OD (vol check), Hole Diameter (empty cylinder r=1.1), and Depth (empty cylinder z=4-8)",
+   "criteria": [
+    {
+     "condition": "Four screw bosses... OD >= 6mm... pilot hole 2.2mm... depth >= 4mm",
+     "measured": 0,
+     "ok": false
+    }
+   ],
+   "faithful": true
+  },
+  "R6": {
+   "status": "pass",
+   "value": 0.0,
+   "note": "",
+   "method": "Intersection volume of cutout probe box (5x9x3 at x=-42.5, y=0, z=14) with part: 0.0 mm3",
+   "criteria": [
+    {
+     "condition": "opening at least 9 mm wide (Y) and 3 mm high (Z), centred at y = 0, z = 14",
+     "measured": 0.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R7": {
+   "status": "pass",
+   "value": 36.510409886687384,
+   "note": "",
+   "method": "Mass calculation: volume(29443.88 mm3) * density(1.24 g/cm3) / 1000",
+   "criteria": [
+    {
+     "condition": "Mass <= 70 g",
+     "measured": 36.510409886687384,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  }
+ },
+ "stdout": ": \"floor z from 0 to 2\", \"measured\": 0.0, \"ok\": true}], \"note\": \"\"}, \"R3\": {\"status\": \"pass\", \"value\": 0.0, \"method\": \"Intersection volume of board cavity region (80x50x24 at z=8) with part: 0.0 mm3\", \"criteria\": [{\"condition\": \"region -40<=x<=40, -25<=y<=25, 8<=z<=32 must be completely free of material\", \"measured\": 0.0, \"ok\": true}], \"note\": \"\"}, \"R4\": {\"status\": \"pass\", \"value\": [85.0, 55.0, 31.0], \"method\": \"Measured Bounding Box: dx=85.0, dy=55.0, zmax=31.0\", \"criteria\": [{\"condition\": \"outer size 85 x 55 mm (+-1.5 mm) in X and Y\", \"measured\": [85.0, 55.0], \"ok\": true}, {\"condition\": \"wall top at z between 30 and 32.5\", \"measured\": 31.0, \"ok\": true}], \"note\": \"\"}, \"R5\": {\"status\": \"fail\", \"value\": 0, \"method\": \"Verified 4 bosses: OD (vol check), Hole Diameter (empty cylinder r=1.1), and Depth (empty cylinder z=4-8)\", \"criteria\": [{\"condition\": \"Four screw bosses... OD >= 6mm... pilot hole 2.2mm... depth >= 4mm\", \"measured\": 0, \"ok\": false}], \"note\": \"\"}, \"R6\": {\"status\": \"pass\", \"value\": 0.0, \"method\": \"Intersection volume of cutout probe box (5x9x3 at x=-42.5, y=0, z=14) with part: 0.0 mm3\", \"criteria\": [{\"condition\": \"opening at least 9 mm wide (Y) and 3 mm high (Z), centred at y = 0, z = 14\", \"measured\": 0.0, \"ok\": true}], \"note\": \"\"}, \"R7\": {\"status\": \"pass\", \"value\": 36.510409886687384, \"method\": \"Mass calculation: volume(29443.88 mm3) * density(1.24 g/cm3) / 1000\", \"criteria\": [{\"condition\": \"Mass <= 70 g\", \"measured\": 36.510409886687384, \"ok\": true}], \"note\": \"\"}}",
+ "stderr": "",
+ "agent": {
+  "sim_steps": 0,
+  "sim_exhausted": false,
+  "review": [
+   {
+    "round": 0,
+    "unfaithful": []
+   }
+  ]
+ }
+}

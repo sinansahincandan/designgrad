@@ -1,0 +1,301 @@
+{
+ "k": 2,
+ "proxy": 2.857142857142857,
+ "level": "L3",
+ "problem": "P08_wall_hook",
+ "llm": {
+  "calls": 63,
+  "tokens_in": 275534,
+  "tokens_out": 77409,
+  "seconds": 1759.4
+ },
+ "rounds": 4,
+ "trace": [
+  {
+   "k": 0,
+   "accepted": true,
+   "score": 2.5714285714285716,
+   "proxy": 2.5714285714285716,
+   "critic_frac": 0.7142857142857143,
+   "gate": {
+    "mismatches": [
+     "R3: The screw holes are not located at (y, z) = (0, 0) and (0, 40); the render shows a single hole centered around Z=20.",
+     "R3: The screw holes should be along X through the back plate; the cylindrical face data indicates a hole with axis [1.0, 0.0, 0.0] but it is not positioned according to R3 requirements.",
+     "R4: The strap seat/recessed pocket is not visible in the renders; the horizontal arm appears as a solid block without the specified subtraction for the strap clearance."
+    ],
+    "systemic": [
+     "The design specifies two screw holes at specific Z heights (0 and 40) to secure the plate, but the implementation only provides one central hole, which would make mounting the hook to a wall impossible according to the specification."
+    ],
+    "summary": "The part fails to implement the required dual screw holes and the recessed strap seat, rendering it both unmountable and unable to hold the specified strap."
+   },
+   "sim_issue": false,
+   "cad_steps": 0,
+   "cad_exhausted": false,
+   "sim_steps": 6,
+   "sim_exhausted": false,
+   "sim_updated": true,
+   "n_measured": 7,
+   "n_unmeasured": 0,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": [
+      "R3"
+     ],
+     "control_pass": [
+      "R1",
+      "R3",
+      "R7"
+     ]
+    },
+    {
+     "round": 1,
+     "unfaithful": [],
+     "control_pass": [
+      "R1",
+      "R7"
+     ]
+    }
+   ]
+  },
+  {
+   "k": 1,
+   "from": 0,
+   "accepted": false,
+   "score": 2.2857142857142856,
+   "proxy": 2.2857142857142856,
+   "critic_frac": 0.5714285714285714,
+   "gate": {
+    "mismatches": [
+     "R3: The screw holes are not at (y, z) = (0, 0) and (0, 40); the measured center is at z=20.",
+     "R3: There is only one cylindrical hole visible in the render/data instead of two.",
+     "R4: The strap seat pocket is not visible; the part appears as a solid block from x=2 to x=52 without the recessed clearance pocket for the strap.",
+     "R7: Mass is 30.41 g, which exceeds the maximum limit of 25 g."
+    ],
+    "systemic": [],
+    "summary": "The part fails several requirements, including incorrect screw hole placement/count, missing the required strap seat recess, and exceeding the mass limit."
+   },
+   "sim_issue": true,
+   "cad_steps": 0,
+   "cad_exhausted": false,
+   "sim_steps": 1,
+   "sim_exhausted": false,
+   "sim_updated": true,
+   "n_measured": 7,
+   "n_unmeasured": 0,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": [
+      "R3"
+     ],
+     "control_pass": [
+      "R1",
+      "R7"
+     ]
+    },
+    {
+     "round": 1,
+     "unfaithful": [],
+     "control_pass": [
+      "R1",
+      "R7"
+     ]
+    }
+   ]
+  },
+  {
+   "k": 2,
+   "from": 0,
+   "accepted": true,
+   "score": 2.857142857142857,
+   "proxy": 2.857142857142857,
+   "critic_frac": 0.8571428571428571,
+   "gate": {
+    "mismatches": [
+     "R3: The screw holes are not at (y, z) = (0, 0) and (0, 40); the measured facts show only one cylindrical face with center (1.0, 0.0, 20.0), suggesting a single hole or incorrectly placed holes.",
+     "R3: The plate thickness around the holes is insufficient; if there is only one hole at z=20, it violates the requirement for two holes at specific locations.",
+     "R4: The strap seat pocket (recessed area) is not clearly visible in the renders; the part appears to be a solid block with a large protrusion rather than having a defined recessed cradle."
+    ],
+    "systemic": [],
+    "summary": "The rendered part fails to implement the required dual screw holes and does not clearly show the specified strap seat recess."
+   },
+   "sim_issue": true,
+   "cad_steps": 0,
+   "cad_exhausted": false,
+   "sim_steps": 3,
+   "sim_exhausted": false,
+   "sim_updated": true,
+   "n_measured": 6,
+   "n_unmeasured": 1,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": [
+      "R3"
+     ],
+     "control_pass": [
+      "R1",
+      "R7"
+     ]
+    },
+    {
+     "round": 1,
+     "unfaithful": [
+      "R3"
+     ],
+     "control_pass": [
+      "R1",
+      "R7"
+     ]
+    },
+    {
+     "round": 2,
+     "unfaithful": [
+      "R3"
+     ],
+     "control_pass": [
+      "R1",
+      "R7"
+     ]
+    },
+    {
+     "round": 3,
+     "unfaithful": [
+      "R3"
+     ],
+     "control_pass": [
+      "R1",
+      "R7"
+     ]
+    }
+   ]
+  },
+  {
+   "k": 3,
+   "from": 2,
+   "accepted": false,
+   "score": 2.428571428571429,
+   "proxy": 2.428571428571429,
+   "critic_frac": 0.7142857142857143,
+   "gate": {
+    "mismatches": [
+     "R3: The screw holes are not present in the rendered part; the 'Front' view shows a solid vertical plate without any cylindrical voids.",
+     "R3: There is only one cylindrical face detected (radius 2.25mm), whereas the requirement specifies two screw holes."
+    ],
+    "systemic": [],
+    "summary": "The rendered part fails to include the required screw holes in the back plate, making it impossible to mount to a wall as intended."
+   },
+   "sim_issue": false,
+   "cad_steps": 0,
+   "cad_exhausted": false,
+   "sim_steps": 2,
+   "sim_exhausted": false,
+   "sim_updated": true,
+   "n_measured": 7,
+   "n_unmeasured": 0,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": [
+      "R3",
+      "R4"
+     ],
+     "control_pass": [
+      "R1",
+      "R7"
+     ]
+    },
+    {
+     "round": 1,
+     "unfaithful": [
+      "R4",
+      "R5"
+     ],
+     "control_pass": [
+      "R1",
+      "R7"
+     ]
+    },
+    {
+     "round": 2,
+     "unfaithful": [],
+     "control_pass": [
+      "R1",
+      "R7"
+     ]
+    }
+   ]
+  },
+  {
+   "k": 4,
+   "from": 2,
+   "accepted": false,
+   "score": 1.738095238095238,
+   "proxy": 1.738095238095238,
+   "critic_frac": 0.5714285714285714,
+   "gate": {
+    "mismatches": [
+     "R3: The screw holes are not at the specified (y, z) coordinates; the 'Right' view shows one hole near z=20, whereas requirements specify holes at z=0 and z=40.",
+     "R3: There is only one visible cylindrical void/hole in the render, but two are required.",
+     "R1: The measured facts report 2 solids (n_solids: 2), indicating the part is not a single valid solid as required."
+    ],
+    "systemic": [],
+    "summary": "The part fails to meet several key requirements, most notably having incorrectly placed and insufficient screw holes and consisting of multiple disconnected solids."
+   },
+   "sim_issue": true,
+   "cad_steps": 5,
+   "cad_exhausted": true,
+   "sim_steps": 4,
+   "sim_exhausted": false,
+   "sim_updated": true,
+   "n_measured": 6,
+   "n_unmeasured": 1,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": [
+      "R1",
+      "R3",
+      "R4"
+     ],
+     "control_pass": [
+      "R1",
+      "R7"
+     ]
+    },
+    {
+     "round": 1,
+     "unfaithful": [
+      "R3"
+     ],
+     "control_pass": [
+      "R1",
+      "R7"
+     ]
+    },
+    {
+     "round": 2,
+     "unfaithful": [
+      "R3",
+      "R4"
+     ],
+     "control_pass": [
+      "R1",
+      "R7"
+     ]
+    },
+    {
+     "round": 3,
+     "unfaithful": [
+      "R3"
+     ],
+     "control_pass": [
+      "R1",
+      "R7"
+     ]
+    }
+   ]
+  }
+ ]
+}

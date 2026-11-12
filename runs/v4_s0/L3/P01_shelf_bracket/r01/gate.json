@@ -1,0 +1,8 @@
+{
+ "mismatches": [
+  "The vertical spine does not start at z=0; the bbox_min shows it starts at z=-5.0, which contradicts R2 (0 <= z <= 130).",
+  "The screw hole axes are along X, but the cylindrical faces data suggests they might be split or incorrectly positioned relative to the clearance requirement."
+ ],
+ "systemic": [],
+ "summary": "The part mostly follows the design document, though it violates the Z-axis minimum boundary constraint by extending below z=0."
+}

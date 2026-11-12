@@ -1,0 +1,11 @@
+{
+ "mismatches": [
+  "The central bore (R3) is incorrectly placed at z=41 and z=19 instead of being centered at z=30.",
+  "The motor screw holes (R4) are missing from the face plate in the render.",
+  "The mass exceeds the limit specified in R7 (65.55g > 60g)."
+ ],
+ "systemic": [
+  "The part is not rest stable (rest_stability_margin_mm: -7.1), meaning it will tip over when placed on the table due to its center of mass and geometry."
+ ],
+ "summary": "The part fails to meet several geometric requirements, including incorrect central bore placement, missing motor screw holes, and exceeding the mass limit."
+}

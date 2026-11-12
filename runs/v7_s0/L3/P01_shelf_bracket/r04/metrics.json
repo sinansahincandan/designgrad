@@ -1,0 +1,59 @@
+{
+ "ok": true,
+ "n_solids": 1,
+ "valid": true,
+ "bbox_min": [
+  0.0,
+  -10.0,
+  0.0
+ ],
+ "bbox_max": [
+  160.0,
+  10.0,
+  216.0
+ ],
+ "size_mm": [
+  160.0,
+  20.0,
+  216.0
+ ],
+ "volume_mm3": 49284.8,
+ "mass_g": 61.11,
+ "center_of_mass": [
+  32.86,
+  0.0,
+  89.98
+ ],
+ "surface_area_mm2": 16500.3,
+ "cylindrical_faces": [
+  {
+   "r": 2.75,
+   "axis": [
+    -1.0,
+    -0.0,
+    -0.0
+   ],
+   "center": [
+    5.0,
+    0.0,
+    20.0
+   ]
+  },
+  {
+   "r": 2.75,
+   "axis": [
+    -1.0,
+    -0.0,
+    -0.0
+   ],
+   "center": [
+    5.0,
+    0.0,
+    60.0
+   ]
+  }
+ ],
+ "n_cylindrical_faces": 2,
+ "rest_stable": false,
+ "rest_stability_margin_mm": -17.86
+}

@@ -1,0 +1,3 @@
+L1/P01_shelf_bracket             identical=True  prompts 24/24 mismatch=0  summary_same=True  diffs=[]  err=None  25.5s
+L1/P07_nema17_mount              identical=True  prompts 16/16 mismatch=0  summary_same=True  diffs=[]  err=None  15.1s
+2/2 units identical

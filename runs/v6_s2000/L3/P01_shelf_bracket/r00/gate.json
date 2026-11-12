@@ -1,0 +1,11 @@
+{
+ "mismatches": [
+  "R2 Envelope violation: The bbox_max Y value is 40.0, whereas the requirement specifies -20 <= y <= 20 (total width 40). The part appears to be centered incorrectly or has a total width of 50.",
+  "R3 Screw holes/clearance: The measured facts show only one cylindrical face with radius 4.0 at z=60, whereas R3 requires two screw holes and specific clearance cutouts for screwdriver access.",
+  "R7 Mass violation: The mass is measured at 444.83 g, which significantly exceeds the maximum limit of 90 g."
+ ],
+ "systemic": [
+  "The design concept aims for a tapered cantilever to save mass, but the resulting geometry (as seen in the isometric and front views) is a bulky, non-tapered block that fails the mass requirement by nearly 5x."
+ ],
+ "summary": "The part fails significantly on mass requirements, screw hole specifications, and envelope dimensions."
+}

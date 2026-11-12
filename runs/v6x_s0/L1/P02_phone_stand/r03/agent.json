@@ -1,0 +1,26 @@
+{
+ "cad_steps": 3,
+ "cad_exhausted": false,
+ "cad_history": [
+  {
+   "step": 0,
+   "ok": false,
+   "feedback": "The code ran but produced 4 disconnected solids:\n  solid 1: volume 29319.5 mm3, bbox_min [-67.29, -10.0, 21.31], bbox_max [29.26, 10.0, 76.26]\n  solid 2: volume 15802.1 mm3, bbox_min [-45.0, -25.0, -0.0], bbox_max [15.0, 25.0, 8.34]\n  solid 3: volume 3000.0 mm3, bbox_min [-48.17, -15.0, 93.21], bbox_max [-38.17, 15.0, 103.21]\n  solid 4: volume 1440.0 mm3, bbox_min [4.28, -15.0, 13.27], bbox_max [12.28, 15.0, 19.27]\n  solid 2 is separated from solid 1 by 13.0 mm along Z (solid 1 spans z 21.31..76.26, solid 2 spans -0.0..8.34)\n  solid 3 is separated from solid 1 by 16.9 mm along Z (solid 1 spans"
+  },
+  {
+   "step": 1,
+   "ok": false,
+   "feedback": "The code ran but produced 3 disconnected solids:\n  solid 1: volume 41600.0 mm3, bbox_min [-70.74, -10.0, -73.59], bbox_max [53.84, 10.0, -4.15]\n  solid 2: volume 40393.9 mm3, bbox_min [-45.0, -25.0, -4.66], bbox_max [15.78, 25.0, 60.0]\n  solid 3: volume 27000.0 mm3, bbox_min [-58.17, -15.0, 83.21], bbox_max [-28.17, 15.0, 113.21]\n  solid 2's box touches or overlaps solid 1's box but the solids do not fuse: make them overlap by >= 1 mm\n  solid 3 is separated from solid 1 by 87.4 mm along Z (solid 1 spans z -73.59..-4.15, solid 3 spans 83.21..113.21)\n`result` must be ONE connected solid. Compare"
+  },
+  {
+   "step": 2,
+   "ok": false,
+   "feedback": "The code ran but produced 3 disconnected solids:\n  solid 1: volume 177170.1 mm3, bbox_min [-45.0, -25.0, -14.66], bbox_max [28.28, 25.0, 120.0]\n  solid 2: volume 65000.0 mm3, bbox_min [-65.25, -12.5, -84.0], bbox_max [61.02, 12.5, -10.94]\n  solid 3: volume 48000.0 mm3, bbox_min [-58.17, -20.0, 78.21], bbox_max [-28.17, 20.0, 118.21]\n  solid 2's box touches or overlaps solid 1's box but the solids do not fuse: make them overlap by >= 1 mm\n  solid 3's box touches or overlaps solid 1's box but the solids do not fuse: make them overlap by >= 1 mm\n`result` must be ONE connected solid. Compare these"
+  },
+  {
+   "step": 3,
+   "ok": true,
+   "feedback": ""
+  }
+ ]
+}

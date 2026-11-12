@@ -1,0 +1,10 @@
+L3/P01_shelf_bracket             identical=True  prompts 35/35 mismatch=0  summary_same=True  diffs=[]  err=None  72.6s
+L3/P03_enclosure_base            identical=True  prompts 34/34 mismatch=0  summary_same=True  diffs=[]  err=None  59.5s
+L3/P07_nema17_mount              identical=True  prompts 41/41 mismatch=0  summary_same=True  diffs=[]  err=None  80.3s
+L4/P01_shelf_bracket             identical=True  prompts 36/36 mismatch=0  summary_same=True  diffs=[]  err=None  72.3s
+L4/P03_enclosure_base            identical=True  prompts 38/38 mismatch=0  summary_same=True  diffs=[]  err=None  56.8s
+L4/P07_nema17_mount              identical=True  prompts 44/44 mismatch=0  summary_same=True  diffs=[]  err=None  88.7s
+L2/P01_shelf_bracket             identical=True  prompts 27/27 mismatch=0  summary_same=True  diffs=[]  err=None  34.8s
+L2/P03_enclosure_base            identical=True  prompts 22/22 mismatch=0  summary_same=True  diffs=[]  err=None  23.5s
+L2/P07_nema17_mount              identical=True  prompts 22/22 mismatch=0  summary_same=True  diffs=[]  err=None  21.7s
+9/9 units identical

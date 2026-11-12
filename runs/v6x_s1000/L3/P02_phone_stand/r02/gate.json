@@ -1,0 +1,12 @@
+{
+ "mismatches": [
+  "The back support height is incorrect: the design document specifies a max height of ~105 mm and places the support at z \u2248 98.9, but the render/measured facts show a max height of only 75.19 mm.",
+  "The mass exceeds the limit: R7 requires mass <= 60 g, but the measured mass is 89.59 g.",
+  "The base plate dimensions are incorrect: the design document specifies x in [-65, 25], but the bbox shows x min of -95.18.",
+  "The back support position is wrong: it does not reach the required height to support a phone leaning at 65 degrees as described."
+ ],
+ "systemic": [
+  "The structural rib/spine is too short to act as a back support for the specified phone geometry, meaning the phone would fall over."
+ ],
+ "summary": "The part fails to meet height and mass requirements and lacks sufficient vertical structure to provide the intended back support for the phone."
+}

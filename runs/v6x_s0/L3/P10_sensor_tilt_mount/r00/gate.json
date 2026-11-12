@@ -1,0 +1,11 @@
+{
+ "mismatches": [
+  "The upright pillar is oriented vertically (parallel to Z-axis) instead of being tilted at 30 degrees as specified in R3 and the design document.",
+  "The mounting face normal is (0, 0, 1) or similar vertical orientation rather than (0, cos30, sin30).",
+  "The sensor screw holes are drilled vertically along the Z-axis instead of being perpendicular to a tilted mounting face."
+ ],
+ "systemic": [
+  "The design document specifies a tilted upright pillar for a 30-degree mount, but the resulting geometry is a vertical block which fails to provide the required tilt for the sensor."
+ ],
+ "summary": "The part is rendered as a standard vertical pillar with vertical holes, failing to implement the 30-degree tilt required by the design specifications."
+}

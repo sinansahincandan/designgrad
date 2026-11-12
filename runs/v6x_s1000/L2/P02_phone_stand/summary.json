@@ -1,0 +1,213 @@
+{
+ "k": 0,
+ "proxy": 2.142857142857143,
+ "level": "L2",
+ "problem": "P02_phone_stand",
+ "llm": {
+  "calls": 57,
+  "tokens_in": 262767,
+  "tokens_out": 67342,
+  "seconds": 1436.6
+ },
+ "rounds": 4,
+ "trace": [
+  {
+   "k": 0,
+   "accepted": true,
+   "score": 2.142857142857143,
+   "proxy": 2.142857142857143,
+   "critic_frac": 0.5714285714285714,
+   "gate": null,
+   "sim_issue": false,
+   "cad_steps": 0,
+   "cad_exhausted": false,
+   "sim_steps": 6,
+   "sim_exhausted": false,
+   "sim_updated": true,
+   "n_measured": 7,
+   "n_unmeasured": 0,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": [],
+     "control_pass": [
+      "R1",
+      "R2",
+      "R3",
+      "R7"
+     ]
+    }
+   ]
+  },
+  {
+   "k": 1,
+   "from": 0,
+   "accepted": false,
+   "score": 2.142857142857143,
+   "proxy": 2.142857142857143,
+   "critic_frac": 0.5714285714285714,
+   "gate": null,
+   "sim_issue": false,
+   "cad_steps": 4,
+   "cad_exhausted": false,
+   "sim_steps": 3,
+   "sim_exhausted": false,
+   "sim_updated": true,
+   "n_measured": 7,
+   "n_unmeasured": 0,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": [
+      "R4",
+      "R5"
+     ],
+     "control_pass": [
+      "R1",
+      "R2",
+      "R3",
+      "R7"
+     ]
+    },
+    {
+     "round": 1,
+     "unfaithful": [
+      "R4",
+      "R5"
+     ],
+     "control_pass": [
+      "R1",
+      "R2",
+      "R3",
+      "R7"
+     ]
+    },
+    {
+     "round": 2,
+     "unfaithful": [
+      "R4",
+      "R5"
+     ],
+     "control_pass": [
+      "R1",
+      "R2",
+      "R3",
+      "R7"
+     ]
+    },
+    {
+     "round": 3,
+     "unfaithful": [],
+     "control_pass": [
+      "R1",
+      "R2",
+      "R3",
+      "R7"
+     ]
+    }
+   ]
+  },
+  {
+   "k": 2,
+   "from": 0,
+   "accepted": false,
+   "score": 2.142857142857143,
+   "proxy": 2.142857142857143,
+   "critic_frac": 0.5714285714285714,
+   "gate": null,
+   "sim_issue": true,
+   "cad_steps": 3,
+   "cad_exhausted": false,
+   "sim_steps": 1,
+   "sim_exhausted": false,
+   "sim_updated": true,
+   "n_measured": 7,
+   "n_unmeasured": 0,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": [
+      "R4",
+      "R5"
+     ],
+     "control_pass": [
+      "R1",
+      "R2",
+      "R3",
+      "R7"
+     ]
+    },
+    {
+     "round": 1,
+     "unfaithful": [],
+     "control_pass": [
+      "R1",
+      "R2",
+      "R3",
+      "R7"
+     ]
+    }
+   ]
+  },
+  {
+   "k": 3,
+   "from": 0,
+   "accepted": false,
+   "score": 0.5,
+   "proxy": 0.5,
+   "critic_frac": 0.5,
+   "gate": null,
+   "sim_issue": false,
+   "cad_steps": 5,
+   "cad_exhausted": true,
+   "sim_steps": 0,
+   "sim_exhausted": false,
+   "sim_updated": false,
+   "n_measured": 0,
+   "n_unmeasured": 7,
+   "review": []
+  },
+  {
+   "k": 4,
+   "from": 0,
+   "accepted": false,
+   "score": 2.142857142857143,
+   "proxy": 2.142857142857143,
+   "critic_frac": 0.5714285714285714,
+   "gate": null,
+   "sim_issue": false,
+   "cad_steps": 3,
+   "cad_exhausted": false,
+   "sim_steps": 1,
+   "sim_exhausted": false,
+   "sim_updated": true,
+   "n_measured": 7,
+   "n_unmeasured": 0,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": [
+      "R4",
+      "R5"
+     ],
+     "control_pass": [
+      "R1",
+      "R2",
+      "R3",
+      "R7"
+     ]
+    },
+    {
+     "round": 1,
+     "unfaithful": [],
+     "control_pass": [
+      "R1",
+      "R2",
+      "R3",
+      "R7"
+     ]
+    }
+   ]
+  }
+ ]
+}

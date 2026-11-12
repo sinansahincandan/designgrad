@@ -1,0 +1,31 @@
+{
+ "cad_steps": 4,
+ "cad_exhausted": false,
+ "cad_history": [
+  {
+   "step": 0,
+   "ok": false,
+   "feedback": "The code failed:\n  File \"/Users/sinancandan/HackathonGemma/.venv/lib/python3.12/site-packages/cadquery/cq.py\", line 3788, in _extrude\n    s1 = Solid.extrudeLinear(face, eDir, taper=taper)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/sinancandan/HackathonGemma/.venv/lib/python3.12/site-packages/multimethod/__init__.py\", line 375, in __call__\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/sinancandan/HackathonGemma/.venv/lib/python3.12/site-packages/cadquery/occ_impl/shapes.py\", line 4497, in extrudeLinear\n    prism_builder: Any = BRepPri"
+  },
+  {
+   "step": 1,
+   "ok": false,
+   "feedback": "The code ran but produced 2 disconnected solids:\n  solid 1: volume 10319.1 mm3, bbox_min [70.0, -12.0, -0.0], bbox_max [150.0, 12.0, 15.0]\n  solid 2: volume 14.4 mm3, bbox_min [-0.0, -0.02, -0.0], bbox_max [30.0, 0.02, 15.0]\n  solid 2 is separated from solid 1 by 40.0 mm along X (solid 1 spans x 70.0..150.0, solid 2 spans -0.0..30.0)\n`result` must be ONE connected solid. Compare these boxes: find which piece does not touch the main body, extend or move it so it overlaps the body by at least 1 mm, and union everything into one solid."
+  },
+  {
+   "step": 2,
+   "ok": false,
+   "feedback": "The code ran but produced 2 disconnected solids:\n  solid 1: volume 10619.1 mm3, bbox_min [70.0, -12.0, -0.0], bbox_max [160.0, 12.0, 15.0]\n  solid 2: volume 14.4 mm3, bbox_min [-0.0, -0.02, -0.0], bbox_max [30.0, 0.02, 15.0]\n  solid 2 is separated from solid 1 by 40.0 mm along X (solid 1 spans x 70.0..160.0, solid 2 spans -0.0..30.0)\n`result` must be ONE connected solid. Compare these boxes: find which piece does not touch the main body, extend or move it so it overlaps the body by at least 1 mm, and union everything into one solid."
+  },
+  {
+   "step": 3,
+   "ok": false,
+   "feedback": "The code ran but produced 2 disconnected solids:\n  solid 1: volume 10619.1 mm3, bbox_min [70.0, -12.0, -0.0], bbox_max [160.0, 12.0, 15.0]\n  solid 2: volume 14.4 mm3, bbox_min [-0.0, -0.02, -0.0], bbox_max [30.0, 0.02, 15.0]\n  solid 2 is separated from solid 1 by 40.0 mm along X (solid 1 spans x 70.0..160.0, solid 2 spans -0.0..30.0)\n`result` must be ONE connected solid. Compare these boxes: find which piece does not touch the main body, extend or move it so it overlaps the body by at least 1 mm, and union everything into one solid."
+  },
+  {
+   "step": 4,
+   "ok": true,
+   "feedback": ""
+  }
+ ]
+}

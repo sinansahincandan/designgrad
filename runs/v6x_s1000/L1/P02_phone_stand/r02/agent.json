@@ -1,0 +1,16 @@
+{
+ "cad_steps": 1,
+ "cad_exhausted": false,
+ "cad_history": [
+  {
+   "step": 0,
+   "ok": false,
+   "feedback": "The code ran but produced 3 disconnected solids:\n  solid 1: volume 25938.7 mm3, bbox_min [-58.17, -45.0, -0.0], bbox_max [20.0, 45.0, 111.21]\n  solid 2: volume 1800.0 mm3, bbox_min [-10.98, -7.5, 5.67], bbox_max [19.02, 7.5, 9.67]\n  solid 3: volume 600.0 mm3, bbox_min [-6.72, -2.0, 13.77], bbox_max [23.28, 2.0, 18.77]\n  solid 2's box touches or overlaps solid 1's box but the solids do not fuse: make them overlap by >= 1 mm\n  solid 3's box touches or overlaps solid 1's box but the solids do not fuse: make them overlap by >= 1 mm\n`result` must be ONE connected solid. Compare these boxes: find wh"
+  },
+  {
+   "step": 1,
+   "ok": true,
+   "feedback": ""
+  }
+ ]
+}

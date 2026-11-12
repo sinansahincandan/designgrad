@@ -1,0 +1,152 @@
+{
+ "ok": true,
+ "result": {
+  "R1": {
+   "status": "pass",
+   "value": 1,
+   "note": "Found 1 solids",
+   "method": "Counted number of solids in STEP file",
+   "criteria": [
+    {
+     "condition": "One single, valid solid",
+     "measured": 1,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R3": {
+   "status": "fail",
+   "value": [
+    1.0,
+    1.0
+   ],
+   "note": "",
+   "method": "Bore probe: core=22.5mm, wall shell check. Empty ratio: 1.0, Walled ratio: 1.0",
+   "criteria": [
+    {
+     "condition": "Central bore diameter 22.5 mm",
+     "measured": 22.5,
+     "ok": false
+    }
+   ],
+   "faithful": true
+  },
+  "R2": {
+   "status": "pass",
+   "value": [
+    1.0,
+    12909.0
+   ],
+   "note": "",
+   "method": "Checked material integrity around bore in y=[0,4]. Shell fill ratio: 1.0",
+   "criteria": [
+    {
+     "condition": "Face plate at least 4 mm thick with solid material around bore",
+     "measured": 1.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R4": {
+   "status": "fail",
+   "value": false,
+   "note": "",
+   "method": "Probed 4 locations at (+-15.5, 30 +- 15.5). Verified both emptiness and surrounding material.",
+   "criteria": [
+    {
+     "condition": "Four motor screw holes, diameter 3.4 mm",
+     "measured": 3.4,
+     "ok": false
+    }
+   ],
+   "faithful": true
+  },
+  "R5": {
+   "status": "pass",
+   "value": 0.0,
+   "note": "",
+   "method": "Intersection volume with clearance box: x[-21.5,21.5], y[-48,0], z[8.5,51.5]",
+   "criteria": [
+    {
+     "condition": "Motor clearance: nothing in specified volume",
+     "measured": 0.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R6": {
+   "status": "fail",
+   "value": [
+    0.0,
+    false
+   ],
+   "note": "",
+   "method": "Checked z_min >= 0 and probed holes at (+-25, 25) for existence (empty + walled)",
+   "criteria": [
+    {
+     "condition": "Base on the table (minimum z = 0)",
+     "measured": 0.0,
+     "ok": true
+    },
+    {
+     "condition": "two vertical screw holes, diameter 5.5 mm, at (x, y) = (+-25, 25)",
+     "measured": 5.5,
+     "ok": false
+    }
+   ],
+   "faithful": true
+  },
+  "R7": {
+   "status": "pass",
+   "value": [
+    -35.0,
+    35.0,
+    50.0,
+    31.2
+   ],
+   "note": "",
+   "method": "BBox: x[-35.0, 35.0], z_max=50.0; Mass = vol(25158.1) * density(1.24)/1000",
+   "criteria": [
+    {
+     "condition": "-35 <= x <= 35",
+     "measured": [
+      -35.0,
+      35.0
+     ],
+     "ok": true
+    },
+    {
+     "condition": "top <= 55 mm",
+     "measured": 50.0,
+     "ok": true
+    },
+    {
+     "condition": "mass <= 60 g",
+     "measured": 31.196092208117395,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  }
+ },
+ "stdout": "es, diameter 3.4 mm\",\n        \"measured\": 3.4,\n        \"ok\": false\n      }\n    ],\n    \"note\": \"\"\n  },\n  \"R5\": {\n    \"status\": \"pass\",\n    \"value\": 0.0,\n    \"method\": \"Intersection volume with clearance box: x[-21.5,21.5], y[-48,0], z[8.5,51.5]\",\n    \"criteria\": [\n      {\n        \"condition\": \"Motor clearance: nothing in specified volume\",\n        \"measured\": 0.0,\n        \"ok\": true\n      }\n    ],\n    \"note\": \"\"\n  },\n  \"R6\": {\n    \"status\": \"fail\",\n    \"value\": [\n      0.0,\n      false\n    ],\n    \"method\": \"Checked z_min >= 0 and probed holes at (+-25, 25) for existence (empty + walled)\",\n    \"criteria\": [\n      {\n        \"condition\": \"Base on the table (minimum z = 0)\",\n        \"measured\": 0.0,\n        \"ok\": true\n      },\n      {\n        \"condition\": \"two vertical screw holes, diameter 5.5 mm, at (x, y) = (+-25, 25)\",\n        \"measured\": 5.5,\n        \"ok\": false\n      }\n    ],\n    \"note\": \"\"\n  },\n  \"R7\": {\n    \"status\": \"pass\",\n    \"value\": [\n      -35.0,\n      35.0,\n      50.0,\n      31.2\n    ],\n    \"method\": \"BBox: x[-35.0, 35.0], z_max=50.0; Mass = vol(25158.1) * density(1.24)/1000\",\n    \"criteria\": [\n      {\n        \"condition\": \"-35 <= x <= 35\",\n        \"measured\": [\n          -35.0,\n          35.0\n        ],\n        \"ok\": true\n      },\n      {\n        \"condition\": \"top <= 55 mm\",\n        \"measured\": 50.0,\n        \"ok\": true\n      },\n      {\n        \"condition\": \"mass <= 60 g\",\n        \"measured\": 31.196092208117395,\n        \"ok\": true\n      }\n    ],\n    \"note\": \"\"\n  }\n}",
+ "stderr": "",
+ "agent": {
+  "sim_steps": 0,
+  "sim_exhausted": false,
+  "review": [
+   {
+    "round": 0,
+    "unfaithful": [],
+    "control_pass": [
+     "R1",
+     "R5",
+     "R7"
+    ]
+   }
+  ]
+ }
+}

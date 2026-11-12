@@ -1,0 +1,150 @@
+{
+ "ok": true,
+ "result": {
+  "R1": {
+   "status": "pass",
+   "value": 1.0,
+   "note": "",
+   "method": "Counted number of solids in STEP file",
+   "criteria": [
+    {
+     "condition": "One single, valid solid",
+     "measured": 1.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R2": {
+   "status": "pass",
+   "value": 0.9801196089890013,
+   "note": "",
+   "method": "Intersected part with box [0,2]x[-8,8]x[-5,45], vol ratio=0.980",
+   "criteria": [
+    {
+     "condition": "solid material at 0 <= x <= 2 over |y| <= 8, -5 <= z <= 45",
+     "measured": 0.9801196089890013,
+     "ok": true
+    },
+    {
+     "condition": "minimum x = 0",
+     "measured": 0.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R3": {
+   "status": "fail",
+   "value": 0.0,
+   "note": "",
+   "method": "Probed cylinders of diameter 4.5 at (y,z)=[(0, 0), (0, 40)] for emptiness",
+   "criteria": [
+    {
+     "condition": "Two screw holes, diameter 4.5 mm",
+     "measured": 0.0,
+     "ok": false
+    }
+   ],
+   "faithful": true
+  },
+  "R4": {
+   "status": "pass",
+   "value": [
+    1.0,
+    0.0
+   ],
+   "note": "",
+   "method": "Bed top at z=-14: True, Pocket vol: 0.00 mm3",
+   "criteria": [
+    {
+     "condition": "solid bed whose top is at z = -14 under 34 <= x <= 46, |y| <= 4",
+     "measured": 1.0,
+     "ok": true
+    },
+    {
+     "condition": "space (35<=x<=45, |y|<=6, -13<=z<=-6) must be empty",
+     "measured": 0.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R5": {
+   "status": "pass",
+   "value": 1.0,
+   "note": "",
+   "method": "Lip fill ratio: 1.00",
+   "criteria": [
+    {
+     "condition": "solid material at 47 <= x <= 52, |y| <= 4, -13 <= z <= -8",
+     "measured": 1.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R6": {
+   "status": "pass",
+   "value": [
+    3.0282598152288274,
+    0.03977473850626021
+   ],
+   "note": "",
+   "method": "M=1600.0Nmm, x=8 section: I=3923.0, c=7.43, sigma=3.03MPa, defl=0.04mm",
+   "criteria": [
+    {
+     "condition": "bending stress <= 25 MPa",
+     "measured": 3.0282598152288274,
+     "ok": true
+    },
+    {
+     "condition": "tip deflection estimate ... <= 1.5 mm",
+     "measured": 0.03977473850626021,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R7": {
+   "status": "pass",
+   "value": [
+    16.770667989857042,
+    52.0
+   ],
+   "note": "",
+   "method": "Mass=16.77g (vol=13524.7), X-ext=52.0mm",
+   "criteria": [
+    {
+     "condition": "Mass <= 25 g",
+     "measured": 16.770667989857042,
+     "ok": true
+    },
+    {
+     "condition": "X extent <= 55 mm",
+     "measured": 52.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  }
+ },
+ "stdout": " \"minimum x = 0\", \"measured\": 0.0, \"ok\": true}], \"note\": \"\"}, \"R3\": {\"status\": \"fail\", \"value\": 0.0, \"method\": \"Probed cylinders of diameter 4.5 at (y,z)=[(0, 0), (0, 40)] for emptiness\", \"criteria\": [{\"condition\": \"Two screw holes, diameter 4.5 mm\", \"measured\": 0.0, \"ok\": false}], \"note\": \"\"}, \"R4\": {\"status\": \"pass\", \"value\": [1.0, 0.0], \"method\": \"Bed top at z=-14: True, Pocket vol: 0.00 mm3\", \"criteria\": [{\"condition\": \"solid bed whose top is at z = -14 under 34 <= x <= 46, |y| <= 4\", \"measured\": 1.0, \"ok\": true}, {\"condition\": \"space (35<=x<=45, |y|<=6, -13<=z<=-6) must be empty\", \"measured\": 0.0, \"ok\": true}], \"note\": \"\"}, \"R5\": {\"status\": \"pass\", \"value\": 1.0, \"method\": \"Lip fill ratio: 1.00\", \"criteria\": [{\"condition\": \"solid material at 47 <= x <= 52, |y| <= 4, -13 <= z <= -8\", \"measured\": 1.0, \"ok\": true}], \"note\": \"\"}, \"R6\": {\"status\": \"pass\", \"value\": [3.0282598152288274, 0.03977473850626021], \"method\": \"M=1600.0Nmm, x=8 section: I=3923.0, c=7.43, sigma=3.03MPa, defl=0.04mm\", \"criteria\": [{\"condition\": \"bending stress <= 25 MPa\", \"measured\": 3.0282598152288274, \"ok\": true}, {\"condition\": \"tip deflection estimate ... <= 1.5 mm\", \"measured\": 0.03977473850626021, \"ok\": true}], \"note\": \"\"}, \"R7\": {\"status\": \"pass\", \"value\": [16.770667989857042, 52.0], \"method\": \"Mass=16.77g (vol=13524.7), X-ext=52.0mm\", \"criteria\": [{\"condition\": \"Mass <= 25 g\", \"measured\": 16.770667989857042, \"ok\": true}, {\"condition\": \"X extent <= 55 mm\", \"measured\": 52.0, \"ok\": true}], \"note\": \"\"}}",
+ "stderr": "",
+ "agent": {
+  "sim_steps": 1,
+  "sim_exhausted": false,
+  "review": [
+   {
+    "round": 0,
+    "unfaithful": [
+     "R6"
+    ]
+   },
+   {
+    "round": 1,
+    "unfaithful": []
+   }
+  ]
+ }
+}

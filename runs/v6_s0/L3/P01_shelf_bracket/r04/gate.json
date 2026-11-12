@@ -1,0 +1,12 @@
+{
+ "mismatches": [
+  "R3: Screw hole axes are at x=83.57 instead of being centered on the wall (x near 0) as specified.",
+  "R3: The screw holes are not through the part where it sits on the wall; they are located far out in the arm.",
+  "R4: There is no solid material directly below z=110 between x=140 and x=150 around y=0 as required (the pillar is missing or incorrectly placed).",
+  "R7: The mass is 188.06g, which exceeds the maximum limit of 90g."
+ ],
+ "systemic": [
+  "The load path is broken because the screw holes (intended for wall mounting) are placed in the cantilever arm rather than the spine at x=0."
+ ],
+ "summary": "The part fails multiple requirements, most notably placing the mounting holes in the middle of the arm instead of on the wall and exceeding the mass limit significantly."
+}

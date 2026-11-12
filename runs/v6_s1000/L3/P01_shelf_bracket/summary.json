@@ -1,0 +1,239 @@
+{
+ "k": 2,
+ "proxy": 2.142857142857143,
+ "level": "L3",
+ "problem": "P01_shelf_bracket",
+ "llm": {
+  "calls": 46,
+  "tokens_in": 184995,
+  "tokens_out": 46782,
+  "seconds": 1077.8
+ },
+ "rounds": 4,
+ "trace": [
+  {
+   "k": 0,
+   "accepted": true,
+   "score": 1.8571428571428572,
+   "proxy": 1.8571428571428572,
+   "critic_frac": 0.42857142857142855,
+   "gate": {
+    "mismatches": [
+     "The mass (179.91 g) significantly exceeds the requirement R7 (<= 90 g).",
+     "The volume/mass mismatch suggests the 'Tapered Profile' described in the design document was not implemented, as the part appears to be a constant rectangular cross-section.",
+     "The top surface height is at z=110, but the bounding box max Z is 110, meaning the thickness of the shelf support might be zero or it is exactly at the limit, whereas the design implies a solid section."
+    ],
+    "systemic": [],
+    "summary": "The part fails the mass requirement (R7) because the intended tapered profile was not implemented, resulting in a much heavier constant-section bracket."
+   },
+   "sim_issue": false,
+   "cad_steps": 0,
+   "cad_exhausted": false,
+   "sim_steps": 2,
+   "sim_exhausted": false,
+   "sim_updated": true,
+   "n_measured": 7,
+   "n_unmeasured": 0,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": [],
+     "control_pass": [
+      "R1",
+      "R2",
+      "R7"
+     ]
+    }
+   ]
+  },
+  {
+   "k": 1,
+   "from": 0,
+   "accepted": false,
+   "score": 1.8571428571428572,
+   "proxy": 1.8571428571428572,
+   "critic_frac": 0.42857142857142855,
+   "gate": {
+    "mismatches": [
+     "R3: Screw holes are completely missing from the rendered part.",
+     "R4: The top surface of the horizontal arm is not at z=110; looking at the Front view, the top edge of the bracket appears to be around z=10 mm or 20 mm, whereas the wall plate goes up to z=110. The shelf support is missing or incorrectly placed.",
+     "R7: Mass is 124.18 g, which exceeds the requirement of <= 90 g."
+    ],
+    "systemic": [],
+    "summary": "The rendered part fails significantly as it lacks the required screw holes and the shelf support structure is not positioned at the specified height or configuration."
+   },
+   "sim_issue": false,
+   "cad_steps": 3,
+   "cad_exhausted": false,
+   "sim_steps": 1,
+   "sim_exhausted": false,
+   "sim_updated": true,
+   "n_measured": 7,
+   "n_unmeasured": 0,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": [
+      "R3",
+      "R4"
+     ],
+     "control_pass": [
+      "R1",
+      "R2",
+      "R7"
+     ]
+    },
+    {
+     "round": 1,
+     "unfaithful": [],
+     "control_pass": [
+      "R1",
+      "R2",
+      "R7"
+     ]
+    }
+   ]
+  },
+  {
+   "k": 2,
+   "from": 0,
+   "accepted": true,
+   "score": 2.142857142857143,
+   "proxy": 2.142857142857143,
+   "critic_frac": 0.5714285714285714,
+   "gate": {
+    "mismatches": [
+     "R7 (Mass): The measured mass is 151.49 g, which exceeds the requirement of <= 90 g.",
+     "R4 (Geometry Constraint): The top surface height in the render/bbox is ~117 mm, whereas the specification requires it to be exactly at z = 110."
+    ],
+    "systemic": [],
+    "summary": "The part fails the mass requirement and does not adhere to the specified top surface height of z=110."
+   },
+   "sim_issue": false,
+   "cad_steps": 1,
+   "cad_exhausted": false,
+   "sim_steps": 0,
+   "sim_exhausted": false,
+   "sim_updated": false,
+   "n_measured": 7,
+   "n_unmeasured": 0,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": [],
+     "control_pass": [
+      "R1",
+      "R2",
+      "R7"
+     ]
+    }
+   ]
+  },
+  {
+   "k": 3,
+   "from": 2,
+   "accepted": false,
+   "score": 2.142857142857143,
+   "proxy": 2.142857142857143,
+   "critic_frac": 0.5714285714285714,
+   "gate": {
+    "mismatches": [
+     "R7 (Mass): The measured mass is 209.13 g, which significantly exceeds the requirement of <= 90 g.",
+     "The design document claims an optimized volume and aggressive tapering to minimize mass, but the rendered part appears as a largely solid block with much higher volume/mass than specified."
+    ],
+    "systemic": [],
+    "summary": "The part fails the mass requirement (R7) significantly, as the actual mass is over double the allowed limit despite the design document's claims of optimization."
+   },
+   "sim_issue": false,
+   "cad_steps": 0,
+   "cad_exhausted": false,
+   "sim_steps": 1,
+   "sim_exhausted": false,
+   "sim_updated": true,
+   "n_measured": 7,
+   "n_unmeasured": 0,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": [
+      "R3",
+      "R4"
+     ],
+     "control_pass": [
+      "R1",
+      "R2",
+      "R7"
+     ]
+    },
+    {
+     "round": 1,
+     "unfaithful": [],
+     "control_pass": [
+      "R1",
+      "R2",
+      "R7"
+     ]
+    }
+   ]
+  },
+  {
+   "k": 4,
+   "from": 2,
+   "accepted": false,
+   "score": 2.142857142857143,
+   "proxy": 2.142857142857143,
+   "critic_frac": 0.5714285714285714,
+   "gate": {
+    "mismatches": [
+     "R4 violation: The top surface of the bracket extends above z=110 (the bbox max Z is 127.5 mm, and the front view shows the profile reaching significantly higher than the shelf level).",
+     "R4 violation: For x >= 8, parts of the bracket are clearly above z = 110.",
+     "R7 violation: The mass is 169.77 g, which exceeds the limit of 90 g (as confirmed by measured facts)."
+    ],
+    "systemic": [],
+    "summary": "The part fails multiple requirements, specifically exceeding the maximum height constraint for x >= 8 and significantly exceeding the mass limit."
+   },
+   "sim_issue": false,
+   "cad_steps": 0,
+   "cad_exhausted": false,
+   "sim_steps": 2,
+   "sim_exhausted": false,
+   "sim_updated": true,
+   "n_measured": 7,
+   "n_unmeasured": 0,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": [
+      "R3",
+      "R4"
+     ],
+     "control_pass": [
+      "R1",
+      "R2",
+      "R7"
+     ]
+    },
+    {
+     "round": 1,
+     "unfaithful": [
+      "R3"
+     ],
+     "control_pass": [
+      "R1",
+      "R2",
+      "R7"
+     ]
+    },
+    {
+     "round": 2,
+     "unfaithful": [],
+     "control_pass": [
+      "R1",
+      "R2",
+      "R7"
+     ]
+    }
+   ]
+  }
+ ]
+}

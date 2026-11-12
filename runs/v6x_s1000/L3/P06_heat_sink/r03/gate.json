@@ -1,0 +1,8 @@
+{
+ "mismatches": [
+  "The screwdriver access voids (cylindrical cutouts) are not single continuous cylinders as described; they appear to be two separate, offset cylindrical pockets rather than one centered void at (+/- 15, 0).",
+  "The mounting holes/access voids are misaligned with the design document's requirement of being centered exactly at x = +/- 15, y = 0 (the measured facts show centers like [14.91, 3.03] and [14.91, -3.03])."
+ ],
+ "systemic": [],
+ "summary": "The part fails to implement the screwdriver access as single centered cylindrical voids, instead creating offset pockets that deviate from the design specification."
+}

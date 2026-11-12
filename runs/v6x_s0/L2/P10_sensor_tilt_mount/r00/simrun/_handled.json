@@ -1,0 +1,1 @@
+[{"type": "AttributeError", "msg": "'Trimesh' object has no attribute 'points'", "line": 69, "src": "proj = mesh.points @ n_vec"}]

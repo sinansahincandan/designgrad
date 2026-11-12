@@ -1,0 +1,8 @@
+{
+ "mismatches": [
+  "The design document specifies two screw holes centered at z=20 and z=60, but the Right view shows the holes are positioned much lower (around z=15 and z=55) or the spine is shorter than intended.",
+  "The design document states the shelf arm thickness is 10mm (from z=100 to z=110), but the Front view shows the horizontal arm is significantly thicker, occupying most of the vertical space from approximately z=80 to z=110."
+ ],
+ "systemic": [],
+ "summary": "The rendered part deviates from the design document regarding the vertical placement of screw holes and the thickness of the shelf arm."
+}

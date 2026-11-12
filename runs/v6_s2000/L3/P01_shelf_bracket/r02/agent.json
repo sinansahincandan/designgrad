@@ -1,0 +1,57 @@
+{
+ "cad_steps": 5,
+ "cad_exhausted": true,
+ "cad_history": [
+  {
+   "step": 0,
+   "ok": false,
+   "feedback": "The code failed:\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/sinancandan/HackathonGemma/.venv/lib/python3.12/site-packages/cadquery/cq.py\", line 3737, in _extrude\n    faces = self._getFaces()\n            ^^^^^^^^^^^^^^^^\n  File \"/Users/sinancandan/HackathonGemma/.venv/lib/python3.12/site-packages/cadquery/cq.py\", line 3668, in _getFaces\n    rv.extend(wiresToFaces(self.ctx.popPendingWires()))\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/sinancandan/HackathonGemma/.venv/lib/python3.12/site-packages/cadquery/cq.py\", line 118, in popPe"
+  },
+  {
+   "step": 1,
+   "ok": false,
+   "feedback": "The code ran but produced 3 disconnected solids:\n  solid 1: volume 110090.5 mm3, bbox_min [-0.0, -20.0, -0.0], bbox_max [150.0, 20.0, 110.0]\n  solid 2: volume 769.9 mm3, bbox_min [80.0, -10.0, 60.0], bbox_max [120.0, -2.64, 63.0]\n  solid 3: volume 769.9 mm3, bbox_min [80.0, 2.64, 60.0], bbox_max [120.0, 10.0, 63.0]\n  solid 2's box touches or overlaps solid 1's box but the solids do not fuse: make them overlap by >= 1 mm\n  solid 3's box touches or overlaps solid 1's box but the solids do not fuse: make them overlap by >= 1 mm\n`result` must be ONE connected solid. Compare these boxes: find which"
+  },
+  {
+   "step": 2,
+   "ok": false,
+   "feedback": "The code ran but produced 3 disconnected solids:\n  solid 1: volume 110322.5 mm3, bbox_min [-0.0, -20.0, -0.0], bbox_max [150.0, 20.0, 110.0]\n  solid 2: volume 808.4 mm3, bbox_min [78.0, -10.0, 60.0], bbox_max [120.0, -2.64, 63.0]\n  solid 3: volume 808.4 mm3, bbox_min [78.0, 2.64, 60.0], bbox_max [120.0, 10.0, 63.0]\n  solid 2's box touches or overlaps solid 1's box but the solids do not fuse: make them overlap by >= 1 mm\n  solid 3's box touches or overlaps solid 1's box but the solids do not fuse: make them overlap by >= 1 mm\n`result` must be ONE connected solid. Compare these boxes: find which"
+  },
+  {
+   "step": 3,
+   "ok": false,
+   "feedback": "The code ran but produced 3 disconnected solids:\n  solid 1: volume 113858.7 mm3, bbox_min [-0.0, -20.0, -0.0], bbox_max [155.0, 20.0, 110.0]\n  solid 2: volume 866.1 mm3, bbox_min [80.0, -10.0, 60.0], bbox_max [125.0, -2.64, 63.0]\n  solid 3: volume 866.1 mm3, bbox_min [80.0, 2.64, 60.0], bbox_max [125.0, 10.0, 63.0]\n  solid 2's box touches or overlaps solid 1's box but the solids do not fuse: make them overlap by >= 1 mm\n  solid 3's box touches or overlaps solid 1's box but the solids do not fuse: make them overlap by >= 1 mm\n`result` must be ONE connected solid. Compare these boxes: find which"
+  },
+  {
+   "step": 4,
+   "ok": false,
+   "feedback": "The code ran but produced 3 disconnected solids:\n  solid 1: volume 113858.7 mm3, bbox_min [-0.0, -20.0, -0.0], bbox_max [155.0, 20.0, 110.0]\n  solid 2: volume 866.1 mm3, bbox_min [80.0, -10.0, 60.0], bbox_max [125.0, -2.64, 63.0]\n  solid 3: volume 866.1 mm3, bbox_min [80.0, 2.64, 60.0], bbox_max [125.0, 10.0, 63.0]\n  solid 2's box touches or overlaps solid 1's box but the solids do not fuse: make them overlap by >= 1 mm\n  solid 3's box touches or overlaps solid 1's box but the solids do not fuse: make them overlap by >= 1 mm\n`result` must be ONE connected solid. Compare these boxes: find which"
+  },
+  {
+   "step": 5,
+   "ok": false,
+   "feedback": "The code ran but produced 3 disconnected solids:\n  solid 1: volume 124446.5 mm3, bbox_min [-0.0, -20.0, -0.0], bbox_max [155.0, 20.0, 110.0]\n  solid 2: volume 866.1 mm3, bbox_min [80.0, -10.0, 60.0], bbox_max [125.0, -2.64, 63.0]\n  solid 3: volume 866.1 mm3, bbox_min [80.0, 2.64, 60.0], bbox_max [125.0, 10.0, 63.0]\n  solid 2's box touches or overlaps solid 1's box but the solids do not fuse: make them overlap by >= 1 mm\n  solid 3's box touches or overlaps solid 1's box but the solids do not fuse: make them overlap by >= 1 mm\n`result` must be ONE connected solid. Compare these boxes: find which"
+  }
+ ],
+ "sim_steps": 0,
+ "sim_exhausted": false,
+ "review": [
+  {
+   "round": 0,
+   "unfaithful": [],
+   "control_pass": [
+    "R1",
+    "R2",
+    "R7"
+   ]
+  }
+ ],
+ "sim_updated": false,
+ "sim_history": [
+  {
+   "step": 0,
+   "ok": true,
+   "feedback": ""
+  }
+ ]
+}

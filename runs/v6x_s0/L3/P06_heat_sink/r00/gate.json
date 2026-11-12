@@ -1,0 +1,10 @@
+{
+ "mismatches": [
+  "The screw clearance voids (intended to be vertical slots/voids above the mounting holes) are rendered as cylindrical cutouts that do not extend fully through the fins or provide sufficient width for a screwdriver, appearing more like small circular pockets at specific heights.",
+  "The design document specifies 8 fins, but the render shows 9 fins."
+ ],
+ "systemic": [
+  "The screw clearance feature (R5) is implemented as small cylindrical voids rather than vertical slots/voids. This fails to provide the required 'no material within 3 mm of either hole axis above the base' for a screwdriver to reach the screws from above."
+ ],
+ "summary": "The part meets most dimensional requirements but fails the screw clearance requirement by using small cylindrical voids instead of vertical slots, and it has an incorrect number of fins."
+}

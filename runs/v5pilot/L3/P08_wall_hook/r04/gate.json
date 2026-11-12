@@ -1,0 +1,9 @@
+{
+ "mismatches": [
+  "R3: The screw holes are not at the specified (y, z) coordinates; the 'Right' view shows one hole near z=20, whereas requirements specify holes at z=0 and z=40.",
+  "R3: There is only one visible cylindrical void/hole in the render, but two are required.",
+  "R1: The measured facts report 2 solids (n_solids: 2), indicating the part is not a single valid solid as required."
+ ],
+ "systemic": [],
+ "summary": "The part fails to meet several key requirements, most notably having incorrectly placed and insufficient screw holes and consisting of multiple disconnected solids."
+}

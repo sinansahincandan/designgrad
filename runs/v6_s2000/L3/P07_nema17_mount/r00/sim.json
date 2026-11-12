@@ -1,0 +1,164 @@
+{
+ "ok": true,
+ "result": {
+  "R1": {
+   "status": "pass",
+   "value": 1,
+   "note": "1 solid(s) found",
+   "method": "count number of solids in CQ shape",
+   "criteria": [
+    {
+     "condition": "One single, valid solid",
+     "measured": 1,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R2": {
+   "status": "pass",
+   "value": 6861.999999999997,
+   "note": "Plate vol in [0,4]: 6862.00",
+   "method": "check volume in y=[0,4] slab (ymin=0.0, ymax=50.0)",
+   "criteria": [
+    {
+     "condition": "Face plate at least 4 mm thick (y = 0 to 4)",
+     "measured": 6861.999999999997,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R3": {
+   "status": "fail",
+   "value": [
+    0.0,
+    0.0
+   ],
+   "note": "Empty: 0.000, Walled: 0.000",
+   "method": "bore probe at (0, y, 30) with D=22.5",
+   "criteria": [
+    {
+     "condition": "Central bore diameter 22.5 mm through the face plate",
+     "measured": 0.0,
+     "ok": false
+    }
+   ],
+   "faithful": true
+  },
+  "R4": {
+   "status": "fail",
+   "value": 0,
+   "note": "Found 0/4 valid holes",
+   "method": "probed 4 cylinders of D=3.4 at coords [(15.5, 45.5), (15.5, 14.5), (-15.5, 45.5), (-15.5, 14.5)] (checking empty and walled)",
+   "criteria": [
+    {
+     "condition": "Four motor screw holes, diameter 3.4 mm",
+     "measured": 0,
+     "ok": false
+    }
+   ],
+   "faithful": true
+  },
+  "R5": {
+   "status": "pass",
+   "value": 0.0,
+   "note": "Interference vol: 0.0",
+   "method": "intersected shape with box [-21.5, 21.5]x[-48, 0]x[8.5, 51.5]",
+   "criteria": [
+    {
+     "condition": "Motor clearance: nothing in -21.5 <= x <= 21.5, -48 <= y <= 0, 8.5 <= z <= 51.5",
+     "measured": 0.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R6": {
+   "status": "fail",
+   "value": [
+    0.0,
+    0
+   ],
+   "note": "z_min=0.000, holes=0",
+   "method": "checked z_min and probed 2 cylinders of D=5.5 at (+-25, 25) (checking empty and walled)",
+   "criteria": [
+    {
+     "condition": "Base on the table (minimum z = 0)",
+     "measured": 0.0,
+     "ok": true
+    },
+    {
+     "condition": "Two vertical screw holes, diameter 5.5 mm",
+     "measured": 0,
+     "ok": false
+    }
+   ],
+   "faithful": true
+  },
+  "R7": {
+   "status": "pass",
+   "value": [
+    -35.0,
+    35.0,
+    55.0,
+    49.85
+   ],
+   "note": "x:[-35.0,35.0], z:55.0, m:49.9",
+   "method": "bbox check and mass = vol * 1.24/1000",
+   "criteria": [
+    {
+     "condition": "-35 <= x <= 35",
+     "measured": [
+      -35.0,
+      35.0
+     ],
+     "ok": true
+    },
+    {
+     "condition": "top <= 55 mm",
+     "measured": 55.0,
+     "ok": true
+    },
+    {
+     "condition": "mass <= 60 g",
+     "measured": 49.852960000000024,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  }
+ },
+ "stdout": "D=22.5\", \"criteria\": [{\"condition\": \"Central bore diameter 22.5 mm through the face plate\", \"measured\": 0.0, \"ok\": false}], \"note\": \"Empty: 0.000, Walled: 0.000\"}, \"R4\": {\"status\": \"fail\", \"value\": 0, \"method\": \"probed 4 cylinders of D=3.4 at coords [(15.5, 45.5), (15.5, 14.5), (-15.5, 45.5), (-15.5, 14.5)] (checking empty and walled)\", \"criteria\": [{\"condition\": \"Four motor screw holes, diameter 3.4 mm\", \"measured\": 0, \"ok\": false}], \"note\": \"Found 0/4 valid holes\"}, \"R5\": {\"status\": \"pass\", \"value\": 0.0, \"method\": \"intersected shape with box [-21.5, 21.5]x[-48, 0]x[8.5, 51.5]\", \"criteria\": [{\"condition\": \"Motor clearance: nothing in -21.5 <= x <= 21.5, -48 <= y <= 0, 8.5 <= z <= 51.5\", \"measured\": 0.0, \"ok\": true}], \"note\": \"Interference vol: 0.0\"}, \"R6\": {\"status\": \"fail\", \"value\": [0.0, 0], \"method\": \"checked z_min and probed 2 cylinders of D=5.5 at (+-25, 25) (checking empty and walled)\", \"criteria\": [{\"condition\": \"Base on the table (minimum z = 0)\", \"measured\": 0.0, \"ok\": true}, {\"condition\": \"Two vertical screw holes, diameter 5.5 mm\", \"measured\": 0, \"ok\": false}], \"note\": \"z_min=0.000, holes=0\"}, \"R7\": {\"status\": \"pass\", \"value\": [-35.0, 35.0, 55.0, 49.85], \"method\": \"bbox check and mass = vol * 1.24/1000\", \"criteria\": [{\"condition\": \"-35 <= x <= 35\", \"measured\": [-35.0, 35.0], \"ok\": true}, {\"condition\": \"top <= 55 mm\", \"measured\": 55.0, \"ok\": true}, {\"condition\": \"mass <= 60 g\", \"measured\": 49.852960000000024, \"ok\": true}], \"note\": \"x:[-35.0,35.0], z:55.0, m:49.9\"}}",
+ "stderr": "",
+ "agent": {
+  "sim_steps": 3,
+  "sim_exhausted": false,
+  "review": [
+   {
+    "round": 0,
+    "unfaithful": [
+     "R2",
+     "R4",
+     "R6"
+    ],
+    "control_pass": [
+     "R1",
+     "R4",
+     "R5",
+     "R6",
+     "R7"
+    ]
+   },
+   {
+    "round": 1,
+    "unfaithful": [],
+    "control_pass": [
+     "R1",
+     "R5",
+     "R7"
+    ]
+   }
+  ]
+ }
+}

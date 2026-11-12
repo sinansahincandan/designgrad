@@ -1,0 +1,11 @@
+{
+ "mismatches": [
+  "The Z-dimension of the part is incorrect; the bbox shows z from -12.5 to 16.5, whereas the specification requires the floor at z=0 and walls up to z~31.",
+  "The USB-C cutout (R6) is missing from the rendered model's side wall.",
+  "The screw bosses (R5) are not visible in the isometric or top views; they appear to be submerged or incorrectly placed relative to the floor/cavity requirements."
+ ],
+ "systemic": [
+  "The coordinate system for Z is fundamentally broken in the implementation; the part is centered around z=0 (from -12.5 to 16.5) instead of having the floor at z=0 and building upwards as required."
+ ],
+ "summary": "The rendered part fails almost all geometric requirements, specifically regarding the Z-axis positioning, the missing USB-C cutout, and the invisible screw bosses."
+}

@@ -1,0 +1,12 @@
+{
+ "mismatches": [
+  "The face plate is located at y < 0 (from -27.5 to 27.5 in the bbox, with the vertical wall on the left side of the front view), whereas the specification requires it to be at y = 0 to 4.",
+  "The base plate is not on the table (z=0); the part extends from z = -27.5 to z = 27.5, meaning it is partially submerged below the table plane.",
+  "The motor mounting holes and central bore are missing or incorrectly placed; the visible circular features in the top view appear to be the base screw holes, but they are not positioned as required for a NEMA 17 mount on the face plate.",
+  "The orientation of the L-shape is incorrect relative to the coordinate system defined in the specification."
+ ],
+ "systemic": [
+  "The part's geometry is oriented such that it cannot be mounted to a table at z=0 as intended, and the face plate position does not align with the motor mounting requirements."
+ ],
+ "summary": "The rendered part fails almost all spatial requirements, including incorrect orientation, wrong placement of the face plate relative to the y=0 plane, and improper z-axis positioning."
+}

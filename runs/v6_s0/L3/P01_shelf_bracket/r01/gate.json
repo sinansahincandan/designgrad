@@ -1,0 +1,9 @@
+{
+ "mismatches": [
+  "R2 Envelope violation: The Y-dimension (width) of the part is 80 mm (-60 to 20), which exceeds the requirement of -20 <= y <= 20 (max width 40 mm).",
+  "R7 Mass violation: The mass is 534.08 g, which significantly exceeds the limit of 90 g.",
+  "R3 Screw hole placement/access: While holes are present, the 'Measured facts' show cylindrical faces with radii of 2.75mm and 6.75mm, suggesting complex or incorrect boolean operations for the clearance channels intended to satisfy R3."
+ ],
+ "systemic": [],
+ "summary": "The part fails significantly on mass (over 5x the limit) and width (double the allowed envelope), likely due to a failure in implementing the tapered profile and correct Y-dimensions."
+}

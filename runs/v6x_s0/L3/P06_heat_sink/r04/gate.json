@@ -1,0 +1,8 @@
+{
+ "mismatches": [
+  "The screw clearance voids (R5) are not continuous cylinders from z=3 to the top; they appear as disconnected or incorrectly positioned cylindrical features within the fins, as evidenced by the 'cylindrical_faces' data showing centers at z=12.5 rather than a single axis through the whole height.",
+  "The mounting holes (R5) are 3.2mm diameter, but the clearance voids intended to allow screwdriver access are not correctly implemented as large cylindrical cutouts through the fins; instead, they seem to be small or misplaced features."
+ ],
+ "systemic": [],
+ "summary": "The part fails to provide continuous screw clearance voids for the mounting holes, which prevents a screwdriver from reaching the screws as required by R5."
+}

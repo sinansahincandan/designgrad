@@ -1,0 +1,8 @@
+{
+ "mismatches": [
+  "The mass of the part (76.13 g) exceeds the maximum requirement of 60 g specified in R7.",
+  "The motor screw holes are located at z = 13.74 and z = 45.5 according to the cylindrical faces data, whereas R4 specifies they should be at z = 30 +/- 15.5 (i.e., 14.5 and 45.5)."
+ ],
+ "systemic": [],
+ "summary": "The part fails the mass constraint and has a slight vertical misalignment in the motor screw hole positions."
+}

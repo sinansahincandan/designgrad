@@ -1,0 +1,13 @@
+{
+ "mismatches": [
+  "The screw holes are not centered at y=0; they appear to be offset towards the back/side (center of cylindrical faces shows y=1.75 instead of 0).",
+  "The screw hole axes are along Z, not along X as required by R3.",
+  "The part fails requirement R7: the measured mass is 119.34g, which exceeds the limit of 90g.",
+  "The design document specifies a tapered profile to reduce mass, but the render shows a constant thickness arm (no taper visible).",
+  "The screw holes are at z=35 and z=75 according to measured facts, whereas R3 requires them at z=20 and z=60."
+ ],
+ "systemic": [
+  "The screwdriver access requirement (R3) cannot be met because the screw holes are oriented along Z instead of X, making it impossible to drive a screw through the wall into the bracket."
+ ],
+ "summary": "The part fails multiple requirements including mass limits, hole orientation, hole placement, and the intended tapered geometry."
+}

@@ -1,0 +1,123 @@
+{
+ "k": 0,
+ "proxy": 2.0714285714285716,
+ "level": "L3",
+ "problem": "P10_sensor_tilt_mount",
+ "llm": {
+  "calls": 53,
+  "tokens_in": 291461,
+  "tokens_out": 64569,
+  "seconds": 1491.0
+ },
+ "rounds": 4,
+ "trace": [
+  {
+   "k": 0,
+   "accepted": true,
+   "score": 2.0714285714285716,
+   "proxy": 2.0714285714285716,
+   "critic_frac": 0.6428571428571429,
+   "gate": {
+    "mismatches": [
+     "The upright pillar is oriented vertically (parallel to Z-axis) instead of being tilted at 30 degrees as specified in R3 and the design document.",
+     "The mounting face normal is (0, 0, 1) or similar vertical orientation rather than (0, cos30, sin30).",
+     "The sensor screw holes are drilled vertically along the Z-axis instead of being perpendicular to a tilted mounting face."
+    ],
+    "systemic": [
+     "The design document specifies a tilted upright pillar for a 30-degree mount, but the resulting geometry is a vertical block which fails to provide the required tilt for the sensor."
+    ],
+    "summary": "The part is rendered as a standard vertical pillar with vertical holes, failing to implement the 30-degree tilt required by the design specifications."
+   },
+   "sim_issue": false,
+   "cad_steps": 3,
+   "cad_exhausted": false,
+   "sim_steps": 6,
+   "sim_exhausted": true,
+   "sim_updated": true,
+   "n_measured": 4,
+   "n_unmeasured": 3,
+   "review": [
+    {
+     "round": 0,
+     "unfaithful": [],
+     "control_pass": [
+      "R1",
+      "R7"
+     ]
+    }
+   ]
+  },
+  {
+   "k": 1,
+   "from": 0,
+   "accepted": false,
+   "score": 0.5,
+   "proxy": 0.5,
+   "critic_frac": 0.5,
+   "gate": null,
+   "sim_issue": false,
+   "cad_steps": 5,
+   "cad_exhausted": true,
+   "sim_steps": 0,
+   "sim_exhausted": false,
+   "sim_updated": false,
+   "n_measured": 0,
+   "n_unmeasured": 7,
+   "review": []
+  },
+  {
+   "k": 2,
+   "from": 0,
+   "accepted": false,
+   "score": 0.5,
+   "proxy": 0.5,
+   "critic_frac": 0.5,
+   "gate": null,
+   "sim_issue": false,
+   "cad_steps": 5,
+   "cad_exhausted": true,
+   "sim_steps": 0,
+   "sim_exhausted": false,
+   "sim_updated": false,
+   "n_measured": 0,
+   "n_unmeasured": 7,
+   "review": []
+  },
+  {
+   "k": 3,
+   "from": 0,
+   "accepted": false,
+   "score": 0.42857142857142855,
+   "proxy": 0.42857142857142855,
+   "critic_frac": 0.42857142857142855,
+   "gate": null,
+   "sim_issue": false,
+   "cad_steps": 5,
+   "cad_exhausted": true,
+   "sim_steps": 0,
+   "sim_exhausted": false,
+   "sim_updated": false,
+   "n_measured": 0,
+   "n_unmeasured": 7,
+   "review": []
+  },
+  {
+   "k": 4,
+   "from": 0,
+   "accepted": false,
+   "score": 0.5,
+   "proxy": 0.5,
+   "critic_frac": 0.5,
+   "gate": null,
+   "sim_issue": false,
+   "cad_steps": 5,
+   "cad_exhausted": true,
+   "sim_steps": 0,
+   "sim_exhausted": false,
+   "sim_updated": false,
+   "n_measured": 0,
+   "n_unmeasured": 7,
+   "review": []
+  }
+ ]
+}

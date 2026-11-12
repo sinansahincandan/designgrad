@@ -1,0 +1,11 @@
+{
+ "mismatches": [
+  "R3: The frame attachment holes at (6, +-6) are missing; only one hole is visible in the cylindrical faces data and render.",
+  "R4: The motor mount features (four 3.2mm holes and one 6mm shaft clearance hole) are completely missing from the rendered part.",
+  "R2/Design Document: The design document specifies a height of ~0.7mm at x=20 to satisfy R6, but the bounding box shows a total height of 8.0 mm, indicating the part is much thicker than intended for the stiffness constraint."
+ ],
+ "systemic": [
+  "The design document acknowledges a mathematical impossibility: satisfying both R5 (strength) and R6 (stiffness) within the allowed width envelope (|y| <= 16). The priority given to R6 results in a part that will fail catastrophically under load."
+ ],
+ "summary": "The rendered part is missing all required mounting and clearance holes and fails to implement the specific geometry intended to meet the contradictory stiffness/strength constraints."
+}

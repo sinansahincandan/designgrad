@@ -1,0 +1,62 @@
+{
+ "cad_steps": 5,
+ "cad_exhausted": true,
+ "cad_history": [
+  {
+   "step": 0,
+   "ok": false,
+   "feedback": "The code ran but produced 2 disconnected solids:\n  solid 1: volume 9153.3 mm3, bbox_min [-30.04, -32.54, -15.54], bbox_max [30.04, 11.04, 15.54]\n  solid 2: volume 7389.1 mm3, bbox_min [-7.02, -11.02, 18.62], bbox_max [7.02, 11.02, 50.0]\n  solid 2 is separated from solid 1 by 3.1 mm along Z (solid 1 spans z -15.54..15.54, solid 2 spans 18.62..50.0)\n`result` must be ONE connected solid. Compare these boxes: find which piece does not touch the main body, extend or move it so it overlaps the body by at least 1 mm, and union everything into one solid."
+  },
+  {
+   "step": 1,
+   "ok": false,
+   "feedback": "The code ran but produced 2 disconnected solids:\n  solid 1: volume 9153.3 mm3, bbox_min [-30.04, -32.54, -15.54], bbox_max [30.04, 11.04, 15.54]\n  solid 2: volume 1913.3 mm3, bbox_min [-7.02, -11.02, 18.62], bbox_max [7.02, 11.02, 30.0]\n  solid 2 is separated from solid 1 by 3.1 mm along Z (solid 1 spans z -15.54..15.54, solid 2 spans 18.62..30.0)\n`result` must be ONE connected solid. Compare these boxes: find which piece does not touch the main body, extend or move it so it overlaps the body by at least 1 mm, and union everything into one solid."
+  },
+  {
+   "step": 2,
+   "ok": false,
+   "feedback": "The code ran but produced 2 disconnected solids:\n  solid 1: volume 10520.7 mm3, bbox_min [-30.04, -32.54, -15.54], bbox_max [30.04, 11.04, 15.54]\n  solid 2: volume 3282.3 mm3, bbox_min [-7.02, -11.02, 18.62], bbox_max [7.02, 11.02, 35.0]\n  solid 2 is separated from solid 1 by 3.1 mm along Z (solid 1 spans z -15.54..15.54, solid 2 spans 18.62..35.0)\n`result` must be ONE connected solid. Compare these boxes: find which piece does not touch the main body, extend or move it so it overlaps the body by at least 1 mm, and union everything into one solid."
+  },
+  {
+   "step": 3,
+   "ok": false,
+   "feedback": "The code ran but produced 2 disconnected solids:\n  solid 1: volume 10520.7 mm3, bbox_min [-30.04, -32.54, -15.54], bbox_max [30.04, 11.04, 15.54]\n  solid 2: volume 3282.3 mm3, bbox_min [-7.02, -11.02, 18.62], bbox_max [7.02, 11.02, 35.0]\n  solid 2 is separated from solid 1 by 3.1 mm along Z (solid 1 spans z -15.54..15.54, solid 2 spans 18.62..35.0)\n`result` must be ONE connected solid. Compare these boxes: find which piece does not touch the main body, extend or move it so it overlaps the body by at least 1 mm, and union everything into one solid."
+  },
+  {
+   "step": 4,
+   "ok": false,
+   "feedback": "The code ran but produced 2 disconnected solids:\n  solid 1: volume 13964.7 mm3, bbox_min [-30.04, -32.55, -20.0], bbox_max [30.04, 11.04, 15.55]\n  solid 2: volume 4651.2 mm3, bbox_min [-7.02, -11.02, 18.62], bbox_max [7.02, 11.02, 40.0]\n  solid 2 is separated from solid 1 by 3.1 mm along Z (solid 1 spans z -20.0..15.55, solid 2 spans 18.62..40.0)\n`result` must be ONE connected solid. Compare these boxes: find which piece does not touch the main body, extend or move it so it overlaps the body by at least 1 mm, and union everything into one solid."
+  },
+  {
+   "step": 5,
+   "ok": false,
+   "feedback": "The code ran but produced 2 disconnected solids:\n  solid 1: volume 10520.7 mm3, bbox_min [-30.04, -32.54, -15.54], bbox_max [30.04, 11.04, 15.54]\n  solid 2: volume 4651.2 mm3, bbox_min [-7.02, -11.02, 18.62], bbox_max [7.02, 11.02, 40.0]\n  solid 2 is separated from solid 1 by 3.1 mm along Z (solid 1 spans z -15.54..15.54, solid 2 spans 18.62..40.0)\n`result` must be ONE connected solid. Compare these boxes: find which piece does not touch the main body, extend or move it so it overlaps the body by at least 1 mm, and union everything into one solid."
+  }
+ ],
+ "sim_steps": 2,
+ "sim_exhausted": false,
+ "review": [
+  {
+   "round": 0,
+   "unfaithful": [],
+   "control_pass": [
+    "R1",
+    "R3",
+    "R7"
+   ]
+  }
+ ],
+ "sim_updated": true,
+ "sim_history": [
+  {
+   "step": 1,
+   "ok": false,
+   "feedback": "These checks raised an error instead of measuring (status 'error'):\n- R4: points must be (n,3)\n    raised at line 107: if mesh.contains([x, y, z]):  ->  ValueError\n- R6: points must be (n,3)\n    raised at line 107: if mesh.contains([x, y, z]):  ->  ValueError\nEvery requirement must end with a real measurement (status pass or fail)."
+  },
+  {
+   "step": 2,
+   "ok": true,
+   "feedback": ""
+  }
+ ]
+}

@@ -1,0 +1,8 @@
+{
+ "mismatches": [
+  "The part's Z-dimension starts at -5 mm (bbox_min[2] = -5.0), whereas R2 requires 0 <= z <= 130 and the design document states the bottom face is exactly at z=0.",
+  "R3 requires screw holes to be centered at y=0, but the 'Right' view shows the part is offset along the Y-axis (bbox_min[1] = -15.0, bbox_max[1] = 15.0), and while the center of mass is at y=0, the geometry appears asymmetric or shifted relative to the coordinate system described."
+ ],
+ "systemic": [],
+ "summary": "The part fails to meet the Z-coordinate requirement by extending below z=0, and there is a discrepancy in the vertical positioning/alignment of the base."
+}

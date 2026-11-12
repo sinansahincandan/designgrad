@@ -1,0 +1,8 @@
+{
+ "mismatches": [
+  "The screw clearance voids (cylindrical cutouts) are not centered at (+-15, 0) as specified; the measured facts show they are offset to (\u00b113.49, \u00b12.5).",
+  "The mounting holes in the base do not appear to be vertical through-holes aligned with the clearance voids, or the clearance voids themselves are misaligned relative to the hole axes."
+ ],
+ "systemic": [],
+ "summary": "The part fails to correctly implement the specified screw clearance zones, as they are offset from the intended mounting hole centerlines."
+}

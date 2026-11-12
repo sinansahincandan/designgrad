@@ -1,0 +1,6 @@
+=== v4 pilot Wed Nov 11 10:43:22 CST 2026
+skip L0 P08_wall_hook
+done L1 P08_wall_hook rounds=4 best_k=1 proxy=1.86 calls=24 400s
+done L2 P08_wall_hook rounds=4 best_k=0 proxy=2.71 calls=33 736s
+done L3 P08_wall_hook rounds=4 best_k=4 proxy=2.79 calls=54 1451s
+=== ALL DONE Wed Nov 11 11:26:30 CST 2026

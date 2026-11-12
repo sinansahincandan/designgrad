@@ -1,0 +1,10 @@
+{
+ "mismatches": [
+  "The screw holes (R5) are not present as vertical subtractions through the flanges; instead, there appear to be small cylindrical features or artifacts in unexpected locations.",
+  "The part does not sit on z=0; the bounding box and views show significant material extending into negative Z values (down to -15.5 mm), whereas R2 requires it to sit on z=0.",
+  "The Y-extent of the part is 42.5 mm according to the bbox, which violates R2 (clamp width between 18 and 22 mm).",
+  "The pipe cutout axis/positioning appears incorrect; the 'Front' view shows a large circular void that does not align with the specified center x=0, z=12.5 relative to a base at z=0."
+ ],
+ "systemic": [],
+ "summary": "The rendered part fails almost all geometric requirements, including incorrect Y-dimension, incorrect Z-positioning (it extends below the mounting surface), and missing screw holes."
+}

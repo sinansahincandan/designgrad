@@ -1,0 +1,133 @@
+{
+ "ok": true,
+ "result": {
+  "R1": {
+   "status": "pass",
+   "value": 1,
+   "note": "",
+   "method": "Counted number of solids in CQ shape: 1",
+   "criteria": [
+    {
+     "condition": "One single, valid solid",
+     "measured": 1,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R2": {
+   "status": "pass",
+   "value": [
+    40.0,
+    40.0,
+    23.0
+   ],
+   "note": "",
+   "method": "BBox: x[-20.00,20.00], y[-20.00,20.00], z[0.00,23.00]",
+   "criteria": [
+    {
+     "condition": "Footprint 40x40 (+-0.5)",
+     "measured": [
+      40.0,
+      40.0
+     ],
+     "ok": true
+    },
+    {
+     "condition": "Centred on origin",
+     "measured": [
+      0.0,
+      0.0
+     ],
+     "ok": true
+    },
+    {
+     "condition": "Total height <= 25 mm",
+     "measured": 23.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R3": {
+   "status": "fail",
+   "value": false,
+   "note": "",
+   "method": "Grid-based probe check (5x5) of 0.5mm radius cylinders from z=0 to 3",
+   "criteria": [
+    {
+     "condition": "Solid base >= 3mm thick over whole footprint",
+     "measured": false,
+     "ok": false
+    }
+   ],
+   "faithful": true
+  },
+  "R4": {
+   "status": "pass",
+   "value": 8.889586410851459,
+   "note": "",
+   "method": "R = 1 / (h * A_m2 * eta) with h=10, eta=0.85, A=0.013234 m2",
+   "criteria": [
+    {
+     "condition": "Thermal resistance <= 9 K/W",
+     "measured": 8.889586410851459,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R5": {
+   "status": "fail",
+   "value": [
+    false,
+    true
+   ],
+   "note": "",
+   "method": "Verified hole existence via core-emptiness and base-presence check; screwdriver access via cylinder clearance (r=3.0, z>=3)",
+   "criteria": [
+    {
+     "condition": "Diameter 3.2 mm vertical through base",
+     "measured": false,
+     "ok": false
+    },
+    {
+     "condition": "No material within 3mm of axis above z=3",
+     "measured": true,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R6": {
+   "status": "pass",
+   "value": 30.366025688735803,
+   "note": "",
+   "method": "Mass = (Volume[11246.68 mm3] / 1000) * 2.70",
+   "criteria": [
+    {
+     "condition": "Mass <= 45 g",
+     "measured": 30.366025688735803,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  }
+ },
+ "stdout": "measured\": 1, \"ok\": true}], \"note\": \"\"}, \"R2\": {\"status\": \"pass\", \"value\": [40.0, 40.0, 23.0], \"method\": \"BBox: x[-20.00,20.00], y[-20.00,20.00], z[0.00,23.00]\", \"criteria\": [{\"condition\": \"Footprint 40x40 (+-0.5)\", \"measured\": [40.0, 40.0], \"ok\": true}, {\"condition\": \"Centred on origin\", \"measured\": [0.0, 0.0], \"ok\": true}, {\"condition\": \"Total height <= 25 mm\", \"measured\": 23.0, \"ok\": true}], \"note\": \"\"}, \"R3\": {\"status\": \"fail\", \"value\": false, \"method\": \"Grid-based probe check (5x5) of 0.5mm radius cylinders from z=0 to 3\", \"criteria\": [{\"condition\": \"Solid base >= 3mm thick over whole footprint\", \"measured\": false, \"ok\": false}], \"note\": \"\"}, \"R4\": {\"status\": \"pass\", \"value\": 8.889586410851459, \"method\": \"R = 1 / (h * A_m2 * eta) with h=10, eta=0.85, A=0.013234 m2\", \"criteria\": [{\"condition\": \"Thermal resistance <= 9 K/W\", \"measured\": 8.889586410851459, \"ok\": true}], \"note\": \"\"}, \"R5\": {\"status\": \"fail\", \"value\": [false, true], \"method\": \"Verified hole existence via core-emptiness and base-presence check; screwdriver access via cylinder clearance (r=3.0, z>=3)\", \"criteria\": [{\"condition\": \"Diameter 3.2 mm vertical through base\", \"measured\": false, \"ok\": false}, {\"condition\": \"No material within 3mm of axis above z=3\", \"measured\": true, \"ok\": true}], \"note\": \"\"}, \"R6\": {\"status\": \"pass\", \"value\": 30.366025688735803, \"method\": \"Mass = (Volume[11246.68 mm3] / 1000) * 2.70\", \"criteria\": [{\"condition\": \"Mass <= 45 g\", \"measured\": 30.366025688735803, \"ok\": true}], \"note\": \"\"}}",
+ "stderr": "",
+ "agent": {
+  "sim_steps": 0,
+  "sim_exhausted": false,
+  "review": [
+   {
+    "round": 0,
+    "unfaithful": [],
+    "control_pass": [
+     "R1",
+     "R6"
+    ]
+   }
+  ]
+ }
+}

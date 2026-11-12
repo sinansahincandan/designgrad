@@ -1,0 +1,154 @@
+{
+ "ok": true,
+ "result": {
+  "R1": {
+   "status": "fail",
+   "value": 2,
+   "note": "",
+   "method": "Counted number of solids in STEP file: 2",
+   "criteria": [
+    {
+     "condition": "One single, valid solid",
+     "measured": 2,
+     "ok": false
+    }
+   ],
+   "faithful": true
+  },
+  "R2": {
+   "status": "fail",
+   "value": [
+    54.0,
+    22.0,
+    -0.0
+   ],
+   "note": "",
+   "method": "BBox: X=54.00000000000007, Y=22.0000002, Zmin=-1.0000006039613254e-07",
+   "criteria": [
+    {
+     "condition": "Sits on z = 0",
+     "measured": -0.0,
+     "ok": true
+    },
+    {
+     "condition": "clamp width (Y extent) between 18 and 22 mm",
+     "measured": 22.0,
+     "ok": false
+    },
+    {
+     "condition": "total X extent <= 80 mm",
+     "measured": 54.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R3": {
+   "status": "pass",
+   "value": 0.0173,
+   "note": "",
+   "method": "Intersection volume ratio with cylinder R=12.6 at (0,y,12.5)",
+   "criteria": [
+    {
+     "condition": "Pipe volume must be free of material",
+     "measured": 0.0173,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R4": {
+   "status": "pass",
+   "value": 0.7963,
+   "note": "",
+   "method": "Sampling in radial band r=[12.7, 15.5], |x|<=7 using mesh.contains",
+   "criteria": [
+    {
+     "condition": "solid material in the band 12.7 to 15.5 mm from pipe axis",
+     "measured": 0.7963,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R5": {
+   "status": "fail",
+   "value": [
+    [
+     0.0,
+     0.03
+    ],
+    [
+     0.03,
+     0.03
+    ]
+   ],
+   "note": "",
+   "method": "Cylinder intersection check at (+-27, 0) for void and shell",
+   "criteria": [
+    {
+     "condition": "Two screw holes, diameter 6.6 mm, vertical, centred at (x, y) = (+-27, 0)",
+     "measured": "fail",
+     "ok": false
+    }
+   ],
+   "faithful": true
+  },
+  "R6": {
+   "status": "fail",
+   "value": 0.6,
+   "note": "",
+   "method": "Sampling in flange region: |x| in [18.5, 23], |y|<=4, z in [0, 3]",
+   "criteria": [
+    {
+     "condition": "Flanges at least 3 mm thick",
+     "measured": 0.6,
+     "ok": false
+    }
+   ],
+   "faithful": true
+  },
+  "R7": {
+   "status": "pass",
+   "value": 5.27,
+   "note": "",
+   "method": "Volume (4250.18 mm3) * Density (1.24 g/cm3)",
+   "criteria": [
+    {
+     "condition": "Mass <= 25 g",
+     "measured": 5.27,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  }
+ },
+ "stdout": "X=54.00000000000007, Y=22.0000002, Zmin=-1.0000006039613254e-07\", \"criteria\": [{\"condition\": \"Sits on z = 0\", \"measured\": -0.0, \"ok\": true}, {\"condition\": \"clamp width (Y extent) between 18 and 22 mm\", \"measured\": 22.0, \"ok\": false}, {\"condition\": \"total X extent <= 80 mm\", \"measured\": 54.0, \"ok\": true}], \"note\": \"\"}, \"R3\": {\"status\": \"pass\", \"value\": 0.0173, \"method\": \"Intersection volume ratio with cylinder R=12.6 at (0,y,12.5)\", \"criteria\": [{\"condition\": \"Pipe volume must be free of material\", \"measured\": 0.0173, \"ok\": true}], \"note\": \"\"}, \"R4\": {\"status\": \"pass\", \"value\": 0.7963, \"method\": \"Sampling in radial band r=[12.7, 15.5], |x|<=7 using mesh.contains\", \"criteria\": [{\"condition\": \"solid material in the band 12.7 to 15.5 mm from pipe axis\", \"measured\": 0.7963, \"ok\": true}], \"note\": \"\"}, \"R5\": {\"status\": \"fail\", \"value\": [[0.0, 0.03], [0.03, 0.03]], \"method\": \"Cylinder intersection check at (+-27, 0) for void and shell\", \"criteria\": [{\"condition\": \"Two screw holes, diameter 6.6 mm, vertical, centred at (x, y) = (+-27, 0)\", \"measured\": \"fail\", \"ok\": false}], \"note\": \"\"}, \"R6\": {\"status\": \"fail\", \"value\": 0.6, \"method\": \"Sampling in flange region: |x| in [18.5, 23], |y|<=4, z in [0, 3]\", \"criteria\": [{\"condition\": \"Flanges at least 3 mm thick\", \"measured\": 0.6, \"ok\": false}], \"note\": \"\"}, \"R7\": {\"status\": \"pass\", \"value\": 5.27, \"method\": \"Volume (4250.18 mm3) * Density (1.24 g/cm3)\", \"criteria\": [{\"condition\": \"Mass <= 25 g\", \"measured\": 5.27, \"ok\": true}], \"note\": \"\"}}",
+ "stderr": "",
+ "agent": {
+  "sim_steps": 1,
+  "sim_exhausted": false,
+  "review": [
+   {
+    "round": 0,
+    "unfaithful": [
+     "R3"
+    ],
+    "control_pass": [
+     "R1",
+     "R3",
+     "R7"
+    ]
+   },
+   {
+    "round": 1,
+    "unfaithful": [],
+    "control_pass": [
+     "R1",
+     "R3",
+     "R7"
+    ]
+   }
+  ]
+ }
+}

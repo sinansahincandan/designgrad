@@ -1,0 +1,1 @@
+[{"type": "ValueError", "msg": "No material found at plane x=20.0. Check part geometry.", "line": 133, "src": "raise ValueError(f\"No material found at plane x={x_target}. Check part geometry.\")"}]

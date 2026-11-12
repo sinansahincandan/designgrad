@@ -1,0 +1,10 @@
+{
+ "mismatches": [
+  "R6: The USB-C cutout (the rectangular opening on the side) is not visible in any of the provided views, suggesting it was either not modeled or failed to subtract from the wall.",
+  "R5: While the bosses are intended to be at (+-35, +-20), the 'Top' view shows a large solid area where the board should be (the cavity is missing or filled), and the 'Front' view shows a solid block rather than an enclosure with walls."
+ ],
+ "systemic": [
+  "The design document specifies a board cavity (R3) to be subtracted, but the rendered part appears as a nearly solid block in the orthographic views, which would prevent any PCB from being housed."
+ ],
+ "summary": "The rendered part fails to show the required board cavity and the USB-C cutout, appearing instead as a mostly solid rectangular block."
+}

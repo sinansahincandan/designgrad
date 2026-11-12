@@ -1,0 +1,196 @@
+{
+ "ok": true,
+ "result": {
+  "R1": {
+   "status": "pass",
+   "value": 1,
+   "note": "",
+   "method": "Counted number of solids in CQ shape: 1",
+   "criteria": [
+    {
+     "condition": "One single, valid solid",
+     "measured": 1,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R2": {
+   "status": "fail",
+   "value": 0.0,
+   "note": "",
+   "method": "Ring walled ratio: 0.0, Boundary check (y=4): False",
+   "criteria": [
+    {
+     "condition": "Face plate >= 4mm thick with solid material around bore",
+     "measured": false,
+     "ok": false
+    }
+   ],
+   "faithful": false,
+   "why": "The probe for thickness (is_at_boundary) uses a box at z=25 instead of checking the y-thickness/plane; furthermore, R3 fails with hit_vol=0 despite the geometry having cylindrical faces that suggest features exist, indicating the probes are misaligned with the part's actual position."
+  },
+  "R3": {
+   "status": "fail",
+   "value": 0.0,
+   "note": "",
+   "method": "Bore emptiness ratio: 0.0, Hit volume: 0.0",
+   "criteria": [
+    {
+     "condition": "Central bore diameter 22.5 mm through the face plate",
+     "measured": false,
+     "ok": false
+    }
+   ],
+   "faithful": false,
+   "why": "The probe (0, -1, 30) with length 10.0 covers y from -1 to 9. However, the reported hit_vol=0 and empty_ratio=0.0 for a part that clearly has volume in that region suggests the probe is not intersecting the actual geometry, likely due to coordinate misalignment or incorrect cylinder orientation/plac"
+  },
+  "R4": {
+   "status": "fail",
+   "value": [
+    0,
+    1,
+    0,
+    1
+   ],
+   "note": "",
+   "method": "Checked 4 cylinders of D=3.4 at specified (x,z). Verified emptiness and intersection.",
+   "criteria": [
+    {
+     "condition": "Four motor screw holes diameter 3.4 mm",
+     "measured": false,
+     "ok": false
+    }
+   ],
+   "faithful": false,
+   "why": "The check reports [0, 1, 0, 1], meaning it found two holes but missed two others. However, the cylindrical faces in the geometry (r=2.75) suggest screw holes exist, and the probe's failure to find them (hit_vol/empty_ratio logic) suggests the probes are not correctly placed or sized relative to the "
+  },
+  "R5": {
+   "status": "pass",
+   "value": 0.0,
+   "note": "",
+   "method": "Volume of part intersecting clearance box: 0.0 mm3",
+   "criteria": [
+    {
+     "condition": "Motor clearance region is empty",
+     "measured": 0.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R6": {
+   "status": "fail",
+   "value": {
+    "z_min": -27.5,
+    "holes": [
+     1,
+     1
+    ]
+   },
+   "note": "",
+   "method": "Min Z: -27.5, Hole existence check at (+-25, 25)",
+   "criteria": [
+    {
+     "condition": "Base on the table (minimum z = 0)",
+     "measured": -27.5,
+     "ok": false
+    },
+    {
+     "condition": "two vertical screw holes diameter 5.5 mm",
+     "measured": true,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R7": {
+   "status": "pass",
+   "value": [
+    -35.0,
+    35.0,
+    27.5,
+    34.71
+   ],
+   "note": "",
+   "method": "BBox: x[-35.0,35.0], z_max:27.5, Mass:34.71307714890962g",
+   "criteria": [
+    {
+     "condition": "-35 <= x <= 35",
+     "measured": -35.0,
+     "ok": true
+    },
+    {
+     "condition": "top <= 55 mm",
+     "measured": 27.5,
+     "ok": true
+    },
+    {
+     "condition": "mass <= 60 g",
+     "measured": 34.71307714890962,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  }
+ },
+ "stdout": "dition\": \"Face plate >= 4mm thick with solid material around bore\", \"measured\": false, \"ok\": false}], \"note\": \"\"}, \"R3\": {\"status\": \"fail\", \"value\": 0.0, \"method\": \"Bore emptiness ratio: 0.0, Hit volume: 0.0\", \"criteria\": [{\"condition\": \"Central bore diameter 22.5 mm through the face plate\", \"measured\": false, \"ok\": false}], \"note\": \"\"}, \"R4\": {\"status\": \"fail\", \"value\": [0, 1, 0, 1], \"method\": \"Checked 4 cylinders of D=3.4 at specified (x,z). Verified emptiness and intersection.\", \"criteria\": [{\"condition\": \"Four motor screw holes diameter 3.4 mm\", \"measured\": false, \"ok\": false}], \"note\": \"\"}, \"R5\": {\"status\": \"pass\", \"value\": 0.0, \"method\": \"Volume of part intersecting clearance box: 0.0 mm3\", \"criteria\": [{\"condition\": \"Motor clearance region is empty\", \"measured\": 0.0, \"ok\": true}], \"note\": \"\"}, \"R6\": {\"status\": \"fail\", \"value\": {\"z_min\": -27.5, \"holes\": [1, 1]}, \"method\": \"Min Z: -27.5, Hole existence check at (+-25, 25)\", \"criteria\": [{\"condition\": \"Base on the table (minimum z = 0)\", \"measured\": -27.5, \"ok\": false}, {\"condition\": \"two vertical screw holes diameter 5.5 mm\", \"measured\": true, \"ok\": true}], \"note\": \"\"}, \"R7\": {\"status\": \"pass\", \"value\": [-35.0, 35.0, 27.5, 34.71], \"method\": \"BBox: x[-35.0,35.0], z_max:27.5, Mass:34.71307714890962g\", \"criteria\": [{\"condition\": \"-35 <= x <= 35\", \"measured\": -35.0, \"ok\": true}, {\"condition\": \"top <= 55 mm\", \"measured\": 27.5, \"ok\": true}, {\"condition\": \"mass <= 60 g\", \"measured\": 34.71307714890962, \"ok\": true}], \"note\": \"\"}}",
+ "stderr": "",
+ "agent": {
+  "sim_steps": 3,
+  "sim_exhausted": false,
+  "review": [
+   {
+    "round": 0,
+    "unfaithful": [
+     "R2",
+     "R3"
+    ],
+    "control_pass": [
+     "R1",
+     "R5",
+     "R7"
+    ]
+   },
+   {
+    "round": 1,
+    "unfaithful": [
+     "R2",
+     "R3",
+     "R4"
+    ],
+    "control_pass": [
+     "R1",
+     "R5",
+     "R7"
+    ]
+   },
+   {
+    "round": 2,
+    "unfaithful": [
+     "R2",
+     "R3",
+     "R4"
+    ],
+    "control_pass": [
+     "R1",
+     "R5",
+     "R7"
+    ]
+   },
+   {
+    "round": 3,
+    "unfaithful": [
+     "R2",
+     "R3",
+     "R4"
+    ],
+    "control_pass": [
+     "R1",
+     "R5",
+     "R7"
+    ]
+   }
+  ]
+ }
+}

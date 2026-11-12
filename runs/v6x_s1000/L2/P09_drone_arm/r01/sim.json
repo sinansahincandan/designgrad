@@ -1,0 +1,163 @@
+{
+ "ok": true,
+ "result": {
+  "R1": {
+   "status": "pass",
+   "value": 1.0,
+   "note": "Found 1 solid(s)",
+   "method": "Counted number of solids in the STEP file",
+   "criteria": [
+    {
+     "condition": "One single, valid solid",
+     "measured": 1.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R2": {
+   "status": "fail",
+   "value": [
+    0.0,
+    130.0,
+    -7.347880794884e-16,
+    24.0,
+    0.0,
+    6.0
+   ],
+   "note": "",
+   "method": "Measured bounding box: x[0.00,130.00], y[-0.00,24.00], z[0.00,6.00]",
+   "criteria": [
+    {
+     "condition": "minimum x = 0",
+     "measured": 0.0,
+     "ok": true
+    },
+    {
+     "condition": "maximum x <= 136",
+     "measured": 130.0,
+     "ok": true
+    },
+    {
+     "condition": "|y| <= 16",
+     "measured": [
+      -7.347880794884e-16,
+      24.0
+     ],
+     "ok": false
+    },
+    {
+     "condition": "minimum z = 0",
+     "measured": 0.0,
+     "ok": true
+    },
+    {
+     "condition": "height <= 20 mm",
+     "measured": 6.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R3": {
+   "status": "fail",
+   "value": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "note": "",
+   "method": "Robustly probed two vertical holes at (6, +-6) with D=3.2mm",
+   "criteria": [
+    {
+     "condition": "two vertical holes, diameter 3.2 mm, at (x, y) = (6, +-6)",
+     "measured": 0.0,
+     "ok": false
+    }
+   ],
+   "faithful": true
+  },
+  "R4": {
+   "status": "fail",
+   "value": {
+    "motor_holes_ok": false,
+    "shaft_hole_ok": false
+   },
+   "note": "",
+   "method": "Robustly probed four 3.2mm holes and one 6mm shaft hole",
+   "criteria": [
+    {
+     "condition": "four vertical holes, diameter 3.2 mm, at (x, y) = (120 +- 8, +-9.5)",
+     "measured": 0.0,
+     "ok": false
+    },
+    {
+     "condition": "6 mm vertical clearance hole for the shaft at (120, 0)",
+     "measured": 0.0,
+     "ok": false
+    }
+   ],
+   "faithful": true
+  },
+  "R5": {
+   "status": "fail",
+   "value": null,
+   "note": "No material found at or near section x=20",
+   "method": "N/A",
+   "criteria": [],
+   "faithful": true
+  },
+  "R6": {
+   "status": "fail",
+   "value": null,
+   "note": "No material found at or near section x=20",
+   "method": "N/A",
+   "criteria": [],
+   "faithful": true
+  },
+  "R7": {
+   "status": "pass",
+   "value": 6.934654515834608,
+   "note": "",
+   "method": "mass = volume(5592.5) * density(1.24) / 1000",
+   "criteria": [
+    {
+     "condition": "Mass <= 20 g",
+     "measured": 6.934654515834608,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  }
+ },
+ "stdout": "bounding box: x[0.00,130.00], y[-0.00,24.00], z[0.00,6.00]\", \"criteria\": [{\"condition\": \"minimum x = 0\", \"measured\": 0.0, \"ok\": true}, {\"condition\": \"maximum x <= 136\", \"measured\": 130.0, \"ok\": true}, {\"condition\": \"|y| <= 16\", \"measured\": [-7.347880794884e-16, 24.0], \"ok\": false}, {\"condition\": \"minimum z = 0\", \"measured\": 0.0, \"ok\": true}, {\"condition\": \"height <= 20 mm\", \"measured\": 6.0, \"ok\": true}]}, \"R3\": {\"status\": \"fail\", \"value\": [0.0, 0.0, 0.0, 0.0], \"method\": \"Robustly probed two vertical holes at (6, +-6) with D=3.2mm\", \"criteria\": [{\"condition\": \"two vertical holes, diameter 3.2 mm, at (x, y) = (6, +-6)\", \"measured\": 0.0, \"ok\": false}]}, \"R4\": {\"status\": \"fail\", \"value\": {\"motor_holes_ok\": false, \"shaft_hole_ok\": false}, \"method\": \"Robustly probed four 3.2mm holes and one 6mm shaft hole\", \"criteria\": [{\"condition\": \"four vertical holes, diameter 3.2 mm, at (x, y) = (120 +- 8, +-9.5)\", \"measured\": 0.0, \"ok\": false}, {\"condition\": \"6 mm vertical clearance hole for the shaft at (120, 0)\", \"measured\": 0.0, \"ok\": false}]}, \"R5\": {\"status\": \"fail\", \"value\": null, \"method\": \"N/A\", \"criteria\": [], \"note\": \"No material found at or near section x=20\"}, \"R6\": {\"status\": \"fail\", \"value\": null, \"method\": \"N/A\", \"criteria\": [], \"note\": \"No material found at or near section x=20\"}, \"R7\": {\"status\": \"pass\", \"value\": 6.934654515834608, \"method\": \"mass = volume(5592.5) * density(1.24) / 1000\", \"criteria\": [{\"condition\": \"Mass <= 20 g\", \"measured\": 6.934654515834608, \"ok\": true}]}}",
+ "stderr": "",
+ "agent": {
+  "sim_steps": 2,
+  "sim_exhausted": false,
+  "review": [
+   {
+    "round": 0,
+    "unfaithful": [
+     "R3",
+     "R4"
+    ],
+    "control_pass": [
+     "R1",
+     "R2",
+     "R7"
+    ]
+   },
+   {
+    "round": 1,
+    "unfaithful": [],
+    "control_pass": [
+     "R1",
+     "R2",
+     "R7"
+    ]
+   }
+  ]
+ }
+}

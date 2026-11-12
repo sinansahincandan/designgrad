@@ -1,0 +1,47 @@
+{
+ "cad_steps": 0,
+ "cad_exhausted": false,
+ "cad_history": [
+  {
+   "step": 0,
+   "ok": true,
+   "feedback": ""
+  }
+ ],
+ "sim_steps": 3,
+ "sim_exhausted": false,
+ "review": [
+  {
+   "round": 0,
+   "unfaithful": [
+    "R4"
+   ]
+  },
+  {
+   "round": 1,
+   "unfaithful": [
+    "R5",
+    "R6"
+   ]
+  },
+  {
+   "round": 2,
+   "unfaithful": [
+    "R5",
+    "R6"
+   ]
+  },
+  {
+   "round": 3,
+   "unfaithful": []
+  }
+ ],
+ "sim_updated": true,
+ "sim_history": [
+  {
+   "step": 0,
+   "ok": true,
+   "feedback": ""
+  }
+ ]
+}

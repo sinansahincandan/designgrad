@@ -1,0 +1,175 @@
+{
+ "ok": true,
+ "result": {
+  "R1": {
+   "status": "pass",
+   "value": 1.0,
+   "note": "",
+   "method": "Counted number of solids in STEP file",
+   "criteria": [
+    {
+     "condition": "One single, valid solid",
+     "measured": 1.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R2": {
+   "status": "pass",
+   "value": 0.9801196089890013,
+   "note": "",
+   "method": "Intersected part with box [0,2]x[-8,8]x[-5,45], vol ratio=0.980",
+   "criteria": [
+    {
+     "condition": "solid material at 0 <= x <= 2 over |y| <= 8, -5 <= z <= 45",
+     "measured": 0.9801196089890013,
+     "ok": true
+    },
+    {
+     "condition": "minimum x = 0",
+     "measured": 0.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R3": {
+   "status": "fail",
+   "value": [
+    0.0,
+    1.0
+   ],
+   "note": "",
+   "method": "Hole existence: False, Thickness around hole >= 4mm: True",
+   "criteria": [
+    {
+     "condition": "Two screw holes, diameter 4.5 mm",
+     "measured": 0.0,
+     "ok": false
+    },
+    {
+     "condition": "plate at least 4 mm thick around them",
+     "measured": 1.0,
+     "ok": true
+    }
+   ],
+   "faithful": false,
+   "why": "The hole existence check uses a cylinder of length 10.0 starting at x=-2.0 (covering x from -2 to 8), which is inconsistent with checking holes 'through the back plate' (x=0 to 2). Furthermore, the thickness check logic is incomplete and relies on arbitrary probe points rather than verifying the spe"
+  },
+  "R4": {
+   "status": "fail",
+   "value": [
+    0.0,
+    0.0
+   ],
+   "note": "",
+   "method": "Bed top at z=-14: False, Pocket vol: 0.00 mm3",
+   "criteria": [
+    {
+     "condition": "solid bed whose top is at z = -14 under 34 <= x <= 46, |y| <= 4",
+     "measured": 0.0,
+     "ok": false
+    },
+    {
+     "condition": "space (35<=x<=45, |y|<=6, -13<=z<=-6) must be empty",
+     "measured": 0.0,
+     "ok": true
+    }
+   ],
+   "faithful": false,
+   "why": "The bed top check uses a box with thickness 0.2 at z=-14 (covering -14.1 to -13.9), but the requirement specifies the 'top is at z = -14'. The pocket check uses a volume threshold of 0.5 mm\u00b3 which is a mere presence test; it doesn't strictly verify the specific bounds [35,45]x[-6,6]x[-13,-6] as requ"
+  },
+  "R5": {
+   "status": "pass",
+   "value": 1.0,
+   "note": "",
+   "method": "Lip fill ratio: 1.00",
+   "criteria": [
+    {
+     "condition": "solid material at 47 <= x <= 52, |y| <= 4, -13 <= z <= -8",
+     "measured": 1.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R6": {
+   "status": "pass",
+   "value": [
+    3.4986758331973418,
+    0.04944988341192642
+   ],
+   "note": "",
+   "method": "M=1600.0Nmm, x=8 section: I=3155.5, c=6.90, sigma=3.50MPa, defl=0.05mm",
+   "criteria": [
+    {
+     "condition": "bending stress <= 25 MPa",
+     "measured": 3.4986758331973418,
+     "ok": true
+    },
+    {
+     "condition": "tip deflection estimate ... <= 1.5 mm",
+     "measured": 0.04944988341192642,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R7": {
+   "status": "pass",
+   "value": [
+    12.430062663285682,
+    52.0
+   ],
+   "note": "",
+   "method": "Mass=12.43g (vol=10024.2), X-ext=52.0mm",
+   "criteria": [
+    {
+     "condition": "Mass <= 25 g",
+     "measured": 12.430062663285682,
+     "ok": true
+    },
+    {
+     "condition": "X extent <= 55 mm",
+     "measured": 52.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  }
+ },
+ "stdout": " \"fail\", \"value\": [0.0, 1.0], \"method\": \"Hole existence: False, Thickness around hole >= 4mm: True\", \"criteria\": [{\"condition\": \"Two screw holes, diameter 4.5 mm\", \"measured\": 0.0, \"ok\": false}, {\"condition\": \"plate at least 4 mm thick around them\", \"measured\": 1.0, \"ok\": true}], \"note\": \"\"}, \"R4\": {\"status\": \"fail\", \"value\": [0.0, 0.0], \"method\": \"Bed top at z=-14: False, Pocket vol: 0.00 mm3\", \"criteria\": [{\"condition\": \"solid bed whose top is at z = -14 under 34 <= x <= 46, |y| <= 4\", \"measured\": 0.0, \"ok\": false}, {\"condition\": \"space (35<=x<=45, |y|<=6, -13<=z<=-6) must be empty\", \"measured\": 0.0, \"ok\": true}], \"note\": \"\"}, \"R5\": {\"status\": \"pass\", \"value\": 1.0, \"method\": \"Lip fill ratio: 1.00\", \"criteria\": [{\"condition\": \"solid material at 47 <= x <= 52, |y| <= 4, -13 <= z <= -8\", \"measured\": 1.0, \"ok\": true}], \"note\": \"\"}, \"R6\": {\"status\": \"pass\", \"value\": [3.4986758331973418, 0.04944988341192642], \"method\": \"M=1600.0Nmm, x=8 section: I=3155.5, c=6.90, sigma=3.50MPa, defl=0.05mm\", \"criteria\": [{\"condition\": \"bending stress <= 25 MPa\", \"measured\": 3.4986758331973418, \"ok\": true}, {\"condition\": \"tip deflection estimate ... <= 1.5 mm\", \"measured\": 0.04944988341192642, \"ok\": true}], \"note\": \"\"}, \"R7\": {\"status\": \"pass\", \"value\": [12.430062663285682, 52.0], \"method\": \"Mass=12.43g (vol=10024.2), X-ext=52.0mm\", \"criteria\": [{\"condition\": \"Mass <= 25 g\", \"measured\": 12.430062663285682, \"ok\": true}, {\"condition\": \"X extent <= 55 mm\", \"measured\": 52.0, \"ok\": true}], \"note\": \"\"}}",
+ "stderr": "",
+ "agent": {
+  "sim_steps": 3,
+  "sim_exhausted": false,
+  "review": [
+   {
+    "round": 0,
+    "unfaithful": [
+     "R3"
+    ]
+   },
+   {
+    "round": 1,
+    "unfaithful": [
+     "R4"
+    ]
+   },
+   {
+    "round": 2,
+    "unfaithful": [
+     "R3"
+    ]
+   },
+   {
+    "round": 3,
+    "unfaithful": [
+     "R3",
+     "R4"
+    ]
+   }
+  ]
+ }
+}

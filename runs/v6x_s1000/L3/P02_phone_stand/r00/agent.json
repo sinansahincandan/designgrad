@@ -1,0 +1,47 @@
+{
+ "cad_steps": 0,
+ "cad_exhausted": false,
+ "cad_history": [
+  {
+   "step": 0,
+   "ok": true,
+   "feedback": ""
+  }
+ ],
+ "sim_steps": 6,
+ "sim_exhausted": true,
+ "review": [],
+ "sim_updated": true,
+ "sim_history": [
+  {
+   "step": 1,
+   "ok": false,
+   "feedback": "The script failed to run:\n    chunks = self.iterencode(o, _one_shot=True)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Caskroom/miniconda/base/lib/python3.12/json/encoder.py\", line 258, in iterencode\n    return _iterencode(o, 0)\n           ^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Caskroom/miniconda/base/lib/python3.12/json/encoder.py\", line 180, in default\n    raise TypeError(f'Object of type {o.__class__.__name__} '\nTypeError: Object of type int64 is not JSON serializable"
+  },
+  {
+   "step": 2,
+   "ok": false,
+   "feedback": "The script failed to run:\n    print(json.dumps(clean(results)))\n                     ^^^^^^^^^^^^^^\n  File \"/Users/sinancandan/HackathonGemma/runs/v6x_s1000/L3/P02_phone_stand/r00/simrun/sim.py\", line 27, in clean\n    if isinstance(obj, (np.float64, np.float32, np.float_, float)):\n                                                ^^^^^^^^^\n  File \"/Users/sinancandan/HackathonGemma/.venv/lib/python3.12/site-packages/numpy/__init__.py\", line 763, in __getattr__\n    raise AttributeError(\nAttributeError: `np.float_` was removed in the NumPy 2.0 release. Use `np.float64` instead."
+  },
+  {
+   "step": 3,
+   "ok": false,
+   "feedback": "These checks raised an error instead of measuring (status 'error'):\n- R4: points must be (n,3)\n    raised at line 113: if mesh.contains(p):  ->  ValueError\n- R5: points must be (n,3)\n    raised at line 113: if mesh.contains(p):  ->  ValueError\n- R6: too many indices for array: array is 0-dimensional, but 1 were indexed\n    raised at line 155: combined_com_x = (stand_mass * stand_com[0] + PHONE_MASS * PHONE_COM[0]) / total_mass  ->  IndexError\nEvery requirement must end with a real measurement (status pass or fail)."
+  },
+  {
+   "step": 4,
+   "ok": false,
+   "feedback": "These checks raised an error instead of measuring (status 'error'):\n- R6: 'Vector' object is not subscriptable\n    raised at line 142: stand_com = np.array([float(stand_com_raw[0]), float(stand_com_raw[1]), float(stand_com_raw[2])])  ->  TypeError\nEvery requirement must end with a real measurement (status pass or fail)."
+  },
+  {
+   "step": 5,
+   "ok": false,
+   "feedback": "The script failed to run:\n    chunks = self.iterencode(o, _one_shot=True)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Caskroom/miniconda/base/lib/python3.12/json/encoder.py\", line 258, in iterencode\n    return _iterencode(o, 0)\n           ^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Caskroom/miniconda/base/lib/python3.12/json/encoder.py\", line 180, in default\n    raise TypeError(f'Object of type {o.__class__.__name__} '\nTypeError: Object of type bool is not JSON serializable"
+  },
+  {
+   "step": 6,
+   "ok": false,
+   "feedback": "The script failed to run:\n    chunks = self.iterencode(o, _one_shot=True)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Caskroom/miniconda/base/lib/python3.12/json/encoder.py\", line 258, in iterencode\n    return _iterencode(o, 0)\n           ^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Caskroom/miniconda/base/lib/python3.12/json/encoder.py\", line 180, in default\n    raise TypeError(f'Object of type {o.__class__.__name__} '\nTypeError: Object of type bool is not JSON serializable"
+  }
+ ]
+}

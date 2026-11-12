@@ -1,0 +1,13 @@
+{
+ "mismatches": [
+  "The part consists of two disconnected solids (n_solids: 2), violating R1.",
+  "The wall spine and the trussed arm are not joined, meaning it cannot function as a single bracket.",
+  "The screw holes are located at the tip of the arm (x=140) instead of on the wall spine (x near 0) as required by R3.",
+  "The vertical support pillar for the shelf is missing from the trussed section (R4).",
+  "The bounding box shows negative Z values (min z = -55), violating R2 (0 <= z <= 130)."
+ ],
+ "systemic": [
+  "The load path is broken because the spine and the arm are disconnected solids; a load at x=150 cannot be transferred to the wall."
+ ],
+ "summary": "The rendered part fails significantly as it consists of two disconnected pieces, with screw holes placed at the tip instead of the wall and no connection between the spine and the arm."
+}

@@ -1,0 +1,168 @@
+{
+ "ok": true,
+ "result": {
+  "R1": {
+   "status": "pass",
+   "value": 1,
+   "note": "",
+   "method": "Counted number of solids in CQ shape: 1",
+   "criteria": [
+    {
+     "condition": "One single, valid solid",
+     "measured": 1,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R2": {
+   "status": "pass",
+   "value": 1.0,
+   "note": "",
+   "method": "Intersection volume of floor region (80x50x2 at z=0) with part: 8000.0 mm3 / 8000 mm3",
+   "criteria": [
+    {
+     "condition": "solid floor at least 2 mm thick under the whole board area",
+     "measured": 1.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R3": {
+   "status": "pass",
+   "value": 0.0,
+   "note": "",
+   "method": "Intersection volume of board cavity (80x50x24 at z=8) with part: 0.0 mm3",
+   "criteria": [
+    {
+     "condition": "region -40 <= x <= 40, -25 <= y <= 25, 8 <= z <= 32 must be completely free of material",
+     "measured": 0.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R4": {
+   "status": "pass",
+   "value": [
+    85.0,
+    55.0,
+    32.0
+   ],
+   "note": "",
+   "method": "Measured Bounding Box: dx=85.0, dy=55.0, zmax=32.0",
+   "criteria": [
+    {
+     "condition": "outer size 85 x 55 mm (+-1.5 mm) in X and Y",
+     "measured": [
+      85.0,
+      55.0
+     ],
+     "ok": true
+    },
+    {
+     "condition": "wall top at z between 30 and 32.5",
+     "measured": 32.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R5": {
+   "status": "fail",
+   "value": [
+    {
+     "coord": [
+      35,
+      20
+     ],
+     "od_fill": 1.0,
+     "hole_empty": 0.0
+    },
+    {
+     "coord": [
+      -35,
+      20
+     ],
+     "od_fill": 1.0,
+     "hole_empty": 0.0
+    },
+    {
+     "coord": [
+      35,
+      -20
+     ],
+     "od_fill": 1.0,
+     "hole_empty": 0.0
+    },
+    {
+     "coord": [
+      -35,
+      -20
+     ],
+     "od_fill": 1.0,
+     "hole_empty": 0.0
+    }
+   ],
+   "note": "",
+   "method": "Probed bosses: checked OD fill (r=3.0, z=0-8) and hole emptiness (r=1.1, depth 4mm at top)",
+   "criteria": [
+    {
+     "condition": "Four screw bosses... OD >= 6mm... 2.2mm pilot hole... depth >= 4mm",
+     "measured": "fail",
+     "ok": false
+    }
+   ],
+   "faithful": true
+  },
+  "R6": {
+   "status": "fail",
+   "value": {
+    "empty_vol": 33.75,
+    "wall_material_in_probe": 307.5
+   },
+   "note": "",
+   "method": "Verified cutout by checking emptiness of probe box (270.0mm3) and presence of wall material in X-range.",
+   "criteria": [
+    {
+     "condition": "USB-C cutout... opening at least 9 mm wide (Y) and 3 mm high (Z)",
+     "measured": "fail",
+     "ok": false
+    }
+   ],
+   "faithful": true
+  },
+  "R7": {
+   "status": "pass",
+   "value": 66.38,
+   "note": "",
+   "method": "Volume 53532.50 mm3 * density 1.24 g/cm3 / 1000",
+   "criteria": [
+    {
+     "condition": "Mass <= 70 g",
+     "measured": 66.38029999999999,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  }
+ },
+ "stdout": "5 <= y <= 25, 8 <= z <= 32 must be completely free of material\", \"measured\": 0.0, \"ok\": true}], \"note\": \"\"}, \"R4\": {\"status\": \"pass\", \"value\": [85.0, 55.0, 32.0], \"method\": \"Measured Bounding Box: dx=85.0, dy=55.0, zmax=32.0\", \"criteria\": [{\"condition\": \"outer size 85 x 55 mm (+-1.5 mm) in X and Y\", \"measured\": [85.0, 55.0], \"ok\": true}, {\"condition\": \"wall top at z between 30 and 32.5\", \"measured\": 32.0, \"ok\": true}], \"note\": \"\"}, \"R5\": {\"status\": \"fail\", \"value\": [{\"coord\": [35, 20], \"od_fill\": 1.0, \"hole_empty\": 0.0}, {\"coord\": [-35, 20], \"od_fill\": 1.0, \"hole_empty\": 0.0}, {\"coord\": [35, -20], \"od_fill\": 1.0, \"hole_empty\": 0.0}, {\"coord\": [-35, -20], \"od_fill\": 1.0, \"hole_empty\": 0.0}], \"method\": \"Probed bosses: checked OD fill (r=3.0, z=0-8) and hole emptiness (r=1.1, depth 4mm at top)\", \"criteria\": [{\"condition\": \"Four screw bosses... OD >= 6mm... 2.2mm pilot hole... depth >= 4mm\", \"measured\": \"fail\", \"ok\": false}], \"note\": \"\"}, \"R6\": {\"status\": \"fail\", \"value\": {\"empty_vol\": 33.75, \"wall_material_in_probe\": 307.5}, \"method\": \"Verified cutout by checking emptiness of probe box (270.0mm3) and presence of wall material in X-range.\", \"criteria\": [{\"condition\": \"USB-C cutout... opening at least 9 mm wide (Y) and 3 mm high (Z)\", \"measured\": \"fail\", \"ok\": false}], \"note\": \"\"}, \"R7\": {\"status\": \"pass\", \"value\": 66.38, \"method\": \"Volume 53532.50 mm3 * density 1.24 g/cm3 / 1000\", \"criteria\": [{\"condition\": \"Mass <= 70 g\", \"measured\": 66.38029999999999, \"ok\": true}], \"note\": \"\"}}",
+ "stderr": "",
+ "agent": {
+  "sim_steps": 0,
+  "sim_exhausted": false,
+  "review": [
+   {
+    "round": 0,
+    "unfaithful": [],
+    "control_pass": [
+     "R1",
+     "R3",
+     "R7"
+    ]
+   }
+  ]
+ }
+}

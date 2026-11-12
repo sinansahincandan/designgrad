@@ -1,0 +1,7 @@
+{
+ "mismatches": [
+  "R7 (Mass) violation: The measured mass is 21.91 g, which exceeds the maximum requirement of 20 g."
+ ],
+ "systemic": [],
+ "summary": "The part follows the design concept but fails the mass constraint specified in R7."
+}

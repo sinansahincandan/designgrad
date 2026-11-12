@@ -1,0 +1,32 @@
+{
+ "k": 0,
+ "proxy": 1.0,
+ "level": "L0",
+ "problem": "P01_shelf_bracket",
+ "llm": {
+  "calls": 5,
+  "tokens_in": 59668,
+  "tokens_out": 9919,
+  "seconds": 218.6
+ },
+ "rounds": 0,
+ "trace": [
+  {
+   "k": 0,
+   "accepted": true,
+   "score": 1.0,
+   "proxy": 1.0,
+   "critic_frac": 0.0,
+   "gate": null,
+   "sim_issue": false,
+   "cad_steps": 4,
+   "cad_exhausted": false,
+   "sim_steps": null,
+   "sim_exhausted": null,
+   "sim_updated": false,
+   "n_measured": null,
+   "n_unmeasured": null,
+   "review": null
+  }
+ ]
+}

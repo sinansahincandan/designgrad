@@ -1,0 +1,8 @@
+{
+ "mismatches": [
+  "R7 (Mass): The measured mass is 151.49 g, which exceeds the requirement of <= 90 g.",
+  "R4 (Geometry Constraint): The top surface height in the render/bbox is ~117 mm, whereas the specification requires it to be exactly at z = 110."
+ ],
+ "systemic": [],
+ "summary": "The part fails the mass requirement and does not adhere to the specified top surface height of z=110."
+}

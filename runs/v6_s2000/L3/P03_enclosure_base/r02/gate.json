@@ -1,0 +1,10 @@
+{
+ "mismatches": [
+  "The screw bosses are incorrectly positioned at z=10 (center of cylindrical face), whereas the design document specifies they should extend from z=0 to z=8.",
+  "The USB-C cutout is missing from the -X wall in the render."
+ ],
+ "systemic": [
+  "The screw bosses are floating or incorrectly integrated into the floor/cavity region (centered at z=10) instead of being part of the base structure below the PCB space (z=0 to 8), which breaks the intended load path and violates R5."
+ ],
+ "summary": "The part fails to include the required USB-C cutout and the screw bosses are incorrectly placed at z=10 instead of being integrated into the floor between z=0 and z=8."
+}

@@ -1,0 +1,40 @@
+{
+ "cad_steps": 5,
+ "cad_exhausted": true,
+ "cad_history": [
+  {
+   "step": 0,
+   "ok": false,
+   "feedback": "The code failed:\nTraceback (most recent call last):\n  File \"design.py\", line 134, in <module>\n    if face.normal().sub(target_normal).length < 0.1:\n       ^^^^^^^^^^^\nAttributeError: 'Face' object has no attribute 'normal'. Did you mean: 'normals'?"
+  },
+  {
+   "step": 1,
+   "ok": false,
+   "feedback": "The code failed:\nTraceback (most recent call last):\n  File \"design.py\", line 77, in <module>\n    if face.centerOfMass().sub(face.centerOfMass()).length == 0: # dummy to ensure we access geometry\n       ^^^^^^^^^^^^^^^^^^^\nTypeError: Shape.centerOfMass() missing 1 required positional argument: 'obj'"
+  },
+  {
+   "step": 2,
+   "ok": false,
+   "feedback": "The code failed:\nTraceback (most recent call last):\n  File \"design.py\", line 74, in <module>\n    fn = face.normal()\n         ^^^^^^^^^^^\nAttributeError: 'Face' object has no attribute 'normal'. Did you mean: 'normals'?"
+  },
+  {
+   "step": 3,
+   "ok": false,
+   "feedback": "The code failed:\nTraceback (most recent call last):\n  File \"design.py\", line 74, in <module>\n    normals = face.normals()\n              ^^^^^^^^^^^^^^\nTypeError: Face.normals() missing 2 required positional arguments: 'us' and 'vs'"
+  },
+  {
+   "step": 4,
+   "ok": false,
+   "feedback": "The code failed:\nTraceback (most recent call last):\n  File \"design.py\", line 86, in <module>\n    result = result.workplane(offset=FACE_CENTER_Z, normal=target_normal).center(0,0).pushPoints([(10, 0), (-10, 0)]).hole(SENSOR_HOLE_DIA)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: Workplane.workplane() got an unexpected keyword argument 'normal'"
+  },
+  {
+   "step": 5,
+   "ok": false,
+   "feedback": "The code failed:\nTraceback (most recent call last):\n  File \"design.py\", line 153, in <module>\n    hole1 = create_hole(hole_pos1, target_normal, SENSOR_HOLE_DIA/2, 100)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"design.py\", line 146, in create_hole\n    if rot_axis.length > 1e-6:\n       ^^^^^^^^^^^^^^^\nAttributeError: 'Vector' object has no attribute 'length'. Did you mean: 'Length'?"
+  }
+ ],
+ "sim_steps": 0,
+ "sim_exhausted": false,
+ "review": [],
+ "sim_updated": false
+}

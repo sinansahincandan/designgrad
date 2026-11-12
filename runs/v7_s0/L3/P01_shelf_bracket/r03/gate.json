@@ -1,0 +1,8 @@
+{
+ "mismatches": [
+  "R4 violation: The design document states that nothing of the bracket may be above z = 110 for x >= 8, but the render shows the top surface of the arm is at approximately z = 116 (bbox_max z is 116.0).",
+  "R3 violation: The screwdriver access requirement specifies no material within 4 mm of either hole axis for x >= 10. Looking at the 'Front' and 'Right' views, the clearance cutouts appear to be missing or insufficient, as the arm remains thick around the holes."
+ ],
+ "systemic": [],
+ "summary": "The part fails to meet the height constraint (R4) by extending above z=110 and appears to lack the required screwdriver access cutouts for the screw holes (R3)."
+}

@@ -1,0 +1,8 @@
+{
+ "mismatches": [
+  "R4: The four motor screw holes are incorrectly placed at (x, z) = (+-15.5, 14.5) and (+-15.5, 45.5) instead of the required (x, z) = (+-15.5, 30 +- 15.5).",
+  "R6: The two vertical base screw holes are missing from the part."
+ ],
+ "systemic": [],
+ "summary": "The motor screw holes are vertically misaligned with the specification, and the required mounting holes in the base plate are completely missing."
+}

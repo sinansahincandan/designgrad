@@ -1,0 +1,59 @@
+{
+ "cad_steps": 3,
+ "cad_exhausted": false,
+ "cad_history": [
+  {
+   "step": 0,
+   "ok": false,
+   "feedback": "The code failed:\nTraceback (most recent call last):\n  File \"design.py\", line 136, in <module>\n    result = build_bracket()\n             ^^^^^^^^^^^^^^^\n  File \"design.py\", line 96, in build_bracket\n    shelf = cq.Workplane(\"XY\").loft([sketch1, sketch2], combine=True)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/sinancandan/HackathonGemma/.venv/lib/python3.12/site-packages/cadquery/cq.py\", line 3642, in loft\n    raise ValueError(\"Nothing to loft\")\nValueError: Nothing to loft"
+  },
+  {
+   "step": 1,
+   "ok": false,
+   "feedback": "The code failed:\n  File \"/Users/sinancandan/HackathonGemma/.venv/lib/python3.12/site-packages/cadquery/cq.py\", line 3788, in _extrude\n    s1 = Solid.extrudeLinear(face, eDir, taper=taper)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/sinancandan/HackathonGemma/.venv/lib/python3.12/site-packages/multimethod/__init__.py\", line 375, in __call__\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/sinancandan/HackathonGemma/.venv/lib/python3.12/site-packages/cadquery/occ_impl/shapes.py\", line 4497, in extrudeLinear\n    prism_builder: Any = BRepPri"
+  },
+  {
+   "step": 2,
+   "ok": false,
+   "feedback": "The code failed:\nTraceback (most recent call last):\n  File \"design.py\", line 75, in <module>\n    result = build_bracket()\n             ^^^^^^^^^^^^^^^\n  File \"design.py\", line 42, in build_bracket\n    w1 = cq.Workplane(\"YZ\").workplane(offset=15).rect(width_root, 10, centered=(False, False)).vertices().toWire()\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'Workplane' object has no attribute 'toWire'"
+  },
+  {
+   "step": 3,
+   "ok": true,
+   "feedback": ""
+  }
+ ],
+ "sim_steps": 1,
+ "sim_exhausted": false,
+ "review": [
+  {
+   "round": 0,
+   "unfaithful": [
+    "R3",
+    "R4"
+   ],
+   "control_pass": [
+    "R1",
+    "R2",
+    "R7"
+   ]
+  },
+  {
+   "round": 1,
+   "unfaithful": [],
+   "control_pass": [
+    "R1",
+    "R2",
+    "R7"
+   ]
+  }
+ ],
+ "sim_updated": true,
+ "sim_history": [
+  {
+   "step": 0,
+   "ok": true,
+   "feedback": ""
+  }
+ ]
+}

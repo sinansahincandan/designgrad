@@ -1,0 +1,9 @@
+{
+ "mismatches": [
+  "R3: The screw holes are not at (y, z) = (0, 0) and (0, 40); the Right view shows only one hole centered around z=20.",
+  "R3: There is only one visible cylindrical feature/hole in the render, whereas two were required.",
+  "R4: The strap seat geometry appears incorrect; the 'pocket' subtraction does not seem to leave a flat bed at z = -14 as specified, but rather creates a large void or irregular shape."
+ ],
+ "systemic": [],
+ "summary": "The part fails to include both required screw holes and the strap seat geometry does not match the specified dimensions/placement."
+}

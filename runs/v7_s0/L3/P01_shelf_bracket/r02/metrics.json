@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "n_solids": 1,
+ "valid": true,
+ "bbox_min": [
+  -0.0,
+  -10.0,
+  0.0
+ ],
+ "bbox_max": [
+  160.0,
+  20.0,
+  110.0
+ ],
+ "size_mm": [
+  160.0,
+  30.0,
+  110.0
+ ],
+ "volume_mm3": 47760.0,
+ "mass_g": 59.22,
+ "center_of_mass": [
+  33.71,
+  6.61,
+  74.41
+ ],
+ "surface_area_mm2": 15359.4,
+ "cylindrical_faces": [],
+ "n_cylindrical_faces": 0,
+ "rest_stable": false,
+ "rest_stability_margin_mm": -18.71
+}

@@ -1,0 +1,71 @@
+{
+ "cad_steps": 3,
+ "cad_exhausted": false,
+ "cad_history": [
+  {
+   "step": 0,
+   "ok": false,
+   "feedback": "The code ran but produced 3 disconnected solids:\n  solid 1: volume 40422.8 mm3, bbox_min [-37.82, -30.0, -3.82], bbox_max [30.0, 30.0, 88.68]\n  solid 2: volume 35773.0 mm3, bbox_min [-61.99, -15.0, 53.52], bbox_max [-27.36, 27.7, 118.21]\n  solid 3: volume 12882.8 mm3, bbox_min [-48.17, -15.0, -0.0], bbox_max [-38.17, 15.0, 53.67]\n  solid 2's box touches or overlaps solid 1's box but the solids do not fuse: make them overlap by >= 1 mm\n  solid 3 is separated from solid 1 by 0.4 mm along X (solid 1 spans x -37.82..30.0, solid 3 spans -48.17..-38.17)\n`result` must be ONE connected solid. Compare "
+  },
+  {
+   "step": 1,
+   "ok": false,
+   "feedback": "The code failed:\nTraceback (most recent call last):\n  File \"design.py\", line 73, in <module>\n    if len(result.solids()) > 1:\n       ^^^^^^^^^^^^^^^^^^^^\nTypeError: object of type 'Workplane' has no len()"
+  },
+  {
+   "step": 2,
+   "ok": false,
+   "feedback": "The code ran but produced 2 disconnected solids:\n  solid 1: volume 234910.7 mm3, bbox_min [-63.17, -42.55, -22.43], bbox_max [38.14, 31.84, 120.07]\n  solid 2: volume 150510.4 mm3, bbox_min [-76.38, -20.0, 21.35], bbox_max [-22.6, 42.55, 148.21]\n  solid 2's box touches or overlaps solid 1's box but the solids do not fuse: make them overlap by >= 1 mm\n`result` must be ONE connected solid. Compare these boxes: find which piece does not touch the main body, extend or move it so it overlaps the body by at least 1 mm, and union everything into one solid."
+  },
+  {
+   "step": 3,
+   "ok": true,
+   "feedback": ""
+  }
+ ],
+ "sim_steps": 2,
+ "sim_exhausted": false,
+ "review": [
+  {
+   "round": 0,
+   "unfaithful": [
+    "R4",
+    "R5"
+   ],
+   "control_pass": [
+    "R1",
+    "R3",
+    "R7"
+   ]
+  },
+  {
+   "round": 1,
+   "unfaithful": [
+    "R4",
+    "R5"
+   ],
+   "control_pass": [
+    "R1",
+    "R3",
+    "R7"
+   ]
+  },
+  {
+   "round": 2,
+   "unfaithful": [],
+   "control_pass": [
+    "R1",
+    "R3",
+    "R7"
+   ]
+  }
+ ],
+ "sim_updated": true,
+ "sim_history": [
+  {
+   "step": 0,
+   "ok": true,
+   "feedback": ""
+  }
+ ]
+}

@@ -1,0 +1,297 @@
+{
+ "units": [
+  "P01_shelf_bracket@s0",
+  "P03_enclosure_base@s0",
+  "P07_nema17_mount@s0"
+ ],
+ "levels": {
+  "L0": {
+   "n": 3,
+   "met_frac": 0.6190476190476191,
+   "by_problem": {
+    "P01_shelf_bracket": [
+     3.0,
+     1
+    ],
+    "P03_enclosure_base": [
+     7.0,
+     1
+    ],
+    "P07_nema17_mount": [
+     3.0,
+     1
+    ]
+   },
+   "met": 4.333333333333333,
+   "met_ci": [
+    3.0,
+    7.0
+   ],
+   "all_met": 1,
+   "best_produced": 4.333333333333333,
+   "calls": 1.0,
+   "minutes": 0.52,
+   "curve_kept": null,
+   "agent_loops": 3,
+   "exhausted": 0
+  },
+  "L1": {
+   "n": 3,
+   "met_frac": 0.6190476190476191,
+   "by_problem": {
+    "P01_shelf_bracket": [
+     3.0,
+     1
+    ],
+    "P03_enclosure_base": [
+     7.0,
+     1
+    ],
+    "P07_nema17_mount": [
+     3.0,
+     1
+    ]
+   },
+   "met": 4.333333333333333,
+   "met_ci": [
+    3.0,
+    7.0
+   ],
+   "all_met": 1,
+   "best_produced": 4.666666666666667,
+   "calls": 14.666666666666666,
+   "minutes": 4.903888888888889,
+   "curve_kept": [
+    4.333333333333333,
+    4.333333333333333,
+    4.333333333333333,
+    4.333333333333333,
+    4.333333333333333
+   ],
+   "agent_loops": 10,
+   "exhausted": 0,
+   "fix": [
+    1,
+    28
+   ],
+   "break": [
+    0,
+    21
+   ],
+   "rounds_accepted": 2,
+   "rounds_rejected": 5,
+   "improved_candidates": 1,
+   "improved_kept": 0
+  },
+  "L2": {
+   "n": 3,
+   "met_frac": 0.6666666666666666,
+   "by_problem": {
+    "P01_shelf_bracket": [
+     4.0,
+     1
+    ],
+    "P03_enclosure_base": [
+     7.0,
+     1
+    ],
+    "P07_nema17_mount": [
+     3.0,
+     1
+    ]
+   },
+   "met": 4.666666666666667,
+   "met_ci": [
+    3.0,
+    7.0
+   ],
+   "all_met": 1,
+   "best_produced": 4.666666666666667,
+   "calls": 39.0,
+   "minutes": 13.954444444444446,
+   "curve_kept": [
+    4.333333333333333,
+    4.333333333333333,
+    4.333333333333333,
+    4.666666666666667,
+    4.666666666666667
+   ],
+   "agent_loops": 30,
+   "exhausted": 1,
+   "analysis_checks": 97,
+   "analysis_agreement": 0.9175257731958762,
+   "unmet_flagged": [
+    36,
+    36
+   ],
+   "analysis_counts": {
+    "agree": 89,
+    "false_alarm": 8,
+    "missed": 0,
+    "disputed": 1,
+    "unmeasured": 0,
+    "unmet": 36,
+    "unmet_reported": 36
+   },
+   "fix": [
+    1,
+    31
+   ],
+   "break": [
+    5,
+    53
+   ],
+   "rounds_accepted": 2,
+   "rounds_rejected": 10,
+   "improved_candidates": 1,
+   "improved_kept": 1
+  },
+  "L3": {
+   "n": 3,
+   "met_frac": 0.8095238095238094,
+   "by_problem": {
+    "P01_shelf_bracket": [
+     4.0,
+     1
+    ],
+    "P03_enclosure_base": [
+     7.0,
+     1
+    ],
+    "P07_nema17_mount": [
+     6.0,
+     1
+    ]
+   },
+   "met": 5.666666666666667,
+   "met_ci": [
+    4.0,
+    7.0
+   ],
+   "all_met": 1,
+   "best_produced": 6.0,
+   "calls": 42.0,
+   "minutes": 14.368888888888886,
+   "curve_kept": [
+    4.333333333333333,
+    5.666666666666667,
+    5.666666666666667,
+    5.666666666666667,
+    5.666666666666667
+   ],
+   "agent_loops": 30,
+   "exhausted": 1,
+   "analysis_checks": 104,
+   "analysis_agreement": 0.875,
+   "unmet_flagged": [
+    29,
+    29
+   ],
+   "analysis_counts": {
+    "agree": 91,
+    "false_alarm": 13,
+    "missed": 0,
+    "disputed": 1,
+    "unmeasured": 0,
+    "unmet": 29,
+    "unmet_reported": 29
+   },
+   "fix": [
+    8,
+    20
+   ],
+   "break": [
+    9,
+    64
+   ],
+   "rounds_accepted": 3,
+   "rounds_rejected": 9,
+   "improved_candidates": 3,
+   "improved_kept": 2,
+   "render_complaints_naming_a_requirement": 38,
+   "render_complaints_about_met_requirements": 12
+  }
+ },
+ "steps": {
+  "L0->L1": {
+   "mean": 0.0,
+   "ci": [
+    0.0,
+    0.0
+   ],
+   "wtl": [
+    0,
+    3,
+    0
+   ]
+  },
+  "L1->L2": {
+   "mean": 0.3333333333333333,
+   "ci": [
+    0.0,
+    1.0
+   ],
+   "wtl": [
+    1,
+    2,
+    0
+   ]
+  },
+  "L2->L3": {
+   "mean": 1.0,
+   "ci": [
+    0.0,
+    3.0
+   ],
+   "wtl": [
+    1,
+    2,
+    0
+   ]
+  },
+  "L0->L2": {
+   "mean": 0.3333333333333333,
+   "ci": [
+    0.0,
+    1.0
+   ],
+   "wtl": [
+    1,
+    2,
+    0
+   ]
+  },
+  "L0->L3": {
+   "mean": 1.3333333333333333,
+   "ci": [
+    0.0,
+    3.0
+   ],
+   "wtl": [
+    2,
+    1,
+    0
+   ]
+  }
+ },
+ "per_unit": {
+  "P01_shelf_bracket@s0": {
+   "L0": 3,
+   "L1": 3,
+   "L2": 4,
+   "L3": 4
+  },
+  "P03_enclosure_base@s0": {
+   "L0": 7,
+   "L1": 7,
+   "L2": 7,
+   "L3": 7
+  },
+  "P07_nema17_mount@s0": {
+   "L0": 3,
+   "L1": 3,
+   "L2": 3,
+   "L3": 6
+  }
+ }
+}

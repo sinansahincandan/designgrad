@@ -1,0 +1,4 @@
+{
+ "ok": false,
+ "error": "  File \"/Users/sinancandan/HackathonGemma/.venv/lib/python3.12/site-packages/cadquery/cq.py\", line 859, in faces\n    return self._selectObjects(\"Faces\", selector, tag)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/sinancandan/HackathonGemma/.venv/lib/python3.12/site-packages/cadquery/cq.py\", line 776, in _selectObjects\n    return self.newObject(self._filter(toReturn, selector))\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/sinancandan/HackathonGemma/.venv/lib/python3.12/site-packages/cadquery/cq.py\", line 786, in _filter\n    toReturn = selectorObj.filter(objs)\n               ^^^^^^^^^^^^^^^^^^\nAttributeError: 'Vector' object has no attribute 'filter'"
+}

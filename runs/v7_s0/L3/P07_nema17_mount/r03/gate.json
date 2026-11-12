@@ -1,0 +1,9 @@
+{
+ "mismatches": [
+  "R3 (Central bore): The central bore of 22.5 mm diameter through the face plate is missing from the render.",
+  "R4 (Motor screw holes): The four motor screw holes of 3.4 mm diameter are missing from the render.",
+  "R5 (Motor clearance): The design document specifies a clearance pocket subtracted from the -Y side, but the rendered part appears to be a solid L-bracket with no cutout on the face plate side."
+ ],
+ "systemic": [],
+ "summary": "The rendered part is a basic L-bracket that completely lacks all specified motor mounting features (central bore and screw holes) and the required motor clearance pocket."
+}

@@ -1,0 +1,153 @@
+{
+ "ok": true,
+ "result": {
+  "R1": {
+   "status": "pass",
+   "value": 1.0,
+   "note": "",
+   "method": "Counted solids in STEP file: 1",
+   "criteria": [
+    {
+     "condition": "One single, valid solid",
+     "measured": 1.0,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R2": {
+   "status": "fail",
+   "value": [
+    101.76458024921855,
+    50.0,
+    118.20816044192,
+    0.0
+   ],
+   "note": "",
+   "method": "Measured bbox: x_ext=101.76458024921855, y_ext=50.0, z_ext=118.20816044192, z_min=0.0",
+   "criteria": [
+    {
+     "condition": "Stands on z=0",
+     "measured": 0.0,
+     "ok": true
+    },
+    {
+     "condition": "Footprint within 100x100",
+     "measured": [
+      101.76458024921855,
+      50.0
+     ],
+     "ok": false
+    },
+    {
+     "condition": "Height <= 120",
+     "measured": 118.20816044192,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R3": {
+   "status": "fail",
+   "value": 219.0,
+   "note": "",
+   "method": "Point-in-mesh sampling of phone volume (3375 pts)",
+   "criteria": [
+    {
+     "condition": "Must not intersect phone volume",
+     "measured": 219.0,
+     "ok": false
+    }
+   ],
+   "faithful": true
+  },
+  "R4": {
+   "status": "pass",
+   "value": 0.3020833333333333,
+   "note": "",
+   "method": "Volume fraction sampling in region a:[90,110], b:[-2,0], y:[-15,15]",
+   "criteria": [
+    {
+     "condition": "Material behind phone back",
+     "measured": 0.3020833333333333,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R5": {
+   "status": "pass",
+   "value": [
+    0.3541666666666667,
+    0.25
+   ],
+   "note": "",
+   "method": "Volume fraction sampling for seat and lip regions",
+   "criteria": [
+    {
+     "condition": "Material below phone bottom (Seat)",
+     "measured": 0.3541666666666667,
+     "ok": true
+    },
+    {
+     "condition": "Front lip material",
+     "measured": 0.25,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R6": {
+   "status": "pass",
+   "value": [
+    -27.598066421823088,
+    -0.006855910920772023
+   ],
+   "note": "",
+   "method": "Combined COM: [-2.75980664e+01 -6.85591092e-03  7.22786826e+01], Footprint: x[-56.764580249218554,45.0], y[-25.0,25.0] with 5mm margin",
+   "criteria": [
+    {
+     "condition": "COM projection inside contact area with 5mm margin",
+     "measured": [
+      -27.598066421823088,
+      -0.006855910920772023
+     ],
+     "ok": true
+    }
+   ],
+   "faithful": true
+  },
+  "R7": {
+   "status": "pass",
+   "value": 57.329349780278235,
+   "note": "",
+   "method": "Volume (46233.35 mm3) * Density (1.24 g/cm3) / 1000",
+   "criteria": [
+    {
+     "condition": "Mass <= 60 g",
+     "measured": 57.329349780278235,
+     "ok": true
+    }
+   ],
+   "faithful": true
+  }
+ },
+ "stdout": ".0], \"ok\": false}, {\"condition\": \"Height <= 120\", \"measured\": 118.20816044192, \"ok\": true}], \"note\": \"\"}, \"R3\": {\"status\": \"fail\", \"value\": 219.0, \"method\": \"Point-in-mesh sampling of phone volume (3375 pts)\", \"criteria\": [{\"condition\": \"Must not intersect phone volume\", \"measured\": 219.0, \"ok\": false}], \"note\": \"\"}, \"R4\": {\"status\": \"pass\", \"value\": 0.3020833333333333, \"method\": \"Volume fraction sampling in region a:[90,110], b:[-2,0], y:[-15,15]\", \"criteria\": [{\"condition\": \"Material behind phone back\", \"measured\": 0.3020833333333333, \"ok\": true}], \"note\": \"\"}, \"R5\": {\"status\": \"pass\", \"value\": [0.3541666666666667, 0.25], \"method\": \"Volume fraction sampling for seat and lip regions\", \"criteria\": [{\"condition\": \"Material below phone bottom (Seat)\", \"measured\": 0.3541666666666667, \"ok\": true}, {\"condition\": \"Front lip material\", \"measured\": 0.25, \"ok\": true}], \"note\": \"\"}, \"R6\": {\"status\": \"pass\", \"value\": [-27.598066421823088, -0.006855910920772023], \"method\": \"Combined COM: [-2.75980664e+01 -6.85591092e-03  7.22786826e+01], Footprint: x[-56.764580249218554,45.0], y[-25.0,25.0] with 5mm margin\", \"criteria\": [{\"condition\": \"COM projection inside contact area with 5mm margin\", \"measured\": [-27.598066421823088, -0.006855910920772023], \"ok\": true}], \"note\": \"\"}, \"R7\": {\"status\": \"pass\", \"value\": 57.329349780278235, \"method\": \"Volume (46233.35 mm3) * Density (1.24 g/cm3) / 1000\", \"criteria\": [{\"condition\": \"Mass <= 60 g\", \"measured\": 57.329349780278235, \"ok\": true}], \"note\": \"\"}}",
+ "stderr": "",
+ "agent": {
+  "sim_steps": 0,
+  "sim_exhausted": false,
+  "review": [
+   {
+    "round": 0,
+    "unfaithful": [],
+    "control_pass": [
+     "R1",
+     "R2",
+     "R3",
+     "R7"
+    ]
+   }
+  ]
+ }
+}

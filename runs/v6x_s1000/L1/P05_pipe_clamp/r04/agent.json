@@ -1,0 +1,21 @@
+{
+ "cad_steps": 2,
+ "cad_exhausted": false,
+ "cad_history": [
+  {
+   "step": 0,
+   "ok": false,
+   "feedback": "The code ran but produced 2 disconnected solids:\n  solid 1: volume 15170.7 mm3, bbox_min [-30.0, -10.02, -0.02], bbox_max [30.0, 10.02, 30.01]\n  solid 2: volume 738.8 mm3, bbox_min [-7.02, -10.52, -15.52], bbox_max [7.02, 7.52, -10.58]\n  solid 2 is separated from solid 1 by 10.6 mm along Z (solid 1 spans z -0.02..30.01, solid 2 spans -15.52..-10.58)\n`result` must be ONE connected solid. Compare these boxes: find which piece does not touch the main body, extend or move it so it overlaps the body by at least 1 mm, and union everything into one solid."
+  },
+  {
+   "step": 1,
+   "ok": false,
+   "feedback": "The code ran but produced 2 disconnected solids:\n  solid 1: volume 14551.9 mm3, bbox_min [-30.0, -10.02, -0.02], bbox_max [30.0, 10.02, 29.01]\n  solid 2: volume 738.8 mm3, bbox_min [-7.02, -10.52, -15.52], bbox_max [7.02, 7.52, -10.58]\n  solid 2 is separated from solid 1 by 10.6 mm along Z (solid 1 spans z -0.02..29.01, solid 2 spans -15.52..-10.58)\n`result` must be ONE connected solid. Compare these boxes: find which piece does not touch the main body, extend or move it so it overlaps the body by at least 1 mm, and union everything into one solid."
+  },
+  {
+   "step": 2,
+   "ok": true,
+   "feedback": ""
+  }
+ ]
+}
