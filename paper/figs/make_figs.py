@@ -110,6 +110,7 @@ def fig3():
 def _ensure_render(stl, png, **kw):
     if not png.exists() and stl.exists():
         from vtk_render import render
+        png.parent.mkdir(parents=True, exist_ok=True)      # the render cache is not part of the repository
         render(stl, png, 700, **kw)
     return png if png.exists() else None
 
