@@ -71,7 +71,7 @@ Each level of feedback improves the design (Table 1, Fig. 3). Conceptual feedbac
 
 Within the loop (Fig. 3, top right), the retained design improves steadily at L2 and L3, whereas at L1 it is unstable, because a critic that cannot observe the built part sometimes prefers a revision whose part is worse.
 
-The three parts respond differently (Fig. 3, bottom; Fig. 4). The enclosure base does not change at any level: one first design already meets all seven requirements, and the other two fail only the requirement on the screw bosses, which no revision corrects, so the points in Fig. 3 coincide. The shelf bracket improves when numerical feedback is added (3.3 requirements at L0 and L1, 4.7 at L2, 4.3 at L3); the mass limit, the envelope and screwdriver access most often remain unmet. The motor mount improves at every level, most with visual feedback (2.3, 3.0, 3.7, 4.7).
+The three parts respond differently (Fig. 3, bottom; Fig. 4). The enclosure base does not change at any level: one first design already meets all seven requirements, and the other two fail only the screw-boss requirement. The agent's own check reports the missing pilot holes, but no revision corrects them, so the points in Fig. 3 coincide. The shelf bracket improves when numerical feedback is added (3.3 requirements at L0 and L1, 4.7 at L2, 4.3 at L3); the mass limit, the envelope and screwdriver access most often remain unmet. The motor mount improves at every level, most with visual feedback (2.3, 3.0, 3.7, 4.7).
 
 ![](figs/v6_fig_results.png)
 
@@ -117,7 +117,7 @@ Three factors limit the loop (Fig. 9).
 
 The first is the revision step. One design round corrects approximately one unmet requirement in seven at L1 and L2 and one in three at L3, and breaks approximately one in ten of the requirements that were already met.
 
-The second is the agent's own checks. After the control run they rarely miss a real fault: of 207 unmet requirements, they reported 201. However, approximately one verdict in ten reports a met requirement as unmet. At L2 and L3 the loop produced nine designs that were better than the design it held and did not retain them; eight of the nine carried such a false alarm. The best motor mount in Fig. 6 was lost in this way.
+The second is the agent's own checks. After the control run they rarely miss a real fault: of 207 unmet requirements, they reported 201. However, approximately one verdict in ten reports a met requirement as unmet. At L2 and L3 the loop produced nine designs that were better than the design it held and did not retain them; eight of the nine carried such a false alarm. The best motor mount in Fig. 6 was lost this way.
 
 The third is the visual reviewer. A quarter of the reviewer's remarks that name a requirement concern one that the part already meets. Visual feedback is the most informative and the least reliable, and is therefore most useful together with measurements.
 
@@ -127,7 +127,7 @@ The third is the visual reviewer. A quarter of the reviewer's remarks that name 
 
 ### 4.5 Other parts
 
-Four further parts were run twice each (Fig. 10): a phone stand, a pipe clamp, a drone arm and a heat sink (six requirements). None of them was used when the loop was revised (Section 7). The trend is similar: the designs meet 3.9 requirements at L0, 3.6 at L1, 4.6 at L2 and 4.7 at L3; three runs improve from L0 to L3 and none deteriorates. Two runs are excluded because the CAD agent did not complete most of their builds, so their scores do not measure the feedback: a tilted sensor mount (12 of 16 builds; 0, 2, 2, 2 from L0 to L3) and the second pipe clamp run (10 of 16; 2, 4, 3, 5).
+Four further parts were run twice each (Fig. 10): a phone stand, a pipe clamp, a drone arm and a heat sink (six requirements). None was used when the loop was revised (Section 7). The trend is similar: the designs meet 3.9 requirements at L0, 3.6 at L1, 4.6 at L2 and 4.7 at L3; three runs improve from L0 to L3 and none deteriorates. Two runs are excluded because the CAD agent did not complete most of their builds, so their scores do not measure the feedback: a tilted sensor mount (12 of 16 builds; 0, 2, 2, 2 from L0 to L3) and the second pipe clamp run (10 of 16; 2, 4, 3, 5).
 
 ![](figs/v6_fig_parts.png)
 
