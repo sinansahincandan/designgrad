@@ -16,7 +16,7 @@ DesignGrad is inspired by TextGrad [12], a method for the automatic improvement 
 
 The feedback levels are inspired by how engineers work: they iterate on their design. They receive a problem statement with little detail and develop it into a design document. They review this document to verify that the concept satisfies every requirement. They model the part and analyse the model with measurements and simulations. Finally, they inspect a rendering of the finished part to confirm that it matches their intent. We give a local agent these three evaluations as conceptual, numerical and visual feedback, and ask: **how do its designs improve as conceptual, numerical and visual feedback are added, and how should a local model be used for design?**
 
-The system runs offline on a laptop with one open model, Gemma 4 26B-A4B [13]. For simple parts, local operation makes design agents accessible and inexpensive, keeps design data on the user's machine, and allows deployment on the local computers that are connected to manufacturing equipment. The designs are scored after the loop has finished, by independent tests that are not part of the feedback.
+The system runs offline on a laptop with one open model, Gemma 4 26B-A4B [13]. For simple parts, local operation makes design agents accessible and inexpensive, keeps design data on the user's machine, and allows deployment on local computers connected to manufacturing equipment. The designs are scored after the loop has finished, by independent tests that are not part of the feedback.
 
 ## 2 The system
 
@@ -50,7 +50,7 @@ The four levels differ only in the information that the critic receives. They ar
 
 **Problems.** The main experiment uses three parts, each with seven numerical requirements (Fig. 4): a shelf bracket that must carry a load, an electronics enclosure base, and a motor mount. Each part is run three times with different sampling seeds, giving nine runs per level.
 
-**Independent tests.** For each problem, a set of geometric and analytic tests, one per requirement, was written separately from the agents' tools and fixed before any run. A reference design passes all tests and a plain block fails most of them. They are applied after a run has finished. "Requirements met" always denotes the number of these tests that a design passes.
+**Independent tests.** For each problem, a set of geometric and analytic tests, one per requirement, was written separately from the agents' tools and fixed before any run. A reference design passes all tests and a plain block fails most. They are applied after a run has finished. "Requirements met" always denotes the number of these tests that a design passes.
 
 **Model.** `gemma4:26b` in Ollama on an M1 Max laptop with 32 GB of memory, temperature 0.3.
 
@@ -81,7 +81,7 @@ The three parts respond differently (Fig. 3, bottom; Fig. 4). The enclosure base
 
 > **Fig. 4.** A correct reference design and the final design of each level, first repeat; "runs" lists all three repeats. **Shelf bracket:** two wall-screw holes with screwdriver access, a seat 110 mm up and 150 mm out, 150 N within stress and deflection limits, at most 90 g. **Enclosure base:** an 85 × 55 mm tray, four screw bosses, a USB-C cutout, at most 70 g. **Motor mount:** a 4 mm face plate with a bore and four screw holes, motor clearance, a base with two bolt holes, at most 60 g.
 
-### 4.2 Three critics, one design
+### 4.2 The three kinds of feedback on one design
 
 Fig. 5 shows the three critics evaluating the same first design: a motor mount whose face plate was built in the wrong plane and whose base lies below the table.
 
@@ -95,7 +95,7 @@ At L2 the analysis program finds neither the bore nor the screw holes at their s
 
 At L3 the reviewer inspects the rendered views and identifies both faults directly. After one revision the part meets six requirements. Numerical feedback indicated what was wrong; visual feedback indicated why.
 
-### 4.3 Round by round
+### 4.3 Design improvement over successive rounds
 
 When a measurement identifies the fault, numerical feedback is effective (Fig. 6, top; Fig. 7). The first shelf bracket weighs 445 g against a limit of 90 g; the designer replaces the solid section at the wall with a hollow section, and the next part weighs 43 g and meets six requirements. The motor mount (Fig. 6, bottom; Fig. 8) improves similarly, one fault per round.
 
@@ -111,7 +111,7 @@ When a measurement identifies the fault, numerical feedback is effective (Fig. 6
 
 > **Fig. 8.** The first two rounds of the motor mount (colours as in Fig. 5).
 
-### 4.4 What limits the loop
+### 4.4 Factors limiting the loop
 
 Two factors limit the loop (Fig. 9). First, detecting a fault is easier than correcting it: a design round corrects only a minority of the unmet requirements and occasionally breaks a met requirement. The correction rate is highest at L3, where the visual review often identifies the cause of the fault. It does not increase from round to round (23%, 16%, 20%, 18%). Second, the agent's own evaluation is not always correct. It rarely misses a real fault, but it sometimes reports a requirement as unmet although the part meets it, for example when a check examines a region larger than the feature. Such false alarms can cause the loop to discard a better design. The visual reviewer shows the same tendency, so visual feedback is most useful together with measurements.
 
@@ -119,7 +119,7 @@ Two factors limit the loop (Fig. 9). First, detecting a fault is easier than cor
 
 > **Fig. 9.** Left: the share of unmet requirements that one design round corrects (solid) and of met requirements that it breaks (hatched). Right: the agent's own verdicts compared, after the runs, with the independent tests: agreement (green), false alarm (orange), missed fault (red), disputed by the reviewer (grey).
 
-### 4.5 Other parts
+### 4.5 Four further parts
 
 Four further parts were run twice each (Fig. 10): a phone stand, a pipe clamp, a drone arm and a heat sink (six requirements). None was used when the loop was revised (Section 7). The trend is similar: the designs meet 3.9 requirements at L0, 3.6 at L1, 4.6 at L2 and 4.7 at L3; three runs improve from L0 to L3 and none deteriorates. Two runs are excluded because the CAD agent did not complete most of their builds, so their scores do not measure the feedback: a tilted sensor mount (12 of 16 builds; 0, 2, 2, 2 from L0 to L3) and the second pipe clamp run (10 of 16; 2, 4, 3, 5).
 
@@ -129,7 +129,7 @@ Four further parts were run twice each (Fig. 10): a phone stand, a pipe clamp, a
 
 ## 5 Discussion
 
-The best designs are obtained when all three kinds of feedback are used together: the designs at L3 meet 28% more requirements than the designs without feedback. The largest improvement occurs when numerical feedback is added, because the agent then evaluates the built part instead of its description. Visual feedback provides a further improvement, mainly by revealing the cause of a fault that the measurements only detect. This improvement has a cost: the time per design increases from about one minute without feedback to about fifteen minutes with all three kinds. For a local model, the results therefore suggest that the agent should build and measure every design, verify its own measurements on a control part, and inspect the rendered part. The remaining difficulty is to correct a detected fault without breaking another requirement. Further improvement is expected from the revision step and from testing the part in a physics simulation.
+The best designs are obtained when all three kinds of feedback are used together: the designs at L3 meet 28% more requirements than the designs without feedback. The largest improvement occurs when numerical feedback is added, because the agent then evaluates the built part instead of its description. Visual feedback provides a further improvement, mainly by revealing the cause of a fault that the measurements only detect. This improvement has a cost: the time per design increases from about one minute without feedback to about fifteen minutes with all three. For a local model, the results therefore suggest that the agent should build and measure every design, verify its own measurements on a control part, and inspect the rendered part. The remaining difficulty is to correct a detected fault without breaking another requirement. Further improvement is expected from the revision step and from testing the part in a physics simulation.
 
 ## 6 Related work
 
@@ -146,7 +146,7 @@ python -m designgrad.run --ladder v6 --problems P01 --levels L0 L1 L2 L3 --out r
 python eval/v4_analyze.py runs/x --out runs/x
 ```
 
-Every model call is recorded; replaying the records reproduces the runs we checked byte for byte. Code, problems, tests and records: https://github.com/sinansahincandan/designgrad
+Every model call is recorded; replaying the records reproduces the checked runs byte for byte. Code, problems, tests and records: https://github.com/sinansahincandan/designgrad
 
 ![](figs/v6_fig_prompts.png)
 
