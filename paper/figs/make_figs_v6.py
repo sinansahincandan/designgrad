@@ -205,8 +205,8 @@ def fig_limits():
         a1.bar(i - 0.21, f * 100, 0.36, color=NC[l], zorder=2); a1.bar(i + 0.21, b * 100, 0.36, color=NC[l], alpha=0.35, zorder=2, hatch="////", edgecolor="white", lw=0)
         assert [sum(x[0] for x in PR[l]["fix"]), sum(x[1] for x in PR[l]["fix"])] == list(fx), (l, PR[l]["fix"], fx)
         pf = [100 * x / y for x, y in PR[l]["fix"] if y]; pb = [100 * x / y for x, y in PR[l]["break"] if y]
-        a1.scatter(i - 0.21 + np.linspace(-0.11, 0.11, len(pf)), pf, s=14, color="white", edgecolor=INK, lw=0.9, zorder=5)
-        a1.scatter(i + 0.21 + np.linspace(-0.11, 0.11, len(pb)), pb, s=14, color="white", edgecolor=INK2, lw=0.9, zorder=5)
+        a1.scatter(i - 0.21 + np.linspace(-0.11, 0.11, len(pf)), pf, s=14, color="white", edgecolor=INK, lw=0.9, zorder=5, clip_on=False)
+        a1.scatter(i + 0.21 + np.linspace(-0.11, 0.11, len(pb)), pb, s=14, color="white", edgecolor=INK2, lw=0.9, zorder=5, clip_on=False)
         a1.text(i - 0.21, max([f * 100] + pf) + 3, f"{fx[0]}/{fx[1]}", ha="center", fontsize=7, color=INK)
         a1.text(i + 0.21, max([b * 100] + pb) + 3, f"{bk[0]}/{bk[1]}", ha="center", fontsize=7, color=INK2)
     a1.set_xticks(range(3)); a1.set_xticklabels(NLV[1:], fontsize=9.5); a1.set_ylim(0, 60); a1.set_yticks([0, 20, 40, 60]); a1.set_yticklabels(["0", "20%", "40%", "60%"], fontsize=8)
